@@ -12,6 +12,8 @@
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
 		5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74071EF7FBBC009A323E /* Assets.xcassets */; };
 		5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74091EF7FBBC009A323E /* LaunchScreen.storyboard */; };
+		657D16AB1EF9283D0069AB00 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657D16AA1EF9283D0069AB00 /* LoginController.swift */; };
+		657D16B01EF92F600069AB00 /* logoUni.png in Resources */ = {isa = PBXBuildFile; fileRef = 657D16AF1EF92F600069AB00 /* logoUni.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		5D1A74071EF7FBBC009A323E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1A740A1EF7FBBC009A323E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1A740C1EF7FBBC009A323E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		657D16AA1EF9283D0069AB00 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		657D16AF1EF92F600069AB00 /* logoUni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoUni.png; path = FeedUni/logoUni.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,22 @@
 			children = (
 				5D1A74001EF7FBBC009A323E /* AppDelegate.swift */,
 				5D1A74021EF7FBBC009A323E /* ViewController.swift */,
+				657D16AA1EF9283D0069AB00 /* LoginController.swift */,
 				5D1A74041EF7FBBC009A323E /* Main.storyboard */,
 				5D1A74071EF7FBBC009A323E /* Assets.xcassets */,
 				5D1A74091EF7FBBC009A323E /* LaunchScreen.storyboard */,
 				5D1A740C1EF7FBBC009A323E /* Info.plist */,
+				657D16AC1EF92C280069AB00 /* Resouces */,
 			);
 			path = FeedUni;
+			sourceTree = "<group>";
+		};
+		657D16AC1EF92C280069AB00 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				657D16AF1EF92F600069AB00 /* logoUni.png */,
+			);
+			name = Resouces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +141,7 @@
 				5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */,
 				5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */,
 				5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */,
+				657D16B01EF92F600069AB00 /* logoUni.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D1A74031EF7FBBC009A323E /* ViewController.swift in Sources */,
+				657D16AB1EF9283D0069AB00 /* LoginController.swift in Sources */,
 				5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +318,7 @@
 				5D1A74111EF7FBBC009A323E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
