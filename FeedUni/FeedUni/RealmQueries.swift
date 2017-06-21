@@ -11,23 +11,24 @@ import RealmSwift
 
 class RealmQueries {
     
-    static let realm = try! Realm()
-    
     //MARK: SELECT QUERIES
     //Ritorna tutte le news favorite
     static func getFavoritePosts() -> [FavoriteNews] {
+        let realm = try! Realm()
         let news = Array(realm.objects(FavoriteNews.self))
         return news
     }
     
     //Ritorna tutti gli annunci favoriti
     static func getFavoriteInsertions() -> [FavoriteInsertion] {
+        let realm = try! Realm()
         let insertions = Array(realm.objects(FavoriteInsertion.self))
         return insertions
     }
     
     //Ritorna tutte le lezioni favorite
     static func getFavoriteLessons() -> [FavoriteLesson] {
+        let realm = try! Realm()
         let lessons = Array(realm.objects(FavoriteLesson.self))
         return lessons
     }
@@ -36,6 +37,7 @@ class RealmQueries {
     //MARK: INSERT QUERIES
     //Inserimento di una news
     static func insertNews(post: FavoriteNews) {
+        let realm = try! Realm()
         try! realm.write {
             realm.add(post)
         }
@@ -43,6 +45,7 @@ class RealmQueries {
     
     //Inserimento di inserzione della bacheca
     static func insertInsertion(insertion: FavoriteInsertion) {
+        let realm = try! Realm()
         try! realm.write {
             realm.add(insertion)
         }
@@ -50,6 +53,7 @@ class RealmQueries {
     
     //Inserimento lezione
     static func insertLesson(lesson: FavoriteLesson) {
+        let realm = try! Realm()
         try! realm.write {
             realm.add(lesson)
         }

@@ -17,5 +17,5 @@ class FavoriteInsertion: Object {
     dynamic var phoneNumber = ""
     dynamic var price = 0.0
     dynamic var publishDate: Date?
-    let insertionType = LinkingObjects(fromType: InsertionType.self, property: "booksType")
+    dynamic var insertionType = 1
 }
