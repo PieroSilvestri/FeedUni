@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
-		3859645E1EFA9A17000DC5ED /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 3859645D1EFA9A17000DC5ED /* Controller */; };
 		5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74001EF7FBBC009A323E /* AppDelegate.swift */; };
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
 		5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74071EF7FBBC009A323E /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3859645D1EFA9A17000DC5ED /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
 		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A73FD1EF7FBBC009A323E /* FeedUni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedUni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A74001EF7FBBC009A323E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 		5D1A73FF1EF7FBBC009A323E /* FeedUni */ = {
 			isa = PBXGroup;
 			children = (
-				3859645D1EFA9A17000DC5ED /* Controller */,
 				5D1A74001EF7FBBC009A323E /* AppDelegate.swift */,
 				5D1A74041EF7FBBC009A323E /* Main.storyboard */,
 				5D1A74071EF7FBBC009A323E /* Assets.xcassets */,
@@ -134,8 +131,7 @@
 				TargetAttributes = {
 					5D1A73FC1EF7FBBC009A323E = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = PM497AXR52;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -165,7 +161,6 @@
 				5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */,
 				5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */,
 				5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */,
-				3859645E1EFA9A17000DC5ED /* Controller in Resources */,
 				657D16B01EF92F600069AB00 /* logoUni.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,11 +344,12 @@
 			baseConfigurationReference = DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PM497AXR52;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FeedUni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.pierosilvestri.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -363,11 +359,12 @@
 			baseConfigurationReference = EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PM497AXR52;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FeedUni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.pierosilvestri.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
