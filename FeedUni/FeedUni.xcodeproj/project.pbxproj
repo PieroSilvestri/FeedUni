@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
 		3859645E1EFA9A17000DC5ED /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 3859645D1EFA9A17000DC5ED /* Controller */; };
-		385964601EFA9A20000DC5ED /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 3859645F1EFA9A20000DC5ED /* Model */; };
 		5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74001EF7FBBC009A323E /* AppDelegate.swift */; };
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
 		5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74071EF7FBBC009A323E /* Assets.xcassets */; };
@@ -19,7 +18,6 @@
 
 /* Begin PBXFileReference section */
 		3859645D1EFA9A17000DC5ED /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
-		3859645F1EFA9A20000DC5ED /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A73FD1EF7FBBC009A323E /* FeedUni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedUni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A74001EF7FBBC009A323E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 		5D1A73FF1EF7FBBC009A323E /* FeedUni */ = {
 			isa = PBXGroup;
 			children = (
-				3859645F1EFA9A20000DC5ED /* Model */,
 				3859645D1EFA9A17000DC5ED /* Controller */,
 				5D1A74001EF7FBBC009A323E /* AppDelegate.swift */,
 				5D1A74041EF7FBBC009A323E /* Main.storyboard */,
@@ -165,7 +162,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				385964601EFA9A20000DC5ED /* Model in Resources */,
 				5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */,
 				5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */,
 				5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */,
