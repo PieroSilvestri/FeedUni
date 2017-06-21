@@ -10,6 +10,7 @@
 		04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657B1EFAC54D0095CE34 /* LoginController.swift */; };
 		04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657D1EFAC55B0095CE34 /* RegisterController.swift */; };
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
+		3897F5AF1EFAC83D000DCD93 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897F5AE1EFAC83D000DCD93 /* TimelineViewController.swift */; };
 		5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74001EF7FBBC009A323E /* AppDelegate.swift */; };
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
 		5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74071EF7FBBC009A323E /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		04F3657B1EFAC54D0095CE34 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		04F3657D1EFAC55B0095CE34 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		3897F5AE1EFAC83D000DCD93 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A73FD1EF7FBBC009A323E /* FeedUni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedUni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A74001EF7FBBC009A323E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				04F3657B1EFAC54D0095CE34 /* LoginController.swift */,
 				04F3657D1EFAC55B0095CE34 /* RegisterController.swift */,
 				5D53DC841EFAC722006F842B /* NewsController.swift */,
+				3897F5AE1EFAC83D000DCD93 /* TimelineViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */,
 				5D53DC851EFAC722006F842B /* NewsController.swift in Sources */,
 				650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */,
+				3897F5AF1EFAC83D000DCD93 /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
