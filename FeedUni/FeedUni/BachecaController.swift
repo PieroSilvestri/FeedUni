@@ -8,17 +8,8 @@
 
 import UIKit
 
-class BachecaController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BachecaController: UIViewController {
 
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return 0
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        return 
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
