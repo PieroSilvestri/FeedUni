@@ -264,7 +264,7 @@
         <!--News-->
         <scene sceneID="P2v-4h-UFl">
             <objects>
-                <viewController id="LOe-Xn-W8a" customClass="NewsController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="LOe-Xn-W8a" customClass="NewsController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d9n-Oe-cXk"/>
                         <viewControllerLayoutGuide type="bottom" id="4Zh-mu-Gh8"/>
@@ -286,6 +286,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LOe-Xn-W8a" id="117-G1-2y1"/>
+                                    <outlet property="delegate" destination="LOe-Xn-W8a" id="ao3-vD-fuG"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -297,6 +301,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="News" id="tlC-GD-ZLA"/>
+                    <connections>
+                        <outlet property="tableView" destination="IAe-4U-ez9" id="aZw-iG-NzX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toq-UK-tNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

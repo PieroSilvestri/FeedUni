@@ -8,12 +8,20 @@
 
 import UIKit
 
-class NewsController: UIViewController {
+class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
+    @IBOutlet weak var tableView: UITableView!
+    var spinner: UIActivityIndicatorView = UIActivityIndicatorView()
+    var indexPage: Int = 1
+    var listData = [NSDictionary]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initUI()
+        
         // Do any additional setup after loading the view.
+        getJsonFromUrl(page: indexPage)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +30,89 @@ class NewsController: UIViewController {
     }
     
 
+    // MARK - TABLE FUNC
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.listData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "NewsCell")
+        let tempItem = self.listData[indexPath.row] as NSDictionary
+        let tempTitle = tempItem["title"] as! String
+        cell.textLabel?.text = tempTitle
+        return cell
+    }
+    
+    // MARK - MY FUNC
+    
+    func initUI(){
+        
+        self.spinner.center = self.view.center
+        self.spinner.hidesWhenStopped = true
+        self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(self.spinner)
+        self.tableView.tableFooterView = UIView()
+        
+        indexPage = 1
+        
+        self.spinner.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        self.tableView.tableFooterView = UIView()
+        
+        
+    }
+    
+    func getJsonFromUrl(page: Int){
+        
+        //self.flagDownload = false;
+        
+        let urlString = "http://apiunipn.parol.in/V1/posts"
+        
+        let url = URL(string: urlString)
+        var request = URLRequest(url: url!)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer 3252261a-215c-4078-a74d-2e1c5c63f0a1", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with:request) { (data, response, error) in
+            if error != nil {
+                print(error.debugDescription)
+            } else {
+                do {
+                    
+                    let response = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
+                    
+                    
+                    let posts = response["data"] as! [NSDictionary]
+                    for post in posts{
+                        self.listData.append(post)
+                    }
+                    
+                    print(self.listData)
+                    
+                    self.spinner.stopAnimating()
+                    self.spinner.isHidden = true
+                    
+                    UIApplication.shared.endIgnoringInteractionEvents()
+                    
+                    //let currentTemperatureF = self.listData[0]["id"] as! Int
+                    //print(currentTemperatureF)
+                    self.tableView.reloadData()
+                } catch let error as NSError {
+                    print(error)
+                }
+            }
+            
+            }.resume()
+        
+    }
+    
     /*
     // MARK: - Navigation
 
