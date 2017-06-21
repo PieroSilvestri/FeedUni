@@ -232,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */,
+				3897F5AD1EFABBC6000DCD93 /* TimeLineViewController.swift in Sources */,
 				650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
