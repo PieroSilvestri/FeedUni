@@ -17,7 +17,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        return 0
+        return 
     }
     
     override func viewDidLoad() {
