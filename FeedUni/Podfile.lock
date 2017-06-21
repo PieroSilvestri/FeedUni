@@ -1,15 +1,23 @@
 PODS:
+  - Realm (2.8.3):
+    - Realm/Headers (= 2.8.3)
+  - Realm/Headers (2.8.3)
+  - RealmSwift (2.8.3):
+    - Realm (= 2.8.3)
   - TabPageViewController (0.2.7)
   - TimelineTableViewCell (1.0.1)
 
 DEPENDENCIES:
+  - RealmSwift
   - TabPageViewController
   - TimelineTableViewCell
 
 SPEC CHECKSUMS:
+  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+  RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
   TabPageViewController: c37a1257a50c2b50712dde61bf499768eee95b67
   TimelineTableViewCell: 8e46d96b32caf5a3ca9f9d7d5b8c94e9de30b92a
 
-PODFILE CHECKSUM: 95c7f3f120ef75af33b321cb1a101a986d39027d
+PODFILE CHECKSUM: a9df299f7ce78525231c9a8dfdfb5351b04fefc7
 
 COCOAPODS: 1.2.0

@@ -9,5 +9,5 @@ target 'FeedUni' do
   
   pod "TimelineTableViewCell"
   pod "TabPageViewController"	
-
+  pod 'RealmSwift'
 end
