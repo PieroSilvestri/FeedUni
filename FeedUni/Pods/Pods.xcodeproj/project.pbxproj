@@ -1,0 +1,880 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		101502C5D186C6B6D35E3CBC57DAD4C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		1926410E07FFC74ABF016B4A7B7CEA25 /* TimelineTableViewCell.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 432A9C55240FB547829DDECEE7776EC5 /* TimelineTableViewCell.bundle */; };
+		243D7A47FA9D93F7944429B722831449 /* TabCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F102081E507E151F41D7BB90875938 /* TabCollectionCell.swift */; };
+		2580028277DB40673A2E4C2888988AFD /* TimelinePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E220810AD775B140958AA22A5D98E /* TimelinePoint.swift */; };
+		29FB01D320EC8D22BCF61E3EEEE7BE0E /* TabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF2A908EF9548868795216638AB721D /* TabPageViewController.swift */; };
+		355D5F16EECA40DD818FB8F895FAF8A0 /* TabPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B840738ED2B20001B8FA7330A1BB99 /* TabPageViewController.storyboard */; };
+		4EEC0CC12EA82FE2B814EC5137CA6B37 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 355B2D5A6C75FFED48D64574A2565AEE /* TimelineTableViewCell.xib */; };
+		577550F5724A3782BCB220B019D02F66 /* Pods-FeedUni-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1382D4B856CCA0562F07E32D4D1E1A99 /* Pods-FeedUni-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A856AF933039375760BCDE0AC7B6AB7 /* TimelineTableViewCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F3C96D004871370524AB9BE24ED441 /* TimelineTableViewCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C2F41C26DF555798627CF5475518B00 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39A0FA574724302B58C567F86ECBF44 /* Timeline.swift */; };
+		7C8123E0C0B05903C030738F08FD32FE /* TimelineTableViewCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6EC1E53D16BD3F1DF7D684F82B139 /* TimelineTableViewCell-dummy.m */; };
+		8CE9FF88A4D26A789C58DED15818DD53 /* TabPageViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068A947CFE451FDEE235E85CC3D345C /* TabPageViewController-dummy.m */; };
+		9550493E4A8561F7BF22184220B2C945 /* Pods-FeedUni-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF44C82EA52E64D28A99E898EB28BFC2 /* Pods-FeedUni-dummy.m */; };
+		9960EE39DBD6CB05C50A8B6CFE6F1FB1 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2669CF09C1FE0A95981BD02182B2620 /* TabView.swift */; };
+		9CA45582D4C125316054A9533A6C5EBF /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242045FF2AB80DCB7CFF3127D1861CE9 /* TabView.xib */; };
+		AAD578F04AEDBEB97169FE6A02EA0155 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		B7DF0606427487A2C30DD521FB07D7FD /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F0C5E3AFB8E23E1A69291CC1FEE33 /* TimelineTableViewCell.swift */; };
+		B9D55E0285824FD5150A609035CD25F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		C232741F4003EDE97196F17DA6E2CA0A /* TabPageOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BB6D6AE0F5850E716244C7D05067A /* TabPageOption.swift */; };
+		DEF36294CEC8FBA04C73239D64EDE004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		E3DEE77A3A007E1BB237A14A49A01C97 /* TabCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 981A5276177B1E68EAF124BCF291B9F5 /* TabCollectionCell.xib */; };
+		EEA522481B8419F010EE07F0329AD237 /* TabPageViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D56D16DAC32C93C15405CDC657F29D47 /* TabPageViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		398CFDB33CC1703CF2536252560D3322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A77A274102CC82A932FC37DD822D75C5;
+			remoteInfo = "TimelineTableViewCell-TimelineTableViewCell";
+		};
+		69444A6095CC16304EE042324C007BBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A845FB26B0D86B9AF1FAF3F77F1F8A9;
+			remoteInfo = TimelineTableViewCell;
+		};
+		6B34308F843DD9F2E8D6A0EAA2AFF3F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF5FC1233D81964A3FDCE3B5982A5B69;
+			remoteInfo = TabPageViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07B39E91AD64BA05A656705093E3DA66 /* TabPageViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TabPageViewController-prefix.pch"; sourceTree = "<group>"; };
+		0AA7117D171D7A81378C7DDEDB632F31 /* Pods-FeedUni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeedUni.release.xcconfig"; sourceTree = "<group>"; };
+		0DBCEFC3B2705F969C94E00086868E4D /* TabPageViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TabPageViewController.modulemap; sourceTree = "<group>"; };
+		1068A947CFE451FDEE235E85CC3D345C /* TabPageViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TabPageViewController-dummy.m"; sourceTree = "<group>"; };
+		10B840738ED2B20001B8FA7330A1BB99 /* TabPageViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = TabPageViewController.storyboard; path = Sources/TabPageViewController.storyboard; sourceTree = "<group>"; };
+		1382D4B856CCA0562F07E32D4D1E1A99 /* Pods-FeedUni-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FeedUni-umbrella.h"; sourceTree = "<group>"; };
+		22F3C96D004871370524AB9BE24ED441 /* TimelineTableViewCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TimelineTableViewCell-umbrella.h"; sourceTree = "<group>"; };
+		242045FF2AB80DCB7CFF3127D1861CE9 /* TabView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TabView.xib; path = Sources/TabView.xib; sourceTree = "<group>"; };
+		28958F83DD0A66F3E3A1639C0F28E920 /* TimelineTableViewCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TimelineTableViewCell.xcconfig; sourceTree = "<group>"; };
+		29EC7AD6183D57A0DA77B8BB37081C8B /* TimelineTableViewCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TimelineTableViewCell.framework; path = TimelineTableViewCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A6E220810AD775B140958AA22A5D98E /* TimelinePoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimelinePoint.swift; path = TimelineTableViewCell/TimelinePoint.swift; sourceTree = "<group>"; };
+		355B2D5A6C75FFED48D64574A2565AEE /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TimelineTableViewCell.xib; path = TimelineTableViewCell/TimelineTableViewCell.xib; sourceTree = "<group>"; };
+		432A9C55240FB547829DDECEE7776EC5 /* TimelineTableViewCell.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TimelineTableViewCell.bundle; path = TimelineTableViewCell.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		43EBA1DA13DAACF2827BA56F97286740 /* Pods-FeedUni-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedUni-resources.sh"; sourceTree = "<group>"; };
+		4BBC7B4F8C2ACF7E82C5155242B24FDA /* ResourceBundle-TimelineTableViewCell-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TimelineTableViewCell-Info.plist"; sourceTree = "<group>"; };
+		534E2FC33D520E5D77F919A4E1287590 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FeedUni.framework; path = "Pods-FeedUni.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A1A1792FAA8ADB6611C74C2AE42E434 /* Pods-FeedUni-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FeedUni-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5A3F0C5E3AFB8E23E1A69291CC1FEE33 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimelineTableViewCell.swift; path = TimelineTableViewCell/TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		60E16AD73AD89DD00DDE3665806B829D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		675A1EC0E6169680C39B88CA9B5303E5 /* TimelineTableViewCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TimelineTableViewCell.modulemap; sourceTree = "<group>"; };
+		6E3C7BFE826DA08A35E6625EFA8616BD /* Pods-FeedUni.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FeedUni.modulemap"; sourceTree = "<group>"; };
+		7C5A3F41BE676421E83BA90EF2F6E6B6 /* Pods-FeedUni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeedUni.debug.xcconfig"; sourceTree = "<group>"; };
+		7CF2A908EF9548868795216638AB721D /* TabPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabPageViewController.swift; path = Sources/TabPageViewController.swift; sourceTree = "<group>"; };
+		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A69BD9F3851B2900B6642DF7A506364 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		981A5276177B1E68EAF124BCF291B9F5 /* TabCollectionCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TabCollectionCell.xib; path = Sources/TabCollectionCell.xib; sourceTree = "<group>"; };
+		9909E56115888B65FD087C0AB8A514C5 /* TimelineTableViewCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TimelineTableViewCell-prefix.pch"; sourceTree = "<group>"; };
+		9DA6EC1E53D16BD3F1DF7D684F82B139 /* TimelineTableViewCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TimelineTableViewCell-dummy.m"; sourceTree = "<group>"; };
+		A3F102081E507E151F41D7BB90875938 /* TabCollectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabCollectionCell.swift; path = Sources/TabCollectionCell.swift; sourceTree = "<group>"; };
+		A7E3D664D1D5250D3B2DCCC07D314169 /* Pods-FeedUni-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FeedUni-acknowledgements.plist"; sourceTree = "<group>"; };
+		B97D4549255CFAF296D226537A053301 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF44C82EA52E64D28A99E898EB28BFC2 /* Pods-FeedUni-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FeedUni-dummy.m"; sourceTree = "<group>"; };
+		C09BB6D6AE0F5850E716244C7D05067A /* TabPageOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabPageOption.swift; path = Sources/TabPageOption.swift; sourceTree = "<group>"; };
+		C1A0A8F0E744532734D29FFD60F8F2C6 /* TabPageViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TabPageViewController.framework; path = TabPageViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39A0FA574724302B58C567F86ECBF44 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = TimelineTableViewCell/Timeline.swift; sourceTree = "<group>"; };
+		C93A7B5730E2D10D58E9F36B99F65AD4 /* Pods-FeedUni-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedUni-frameworks.sh"; sourceTree = "<group>"; };
+		D2669CF09C1FE0A95981BD02182B2620 /* TabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabView.swift; path = Sources/TabView.swift; sourceTree = "<group>"; };
+		D56D16DAC32C93C15405CDC657F29D47 /* TabPageViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TabPageViewController-umbrella.h"; sourceTree = "<group>"; };
+		D60FBBD788FF6D656548B9E7D2D84A56 /* TabPageViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TabPageViewController.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5750095D2874620B934163EC4EF4C66E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD578F04AEDBEB97169FE6A02EA0155 /* Foundation.framework in Frameworks */,
+				B9D55E0285824FD5150A609035CD25F9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59EFA1394A5C68F1BC069B9943385221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEF36294CEC8FBA04C73239D64EDE004 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DA2E9C93543D53568A24F20B1A6353 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				101502C5D186C6B6D35E3CBC57DAD4C2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D799599CD2C2E82997E879CE48ED253B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1159BF4390EC7431B2F90F4E6A083CC0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B97D4549255CFAF296D226537A053301 /* Info.plist */,
+				0DBCEFC3B2705F969C94E00086868E4D /* TabPageViewController.modulemap */,
+				D60FBBD788FF6D656548B9E7D2D84A56 /* TabPageViewController.xcconfig */,
+				1068A947CFE451FDEE235E85CC3D345C /* TabPageViewController-dummy.m */,
+				07B39E91AD64BA05A656705093E3DA66 /* TabPageViewController-prefix.pch */,
+				D56D16DAC32C93C15405CDC657F29D47 /* TabPageViewController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TabPageViewController";
+			sourceTree = "<group>";
+		};
+		194AA382418FA28B718A5B1161750449 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3D4A4E44F2F8DE7D399CDFB6846F7 /* Pods-FeedUni */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		317DCE1A6D3F95A96CE55913AA412942 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				355B2D5A6C75FFED48D64574A2565AEE /* TimelineTableViewCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4345DEDF94F1DD7C35BD5E947CD4B511 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				534E2FC33D520E5D77F919A4E1287590 /* Pods_FeedUni.framework */,
+				C1A0A8F0E744532734D29FFD60F8F2C6 /* TabPageViewController.framework */,
+				432A9C55240FB547829DDECEE7776EC5 /* TimelineTableViewCell.bundle */,
+				29EC7AD6183D57A0DA77B8BB37081C8B /* TimelineTableViewCell.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46F970C65DCAB6974EEA02161DBA8FD4 /* TabPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3F102081E507E151F41D7BB90875938 /* TabCollectionCell.swift */,
+				C09BB6D6AE0F5850E716244C7D05067A /* TabPageOption.swift */,
+				7CF2A908EF9548868795216638AB721D /* TabPageViewController.swift */,
+				D2669CF09C1FE0A95981BD02182B2620 /* TabView.swift */,
+				73077E74A9B58EB9CCFF4688D72EF601 /* Resources */,
+				1159BF4390EC7431B2F90F4E6A083CC0 /* Support Files */,
+			);
+			name = TabPageViewController;
+			path = TabPageViewController;
+			sourceTree = "<group>";
+		};
+		6B9E8ED86259F460416D0B5981D5D302 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46F970C65DCAB6974EEA02161DBA8FD4 /* TabPageViewController */,
+				D0EB9C8A4DBCA5DE0891C46B177E25EC /* TimelineTableViewCell */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		73077E74A9B58EB9CCFF4688D72EF601 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				981A5276177B1E68EAF124BCF291B9F5 /* TabCollectionCell.xib */,
+				10B840738ED2B20001B8FA7330A1BB99 /* TabPageViewController.storyboard */,
+				242045FF2AB80DCB7CFF3127D1861CE9 /* TabView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				6B9E8ED86259F460416D0B5981D5D302 /* Pods */,
+				4345DEDF94F1DD7C35BD5E947CD4B511 /* Products */,
+				194AA382418FA28B718A5B1161750449 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BE216705A7A4CB5A03A046D5E04DD6D2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A69BD9F3851B2900B6642DF7A506364 /* Info.plist */,
+				4BBC7B4F8C2ACF7E82C5155242B24FDA /* ResourceBundle-TimelineTableViewCell-Info.plist */,
+				675A1EC0E6169680C39B88CA9B5303E5 /* TimelineTableViewCell.modulemap */,
+				28958F83DD0A66F3E3A1639C0F28E920 /* TimelineTableViewCell.xcconfig */,
+				9DA6EC1E53D16BD3F1DF7D684F82B139 /* TimelineTableViewCell-dummy.m */,
+				9909E56115888B65FD087C0AB8A514C5 /* TimelineTableViewCell-prefix.pch */,
+				22F3C96D004871370524AB9BE24ED441 /* TimelineTableViewCell-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TimelineTableViewCell";
+			sourceTree = "<group>";
+		};
+		D0EB9C8A4DBCA5DE0891C46B177E25EC /* TimelineTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C39A0FA574724302B58C567F86ECBF44 /* Timeline.swift */,
+				2A6E220810AD775B140958AA22A5D98E /* TimelinePoint.swift */,
+				5A3F0C5E3AFB8E23E1A69291CC1FEE33 /* TimelineTableViewCell.swift */,
+				317DCE1A6D3F95A96CE55913AA412942 /* Resources */,
+				BE216705A7A4CB5A03A046D5E04DD6D2 /* Support Files */,
+			);
+			name = TimelineTableViewCell;
+			path = TimelineTableViewCell;
+			sourceTree = "<group>";
+		};
+		DCB3D4A4E44F2F8DE7D399CDFB6846F7 /* Pods-FeedUni */ = {
+			isa = PBXGroup;
+			children = (
+				60E16AD73AD89DD00DDE3665806B829D /* Info.plist */,
+				6E3C7BFE826DA08A35E6625EFA8616BD /* Pods-FeedUni.modulemap */,
+				5A1A1792FAA8ADB6611C74C2AE42E434 /* Pods-FeedUni-acknowledgements.markdown */,
+				A7E3D664D1D5250D3B2DCCC07D314169 /* Pods-FeedUni-acknowledgements.plist */,
+				BF44C82EA52E64D28A99E898EB28BFC2 /* Pods-FeedUni-dummy.m */,
+				C93A7B5730E2D10D58E9F36B99F65AD4 /* Pods-FeedUni-frameworks.sh */,
+				43EBA1DA13DAACF2827BA56F97286740 /* Pods-FeedUni-resources.sh */,
+				1382D4B856CCA0562F07E32D4D1E1A99 /* Pods-FeedUni-umbrella.h */,
+				7C5A3F41BE676421E83BA90EF2F6E6B6 /* Pods-FeedUni.debug.xcconfig */,
+				0AA7117D171D7A81378C7DDEDB632F31 /* Pods-FeedUni.release.xcconfig */,
+			);
+			name = "Pods-FeedUni";
+			path = "Target Support Files/Pods-FeedUni";
+			sourceTree = "<group>";
+		};
+		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
+				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2430B541FD3F6FEF6528E7E6BFC313C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA522481B8419F010EE07F0329AD237 /* TabPageViewController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4226E7A776809DA54D5DFD21F388F8EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				577550F5724A3782BCB220B019D02F66 /* Pods-FeedUni-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD32F5BB2F398A78292C524F966E19E1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A856AF933039375760BCDE0AC7B6AB7 /* TimelineTableViewCell-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4A845FB26B0D86B9AF1FAF3F77F1F8A9 /* TimelineTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41BA60D3C13632063ABA14958FFAE995 /* Build configuration list for PBXNativeTarget "TimelineTableViewCell" */;
+			buildPhases = (
+				07C8CF41286C40899ECF7FF2E3AC3FC8 /* Sources */,
+				59EFA1394A5C68F1BC069B9943385221 /* Frameworks */,
+				13C8B01A3022A91198DDF2CCF19F1117 /* Resources */,
+				BD32F5BB2F398A78292C524F966E19E1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3DE0F47ACE1F5271694A285B7556292 /* PBXTargetDependency */,
+			);
+			name = TimelineTableViewCell;
+			productName = TimelineTableViewCell;
+			productReference = 29EC7AD6183D57A0DA77B8BB37081C8B /* TimelineTableViewCell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		58BB1DACE8DA8100CB37D90A162DE775 /* Pods-FeedUni */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100678D182E3D442FE6AF67BEF0B120D /* Build configuration list for PBXNativeTarget "Pods-FeedUni" */;
+			buildPhases = (
+				A35712AA52148232358C1DDC67132835 /* Sources */,
+				64DA2E9C93543D53568A24F20B1A6353 /* Frameworks */,
+				4226E7A776809DA54D5DFD21F388F8EC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F439A683DB1EEB874BFF4D706CE7985D /* PBXTargetDependency */,
+				6293ADCEF4113FD3E98BCF821DDC8628 /* PBXTargetDependency */,
+			);
+			name = "Pods-FeedUni";
+			productName = "Pods-FeedUni";
+			productReference = 534E2FC33D520E5D77F919A4E1287590 /* Pods_FeedUni.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A77A274102CC82A932FC37DD822D75C5 /* TimelineTableViewCell-TimelineTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E84D09CD74333D6E1225D2E35E6CE58 /* Build configuration list for PBXNativeTarget "TimelineTableViewCell-TimelineTableViewCell" */;
+			buildPhases = (
+				67691AEF53237A1AA8516F1078750B70 /* Sources */,
+				D799599CD2C2E82997E879CE48ED253B /* Frameworks */,
+				8A4D1B6864539281B82228C163852117 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TimelineTableViewCell-TimelineTableViewCell";
+			productName = "TimelineTableViewCell-TimelineTableViewCell";
+			productReference = 432A9C55240FB547829DDECEE7776EC5 /* TimelineTableViewCell.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EF5FC1233D81964A3FDCE3B5982A5B69 /* TabPageViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A4311BEE6EC826526AA04A1576EB025 /* Build configuration list for PBXNativeTarget "TabPageViewController" */;
+			buildPhases = (
+				CC1EBB1C761CF184CE685912A922C880 /* Sources */,
+				5750095D2874620B934163EC4EF4C66E /* Frameworks */,
+				842521D1495609A74AE75EDEE8E8830A /* Resources */,
+				2430B541FD3F6FEF6528E7E6BFC313C9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TabPageViewController;
+			productName = TabPageViewController;
+			productReference = C1A0A8F0E744532734D29FFD60F8F2C6 /* TabPageViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4345DEDF94F1DD7C35BD5E947CD4B511 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58BB1DACE8DA8100CB37D90A162DE775 /* Pods-FeedUni */,
+				EF5FC1233D81964A3FDCE3B5982A5B69 /* TabPageViewController */,
+				4A845FB26B0D86B9AF1FAF3F77F1F8A9 /* TimelineTableViewCell */,
+				A77A274102CC82A932FC37DD822D75C5 /* TimelineTableViewCell-TimelineTableViewCell */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13C8B01A3022A91198DDF2CCF19F1117 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1926410E07FFC74ABF016B4A7B7CEA25 /* TimelineTableViewCell.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842521D1495609A74AE75EDEE8E8830A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3DEE77A3A007E1BB237A14A49A01C97 /* TabCollectionCell.xib in Resources */,
+				355D5F16EECA40DD818FB8F895FAF8A0 /* TabPageViewController.storyboard in Resources */,
+				9CA45582D4C125316054A9533A6C5EBF /* TabView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4D1B6864539281B82228C163852117 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EEC0CC12EA82FE2B814EC5137CA6B37 /* TimelineTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07C8CF41286C40899ECF7FF2E3AC3FC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C2F41C26DF555798627CF5475518B00 /* Timeline.swift in Sources */,
+				2580028277DB40673A2E4C2888988AFD /* TimelinePoint.swift in Sources */,
+				7C8123E0C0B05903C030738F08FD32FE /* TimelineTableViewCell-dummy.m in Sources */,
+				B7DF0606427487A2C30DD521FB07D7FD /* TimelineTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67691AEF53237A1AA8516F1078750B70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A35712AA52148232358C1DDC67132835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9550493E4A8561F7BF22184220B2C945 /* Pods-FeedUni-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC1EBB1C761CF184CE685912A922C880 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				243D7A47FA9D93F7944429B722831449 /* TabCollectionCell.swift in Sources */,
+				C232741F4003EDE97196F17DA6E2CA0A /* TabPageOption.swift in Sources */,
+				8CE9FF88A4D26A789C58DED15818DD53 /* TabPageViewController-dummy.m in Sources */,
+				29FB01D320EC8D22BCF61E3EEEE7BE0E /* TabPageViewController.swift in Sources */,
+				9960EE39DBD6CB05C50A8B6CFE6F1FB1 /* TabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6293ADCEF4113FD3E98BCF821DDC8628 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TimelineTableViewCell;
+			target = 4A845FB26B0D86B9AF1FAF3F77F1F8A9 /* TimelineTableViewCell */;
+			targetProxy = 69444A6095CC16304EE042324C007BBF /* PBXContainerItemProxy */;
+		};
+		F3DE0F47ACE1F5271694A285B7556292 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "TimelineTableViewCell-TimelineTableViewCell";
+			target = A77A274102CC82A932FC37DD822D75C5 /* TimelineTableViewCell-TimelineTableViewCell */;
+			targetProxy = 398CFDB33CC1703CF2536252560D3322 /* PBXContainerItemProxy */;
+		};
+		F439A683DB1EEB874BFF4D706CE7985D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TabPageViewController;
+			target = EF5FC1233D81964A3FDCE3B5982A5B69 /* TabPageViewController */;
+			targetProxy = 6B34308F843DD9F2E8D6A0EAA2AFF3F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		156284431C64CB05C59BDA0595A1E95A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18FD148DE9E1F6C20D0989737EF412E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28958F83DD0A66F3E3A1639C0F28E920 /* TimelineTableViewCell.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TimelineTableViewCell";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/TimelineTableViewCell/ResourceBundle-TimelineTableViewCell-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TimelineTableViewCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		22C93955FD29189552F0E7146DFD0859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AA7117D171D7A81378C7DDEDB632F31 /* Pods-FeedUni.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FeedUni/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeedUni/Pods-FeedUni.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FeedUni;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6A42F790BF5421B98DC0F670F5629DC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D60FBBD788FF6D656548B9E7D2D84A56 /* TabPageViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TabPageViewController/TabPageViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TabPageViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TabPageViewController/TabPageViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TabPageViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7922CF5AA9ED051C6A175C4131134BBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C5A3F41BE676421E83BA90EF2F6E6B6 /* Pods-FeedUni.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FeedUni/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeedUni/Pods-FeedUni.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FeedUni;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7CADF574FB82A8F5C787CA3C1B83C4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28958F83DD0A66F3E3A1639C0F28E920 /* TimelineTableViewCell.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TimelineTableViewCell";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/TimelineTableViewCell/ResourceBundle-TimelineTableViewCell-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TimelineTableViewCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		843F4CC6678A28EE1E15AEFBFA3503B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D60FBBD788FF6D656548B9E7D2D84A56 /* TabPageViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TabPageViewController/TabPageViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TabPageViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TabPageViewController/TabPageViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TabPageViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CA316CCA017979F92DDDB4AEB330AA70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28958F83DD0A66F3E3A1639C0F28E920 /* TimelineTableViewCell.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TimelineTableViewCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TimelineTableViewCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D0751DB6129C4CBA0AFB68375226903C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28958F83DD0A66F3E3A1639C0F28E920 /* TimelineTableViewCell.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TimelineTableViewCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TimelineTableViewCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100678D182E3D442FE6AF67BEF0B120D /* Build configuration list for PBXNativeTarget "Pods-FeedUni" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7922CF5AA9ED051C6A175C4131134BBE /* Debug */,
+				22C93955FD29189552F0E7146DFD0859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A4311BEE6EC826526AA04A1576EB025 /* Build configuration list for PBXNativeTarget "TabPageViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843F4CC6678A28EE1E15AEFBFA3503B6 /* Debug */,
+				6A42F790BF5421B98DC0F670F5629DC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C382132BB6BF8CA1A911872A2062FD0D /* Debug */,
+				156284431C64CB05C59BDA0595A1E95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E84D09CD74333D6E1225D2E35E6CE58 /* Build configuration list for PBXNativeTarget "TimelineTableViewCell-TimelineTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18FD148DE9E1F6C20D0989737EF412E1 /* Debug */,
+				7CADF574FB82A8F5C787CA3C1B83C4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41BA60D3C13632063ABA14958FFAE995 /* Build configuration list for PBXNativeTarget "TimelineTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0751DB6129C4CBA0AFB68375226903C /* Debug */,
+				CA316CCA017979F92DDDB4AEB330AA70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

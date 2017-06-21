@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
 		5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74001EF7FBBC009A323E /* AppDelegate.swift */; };
 		5D1A74031EF7FBBC009A323E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74021EF7FBBC009A323E /* ViewController.swift */; };
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A73FD1EF7FBBC009A323E /* FeedUni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedUni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A74001EF7FBBC009A323E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D1A74021EF7FBBC009A323E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		5D1A740C1EF7FBBC009A323E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		657D16AA1EF9283D0069AB00 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		657D16AF1EF92F600069AB00 /* logoUni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoUni.png; path = FeedUni/logoUni.png; sourceTree = SOURCE_ROOT; };
+		DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.debug.xcconfig"; sourceTree = "<group>"; };
+		EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1498D79C0B9DB28CB395E262 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D1A73F41EF7FBBB009A323E = {
 			isa = PBXGroup;
 			children = (
 				5D1A73FF1EF7FBBC009A323E /* FeedUni */,
 				5D1A73FE1EF7FBBC009A323E /* Products */,
+				610DEBE3B0E21E39638459A7 /* Pods */,
+				1498D79C0B9DB28CB395E262 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +85,15 @@
 			path = FeedUni;
 			sourceTree = "<group>";
 		};
+		610DEBE3B0E21E39638459A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */,
+				EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		657D16AC1EF92C280069AB00 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D1A740F1EF7FBBC009A323E /* Build configuration list for PBXNativeTarget "FeedUni" */;
 			buildPhases = (
+				B5D1DF0CBE80BC01ECC2E9C6 /* [CP] Check Pods Manifest.lock */,
 				5D1A73F91EF7FBBC009A323E /* Sources */,
 				5D1A73FA1EF7FBBC009A323E /* Frameworks */,
 				5D1A73FB1EF7FBBC009A323E /* Resources */,
+				D96E8B35A1154D2EF97CEBD3 /* [CP] Embed Pods Frameworks */,
+				A0C181BFCC8E85544F40C9CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0C181BFCC8E85544F40C9CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5D1DF0CBE80BC01ECC2E9C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D96E8B35A1154D2EF97CEBD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D1A73F91EF7FBBC009A323E /* Sources */ = {
@@ -275,6 +350,7 @@
 		};
 		5D1A74101EF7FBBC009A323E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PM497AXR52;
@@ -288,6 +364,7 @@
 		};
 		5D1A74111EF7FBBC009A323E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PM497AXR52;

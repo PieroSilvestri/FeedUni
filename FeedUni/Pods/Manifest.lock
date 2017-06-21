@@ -1,0 +1,15 @@
+PODS:
+  - TabPageViewController (0.2.7)
+  - TimelineTableViewCell (1.0.1)
+
+DEPENDENCIES:
+  - TabPageViewController
+  - TimelineTableViewCell
+
+SPEC CHECKSUMS:
+  TabPageViewController: c37a1257a50c2b50712dde61bf499768eee95b67
+  TimelineTableViewCell: 8e46d96b32caf5a3ca9f9d7d5b8c94e9de30b92a
+
+PODFILE CHECKSUM: 95c7f3f120ef75af33b321cb1a101a986d39027d
+
+COCOAPODS: 1.2.0
