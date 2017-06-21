@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657B1EFAC54D0095CE34 /* LoginController.swift */; };
+		04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657D1EFAC55B0095CE34 /* RegisterController.swift */; };
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
 		5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74001EF7FBBC009A323E /* AppDelegate.swift */; };
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
 		5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74071EF7FBBC009A323E /* Assets.xcassets */; };
 		5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74091EF7FBBC009A323E /* LaunchScreen.storyboard */; };
+		5D53DC851EFAC722006F842B /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D53DC841EFAC722006F842B /* NewsController.swift */; };
+		650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650EF3261EFABD0D00894F9D /* BachecaController.swift */; };
 		657D16B01EF92F600069AB00 /* logoUni.png in Resources */ = {isa = PBXBuildFile; fileRef = 657D16AF1EF92F600069AB00 /* logoUni.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04F3657B1EFAC54D0095CE34 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		04F3657D1EFAC55B0095CE34 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A73FD1EF7FBBC009A323E /* FeedUni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedUni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A74001EF7FBBC009A323E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -23,6 +29,8 @@
 		5D1A74071EF7FBBC009A323E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1A740A1EF7FBBC009A323E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1A740C1EF7FBBC009A323E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D53DC841EFAC722006F842B /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
+		650EF3261EFABD0D00894F9D /* BachecaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BachecaController.swift; sourceTree = "<group>"; };
 		657D16AF1EF92F600069AB00 /* logoUni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoUni.png; path = FeedUni/logoUni.png; sourceTree = SOURCE_ROOT; };
 		DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +91,10 @@
 		5D53DC811EFABC5B006F842B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				650EF3261EFABD0D00894F9D /* BachecaController.swift */,
+				04F3657B1EFAC54D0095CE34 /* LoginController.swift */,
+				04F3657D1EFAC55B0095CE34 /* RegisterController.swift */,
+				5D53DC841EFAC722006F842B /* NewsController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -139,8 +151,7 @@
 				TargetAttributes = {
 					5D1A73FC1EF7FBBC009A323E = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = PM497AXR52;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -204,7 +215,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D96E8B35A1154D2EF97CEBD3 /* [CP] Embed Pods Frameworks */ = {
@@ -229,7 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */,
 				5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */,
+				04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */,
+				5D53DC851EFAC722006F842B /* NewsController.swift in Sources */,
+				650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,11 +368,12 @@
 			baseConfigurationReference = DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PM497AXR52;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FeedUni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.pierosilvestri.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -367,11 +383,12 @@
 			baseConfigurationReference = EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PM497AXR52;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FeedUni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.pierosilvestri.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
