@@ -13,11 +13,15 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var spinner: UIActivityIndicatorView = UIActivityIndicatorView()
     var indexPage: Int = 1
+    var listData = [NSDictionary]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initUI()
 
         // Do any additional setup after loading the view.
+        getJsonFromUrl(page: indexPage)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +32,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK - TABLE FUNC
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 666
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,6 +49,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.spinner.hidesWhenStopped = true
         self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(self.spinner)
+        self.tableView.tableFooterView = UIView()
         
         indexPage = 1
         
@@ -60,10 +65,14 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //self.flagDownload = false;
         
-        let urlString = "http://www.fogliogoriziano.com/?json=get_posts&count=6&page=\(page)"
+        let urlString = "http://apiunipn.parol.in/V1/posts"
         
         let url = URL(string: urlString)
-        URLSession.shared.dataTask(with:url!) { (data, response, error) in
+        var request = URLRequest(url: url!)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer 3252261a-215c-4078-a74d-2e1c5c63f0a1", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with:request) { (data, response, error) in
             if error != nil {
                 print(error.debugDescription)
             } else {
@@ -72,12 +81,12 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let response = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
                     
                     
-                    let posts = response["posts"] as! [NSDictionary]
+                    let posts = response["data"] as! [NSDictionary]
                     for post in posts{
-                        //self.listData.append(post)
+                        self.listData.append(post)
                     }
                     
-                    //print(self.listData)
+                    print(self.listData)
                     
                     self.spinner.stopAnimating()
                     UIApplication.shared.endIgnoringInteractionEvents()
