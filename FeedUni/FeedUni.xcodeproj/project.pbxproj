@@ -8,25 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
+		3859645E1EFA9A17000DC5ED /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 3859645D1EFA9A17000DC5ED /* Controller */; };
+		385964601EFA9A20000DC5ED /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 3859645F1EFA9A20000DC5ED /* Model */; };
 		5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74001EF7FBBC009A323E /* AppDelegate.swift */; };
-		5D1A74031EF7FBBC009A323E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74021EF7FBBC009A323E /* ViewController.swift */; };
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
 		5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74071EF7FBBC009A323E /* Assets.xcassets */; };
 		5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74091EF7FBBC009A323E /* LaunchScreen.storyboard */; };
-		657D16AB1EF9283D0069AB00 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657D16AA1EF9283D0069AB00 /* LoginController.swift */; };
 		657D16B01EF92F600069AB00 /* logoUni.png in Resources */ = {isa = PBXBuildFile; fileRef = 657D16AF1EF92F600069AB00 /* logoUni.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3859645D1EFA9A17000DC5ED /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
+		3859645F1EFA9A20000DC5ED /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A73FD1EF7FBBC009A323E /* FeedUni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedUni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A74001EF7FBBC009A323E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D1A74021EF7FBBC009A323E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D1A74051EF7FBBC009A323E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D1A74071EF7FBBC009A323E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1A740A1EF7FBBC009A323E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1A740C1EF7FBBC009A323E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		657D16AA1EF9283D0069AB00 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		657D16AF1EF92F600069AB00 /* logoUni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoUni.png; path = FeedUni/logoUni.png; sourceTree = SOURCE_ROOT; };
 		DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,9 +73,9 @@
 		5D1A73FF1EF7FBBC009A323E /* FeedUni */ = {
 			isa = PBXGroup;
 			children = (
+				3859645F1EFA9A20000DC5ED /* Model */,
+				3859645D1EFA9A17000DC5ED /* Controller */,
 				5D1A74001EF7FBBC009A323E /* AppDelegate.swift */,
-				5D1A74021EF7FBBC009A323E /* ViewController.swift */,
-				657D16AA1EF9283D0069AB00 /* LoginController.swift */,
 				5D1A74041EF7FBBC009A323E /* Main.storyboard */,
 				5D1A74071EF7FBBC009A323E /* Assets.xcassets */,
 				5D1A74091EF7FBBC009A323E /* LaunchScreen.storyboard */,
@@ -165,9 +165,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385964601EFA9A20000DC5ED /* Model in Resources */,
 				5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */,
 				5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */,
 				5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */,
+				3859645E1EFA9A17000DC5ED /* Controller in Resources */,
 				657D16B01EF92F600069AB00 /* logoUni.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,8 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D1A74031EF7FBBC009A323E /* ViewController.swift in Sources */,
-				657D16AB1EF9283D0069AB00 /* LoginController.swift in Sources */,
 				5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
