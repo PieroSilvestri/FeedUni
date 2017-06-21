@@ -14,6 +14,7 @@
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
 		5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74071EF7FBBC009A323E /* Assets.xcassets */; };
 		5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74091EF7FBBC009A323E /* LaunchScreen.storyboard */; };
+		5D53DC851EFAC722006F842B /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D53DC841EFAC722006F842B /* NewsController.swift */; };
 		650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650EF3261EFABD0D00894F9D /* BachecaController.swift */; };
 		657D16B01EF92F600069AB00 /* logoUni.png in Resources */ = {isa = PBXBuildFile; fileRef = 657D16AF1EF92F600069AB00 /* logoUni.png */; };
 		F3E457FF1EFAC77200B09BBD /* FavoriteNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E457FE1EFAC77200B09BBD /* FavoriteNews.swift */; };
@@ -33,6 +34,7 @@
 		5D1A74071EF7FBBC009A323E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1A740A1EF7FBBC009A323E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1A740C1EF7FBBC009A323E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D53DC841EFAC722006F842B /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		650EF3261EFABD0D00894F9D /* BachecaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BachecaController.swift; sourceTree = "<group>"; };
 		657D16AF1EF92F600069AB00 /* logoUni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoUni.png; path = FeedUni/logoUni.png; sourceTree = SOURCE_ROOT; };
 		DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				650EF3261EFABD0D00894F9D /* BachecaController.swift */,
 				04F3657B1EFAC54D0095CE34 /* LoginController.swift */,
 				04F3657D1EFAC55B0095CE34 /* RegisterController.swift */,
+				5D53DC841EFAC722006F842B /* NewsController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				F3E458071EFAC85600B09BBD /* RealmQueries.swift in Sources */,
 				F3E458051EFAC83000B09BBD /* FavoriteLesson.swift in Sources */,
 				04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */,
+				5D53DC851EFAC722006F842B /* NewsController.swift in Sources */,
 				650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */,
 				F3E458031EFAC7FE00B09BBD /* InsertionType.swift in Sources */,
 				F3E458011EFAC7C200B09BBD /* FavoriteInsertion.swift in Sources */,
