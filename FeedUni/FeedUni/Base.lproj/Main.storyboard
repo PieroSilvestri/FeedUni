@@ -95,16 +95,16 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR SIGN IN WITH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MW-Xh-9Jy">
-                                <rect key="frame" x="153.66666666666669" y="593.33333333333348" width="106.66666666666669" height="15.666666666666629"/>
+                                <rect key="frame" x="154" y="593" width="107" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bAO-Qe-ET1">
-                                <rect key="frame" x="87.333333333333343" y="674" width="239.66666666666666" height="27"/>
+                                <rect key="frame" x="87" y="674" width="240" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't have an account yet.  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-WQ-uDZ">
-                                        <rect key="frame" x="0.3333333333333286" y="0.0" width="162.66666666666669" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -114,7 +114,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Register now!"/>
                                         <connections>
-                                            <segue destination="chp-qI-dVb" kind="presentation" modalTransitionStyle="flipHorizontal" id="iGd-gt-xHt"/>
+                                            <segue destination="chp-qI-dVb" kind="presentation" modalTransitionStyle="flipHorizontal" id="JZm-9c-sjo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -144,13 +144,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vqv-uf-0sN"/>
-                    <connections>
-                        <outlet property="emailText" destination="QU2-jb-JG8" id="Vhn-OF-Y9g"/>
-                        <outlet property="facebookButton" destination="TOM-8c-YoQ" id="Qxo-BE-XFV"/>
-                        <outlet property="logoUni" destination="WsZ-CJ-Agj" id="pzt-PD-pmR"/>
-                        <outlet property="passwordText" destination="guC-4e-J8W" id="7cc-NO-vRj"/>
-                        <outlet property="signInButton" destination="5fX-aG-kfP" id="mRn-fR-Aw8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
