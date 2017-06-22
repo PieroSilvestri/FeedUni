@@ -42,10 +42,12 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "NewsCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
         let tempItem = self.listData[indexPath.row] as NSDictionary
         let tempTitle = tempItem["title"] as! String
-        cell.textLabel?.text = tempTitle
+        let tempDate = tempItem["pub_date"] as! String
+        cell.titleLabel.text = tempTitle
+        cell.dateLabel.text = tempDate
         return cell
     }
     
@@ -73,43 +75,51 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //self.flagDownload = false;
         
+        
         let urlString = "http://apiunipn.parol.in/V1/posts"
         
         let url = URL(string: urlString)
         var request = URLRequest(url: url!)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("Bearer 3252261a-215c-4078-a74d-2e1c5c63f0a1", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
         
-        URLSession.shared.dataTask(with:request) { (data, response, error) in
-            if error != nil {
-                print(error.debugDescription)
-            } else {
-                do {
-                    
-                    let response = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
-                    
-                    
-                    let posts = response["data"] as! [NSDictionary]
-                    for post in posts{
-                        self.listData.append(post)
+            session.dataTask(with:request) { (data, response, error) in
+                if error != nil {
+                    print(error.debugDescription)
+                } else {
+                    do {
+                        
+                        let response = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
+                        
+                        
+                        let posts = response["data"] as! [NSDictionary]
+                        for post in posts{
+                            self.listData.append(post)
+                        }
+                        
+                        print(self.listData)
+                        
+                        
+                        
+                        UIApplication.shared.endIgnoringInteractionEvents()
+                        
+                        //let currentTemperatureF = self.listData[0]["id"] as! Int
+                        //print(currentTemperatureF)
+                        DispatchQueue.main.sync {
+                            self.spinner.stopAnimating()
+                            self.spinner.isHidden = true
+                            self.tableView.reloadData()
+                        }
+                    } catch let error as NSError {
+                        print(error)
                     }
-                    
-                    print(self.listData)
-                    
-                    self.spinner.stopAnimating()
-                    self.spinner.isHidden = true
-                    
-                    UIApplication.shared.endIgnoringInteractionEvents()
-                    
-                    //let currentTemperatureF = self.listData[0]["id"] as! Int
-                    //print(currentTemperatureF)
-                    self.tableView.reloadData()
-                } catch let error as NSError {
-                    print(error)
                 }
-            }
-            
-            }.resume()
+                
+                }.resume()
+        
+        
+        
         
     }
     
