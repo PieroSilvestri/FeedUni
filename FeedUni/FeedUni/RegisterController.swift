@@ -170,12 +170,7 @@ class RegisterController: UIViewController {
         
     }
 
-    func getJsonFromUrl(page: Int){
-        
-        //self.flagDownload = false;
-        
-        
-    }
+    
     
     @IBAction func GoToLoginPressed(_ sender: UIButton?) {
         self.dismiss(animated: true, completion: {});
