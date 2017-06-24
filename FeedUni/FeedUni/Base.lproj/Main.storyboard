@@ -48,7 +48,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="LoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WGB-Lc-g4D"/>
-                                    <segue destination="5LJ-xo-18f" kind="presentation" modalTransitionStyle="flipHorizontal" id="S25-Vd-SjA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR SIGN IN WITH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MW-Xh-9Jy">
@@ -71,7 +70,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Register now!"/>
                                         <connections>
-                                            <segue destination="cf1-Ca-ITC" kind="presentation" modalTransitionStyle="flipHorizontal" id="PFs-pJ-1zi"/>
+                                            <segue destination="cf1-Ca-ITC" kind="presentation" identifier="GoToSignIn" modalTransitionStyle="flipHorizontal" id="PFs-pJ-1zi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -178,34 +177,36 @@
                                     <action selector="SignInPressed:" destination="cf1-Ca-ITC" eventType="touchUpInside" id="at0-Nk-inA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEM-uB-C1W">
-                                <rect key="frame" x="50" y="648" width="314" height="35"/>
-                                <color key="backgroundColor" red="0.6705882352941176" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="GoToLoginPressed:" destination="cf1-Ca-ITC" eventType="touchUpInside" id="NaD-Kk-6vQ"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="n8d-zL-mjV">
+                                <rect key="frame" x="160.66666666666666" y="649" width="92.666666666666686" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or go to " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIx-V2-BRH">
+                                        <rect key="frame" x="0.0" y="6" width="57.666666666666686" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Or-CW-7uL">
+                                        <rect key="frame" x="58.666666666666686" y="0.0" width="34" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="login"/>
+                                        <connections>
+                                            <action selector="GoToLoginPressed:" destination="cf1-Ca-ITC" eventType="touchUpInside" id="RRm-Xo-5dS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UEM-uB-C1W" firstAttribute="leading" secondItem="e8l-Gh-hqu" secondAttribute="leadingMargin" constant="30" id="0Y0-3a-KOO"/>
                             <constraint firstItem="uov-kd-24d" firstAttribute="leading" secondItem="e8l-Gh-hqu" secondAttribute="leadingMargin" constant="30" id="7iF-tp-qBD"/>
                             <constraint firstItem="0dx-y7-Jgb" firstAttribute="leading" secondItem="e8l-Gh-hqu" secondAttribute="leadingMargin" constant="30" id="8uh-dd-x6m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0dx-y7-Jgb" secondAttribute="trailing" constant="30" id="AYW-5g-D4M"/>
                             <constraint firstItem="086-q1-V6A" firstAttribute="top" secondItem="0dx-y7-Jgb" secondAttribute="bottom" constant="22" id="DHW-3L-joQ"/>
                             <constraint firstItem="uov-kd-24d" firstAttribute="top" secondItem="086-q1-V6A" secondAttribute="bottom" constant="30" id="FUu-ap-AgK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UEM-uB-C1W" secondAttribute="trailing" constant="30" id="KKd-Bb-41j"/>
                             <constraint firstItem="eFS-vR-L5K" firstAttribute="leading" secondItem="e8l-Gh-hqu" secondAttribute="leadingMargin" constant="30" id="KSL-fe-VC1"/>
-                            <constraint firstItem="Wh7-yC-efO" firstAttribute="top" secondItem="UEM-uB-C1W" secondAttribute="bottom" constant="53" id="Nke-6G-az6"/>
+                            <constraint firstItem="n8d-zL-mjV" firstAttribute="centerX" secondItem="e8l-Gh-hqu" secondAttribute="centerX" id="S0i-Yg-Ypr"/>
+                            <constraint firstItem="Wh7-yC-efO" firstAttribute="top" secondItem="n8d-zL-mjV" secondAttribute="bottom" constant="57" id="T5O-4F-Xav"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oYg-jd-Hiw" secondAttribute="trailing" constant="30" id="Usy-dU-vt6"/>
                             <constraint firstItem="086-q1-V6A" firstAttribute="leading" secondItem="e8l-Gh-hqu" secondAttribute="leadingMargin" constant="30" id="YTf-Os-vdY"/>
                             <constraint firstItem="0dx-y7-Jgb" firstAttribute="top" secondItem="oYg-jd-Hiw" secondAttribute="bottom" constant="28" id="kdd-SK-6Fs"/>

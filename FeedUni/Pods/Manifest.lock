@@ -16,8 +16,8 @@ PODS:
   - FacebookShare (0.2.0):
     - Bolts (~> 1.8)
     - FacebookCore (~> 0.2)
-    - FBSDKCoreKit (~> 4.15)
-    - FBSDKShareKit (~> 4.15)
+    - FBSDKCoreKit (~> 4.21)
+    - FBSDKShareKit (~> 4.21)
   - FBSDKCoreKit (4.23.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.23.0):
@@ -35,16 +35,25 @@ PODS:
 DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
-  - FacebookShare
+  - FacebookShare (from `https://github.com/1amageek/facebook-sdk-swift`)
   - RealmSwift
   - TabPageViewController
   - TimelineTableViewCell
+
+EXTERNAL SOURCES:
+  FacebookShare:
+    :git: https://github.com/1amageek/facebook-sdk-swift
+
+CHECKOUT OPTIONS:
+  FacebookShare:
+    :commit: 3ac76c770e9849285c380f380309d866911d2e93
+    :git: https://github.com/1amageek/facebook-sdk-swift
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
-  FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
+  FacebookShare: d086f7a4610bbbca9cec5e774de450a9b3e1a20b
   FBSDKCoreKit: d7829f5a69901cd7296105328e4c3c3fc7da6518
   FBSDKLoginKit: 6b92bd65f319d669d2b0730e49db495ef1660566
   FBSDKShareKit: 65751c3b9937ab9d594e6c37611ecc115ceeb448
@@ -53,6 +62,6 @@ SPEC CHECKSUMS:
   TabPageViewController: c37a1257a50c2b50712dde61bf499768eee95b67
   TimelineTableViewCell: 8e46d96b32caf5a3ca9f9d7d5b8c94e9de30b92a
 
-PODFILE CHECKSUM: 6e268cef0ccc4ade00db7fdc4939ad6c9152d65a
+PODFILE CHECKSUM: 6b5ffe49b7a6406d20da797ccfacea764be041f9
 
 COCOAPODS: 1.2.0
