@@ -113,7 +113,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
                                     
                                     // create the alert
                                     let alert = UIAlertController(title: "Login", message: "\(error ?? "")", preferredStyle: UIAlertControllerStyle.alert)
-                                    
+                                    alert.addAction(UIAlertAction(title: "Riprova", style: UIAlertActionStyle.default, handler: {action in
+                                    self.PasswordTextField.text = ""
+                                    }))
                                     // add an action (button)
                                     alert.addAction(UIAlertAction(title: "Vai a sign in", style: UIAlertActionStyle.default, handler: { action in
                                         self.performSegue(withIdentifier: "GoToSignInSegue", sender: self)
@@ -122,6 +124,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
                                         
                                         return;
                                     }))
+                                    
                                     
                                     // show the alert
                                     self.present(alert, animated: true, completion: nil)
