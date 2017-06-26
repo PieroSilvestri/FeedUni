@@ -44,11 +44,53 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
         let tempItem = self.listData[indexPath.row] as NSDictionary
+        let tempImage = tempItem["media"] as! String
         let tempTitle = tempItem["title"] as! String
         let tempDate = tempItem["pub_date"] as! String
-        cell.titleLabel.text = tempTitle
+        
+        //let myUrl = URL.init(string: imageUrl)
+        
+        // Configure the cell...
+        if let url = URL(string: tempImage) {
+            if let data = NSData(contentsOf: url) {
+                
+                /*
+                cell.imageCell.backgroundColor = UIColor(patternImage: UIImage(data: data as Data)!)
+                cell.imageCell.bounds.origin.x = (UIImage(data: data as Data)!.size.width/2) - (cell.imageCell.bounds.size.width/2)
+                cell.imageCell.bounds.origin.y = (UIImage(data: data as Data)!.size.height/2) - (cell.imageCell.bounds.size.height/2)
+                */
+                
+                 UIGraphicsBeginImageContext(cell.imageCell.frame.size);
+                 UIImage(data: data as Data)?.draw(in: cell.imageCell.bounds);
+                 let image = UIGraphicsGetImageFromCurrentImageContext();
+                 UIGraphicsEndImageContext();
+                 
+                 cell.imageCell.backgroundColor = UIColor(patternImage: image!)
+ 
+            }
+        }
+        cell.titleTextView.text = String.init(htmlEncodedString: tempTitle)
         cell.dateLabel.text = tempDate
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //self.performSegue(withIdentifier: "NewsDetaiLSegue", sender: indexPath)
+        //self.tableView.allowsSelection = false
+    }
+ 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "NewsDetailSegue"){
+            let detail = segue.destination as! NewsDetailController
+            let index = self.tableView.indexPath(for: sender as! NewsTableViewCell)?.row
+            let tempItem = self.listData[index!]
+            detail.titleText = tempItem["title"] as! String
+            detail.date = tempItem["createdAt"] as! String
+            detail.imageUrl = tempItem["media"] as! String
+            detail.content = tempItem["content"] as! String
+            
+        }
     }
     
     // MARK - MY FUNC
@@ -92,15 +134,12 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         
                         let response = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
                         
-                        
                         let posts = response["data"] as! [NSDictionary]
                         for post in posts{
                             self.listData.append(post)
                         }
                         
                         print(self.listData)
-                        
-                        
                         
                         UIApplication.shared.endIgnoringInteractionEvents()
                         

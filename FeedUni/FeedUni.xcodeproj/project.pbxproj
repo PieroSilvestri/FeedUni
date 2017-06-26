@@ -14,7 +14,9 @@
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
 		5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74071EF7FBBC009A323E /* Assets.xcassets */; };
 		5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74091EF7FBBC009A323E /* LaunchScreen.storyboard */; };
+		5D91CBD61F010D3A005D9BAD /* String+Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91CBD51F010D3A005D9BAD /* String+Shortcuts.swift */; };
 		5DC6437B1EFC3D4D0064511A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6437A1EFC3D4D0064511A /* NewsTableViewCell.swift */; };
+		5DD6F9541F00F2CF002908B4 /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */; };
 		5DE5E2EF1EFAC97100B469E0 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5E2EE1EFAC97100B469E0 /* NewsController.swift */; };
 		650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650EF3261EFABD0D00894F9D /* BachecaController.swift */; };
 		657D16B01EF92F600069AB00 /* logoUni.png in Resources */ = {isa = PBXBuildFile; fileRef = 657D16AF1EF92F600069AB00 /* logoUni.png */; };
@@ -30,7 +32,9 @@
 		5D1A74071EF7FBBC009A323E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1A740A1EF7FBBC009A323E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1A740C1EF7FBBC009A323E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D91CBD51F010D3A005D9BAD /* String+Shortcuts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Shortcuts.swift"; sourceTree = "<group>"; };
 		5DC6437A1EFC3D4D0064511A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
 		5DE5E2EE1EFAC97100B469E0 /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		650EF3261EFABD0D00894F9D /* BachecaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BachecaController.swift; sourceTree = "<group>"; };
 		657D16AF1EF92F600069AB00 /* logoUni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoUni.png; path = FeedUni/logoUni.png; sourceTree = SOURCE_ROOT; };
@@ -98,6 +102,7 @@
 				04F3657B1EFAC54D0095CE34 /* LoginController.swift */,
 				04F3657D1EFAC55B0095CE34 /* RegisterController.swift */,
 				5DE5E2EE1EFAC97100B469E0 /* NewsController.swift */,
+				5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5DC6437A1EFC3D4D0064511A /* NewsTableViewCell.swift */,
+				5D91CBD51F010D3A005D9BAD /* String+Shortcuts.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -253,8 +259,10 @@
 			files = (
 				04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */,
 				5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */,
+				5D91CBD61F010D3A005D9BAD /* String+Shortcuts.swift in Sources */,
 				5DC6437B1EFC3D4D0064511A /* NewsTableViewCell.swift in Sources */,
 				04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */,
+				5DD6F9541F00F2CF002908B4 /* NewsDetailController.swift in Sources */,
 				5DE5E2EF1EFAC97100B469E0 /* NewsController.swift in Sources */,
 				650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */,
 			);
