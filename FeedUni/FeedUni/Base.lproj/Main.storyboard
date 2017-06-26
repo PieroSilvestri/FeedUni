@@ -65,13 +65,13 @@
                                 <rect key="frame" x="87.333333333333343" y="674" width="239.66666666666666" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't have an account yet.  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-WQ-uDZ">
-                                        <rect key="frame" x="0.3333333333333286" y="0.0" width="162.66666666666669" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162.66666666666669" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbf-8D-m9B">
-                                        <rect key="frame" x="163" y="0.0" width="77" height="27"/>
+                                        <rect key="frame" x="162.66666666666669" y="0.0" width="77" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Register now!"/>
                                         <connections>
@@ -541,12 +541,6 @@
                                     <constraint firstAttribute="width" secondItem="gQm-fX-6fv" secondAttribute="height" multiplier="414:193" id="8eq-Ir-bo7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-4D-dvI">
-                                <rect key="frame" x="20" y="271.66666666666669" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="prezzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNT-IT-qW2">
                                 <rect key="frame" x="20" y="403" width="53" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -575,12 +569,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titolo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-4D-dvI">
+                                <rect key="frame" x="20" y="279" width="161" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1Wa-4D-dvI" firstAttribute="leading" secondItem="Rz9-kT-cdx" secondAttribute="leadingMargin" id="BBm-Ng-Hjk"/>
-                            <constraint firstItem="1Wa-4D-dvI" firstAttribute="top" secondItem="gQm-fX-6fv" secondAttribute="bottom" constant="15" id="Kcl-dA-9c0"/>
-                            <constraint firstItem="1Wa-4D-dvI" firstAttribute="trailing" secondItem="Rz9-kT-cdx" secondAttribute="trailingMargin" id="WZw-D4-O92"/>
                             <constraint firstAttribute="trailing" secondItem="gQm-fX-6fv" secondAttribute="trailing" id="r1G-Tx-IM3"/>
                             <constraint firstItem="gQm-fX-6fv" firstAttribute="top" secondItem="yiV-J3-dd4" secondAttribute="bottom" id="tBb-WG-PaM"/>
                             <constraint firstItem="gQm-fX-6fv" firstAttribute="leading" secondItem="Rz9-kT-cdx" secondAttribute="leading" id="xIP-Gs-w7w"/>
