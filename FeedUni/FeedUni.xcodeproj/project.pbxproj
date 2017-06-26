@@ -124,10 +124,11 @@
 				04F3657B1EFAC54D0095CE34 /* LoginController.swift */,
 				04F3657D1EFAC55B0095CE34 /* RegisterController.swift */,
 				65AC99BE1F011E060055D6C8 /* BachecaDetailController.swift */,
-				5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */,
 				3897F5AE1EFAC83D000DCD93 /* TimelineController.swift */,
 				38D58A2F1F013CCF00833F1A /* FilterCourseController.swift */,
 				F36706AE1F01437B00D3980C /* AddInsertionController.swift */,
+				5DE5E2EE1EFAC97100B469E0 /* NewsController.swift */,
+				5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -315,12 +316,12 @@
 				F3E458071EFAC85600B09BBD /* RealmQueries.swift in Sources */,
 				F3E458051EFAC83000B09BBD /* FavoriteLesson.swift in Sources */,
 				04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */,
-				5DD6F9541F00F2CF002908B4 /* NewsDetailController.swift in Sources */,
-				5DE5E2EF1EFAC97100B469E0 /* NewsController.swift in Sources */,
 				65AC99BF1F011E060055D6C8 /* BachecaDetailController.swift in Sources */,
 				65CE43501EFACD9B00C00644 /* BachecaControllerTableViewCell.swift in Sources */,
 				38D58A301F013CCF00833F1A /* FilterCourseController.swift in Sources */,
 				F36706AF1F01437B00D3980C /* AddInsertionController.swift in Sources */,
+				5DD6F9541F00F2CF002908B4 /* NewsDetailController.swift in Sources */,
+				5DE5E2EF1EFAC97100B469E0 /* NewsController.swift in Sources */,
 				650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */,
 				F3E458011EFAC7C200B09BBD /* FavoriteInsertion.swift in Sources */,
 				3897F5AF1EFAC83D000DCD93 /* TimelineController.swift in Sources */,
