@@ -59,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bAO-Qe-ET1">
-                                <rect key="frame" x="87.333333333333343" y="674" width="239.66666666666666" height="27"/>
+                                <rect key="frame" x="87" y="674" width="240" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't have an account yet.  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-WQ-uDZ">
                                         <rect key="frame" x="0.3333333333333286" y="0.0" width="162.66666666666669" height="27"/>
@@ -236,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="138" y="875"/>
         </scene>
-        <!--View Controller-->
+        <!--Timeline Controller-->
         <scene sceneID="QRm-Sj-NfK">
             <objects>
-                <viewController id="dsJ-5o-9Uj" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dsJ-5o-9Uj" customClass="TimelineController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aWq-Ei-Wmg"/>
                         <viewControllerLayoutGuide type="bottom" id="mgX-pE-G86"/>
@@ -248,18 +248,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDS-65-Xu0">
-                                <rect key="frame" x="137" y="353" width="140" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ORARI - DETTAGLIO"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nOx-AV-E2X">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimelineTableViewCell" id="aci-y4-MC6">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aci-y4-MC6" id="XGq-kj-Ytw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <segue destination="1rw-aM-XAB" kind="show" id="5fT-WP-LzX"/>
+                                    <outlet property="dataSource" destination="dsJ-5o-9Uj" id="DAI-cU-jjG"/>
+                                    <outlet property="delegate" destination="dsJ-5o-9Uj" id="1SK-Y9-RXh"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mgX-pE-G86" firstAttribute="top" secondItem="nOx-AV-E2X" secondAttribute="bottom" id="bAL-mY-euY"/>
+                            <constraint firstAttribute="trailing" secondItem="nOx-AV-E2X" secondAttribute="trailing" id="hVV-zi-cGg"/>
+                            <constraint firstItem="nOx-AV-E2X" firstAttribute="leading" secondItem="7ij-fG-frt" secondAttribute="leading" id="m7E-N7-UN5"/>
+                            <constraint firstItem="nOx-AV-E2X" firstAttribute="top" secondItem="aWq-Ei-Wmg" secondAttribute="bottom" id="sqb-oI-uIX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NsD-Gj-WDq"/>
+                    <connections>
+                        <outlet property="timeTableView" destination="nOx-AV-E2X" id="xjZ-Qv-j1U"/>
+                        <segue destination="Nbh-Il-6iQ" kind="modal" identifier="filter" id="tOD-qQ-ul7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ge-9m-bsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,7 +301,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6o-Dq-DcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3783.1999999999998" y="-205.54722638680661"/>
+            <point key="canvasLocation" x="3761" y="-205"/>
+        </scene>
+        <!--Seleziona il tuo corso-->
+        <scene sceneID="DKi-3K-Qmk">
+            <objects>
+                <viewController title="Seleziona il tuo corso" automaticallyAdjustsScrollViewInsets="NO" id="Nbh-Il-6iQ" customClass="FilterCourseController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eCK-R2-U4o"/>
+                        <viewControllerLayoutGuide type="bottom" id="paI-zo-KWU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hWK-e3-K57">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XRz-2j-Kny">
+                                <rect key="frame" x="0.0" y="56" width="414" height="670"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Aw9-Pr-857">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aw9-Pr-857" id="xAR-fP-IJ4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nbh-Il-6iQ" id="4Ms-y7-kCO"/>
+                                    <outlet property="delegate" destination="Nbh-Il-6iQ" id="S9m-NF-hKq"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scegli il tuo corso" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Tr-LF-1uu">
+                                <rect key="frame" x="0.0" y="20" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Tr-LF-1uu" firstAttribute="leading" secondItem="hWK-e3-K57" secondAttribute="leading" id="HEK-SG-3ck"/>
+                            <constraint firstItem="paI-zo-KWU" firstAttribute="top" secondItem="XRz-2j-Kny" secondAttribute="bottom" constant="10" id="Vup-zf-eji"/>
+                            <constraint firstItem="XRz-2j-Kny" firstAttribute="top" secondItem="0Tr-LF-1uu" secondAttribute="bottom" id="Wqv-5a-Skp"/>
+                            <constraint firstItem="0Tr-LF-1uu" firstAttribute="top" secondItem="eCK-R2-U4o" secondAttribute="bottom" id="XBw-xJ-XEx"/>
+                            <constraint firstItem="XRz-2j-Kny" firstAttribute="leading" secondItem="hWK-e3-K57" secondAttribute="leading" id="dG1-LW-Ryk"/>
+                            <constraint firstAttribute="trailing" secondItem="XRz-2j-Kny" secondAttribute="trailing" id="gdY-wL-yin"/>
+                            <constraint firstAttribute="trailing" secondItem="0Tr-LF-1uu" secondAttribute="trailing" id="tdm-ky-ciR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="XRz-2j-Kny" id="h6Y-pq-KWw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdk-Iy-93H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4821.739130434783" y="513.58695652173913"/>
         </scene>
         <!--News-->
         <scene sceneID="P2v-4h-UFl">
