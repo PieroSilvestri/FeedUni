@@ -523,7 +523,6 @@
             </objects>
             <point key="canvasLocation" x="2894.202898550725" y="513.58695652173913"/>
         </scene>
-<<<<<<< HEAD
         <!--Bacheca Detail Controller-->
         <scene sceneID="4pS-AB-D0I">
             <objects>
@@ -589,100 +588,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9j-s3-MMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-=======
-        <!--View Controller-->
-        <scene sceneID="qbz-mW-6CS">
-            <objects>
-                <viewController id="Igv-zE-zTk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sLd-oj-R6i"/>
-                        <viewControllerLayoutGuide type="bottom" id="2hQ-KR-b70"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8d0-oS-rIW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titolo annuncio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zZ-DT-xsD">
-                                <rect key="frame" x="20" y="91" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrizione annuncio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Da9-x1-cPl">
-                                <rect key="frame" x="20" y="133" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eTk-SH-9iM">
-                                <rect key="frame" x="143" y="175" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Gq4-bq-nqG"/>
-                                    <constraint firstAttribute="width" constant="128" id="kX5-zY-eBi"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome inserzionista" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVq-n9-f6Q">
-                                <rect key="frame" x="20" y="353" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCW-KZ-cfg">
-                                <rect key="frame" x="20" y="395" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Costo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SsC-0j-NO0">
-                                <rect key="frame" x="20" y="437" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivc-ZY-xQz">
-                                <rect key="frame" x="20" y="686" width="374" height="30"/>
-                                <color key="backgroundColor" red="0.6705882353" green="0.14117647059999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="PUBBLICA">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Numero di telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9o3-Kh-Se4">
-                                <rect key="frame" x="20" y="479" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9o3-Kh-Se4" firstAttribute="leading" secondItem="8d0-oS-rIW" secondAttribute="leadingMargin" id="3Gp-kE-tBl"/>
-                            <constraint firstItem="eTk-SH-9iM" firstAttribute="top" secondItem="Da9-x1-cPl" secondAttribute="bottom" constant="12" id="5oL-hc-jgn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ivc-ZY-xQz" secondAttribute="trailing" id="8tg-hJ-0jo"/>
-                            <constraint firstItem="Ivc-ZY-xQz" firstAttribute="leading" secondItem="8d0-oS-rIW" secondAttribute="leadingMargin" id="DI9-Ac-SB2"/>
-                            <constraint firstItem="Da9-x1-cPl" firstAttribute="top" secondItem="2zZ-DT-xsD" secondAttribute="bottom" constant="12" id="FLt-kg-Xx0"/>
-                            <constraint firstItem="ZCW-KZ-cfg" firstAttribute="top" secondItem="AVq-n9-f6Q" secondAttribute="bottom" constant="12" id="Ij0-rz-0Zr"/>
-                            <constraint firstItem="2zZ-DT-xsD" firstAttribute="leading" secondItem="8d0-oS-rIW" secondAttribute="leadingMargin" id="Jk6-2q-RJz"/>
-                            <constraint firstItem="9o3-Kh-Se4" firstAttribute="top" secondItem="SsC-0j-NO0" secondAttribute="bottom" constant="12" id="MXV-aw-JHZ"/>
-                            <constraint firstItem="2hQ-KR-b70" firstAttribute="top" secondItem="Ivc-ZY-xQz" secondAttribute="bottom" constant="20" id="MuO-QD-3hj"/>
-                            <constraint firstItem="2zZ-DT-xsD" firstAttribute="top" secondItem="sLd-oj-R6i" secondAttribute="bottom" constant="71" id="NNE-th-2mD"/>
-                            <constraint firstItem="AVq-n9-f6Q" firstAttribute="trailing" secondItem="8d0-oS-rIW" secondAttribute="trailingMargin" id="PJc-E8-Hyl"/>
-                            <constraint firstItem="eTk-SH-9iM" firstAttribute="centerX" secondItem="8d0-oS-rIW" secondAttribute="centerX" id="Pfv-UF-CoM"/>
-                            <constraint firstItem="ZCW-KZ-cfg" firstAttribute="trailing" secondItem="8d0-oS-rIW" secondAttribute="trailingMargin" id="Tj1-9v-pAN"/>
-                            <constraint firstItem="Da9-x1-cPl" firstAttribute="trailing" secondItem="8d0-oS-rIW" secondAttribute="trailingMargin" id="XOT-gr-thK"/>
-                            <constraint firstItem="ZCW-KZ-cfg" firstAttribute="leading" secondItem="8d0-oS-rIW" secondAttribute="leadingMargin" id="a0C-Qb-ldg"/>
-                            <constraint firstItem="2zZ-DT-xsD" firstAttribute="trailing" secondItem="8d0-oS-rIW" secondAttribute="trailingMargin" id="ai3-Ts-ZVg"/>
-                            <constraint firstItem="SsC-0j-NO0" firstAttribute="top" secondItem="ZCW-KZ-cfg" secondAttribute="bottom" constant="12" id="dr5-Fk-Lr9"/>
-                            <constraint firstItem="AVq-n9-f6Q" firstAttribute="top" secondItem="eTk-SH-9iM" secondAttribute="bottom" constant="50" id="f2p-lK-SFC"/>
-                            <constraint firstItem="9o3-Kh-Se4" firstAttribute="trailing" secondItem="8d0-oS-rIW" secondAttribute="trailingMargin" id="fPI-Rd-Oq5"/>
-                            <constraint firstItem="Da9-x1-cPl" firstAttribute="leading" secondItem="8d0-oS-rIW" secondAttribute="leadingMargin" id="gO0-T0-iBb"/>
-                            <constraint firstItem="AVq-n9-f6Q" firstAttribute="leading" secondItem="8d0-oS-rIW" secondAttribute="leadingMargin" id="o1e-kV-Adz"/>
-                            <constraint firstItem="SsC-0j-NO0" firstAttribute="trailing" secondItem="8d0-oS-rIW" secondAttribute="trailingMargin" id="td7-Ed-tJQ"/>
-                            <constraint firstItem="SsC-0j-NO0" firstAttribute="leading" secondItem="8d0-oS-rIW" secondAttribute="leadingMargin" id="y0E-8Y-SHM"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cPi-Ub-dN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
->>>>>>> master
             </objects>
             <point key="canvasLocation" x="3782.608695652174" y="513.58695652173913"/>
         </scene>
