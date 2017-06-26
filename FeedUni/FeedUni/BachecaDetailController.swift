@@ -1,17 +1,23 @@
 //
-//  LoginController.swift
+//  BachecaDetailController.swift
 //  FeedUni
 //
-//  Created by giacomo osso on 21/06/17.
+//  Created by Andrea Scocchi on 26/06/17.
 //  Copyright © 2017 Piero Silvestri. All rights reserved.
 //
 
 import UIKit
 
-class LoginController: UIViewController {
+class BachecaDetailController: UIViewController {
 
+    var detailTitle = ""
+    var detailUser = ""
+    var detailPrice = ""
+    var detailData = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
