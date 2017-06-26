@@ -60,13 +60,15 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.imageCell.bounds.origin.y = (UIImage(data: data as Data)!.size.height/2) - (cell.imageCell.bounds.size.height/2)
                 */
                 
-                 UIGraphicsBeginImageContext(cell.imageCell.frame.size);
-                 UIImage(data: data as Data)?.draw(in: cell.imageCell.bounds);
-                 let image = UIGraphicsGetImageFromCurrentImageContext();
-                 UIGraphicsEndImageContext();
-                 
-                 cell.imageCell.backgroundColor = UIColor(patternImage: image!)
- 
+                    UIGraphicsBeginImageContext(cell.imageCell.frame.size);
+                    UIImage(data: data as Data)?.draw(in: cell.imageCell.bounds);
+                    let image = UIGraphicsGetImageFromCurrentImageContext();
+                    UIGraphicsEndImageContext();
+                    
+                    cell.imageCell.backgroundColor = UIColor(patternImage: image!)
+
+                
+                
             }
         }
         cell.titleTextView.text = String.init(htmlEncodedString: tempTitle)
