@@ -11,24 +11,23 @@ import RealmSwift
 
 class RealmQueries {
     
+    static let realm = try! Realm()
+    
     //MARK: SELECT QUERIES
     //Ritorna tutte le news favorite
     static func getFavoritePosts() -> [FavoriteNews] {
-        let realm = try! Realm()
         let news = Array(realm.objects(FavoriteNews.self))
         return news
     }
     
     //Ritorna tutti gli annunci favoriti
     static func getFavoriteInsertions() -> [FavoriteInsertion] {
-        let realm = try! Realm()
         let insertions = Array(realm.objects(FavoriteInsertion.self))
         return insertions
     }
     
     //Ritorna tutte le lezioni favorite
     static func getFavoriteLessons() -> [FavoriteLesson] {
-        let realm = try! Realm()
         let lessons = Array(realm.objects(FavoriteLesson.self))
         return lessons
     }
@@ -36,8 +35,7 @@ class RealmQueries {
     
     //MARK: INSERT QUERIES
     //Inserimento di una news
-    static func insertNews(post: FavoriteNews) {
-        let realm = try! Realm()
+    static func insertNews (post: FavoriteNews) {
         try! realm.write {
             realm.add(post)
         }
@@ -45,7 +43,6 @@ class RealmQueries {
     
     //Inserimento di inserzione della bacheca
     static func insertInsertion(insertion: FavoriteInsertion) {
-        let realm = try! Realm()
         try! realm.write {
             realm.add(insertion)
         }
@@ -53,9 +50,39 @@ class RealmQueries {
     
     //Inserimento lezione
     static func insertLesson(lesson: FavoriteLesson) {
-        let realm = try! Realm()
         try! realm.write {
             realm.add(lesson)
+        }
+    }
+    
+    //MARK: DELETE QUERIES
+    //Eliminazione di una news
+    static func deleteNews(post: FavoriteNews) {
+        try! realm.write {
+            realm.delete(post)
+        }
+    }
+    
+    //Eliminazione di inserzione della bacheca
+    static func deleteInsertion(insertion: FavoriteInsertion) {
+        try! realm.write {
+            realm.delete(insertion)
+        }
+    }
+    
+    //Eliminazione lezione
+    static func deleteLesson(lesson: FavoriteLesson) {
+        try! realm.write {
+            realm.delete(lesson)
+        }
+    }
+    
+    
+    //MARK: EDIT QUERIES
+    //Modifica inserzione in bacheca (da decidere se utile)
+    static func editInsertion(newInsertion: FavoriteInsertion) {
+        try! realm.write {
+            realm.create(FavoriteInsertion.self, value: ["title" : newInsertion.title, "insertionDescription" : newInsertion.description, "publisherName" : newInsertion.publisherName, "email" : newInsertion.email, "phoneNumber" : newInsertion.phoneNumber, "price" : newInsertion.price, "publishDate" : newInsertion.publishDate!, "insertionType" : newInsertion.insertionType], update: true)
         }
     }
 }
