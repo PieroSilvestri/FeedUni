@@ -15,7 +15,7 @@ class FavoriteInsertion: Object {
     dynamic var publisherName = ""
     dynamic var email = ""
     dynamic var phoneNumber = ""
-    dynamic var price = 0.0
+    dynamic var price = 0   //Prezzo in centesimi
     dynamic var publishDate: Date?
     dynamic var insertionType = 1
 }
