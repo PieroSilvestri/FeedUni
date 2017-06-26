@@ -39,7 +39,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bachecaCell", for: indexPath) as! BachecaControllerTableViewCell
         let tempItem = self.listData[indexPath.row] as NSDictionary
-        let tempTitle = tempItem["TEXT"] as! String
+        let tempTitle = tempItem["TITLE"] as! String
         let tempDate = tempItem["DATE"] as! String
         let index = tempDate.index(tempDate.startIndex, offsetBy: 10)
         let range = tempDate.startIndex..<index
@@ -97,13 +97,13 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             let destination = segue.destination as! BachecaDetailController
             let indexRow = self.tableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
             let tempItem = self.listData[indexRow!] as NSDictionary
-            let tempTitle = tempItem["TEXT"] as! String
+            let tempTitle = tempItem["TITLE"] as! String
             let tempDate = tempItem["DATE"] as! String
             let index = tempDate.index(tempDate.startIndex, offsetBy: 10)
             let range = tempDate.startIndex..<index
             destination.detailData = tempDate
             destination.detailUser = tempItem["USER"] as! String
-            destination.detailTitle = tempItem["TEXT"] as! String
+            destination.detailTitle = tempTitle
         }
     }
     
