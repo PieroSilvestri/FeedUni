@@ -24,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043C94F31EFEBC5E000EC227 /* FeedUni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeedUni.entitlements; sourceTree = "<group>"; };
 		04F3657B1EFAC54D0095CE34 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		04F3657D1EFAC55B0095CE34 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +86,7 @@
 		5D1A73FF1EF7FBBC009A323E /* FeedUni */ = {
 			isa = PBXGroup;
 			children = (
+				043C94F31EFEBC5E000EC227 /* FeedUni.entitlements */,
 				F3E457FC1EFAC73300B09BBD /* RealmStuff */,
 				5D1A74001EF7FBBC009A323E /* AppDelegate.swift */,
 				5D1A74041EF7FBBC009A323E /* Main.storyboard */,
@@ -181,6 +183,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = G3854Z4687;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -405,7 +412,7 @@
 				DEVELOPMENT_TEAM = G3854Z4687;
 				INFOPLIST_FILE = FeedUni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.pierosilvestri.FeedUni;
+				PRODUCT_BUNDLE_IDENTIFIER = it.giacomoosso.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -421,7 +428,7 @@
 				DEVELOPMENT_TEAM = G3854Z4687;
 				INFOPLIST_FILE = FeedUni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.pierosilvestri.FeedUni;
+				PRODUCT_BUNDLE_IDENTIFIER = it.giacomoosso.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;

@@ -122,6 +122,8 @@
                     <connections>
                         <outlet property="EmailTextField" destination="QU2-jb-JG8" id="fNi-yC-qnM"/>
                         <outlet property="PasswordTextField" destination="guC-4e-J8W" id="h6o-kl-YYY"/>
+                        <segue destination="cf1-Ca-ITC" kind="presentation" identifier="GoToSignInSegue" modalTransitionStyle="flipHorizontal" id="zNO-1P-LGT"/>
+                        <segue destination="5LJ-xo-18f" kind="presentation" identifier="GoToMainViewFromLoginSegue" modalTransitionStyle="flipHorizontal" id="EQy-a6-IRh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -225,6 +227,7 @@
                         <outlet property="ConfirmPasswordTextField" destination="uov-kd-24d" id="8Cg-MR-eEX"/>
                         <outlet property="emailTextField" destination="0dx-y7-Jgb" id="YDq-b4-vIa"/>
                         <outlet property="passwordTextField" destination="086-q1-V6A" id="cVH-QJ-paf"/>
+                        <segue destination="5LJ-xo-18f" kind="presentation" identifier="GoToMainViewFromRegisterSegue" modalTransitionStyle="flipHorizontal" id="G8M-aD-LBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibS-dr-M9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -493,7 +496,7 @@
         <!--Navigation Controller-->
         <scene sceneID="7gl-jt-XGN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Asa-SA-ZRM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NewsController" automaticallyAdjustsScrollViewInsets="NO" id="Asa-SA-ZRM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="Ajj-7g-vPG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jIG-B7-D6g">
@@ -532,4 +535,8 @@
     <resources>
         <image name="logoUni.png" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EQy-a6-IRh"/>
+        <segue reference="zNO-1P-LGT"/>
+    </inferredMetricsTieBreakers>
 </document>

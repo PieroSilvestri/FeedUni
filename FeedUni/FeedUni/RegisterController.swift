@@ -9,7 +9,7 @@
 import UIKit
 import SystemConfiguration
 
-class RegisterController: UIViewController {
+class RegisterController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var ConfirmPasswordTextField: UITextField!
@@ -21,8 +21,16 @@ class RegisterController: UIViewController {
     override func viewDidLoad() {
                super.viewDidLoad()
         
+        self.emailTextField.delegate = self
+        self.ConfirmPasswordTextField.delegate = self
+        self.passwordTextField.delegate = self
+        
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
    
     @IBAction func SignInPressed(_ sender: UIButton) {
@@ -120,9 +128,7 @@ class RegisterController: UIViewController {
                             defaults.setValue(id, forKey: "id")
                             
                             DispatchQueue.main.sync {
-                                let mapViewController = NewsController()
-                                mapViewController.modalTransitionStyle = .flipHorizontal
-                                self.present(mapViewController, animated: true, completion: nil)
+                                self.performSegue(withIdentifier: "GoToMainViewFromRegisterSegue", sender: self)
                             }
                         }
 
