@@ -9,21 +9,14 @@
 import UIKit
 import TimelineTableViewCell
 
-class TimelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TimelineController: UIViewController, UITableViewDelegate, UITableViewDataSource, FilterCourseDelegate {
     
     @IBOutlet weak var timeTableView: UITableView!
     
-    var schedule:[String: [(TimelinePoint, UIColor, String, String, String?, String?)]] = ["0/2017-06-24T00:00:00.000Z":[
-        (TimelinePoint(), UIColor.black, "12:30", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", nil, nil),
-        (TimelinePoint(color: UIColor.green, filled: true), UIColor.green, "16:30", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doe velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "150 mins", "Apple")
-        ], "1/2017-06-25T00:00:00.000Z":[
-            (TimelinePoint(), UIColor.lightGray, "08:30", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "60 mins", nil),
-            (TimelinePoint(), backColor: UIColor.clear, "20:00", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", nil, nil)
-        ]]
-    
     let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     var courses: [String :[NSDictionary]] = [String:Array<NSDictionary>]()
-    var chosenCourse = "I.T.S."
+    var chosenCourse = "UniTS"
+    var timeline: [String: [(TimelinePoint, UIColor, String, String, String?, String?)]] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +30,14 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.timeTableView.estimatedRowHeight = 300
         self.timeTableView.rowHeight = UITableViewAutomaticDimension
+        
+        let rightButton = UIBarButtonItem(
+            title: "Filtra",
+            style: .plain,
+            target: self,
+            action: #selector(buttonFilterPressed(_:)))
+        
+        navigationItem.rightBarButtonItem = rightButton
         
         // Chiamata orari
         self.getJsonFromUrl(page: 1)
@@ -71,7 +72,6 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
                     
                     self.spinner.stopAnimating()
                     UIApplication.shared.endIgnoringInteractionEvents()
-                    //self.timeTableView.reloadData()
                 } catch let error as NSError {
                     print(error)
                 }
@@ -85,14 +85,14 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return self.schedule.count
+        return self.timeline.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var nRows = 0
-        for key in self.schedule.keys {
+        for key in self.timeline.keys {
             if(key.contains("\(section)/")){
-                guard let sectionData = self.schedule[key] else {
+                guard let sectionData = self.timeline[key] else {
                     return 0
                 }
                 nRows = sectionData.count
@@ -106,9 +106,9 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell",
                                                  for: indexPath) as! TimelineTableViewCell
         
-        for key in self.schedule.keys {
+        for key in self.timeline.keys {
             if(key.contains("\(indexPath.section)/")){
-                guard let sectionData = self.schedule[key] else {
+                guard let sectionData = self.timeline[key] else {
                     return cell
                 }
                 
@@ -134,8 +134,8 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var name = "Giorno"
-        self.schedule.keys.forEach { (key) in
-            if(key.contains("\(section)/")){
+        self.timeline.keys.forEach { (key) in
+            if key.contains("\(section)/") {
                 let c = key.characters
                 let separator = c.index(of: "/")!
                 name = key[c.index(after: separator)..<key.endIndex]
@@ -155,13 +155,11 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
             let classes = days.object(forKey: "classes") as! [NSDictionary]
             for lesson in classes {
                 let course = lesson.object(forKey: "course") as! String
-                if(!self.courses.isEmpty){
-                    for (key, _) in self.courses {
-                        if(self.courses[key] != nil){
-                            self.courses[key]!.append(lesson)
-                        } else {
-                            self.courses[course] = [lesson]
-                        }
+                if !self.courses.isEmpty {
+                    if self.courses.keys.contains(course) {
+                        self.courses[course]!.append(lesson)
+                    } else {
+                        self.courses[course] = [lesson]
                     }
                 } else {
                     self.courses[course] = [lesson]
@@ -170,31 +168,58 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func setTimeline(){
-        for course in self.courses{
-            if course.key == self.chosenCourse {
-                for value in course.value{
-                    let dateString = value.object(forKey: "date") as! Date
-                    print(dateString)
-                    /*let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-                    let date = dateFormatter.date(from: dateString)
-                    dateFormatter.dateFormat = "HH:mm"
-                    let newPoint = (TimelinePoint(), UIColor.black, dateFormatter.string(from: date), "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", nil, nil)
-                    if(!self.schedule.isEmpty){
-                        for (key, _) in self.schedule {
-                            if(self.schedule[key] != nil){
-                                self.schedule[key]!.append(lesson)
-                            } else {
-                                self.schedule[dateString] = [lesson]
-                            }
+    func setTimeline() {
+        var newPoint: (TimelinePoint, UIColor, String, String, String?, String?)
+        if self.courses[chosenCourse] != nil {
+            let course = self.courses[chosenCourse]
+            for value in course! {
+                
+                let today = (value.object(forKey: "date") as! String)
+                
+                let dateString = value.object(forKey: "time_start") as! String
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                let date = dateFormatter.date(from: dateString)!
+                dateFormatter.dateFormat = "HH:mm"
+                
+                var point = TimelinePoint()
+                /*if(value == self.courses[chosenCourse]?.last){
+                    newPoint = (point, backColor: UIColor.clear, dateFormatter.string(from: date), value.object(forKey: "name") as! String, value.object(forKey: "class") as? String, nil)
+                } else {*/
+                    newPoint = (point, UIColor.black, dateFormatter.string(from: date), value.object(forKey: "name") as! String, value.object(forKey: "class") as? String, nil)
+                //}
+                
+                var noKey = true
+                if !self.timeline.isEmpty {
+                    self.timeline.keys.forEach { (key) in
+                        if key.contains(today) {
+                            self.timeline[key]!.append(newPoint)
+                            noKey = false
+                        } else {
+                            noKey = true
                         }
-                    } else {
-                        self.schedule[dateString] = [lesson]
-                    }*/
+                    }
+                    if noKey {
+                        let k = "\(self.timeline.count)/\(today)"
+                        self.timeline[k] = [newPoint]
+                    }
+                } else {
+                    let k = "\(self.timeline.count)/\(today)"
+                    self.timeline[k] = [newPoint]
                 }
             }
         }
+        DispatchQueue.main.async(execute: {
+            self.timeTableView.reloadData()
+        })
+    }
+    
+    func buttonFilterPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "filter", sender: sender)
+    }
+    
+    func courseChosen(course: String) {
+        self.chosenCourse = course
     }
     
     /*
