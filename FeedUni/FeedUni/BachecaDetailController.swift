@@ -34,10 +34,15 @@ class BachecaDetailController: UIViewController {
         detailPriceLabel.text = detailPrice
         detailInserzionistaLabel.text = detailUser
         detailDataLabel.text = detailData
-        let dataDecoded : Data = Data(base64Encoded: detailImage, options: .ignoreUnknownCharacters)!
-        let decodedimage = UIImage(data: dataDecoded)
-        detailImageImage.image = decodedimage
-
+        if (detailImage == "")
+        {
+            detailImageImage.image = #imageLiteral(resourceName: "logoUni.png")
+        }
+        else {
+            let dataDecoded : Data = Data(base64Encoded: detailImage, options: .ignoreUnknownCharacters)!
+            let decodedimage = UIImage(data: dataDecoded)
+            detailImageImage.image = decodedimage
+        }
         // Do any additional setup after loading the view.
     }
 
