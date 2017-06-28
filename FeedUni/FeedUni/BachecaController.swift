@@ -153,6 +153,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             var tempImage = ""
             if (tempItem["IMAGE"] is NSNull)
             {
+                tempImage = ""
             } else {
                 tempImage = tempItem["IMAGE"] as! String
             }
