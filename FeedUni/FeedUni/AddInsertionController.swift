@@ -17,6 +17,7 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
     @IBOutlet weak var publisherMailTxt: UITextField!
     @IBOutlet weak var publisherPhoneTxt: UITextField!
     @IBOutlet weak var insertionPriceTxt: UITextField!
+    @IBOutlet weak var insertionImage: UIButton!
     
     @IBAction func publishBtnPressed(_ sender: UIButton) {
     }
@@ -39,6 +40,10 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
         self.publisherMailTxt.delegate = self
         self.publisherPhoneTxt.delegate = self
         self.insertionPriceTxt.delegate = self
+        
+        let defaults = UserDefaults.standard
+        let premail = defaults.value(forKey: "email") as! String
+        self.publisherMailTxt.text = premail
         
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(AddInsertionController.didTapView))
@@ -74,6 +79,8 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
             let imageToSave = info[UIImagePickerControllerOriginalImage] as! UIImage
             
             UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
+            
+            self.insertionImage.setImage(imageToSave, for: .normal)
             
             self.savedImageAlert()
             self.dismiss(animated: true, completion: nil)

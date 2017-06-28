@@ -59,16 +59,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bAO-Qe-ET1">
-                                <rect key="frame" x="87" y="674" width="240" height="27"/>
+                                <rect key="frame" x="87.333333333333343" y="674" width="239.66666666666666" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't have an account yet.  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-WQ-uDZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.66666666666669" height="27"/>
+                                        <rect key="frame" x="0.3333333333333286" y="0.0" width="162.66666666666669" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbf-8D-m9B">
-                                        <rect key="frame" x="162.66666666666669" y="0.0" width="77" height="27"/>
+                                        <rect key="frame" x="163" y="0.0" width="77" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Register now!"/>
                                         <connections>
@@ -886,6 +886,7 @@
                     </view>
                     <connections>
                         <outlet property="insertionDescriptionTxt" destination="Etp-Vw-9hb" id="qs1-uL-CqU"/>
+                        <outlet property="insertionImage" destination="4jJ-W5-LQc" id="iXx-o2-j8i"/>
                         <outlet property="insertionPriceTxt" destination="rf0-M7-XM7" id="BeF-M7-cz5"/>
                         <outlet property="insertionPublisherTxt" destination="sb8-wM-L4V" id="CnD-nm-syg"/>
                         <outlet property="insertionTitleTxt" destination="tD4-Ya-pS3" id="xQk-yC-6oI"/>
