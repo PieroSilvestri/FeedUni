@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class AddInsertionController: UIViewController, UITextFieldDelegate {
+class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var insertionTitleTxt: UITextField!
     @IBOutlet weak var insertionDescriptionTxt: UITextField!
@@ -24,6 +25,12 @@ class AddInsertionController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func takePhotoBtnPressed(_ sender: UIButton) {
+        presentCamera()
+    }
+    
+    var cameraUI: UIImagePickerController! = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.insertionTitleTxt.delegate = self
@@ -38,13 +45,59 @@ class AddInsertionController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(tapRecognizer)
     }
     
+    func presentCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            cameraUI = UIImagePickerController()
+            cameraUI.delegate = self
+            cameraUI.sourceType = UIImagePickerControllerSourceType.camera;
+            cameraUI.mediaTypes = [kUTTypeImage as String]
+            cameraUI.allowsEditing = false
+            
+            self.present(cameraUI, animated: true, completion: nil)
+        }
+        else {
+            print("Can't open camera")
+        }
+    }
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if(picker.sourceType == UIImagePickerControllerSourceType.camera) {
+            
+            //Accedi all'immagine appena presa TODO:Prenderla da file system
+            let imageToSave = info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
+            
+            self.savedImageAlert()
+            self.dismiss(animated: true, completion: nil)
+        }
+
+    }
+    
+    func savedImageAlert() {
+        let alert:UIAlertView = UIAlertView()
+        alert.title = "Ghea ghemo fatta!"
+        alert.message = "Immagine salvata"
+        alert.delegate = self
+        alert.addButton(withTitle: "Ok")
+        alert.show()
+    }
+
+    
     func didTapView(){
         self.view.endEditing(true)
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-
+    
 }
