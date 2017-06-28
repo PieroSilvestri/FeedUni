@@ -24,6 +24,7 @@
 		657D16B01EF92F600069AB00 /* logoUni.png in Resources */ = {isa = PBXBuildFile; fileRef = 657D16AF1EF92F600069AB00 /* logoUni.png */; };
 		65AC99BF1F011E060055D6C8 /* BachecaDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC99BE1F011E060055D6C8 /* BachecaDetailController.swift */; };
 		65CE43501EFACD9B00C00644 /* BachecaControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE434F1EFACD9B00C00644 /* BachecaControllerTableViewCell.swift */; };
+		F307B1B51F03BAE5009FF276 /* UserInsertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B1B41F03BAE5009FF276 /* UserInsertion.swift */; };
 		F36706AF1F01437B00D3980C /* AddInsertionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36706AE1F01437B00D3980C /* AddInsertionController.swift */; };
 		F3E457FF1EFAC77200B09BBD /* FavoriteNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E457FE1EFAC77200B09BBD /* FavoriteNews.swift */; };
 		F3E458011EFAC7C200B09BBD /* FavoriteInsertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E458001EFAC7C200B09BBD /* FavoriteInsertion.swift */; };
@@ -54,6 +55,7 @@
 		65CE434F1EFACD9B00C00644 /* BachecaControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BachecaControllerTableViewCell.swift; sourceTree = "<group>"; };
 		DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.release.xcconfig"; sourceTree = "<group>"; };
+		F307B1B41F03BAE5009FF276 /* UserInsertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertion.swift; sourceTree = "<group>"; };
 		F36706AE1F01437B00D3980C /* AddInsertionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInsertionController.swift; sourceTree = "<group>"; };
 		F3E457FE1EFAC77200B09BBD /* FavoriteNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteNews.swift; sourceTree = "<group>"; };
 		F3E458001EFAC7C200B09BBD /* FavoriteInsertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteInsertion.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				F3E457FE1EFAC77200B09BBD /* FavoriteNews.swift */,
 				F3E458001EFAC7C200B09BBD /* FavoriteInsertion.swift */,
 				F3E458041EFAC83000B09BBD /* FavoriteLesson.swift */,
+				F307B1B41F03BAE5009FF276 /* UserInsertion.swift */,
 			);
 			name = Tables;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				F3E458071EFAC85600B09BBD /* RealmQueries.swift in Sources */,
 				F3E458051EFAC83000B09BBD /* FavoriteLesson.swift in Sources */,
 				04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */,
+				F307B1B51F03BAE5009FF276 /* UserInsertion.swift in Sources */,
 				65AC99BF1F011E060055D6C8 /* BachecaDetailController.swift in Sources */,
 				65CE43501EFACD9B00C00644 /* BachecaControllerTableViewCell.swift in Sources */,
 				38D58A301F013CCF00833F1A /* FilterCourseController.swift in Sources */,
