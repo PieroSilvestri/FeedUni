@@ -5,7 +5,8 @@
 //  Created by Piero Silvestri on 21/06/2017.
 //  Copyright © 2017 Piero Silvestri. All rights reserved.
 //
-
+import Nuke
+import NukeToucanPlugin
 import UIKit
 
 class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
@@ -61,13 +62,23 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.imageCell.bounds.origin.y = (UIImage(data: data as Data)!.size.height/2) - (cell.imageCell.bounds.size.height/2)
                 */
                 
+                cell.imageView?.image = nil
+                
+                var request = Nuke.Request(url: url)
+                request.process(key: "Avatar") {
+                    return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop)
+                }
+                
+                 Nuke.loadImage(with: request, into: cell.imageCell)
+                
+                    /*
                     UIGraphicsBeginImageContext(cell.imageCell.frame.size);
                     UIImage(data: data as Data)?.draw(in: cell.imageCell.bounds);
                     let image = UIGraphicsGetImageFromCurrentImageContext();
                     UIGraphicsEndImageContext();
                     
                     cell.imageCell.backgroundColor = UIColor(patternImage: image!)
-
+                    */
                 
                 
             }
