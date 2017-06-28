@@ -330,6 +330,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="Asa-SA-ZRM" kind="relationship" relationship="viewControllers" id="27j-Fq-w8q"/>
@@ -400,7 +405,13 @@
         <scene sceneID="PXE-7n-v7m">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EiJ-XC-wiG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="xzD-fv-4Tp"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="xzD-fv-4Tp">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HaM-kO-scb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -512,11 +523,14 @@
                     <navigationItem key="navigationItem" id="Y38-35-eQK">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="jlY-wo-maK">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="Gtr-zc-F2P" kind="presentation" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="dNA-zf-n6O"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Filtro" id="iev-AC-mfX"/>
+                            <barButtonItem title="Filtro" id="iev-AC-mfX">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -559,24 +573,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKS-AO-g9g">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKS-AO-g9g">
                                 <rect key="frame" x="20" y="306" width="374" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data pubblicazione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xls-Sx-wXH">
-                                <rect key="frame" x="20" y="507" width="147" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titolo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-4D-dvI">
+                                <rect key="frame" x="0.0" y="281" width="414" height="26.333333333333343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titolo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-4D-dvI">
-                                <rect key="frame" x="20" y="279" width="161" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data pubblicazione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xls-Sx-wXH">
+                                <rect key="frame" x="20" y="516" width="147" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -588,6 +602,14 @@
                             <constraint firstItem="gQm-fX-6fv" firstAttribute="leading" secondItem="Rz9-kT-cdx" secondAttribute="leading" id="xIP-Gs-w7w"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailDataLabel" destination="Xls-Sx-wXH" id="Jly-Gn-abG"/>
+                        <outlet property="detailDescLabel" destination="LKS-AO-g9g" id="4vc-da-vML"/>
+                        <outlet property="detailImageImage" destination="gQm-fX-6fv" id="ihw-0x-xGM"/>
+                        <outlet property="detailInserzionistaLabel" destination="a40-RK-sPB" id="Y3e-Vh-hI6"/>
+                        <outlet property="detailPriceLabel" destination="JNT-IT-qW2" id="KeK-vO-Zt7"/>
+                        <outlet property="detailTitleLabel" destination="1Wa-4D-dvI" id="a6Y-0n-p8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9j-s3-MMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

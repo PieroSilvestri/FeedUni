@@ -17,6 +17,8 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor.red
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.getJsonFromUrl()
     }
     
@@ -96,16 +98,79 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         if (segue.identifier == "InseptionDetailSegue"){
             let destination = segue.destination as! BachecaDetailController
             let indexRow = self.tableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
+            
+            
             let tempItem = self.listData[indexRow!] as NSDictionary
-            let tempTitle = tempItem["TITLE"] as! String
-            let tempDate = tempItem["DATE"] as! String
+
+            
+            var tempTitle = ""
+            if (tempItem["TITLE"] is NSNull)
+            {
+                tempTitle = " Titolo non disponibile"
+            } else {
+                tempTitle = tempItem["TITLE"] as! String
+            }
+            
+            
+            var tempDesc = ""
+            if (tempItem["DESCRIPTION"] is NSNull)
+            {
+                tempDesc = " Descrizione non disponibile"
+            } else {
+                tempDesc = tempItem["DESCRIPTION"] as! String
+            }
+            
+        
+            var tempUser = ""
+            if (tempItem["USER"] is NSNull)
+            {
+                tempUser = " Utente non disponibile"
+            } else {
+                tempUser = tempItem["USER"] as! String
+            }
+
+            
+            var tempPrice = 0
+            if (tempItem["PRICE"] is NSNull)
+            {
+                tempPrice = 0
+            } else {
+                tempPrice = tempItem["PRICE"] as! Int
+            }
+            
+            
+            var tempDate = ""
+            if (tempItem["DATE"] is NSNull)
+            {
+                tempDate = "Data non disponibile"
+            }else {
+                tempDate = tempItem["DATE"] as! String
+            }
             let index = tempDate.index(tempDate.startIndex, offsetBy: 10)
             let range = tempDate.startIndex..<index
-            destination.detailData = tempDate
-            destination.detailUser = tempItem["USER"] as! String
+            
+            
+            var tempImage = ""
+            if (tempItem["IMAGE"] is NSNull)
+            {
+            } else {
+                tempImage = tempItem["IMAGE"] as! String
+            }
+            
+            
+            
+            destination.detailImage = tempImage
+            destination.detailData = tempDate.substring(with:range)
+            destination.detailUser = tempUser
+            destination.detailDescription = tempDesc
             destination.detailTitle = tempTitle
+            destination.detailPrice = "\(tempPrice)"
+            
         }
     }
+    
+    
+    
     
 
 }

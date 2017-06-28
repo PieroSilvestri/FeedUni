@@ -106,10 +106,10 @@
 			children = (
 				650EF3261EFABD0D00894F9D /* BachecaController.swift */,
 				65CE434F1EFACD9B00C00644 /* BachecaControllerTableViewCell.swift */,
-				04F3657B1EFAC54D0095CE34 /* LoginController.swift */,
-				04F3657D1EFAC55B0095CE34 /* RegisterController.swift */,
-				5D53DC841EFAC722006F842B /* NewsController.swift */,
 				65AC99BE1F011E060055D6C8 /* BachecaDetailController.swift */,
+				04F3657B1EFAC54D0095CE34 /* LoginController.swift */,
+				5D53DC841EFAC722006F842B /* NewsController.swift */,
+				04F3657D1EFAC55B0095CE34 /* RegisterController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
