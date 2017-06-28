@@ -210,11 +210,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
                 DispatchQueue.global(qos: .userInitiated).sync {
                     self.sendFacebookToken(token: accessToken.authenticationToken)
                 }
-                
-                
-                
-                
-                
+        
                 print("Logged in!")
                 print(accessToken.authenticationToken)
                 
