@@ -15,7 +15,7 @@
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -592,7 +592,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="j3I-z3-meX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="rewind" id="C6K-mh-djT"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="C6K-mh-djT">
+                            <connections>
+                                <action selector="LogoutPressed:" destination="y7N-Vd-rbu" id="njE-qw-zIy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="usernameLabel" destination="Vom-8g-ukx" id="h4j-XF-6iV"/>
@@ -1041,7 +1045,7 @@
         <image name="logoUni.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="EQy-a6-IRh"/>
         <segue reference="zNO-1P-LGT"/>
-        <segue reference="G8M-aD-LBe"/>
     </inferredMetricsTieBreakers>
 </document>

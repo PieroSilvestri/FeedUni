@@ -11,6 +11,11 @@ import UIKit
 class ProfileController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
 
+    @IBAction func LogoutPressed(_ sender: UIBarButtonItem) {
+        print("Logout pressed")
+        UserDefaults.standard.setValue(false, forKey: "ricordami")
+        presentingViewController?.dismiss(animated: false, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
