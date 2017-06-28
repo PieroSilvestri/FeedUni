@@ -22,10 +22,17 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
     @IBOutlet weak var insertionTypeController: UISegmentedControl!
     
     @IBAction func publishBtnPressed(_ sender: UIButton) {
-        if insertionTitleTxt.text != nil && insertionDescriptionTxt.text != nil &&
-            insertionPublisherTxt.text != nil &&
-            (publisherMailTxt.text != nil || publisherMailTxt.text != nil) {
-            postInserion()
+        if insertionTitleTxt.text != "" && insertionDescriptionTxt.text != "" &&
+            insertionPublisherTxt.text != "" &&
+            (publisherMailTxt.text != "" || publisherMailTxt.text != "") {
+            self.postInserion()
+        } else {
+            let alert:UIAlertView = UIAlertView()
+            alert.title = "Attenzione!"
+            alert.message = "Alcuni campi sembrano non essere completi"
+            alert.delegate = self
+            alert.addButton(withTitle: "Ok")
+            alert.show()
         }
     }
     
@@ -49,14 +56,18 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
         self.insertionPriceTxt.delegate = self
         
         let defaults = UserDefaults.standard
-        //let premail = defaults.value(forKey: "email") as! String
-        //self.publisherMailTxt.text = premail
+        let premail = defaults.value(forKey: "email")
+        if premail != nil {
+            publisherMailTxt.text = premail as! String
+        }
         
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(AddInsertionController.didTapView))
         self.view.addGestureRecognizer(tapRecognizer)
     }
     
+    
+    //MARK: Metodi per fotocamera
     func presentCamera() {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             cameraUI = UIImagePickerController()
@@ -77,8 +88,6 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if(picker.sourceType == UIImagePickerControllerSourceType.camera) {
             
@@ -89,21 +98,10 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
             
             self.insertionImage.setImage(imageToSave, for: .normal)
             
-            self.savedImageAlert()
             self.dismiss(animated: true, completion: nil)
         }
         
     }
-    
-    func savedImageAlert() {
-        let alert:UIAlertView = UIAlertView()
-        alert.title = "Ghea ghemo fatta!"
-        alert.message = "Immagine salvata"
-        alert.delegate = self
-        alert.addButton(withTitle: "Ok")
-        alert.show()
-    }
-    
     
     func didTapView(){
         self.view.endEditing(true)
@@ -115,19 +113,23 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
     }
     
     
+    //MARK: metodi di creazione dell'annuncio
+    //Conversione oggetto per poter fare il POST
     func insertionToJSON(userInsertion: UserInsertion) -> [String : Any] {
         return [
             "title" : userInsertion.title,
             "price" : userInsertion.price,
             "image" : UIImagePNGRepresentation((insertionImage.imageView?.image)!)!.base64EncodedString(options: .lineLength64Characters),
             "email" : userInsertion.email,
-            "description" : userInsertion.description,
+            "description" : userInsertion.insertionDescription,
             "phone" : userInsertion.phoneNumber,
             "username" : userInsertion.publisherName,
             "tag_id" : userInsertion.insertionType
         ]
     }
     
+    
+    //Post dell'annuncio creato
     func postInserion() {
         
         let tempInsertion = UserInsertion(value: ["title" : insertionTitleTxt.text, "insertionDescription": insertionDescriptionTxt.text,
@@ -135,6 +137,7 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
                                                   "phoneNumber" : publisherPhoneTxt.text, "price" : Int.init(insertionPriceTxt.text!)!*100,
                                                   "publishDate" : Date.init().timeIntervalSince1970, "insertionType" : insertionTypeController.selectedSegmentIndex+1, "image" : "documents/hjb"])
         
+        //Post su munsra back end
         let jsonInsertion = insertionToJSON(userInsertion: tempInsertion)
         Alamofire.request("https://backend-feeduni-v1.herokuapp.com/api/v1/posts/add", method: .post, parameters: jsonInsertion, encoding: JSONEncoding.default).responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
@@ -149,5 +152,11 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
                 print("Data: \(utf8Text)") // original server data as UTF8 string
             }
         }
+        
+        //Inserimento in db locale
+        RealmQueries.insertUserInsertion(userInsertion: tempInsertion)
+        
+        //Chiudo la view se tutto va a buon fine
+        self.dismiss(animated: true, completion: nil)
     }
 }

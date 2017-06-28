@@ -19,5 +19,5 @@ class UserInsertion: Object {
     dynamic var price = 0   //Prezzo in centesimi
     dynamic var publishDate = 0.0
     dynamic var insertionType = 1
-    dynamic var image = "" //In base in 64
+    dynamic var image = "" //Percorso immagine nel file system
 }
