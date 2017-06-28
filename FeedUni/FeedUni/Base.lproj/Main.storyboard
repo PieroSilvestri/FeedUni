@@ -59,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bAO-Qe-ET1">
-                                <rect key="frame" x="87.333333333333343" y="674" width="239.66666666666666" height="27"/>
+                                <rect key="frame" x="87" y="674" width="240" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't have an account yet.  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-WQ-uDZ">
                                         <rect key="frame" x="0.0" y="0.0" width="162.66666666666669" height="27"/>
