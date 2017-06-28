@@ -78,9 +78,6 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     UIGraphicsEndImageContext();
                     
                     cell.imageCell.backgroundColor = UIColor(patternImage: image!)
-                    */
-                
-                
             }
         }
         cell.titleTextView.text = String.init(htmlEncodedString: tempTitle)
@@ -91,6 +88,22 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //self.performSegue(withIdentifier: "NewsDetaiLSegue", sender: indexPath)
         //self.tableView.allowsSelection = false
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height {
+            tableView.tableFooterView!.isHidden = true
+            // call method to add data to tableView
+            self.indexPage += 1
+            getJsonFromUrl(page: indexPage)
+            print("IndexPage: \(self.indexPage)")
+            self.spinner.center = self.view.center
+            self.spinner.hidesWhenStopped = true
+            self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            view.addSubview(self.spinner)
+            self.spinner.startAnimating()
+            UIApplication.shared.beginIgnoringInteractionEvents()
+        }
     }
  
     
@@ -132,7 +145,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //self.flagDownload = false;
         
         
-        let urlString = "http://apiunipn.parol.in/V1/posts"
+        let urlString = "http://apiunipn.parol.in/V1/posts/\(page)"
         
         let url = URL(string: urlString)
         var request = URLRequest(url: url!)
