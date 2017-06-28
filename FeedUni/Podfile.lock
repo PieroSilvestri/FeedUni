@@ -24,6 +24,7 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.24.0):
     - FBSDKCoreKit
+  - JSONJoy-Swift (3.0.1)
   - Realm (2.8.3):
     - Realm/Headers (= 2.8.3)
   - Realm/Headers (2.8.3)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FacebookShare (from `https://github.com/1amageek/facebook-sdk-swift`)
+  - JSONJoy-Swift (~> 3.0.0)
   - RealmSwift
   - TabPageViewController
   - TimelineTableViewCell
@@ -57,11 +59,12 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: f8c9eb0dd34a9cd277c7b60da4b32226d142502d
   FBSDKLoginKit: 1214c6d5a1c4995b694d8db8a9ba6910c6028acf
   FBSDKShareKit: a2ed9d7781a4eda9ac20d7404305e795b10251ac
+  JSONJoy-Swift: ef6eccdcf319412f149bbdd031b27f0430d5d576
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
   RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
   TabPageViewController: c37a1257a50c2b50712dde61bf499768eee95b67
   TimelineTableViewCell: 8e46d96b32caf5a3ca9f9d7d5b8c94e9de30b92a
 
-PODFILE CHECKSUM: 6b5ffe49b7a6406d20da797ccfacea764be041f9
+PODFILE CHECKSUM: 16ae17a5f8bec5d1e1cb12ee8050e9c0113ecc66
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0

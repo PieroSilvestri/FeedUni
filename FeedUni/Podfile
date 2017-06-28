@@ -7,10 +7,11 @@ target 'FeedUni' do
 
   # Pods for FeedUni
   
-  pod "TimelineTableViewCell"
-  pod "TabPageViewController"	
+  pod 'TimelineTableViewCell'
+  pod 'TabPageViewController'
   pod 'RealmSwift'
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare', :git => 'https://github.com/1amageek/facebook-sdk-swift'
+  pod 'JSONJoy-Swift', '~> 3.0.0'
 end

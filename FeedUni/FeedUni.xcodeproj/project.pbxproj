@@ -10,6 +10,7 @@
 		04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657B1EFAC54D0095CE34 /* LoginController.swift */; };
 		04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657D1EFAC55B0095CE34 /* RegisterController.swift */; };
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
+		381F7DE91F03BB3A00FECEE7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381F7DE81F03BB3A00FECEE7 /* Lesson.swift */; };
 		3897F5AF1EFAC83D000DCD93 /* TimelineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897F5AE1EFAC83D000DCD93 /* TimelineController.swift */; };
 		38D58A301F013CCF00833F1A /* FilterCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D58A2F1F013CCF00833F1A /* FilterCourseController.swift */; };
 		5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74001EF7FBBC009A323E /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		043C94F31EFEBC5E000EC227 /* FeedUni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeedUni.entitlements; sourceTree = "<group>"; };
 		04F3657B1EFAC54D0095CE34 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		04F3657D1EFAC55B0095CE34 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		381F7DE81F03BB3A00FECEE7 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		3897F5AE1EFAC83D000DCD93 /* TimelineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineController.swift; sourceTree = "<group>"; };
 		38D58A2F1F013CCF00833F1A /* FilterCourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCourseController.swift; sourceTree = "<group>"; };
 		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			children = (
 				5DC6437A1EFC3D4D0064511A /* NewsTableViewCell.swift */,
 				5D91CBD51F010D3A005D9BAD /* String+Shortcuts.swift */,
+				381F7DE81F03BB3A00FECEE7 /* Lesson.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -214,7 +217,7 @@
 				TargetAttributes = {
 					5D1A73FC1EF7FBBC009A323E = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = G3854Z4687;
+						DevelopmentTeam = 6M2CJ2SN4J;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -284,7 +287,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D96E8B35A1154D2EF97CEBD3 /* [CP] Embed Pods Frameworks */ = {
@@ -318,6 +321,7 @@
 				F3E458051EFAC83000B09BBD /* FavoriteLesson.swift in Sources */,
 				04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */,
 				65AC99BF1F011E060055D6C8 /* BachecaDetailController.swift in Sources */,
+				381F7DE91F03BB3A00FECEE7 /* Lesson.swift in Sources */,
 				65CE43501EFACD9B00C00644 /* BachecaControllerTableViewCell.swift in Sources */,
 				38D58A301F013CCF00833F1A /* FilterCourseController.swift in Sources */,
 				F36706AF1F01437B00D3980C /* AddInsertionController.swift in Sources */,
@@ -450,10 +454,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = G3854Z4687;
+				DEVELOPMENT_TEAM = 6M2CJ2SN4J;
 				INFOPLIST_FILE = FeedUni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.giacomoosso.FeedUni;
+				PRODUCT_BUNDLE_IDENTIFIER = it.gabrielesuerz.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -466,10 +470,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = G3854Z4687;
+				DEVELOPMENT_TEAM = 6M2CJ2SN4J;
 				INFOPLIST_FILE = FeedUni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.giacomoosso.FeedUni;
+				PRODUCT_BUNDLE_IDENTIFIER = it.gabrielesuerz.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
