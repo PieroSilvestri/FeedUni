@@ -55,6 +55,14 @@ class RealmQueries {
         }
     }
     
+    //Inserimento inserzioni postate dall'utente
+    static func insertUserInsertion(userInsertion: UserInsertion) {
+        try! realm.write {
+            realm.add(userInsertion)
+        }
+    }
+    
+    
     //MARK: DELETE QUERIES
     //Eliminazione di una news
     static func deleteNews(post: FavoriteNews) {

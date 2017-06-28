@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import Alamofire
 
 class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate, UINavigationControllerDelegate {
     
@@ -18,8 +19,14 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
     @IBOutlet weak var publisherPhoneTxt: UITextField!
     @IBOutlet weak var insertionPriceTxt: UITextField!
     @IBOutlet weak var insertionImage: UIButton!
+    @IBOutlet weak var insertionTypeController: UISegmentedControl!
     
     @IBAction func publishBtnPressed(_ sender: UIButton) {
+        if insertionTitleTxt.text != nil && insertionDescriptionTxt.text != nil &&
+            insertionPublisherTxt.text != nil &&
+            (publisherMailTxt.text != nil || publisherMailTxt.text != nil) {
+            postInserion()
+        }
     }
     
     @IBAction func cancelBtnPressed(_ sender: UIBarButtonItem) {
@@ -42,8 +49,8 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
         self.insertionPriceTxt.delegate = self
         
         let defaults = UserDefaults.standard
-        let premail = defaults.value(forKey: "email") as! String
-        self.publisherMailTxt.text = premail
+        //let premail = defaults.value(forKey: "email") as! String
+        //self.publisherMailTxt.text = premail
         
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(AddInsertionController.didTapView))
@@ -85,7 +92,7 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
             self.savedImageAlert()
             self.dismiss(animated: true, completion: nil)
         }
-
+        
     }
     
     func savedImageAlert() {
@@ -96,7 +103,7 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
         alert.addButton(withTitle: "Ok")
         alert.show()
     }
-
+    
     
     func didTapView(){
         self.view.endEditing(true)
@@ -107,4 +114,40 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
         return false
     }
     
+    
+    func insertionToJSON(userInsertion: UserInsertion) -> [String : Any] {
+        return [
+            "title" : userInsertion.title,
+            "price" : userInsertion.price,
+            "image" : UIImagePNGRepresentation((insertionImage.imageView?.image)!)!.base64EncodedString(options: .lineLength64Characters),
+            "email" : userInsertion.email,
+            "description" : userInsertion.description,
+            "phone" : userInsertion.phoneNumber,
+            "username" : userInsertion.publisherName,
+            "tag_id" : userInsertion.insertionType
+        ]
+    }
+    
+    func postInserion() {
+        
+        let tempInsertion = UserInsertion(value: ["title" : insertionTitleTxt.text, "insertionDescription": insertionDescriptionTxt.text,
+                                                  "publisherName" : insertionPublisherTxt.text, "email" : publisherMailTxt.text,
+                                                  "phoneNumber" : publisherPhoneTxt.text, "price" : Int.init(insertionPriceTxt.text!)!*100,
+                                                  "publishDate" : Date.init().timeIntervalSince1970, "insertionType" : insertionTypeController.selectedSegmentIndex+1, "image" : "documents/hjb"])
+        
+        let jsonInsertion = insertionToJSON(userInsertion: tempInsertion)
+        Alamofire.request("https://backend-feeduni-v1.herokuapp.com/api/v1/posts/add", method: .post, parameters: jsonInsertion, encoding: JSONEncoding.default).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+        }
+    }
 }
