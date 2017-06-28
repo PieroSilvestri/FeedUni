@@ -16,18 +16,20 @@ class LoginController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
     
+    @IBOutlet weak var RicordamiSwitchUI: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.PasswordTextField.delegate = self
-        self.EmailTextField.delegate = self
-        
-        if let email: String = UserDefaults.standard.object(forKey: "email") as! String? {
-            EmailTextField.text = email
+        if(UserDefaults.standard.object(forKey: "ricordami") != nil){
+            if(UserDefaults.standard.object(forKey: "ricordami") as! Bool){
+                if(UserDefaults.standard.object(forKey: "token") != nil){
+                    if(UserDefaults.standard.object(forKey: "id") != nil){
+                        self.performSegue(withIdentifier: "GoToMainViewFromLoginSegue", sender: self)
+                    }
+                }
+            }
         }
-        
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -114,7 +116,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
                                     // create the alert
                                     let alert = UIAlertController(title: "Login", message: "\(error ?? "")", preferredStyle: UIAlertControllerStyle.alert)
                                     alert.addAction(UIAlertAction(title: "Riprova", style: UIAlertActionStyle.default, handler: {action in
-                                    self.PasswordTextField.text = ""
+                                        self.PasswordTextField.text = ""
                                     }))
                                     // add an action (button)
                                     alert.addAction(UIAlertAction(title: "Vai a sign in", style: UIAlertActionStyle.default, handler: { action in
@@ -140,6 +142,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
                             
                             //salvo nelle shared preferences info sull'utente
                             let defaults = UserDefaults.standard
+                            defaults.setValue(self.RicordamiSwitchUI.isOn, forKey: "ricordami")
                             defaults.setValue(self.EmailTextField.text, forKey: "email")
                             defaults.setValue(accessToken, forKey: "token")
                             defaults.setValue(id, forKey: "id")
