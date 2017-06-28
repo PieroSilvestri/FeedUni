@@ -461,8 +461,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6M2CJ2SN4J;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3854Z4687;
 				INFOPLIST_FILE = FeedUni/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.gabrielesuerz.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -477,8 +479,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6M2CJ2SN4J;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3854Z4687;
 				INFOPLIST_FILE = FeedUni/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.gabrielesuerz.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";

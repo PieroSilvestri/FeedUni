@@ -15,4 +15,8 @@ target 'FeedUni' do
   pod 'FacebookShare', :git => 'https://github.com/1amageek/facebook-sdk-swift'
   pod 'Alamofire', '~> 4.4'
   pod 'JSONJoy-Swift', '~> 3.0.0'
+  pod 'Toucan'
+  pod 'Nuke'
+  pod 'Nuke-Toucan-Plugin'
+  
 end
