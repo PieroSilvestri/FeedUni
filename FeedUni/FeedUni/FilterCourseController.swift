@@ -24,6 +24,7 @@ class FilterCourseController: UIViewController, UITableViewDelegate, UITableView
 
         // Do any additional setup after loading the view.
         
+        self.tableView.tableFooterView = UIView()
         
     }
     
@@ -39,7 +40,6 @@ class FilterCourseController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         cell.textLabel?.text = courses[indexPath.row]
-        print("n corsi: " + courses[indexPath.row])
         return cell
     }
     
