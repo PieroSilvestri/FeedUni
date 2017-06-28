@@ -694,6 +694,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0E3773087E5F52EE620528C4BD8CFDCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0662EA55B16ACB3BF51360B57DDDC347;
+			remoteInfo = TabPageViewController;
+		};
+		0EDDC584C190A2668B14E1E5CD279194 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7FEAA14E89971698ACA148F7F7202F2;
+			remoteInfo = FacebookShare;
+		};
 		1707295455DE4AF37E9B157E5859EB8F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -806,12 +820,12 @@
 			remoteGlobalIDString = C5C012A7AC9468F7360F4CF29A1917CF;
 			remoteInfo = TabPageViewController;
 		};
-		8C8608F2C87A6D91FCD86F90E5604514 /* PBXContainerItemProxy */ = {
+		8A4E265E7AB949BE570AD0C1CE271363 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 44CAD6CE523055ED339E87154473A254;
-			remoteInfo = Bolts;
+			remoteGlobalIDString = 1DAF1816F1310E3089CA0921E55062C9;
+			remoteInfo = Realm;
 		};
 		97793D355FB11B086CBE31CF7BC58008 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -845,15 +859,15 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 593E9479C06FB200807D11AB29EB50BD;
-			remoteInfo = FBSDKCoreKit;
+			remoteGlobalIDString = 332F91393FB1DE033D370B4CEDDD5FCF;
+			remoteInfo = FBSDKShareKit;
 		};
 		CCEA274D6567B8AF3FC64523E9ACCC0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 332F91393FB1DE033D370B4CEDDD5FCF;
-			remoteInfo = FBSDKShareKit;
+			remoteGlobalIDString = 593E9479C06FB200807D11AB29EB50BD;
+			remoteInfo = FBSDKCoreKit;
 		};
 		D2602C4C18BADA8739EF38EE18B70C78 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1660,6 +1674,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0198377132F44A52078A5EBE16F2B92B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB42B45571C154990526F2DCAB55D5CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DB7BDAE0D61F1D9636265719CC46A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B061F946D0FA95A368F0CC5015FB4845 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06B737175F0473989B9DD3EF41CF0E0E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1700,11 +1730,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5CBF451DCA26730C976CC026ED37822C /* Frameworks */ = {
+		4B78B376FCF2256461A20BD8C0375EB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553C77C3BA656D7F8083C3B56984F521 /* Foundation.framework in Frameworks */,
+				6CB30859350EF480BC660C937279F94E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2187,7 +2217,8 @@
 				9D300E1574EA2ABCC912E7241E3B4097 /* TimelineTableViewCell.bundle */,
 				1BF91B47B64564C0A97E19765088AAE2 /* TimelineTableViewCell.framework */,
 			);
-			name = Products;
+			name = RealmSwift;
+			path = RealmSwift;
 			sourceTree = "<group>";
 		};
 		38FE76B56E3FDFF3D621B6E9A068151D /* Support Files */ = {
@@ -2354,8 +2385,8 @@
 				A8910C2F5D27B0894C111A9B69E6A45A /* FBSDKTooltipView.m */,
 				38FE76B56E3FDFF3D621B6E9A068151D /* Support Files */,
 			);
-			name = FBSDKLoginKit;
-			path = FBSDKLoginKit;
+			name = FacebookShare;
+			path = FacebookShare;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -2393,15 +2424,15 @@
 		87F33379168BAC3F440C083E151EF07C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				71FB261D49F34CAB4934450EDA91CCDD /* Bolts.framework */,
-				409310938E6DB1ACCF2E5BFD754F086E /* FacebookCore.framework */,
-				5964CEFF2860F45D10F5E6AB234C583D /* FBSDKCoreKit.framework */,
-				8C5DE04CB495755579FCF77C41501350 /* FBSDKLoginKit.framework */,
-				5BC76B455F1B36149BED5A9A7A1A80A0 /* FBSDKShareKit.framework */,
-				4C3A69FB3DB41E1C4C744DA0B5C298E9 /* Realm.framework */,
-				98C82D83A14225A93BEA4D35CCCEEFE0 /* iOS */,
+				7D5F640F82922D0950E5C3569B99B6DF /* FBSDKShareKit.modulemap */,
+				74973EFE5ABA51D3ABC4588A8D031FAF /* FBSDKShareKit.xcconfig */,
+				20587862F0ECB29027912A152E0A58E3 /* FBSDKShareKit-dummy.m */,
+				87DE9A9F771469D129245808FCC9E83C /* FBSDKShareKit-prefix.pch */,
+				CEA11963D2D6AAB8232A8BB813F9F299 /* FBSDKShareKit-umbrella.h */,
+				1007B6FCB22FC20088BD1558D99C32D7 /* Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/FBSDKShareKit";
 			sourceTree = "<group>";
 		};
 		92E7C3CCCE1C6067420AFE60D02212F7 /* Support Files */ = {
@@ -2799,6 +2830,16 @@
 			path = Bolts;
 			sourceTree = "<group>";
 		};
+		FBC21ADB684AD68C0A2665CE6FB9F73E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A79B2449CED10E9DCA63A84161115B6 /* TabCollectionCell.xib */,
+				0624AB720561E39AD8E488D3AD21FC97 /* TabPageViewController.storyboard */,
+				31D2CBC72AB6B45C849888F673080EE7 /* TabView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -3058,6 +3099,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		88CFDBB3A043A063F211C88E1CD87A08 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DE2163BC2569F6804A54A61CDD6968F /* NSError+RLMSync.h in Headers */,
+				9AF5919978959A68F2B035F39EA6B694 /* Realm.h in Headers */,
+				F665A413B2200BF7AE4B5BBD7B662C3D /* RLMAccessor.h in Headers */,
+				C669C175539D122BE5B089A8BFA748C5 /* RLMArray.h in Headers */,
+				D341A02EE818B30DA2B9455532A28618 /* RLMArray_Private.h in Headers */,
+				0F09C62FFC6D0D1C4FC353FF30C22455 /* RLMCollection.h in Headers */,
+				C33AEA100994E8EF02D8DF3B821CC6E9 /* RLMConstants.h in Headers */,
+				A49F878D61E80357FD50266CC7029592 /* RLMListBase.h in Headers */,
+				4A0B7FF9E6468D2B03C120EEB6EC9774 /* RLMMigration.h in Headers */,
+				00B835FD976161D4DB60047AB4D0FBAC /* RLMMigration_Private.h in Headers */,
+				86FCCE573733B133FACEA78DB5B6B8EB /* RLMObject.h in Headers */,
+				7474C38AAC5D7986A3B298A2989558C4 /* RLMObject_Private.h in Headers */,
+				C498A093154122FF8E79BC25FD376609 /* RLMObjectBase.h in Headers */,
+				47923D3D40BD5036AF789BFAB7B1E601 /* RLMObjectBase_Dynamic.h in Headers */,
+				0CA8F0A8DE9C5CA69AE8E6AC9438779F /* RLMObjectSchema.h in Headers */,
+				E4AABD77F89B92EABEA1574C310EADCA /* RLMObjectSchema_Private.h in Headers */,
+				A84DBE6D7406870D5BA6FA4262221615 /* RLMObjectStore.h in Headers */,
+				0FB8198A4E25D4565891E8B0E0600A59 /* RLMOptionalBase.h in Headers */,
+				6AD63BB4D3F3C2FF62F94344E6D5C5BE /* RLMPlatform.h in Headers */,
+				65E373C8CBE2B1CE90E4CB8BA93381C4 /* RLMProperty.h in Headers */,
+				B0C00617FC18ABBBC461131872F813B4 /* RLMProperty_Private.h in Headers */,
+				8807CFAB4BA273E48310EC2527E7C4D7 /* RLMRealm.h in Headers */,
+				1630B34851553A153E219D2490F2372B /* RLMRealm_Dynamic.h in Headers */,
+				0D835ECF02DAB593FC602037BD814C26 /* RLMRealm_Private.h in Headers */,
+				E92B3E466B8C5CA5B7A3FA75DB2F2A2B /* RLMRealmConfiguration+Sync.h in Headers */,
+				54EDD7C929E8DAA653D705A600AE6543 /* RLMRealmConfiguration.h in Headers */,
+				2AF7E28DFE543A00D71DEEE47B7368DF /* RLMRealmConfiguration_Private.h in Headers */,
+				5994475DD18B2186540DD8574955330A /* RLMResults.h in Headers */,
+				8FF0459336A69BC9CB7D42C605F0F0CF /* RLMResults_Private.h in Headers */,
+				C86390621397738B21780CB2A7045358 /* RLMSchema.h in Headers */,
+				7F95742B2F29FBAF0B5A7DDA97A3C1FC /* RLMSchema_Private.h in Headers */,
+				E0CE628F084C3748C4CA0E7F36F6C306 /* RLMSyncConfiguration.h in Headers */,
+				EEEFB6E2443CCAF33ABA777789CE6DE6 /* RLMSyncConfiguration_Private.h in Headers */,
+				2469AF0E228E612FB3009137805C4E9A /* RLMSyncCredentials.h in Headers */,
+				2C8310959043F07B0410427DE510F64E /* RLMSyncManager.h in Headers */,
+				B9A1B55D39709C06D2CF5C2276FF932C /* RLMSyncManager_Private.h in Headers */,
+				F9E286FB8281C247129244C936239372 /* RLMSyncPermission.h in Headers */,
+				489C3E497202540F8D13A0386E0AE805 /* RLMSyncPermission_Private.h in Headers */,
+				F8F1B4FDA543435E15E0626FACEBBE30 /* RLMSyncPermissionChange.h in Headers */,
+				14BA065B936262DF509A1FFD23EAD44E /* RLMSyncPermissionChange_Private.h in Headers */,
+				6BC5CD1256BAF7DAE1B5865A49574494 /* RLMSyncPermissionOffer.h in Headers */,
+				5657D9590044161D216A8A6B4EE43B89 /* RLMSyncPermissionOffer_Private.h in Headers */,
+				8C67FF3503B7ABD2AD0B3C5D57C4DCA4 /* RLMSyncPermissionOfferResponse.h in Headers */,
+				3B7ED3A9B209711BCE07477F65C084B9 /* RLMSyncPermissionOfferResponse_Private.h in Headers */,
+				B9171C322A956230C0F56E6C08FD3FDC /* RLMSyncPermissionResults.h in Headers */,
+				17606F17BCE972EA906EC1CC9C860723 /* RLMSyncPermissionValue.h in Headers */,
+				6C7EE345A8C0CB7A5D32E647C2ABBDBF /* RLMSyncSession.h in Headers */,
+				D25318E6158F154BFE8288F82B92753C /* RLMSyncUser.h in Headers */,
+				76C77491ADDEB63CBF88B8CF4C15E9F5 /* RLMSyncUtil.h in Headers */,
+				34923C11974F0D6C016BEB0694B9D90B /* RLMSyncUtil_Private.h in Headers */,
+				64D0C4D83100D525693CEE6240F9FA5F /* RLMThreadSafeReference.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8E44FB26B76005069D820994F4CC326B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -3165,6 +3264,44 @@
 			name = "Pods-FeedUni";
 			productName = "Pods-FeedUni";
 			productReference = 1461AEAE899430CD36A6498E1414ED74 /* Pods_FeedUni.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1468BBFEA20F682C8C2A9C62C5D87123 /* TimelineTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9D248973EE23FEE8D4E6863AE1BD0A /* Build configuration list for PBXNativeTarget "TimelineTableViewCell" */;
+			buildPhases = (
+				0706E5771F100DC0919877C81AE672C7 /* Sources */,
+				03DB7BDAE0D61F1D9636265719CC46A5 /* Frameworks */,
+				600D3724741F5697F11CFDC8B7A27FB9 /* Resources */,
+				59AC8BDBEE69A51D659623B93135CECA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A741C6A7EDE8F132E5296CF0D72B6870 /* PBXTargetDependency */,
+			);
+			name = TimelineTableViewCell;
+			productName = TimelineTableViewCell;
+			productReference = 331E194139B85C9582AA42C14FB4D699 /* TimelineTableViewCell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1DAF1816F1310E3089CA0921E55062C9 /* Realm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10D1F7155F7C607830FC797615B4C94E /* Build configuration list for PBXNativeTarget "Realm" */;
+			buildPhases = (
+				2081C8B42B49176D2B02D7A2B833DFD4 /* Sources */,
+				E9EC655AE35F7DAB55B773F7679BC4E1 /* Frameworks */,
+				88CFDBB3A043A063F211C88E1CD87A08 /* Headers */,
+				00E20436E9E7FD2AD5452D60849BE8A3 /* Copy . Private Headers */,
+				4732663A992C2E7D468E5EC6FA343997 /* Copy . Public Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Realm;
+			productName = Realm;
+			productReference = 7D63AE49A8234C08D016470C15C505FA /* Realm.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		332F91393FB1DE033D370B4CEDDD5FCF /* FBSDKShareKit */ = {
@@ -3847,6 +3984,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ABD3666F324EDE9640AA313FBA2E774C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9A0CF335F844DF229104B1D6F5B3D50 /* TabCollectionCell.swift in Sources */,
+				6A7EDEDB07C164FE280367EB53ADFE74 /* TabPageOption.swift in Sources */,
+				839169797F2B00785B4F4BCA28A000FC /* TabPageViewController-dummy.m in Sources */,
+				1EEFD830821A982B913A86DFD1E204BF /* TabPageViewController.swift in Sources */,
+				2B5158FC205164FA625B7ACE9E90D0DE /* TabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC6BB8BAE9A0CFCAD4B74338DD1029AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3988,6 +4137,24 @@
 			name = FBSDKLoginKit;
 			target = 5B5AC3C06B783F8674FDB4C0F900B56A /* FBSDKLoginKit */;
 			targetProxy = 1707295455DE4AF37E9B157E5859EB8F /* PBXContainerItemProxy */;
+		};
+		6CF31011107DB3AC40B70ABBF2B65B6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TabPageViewController;
+			target = 0662EA55B16ACB3BF51360B57DDDC347 /* TabPageViewController */;
+			targetProxy = 0E3773087E5F52EE620528C4BD8CFDCB /* PBXContainerItemProxy */;
+		};
+		6D75E93E030D93795097111B8AE97A35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TimelineTableViewCell;
+			target = 1468BBFEA20F682C8C2A9C62C5D87123 /* TimelineTableViewCell */;
+			targetProxy = F71B506E97D396DCCB72214AE83F9755 /* PBXContainerItemProxy */;
+		};
+		78A06A20AB34A77B84C54566865F6750 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RealmSwift;
+			target = 504D8E6100EF43DD31A83AB2FDEF15D7 /* RealmSwift */;
+			targetProxy = 450D524CD48F494C14860018B2EEA1F8 /* PBXContainerItemProxy */;
 		};
 		858C73FD543C52D9322067174B059EF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4521,11 +4688,28 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1167A845E7D0A09C56403E4FCECBB1BC /* FacebookShare.xcconfig */;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TimelineTableViewCell";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/TimelineTableViewCell/ResourceBundle-TimelineTableViewCell-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TimelineTableViewCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		647ED77E8592726419569809E9747709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74973EFE5ABA51D3ABC4588A8D031FAF /* FBSDKShareKit.xcconfig */;
+			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -4547,7 +4731,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		5A4DDDDE0167AD71CE7B643E32024562 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -4589,7 +4773,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -4598,6 +4782,42 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FBSDKShareKit/FBSDKShareKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSDKShareKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeedUni/Pods-FeedUni.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FeedUni;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7E3795656CE05962C4D7EE8FACF46FD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8577A27AB1095E58837378849904BF37 /* FBSDKLoginKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FBSDKLoginKit/FBSDKLoginKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSDKLoginKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -4611,7 +4831,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		6EE8C98A8ECBF9F6CA2CEEE7B6A46E1E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4654,7 +4874,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -4676,9 +4896,9 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		7E3795656CE05962C4D7EE8FACF46FD5 /* Release */ = {
+		9A858BF1E745A40733055AC73249EC33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A25047B0AFB074D525A88F373590F9B9 /* FBSDKLoginKit.xcconfig */;
 			buildSettings = {
@@ -4693,14 +4913,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSDKLoginKit/FBSDKLoginKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSDKLoginKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TimelineTableViewCell/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSDKLoginKit/FBSDKLoginKit.modulemap";
+				MODULEMAP_FILE = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FBSDKLoginKit;
+				PRODUCT_NAME = TimelineTableViewCell;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -4742,7 +4962,7 @@
 			};
 			name = Release;
 		};
-		8C33E6BABA7FFD520C57AF86ED0B6B02 /* Debug */ = {
+		A30D8A1401DA692A28E11C4E1453A389 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C36EAE49E874D8008FDE7E32FCDA9DE /* FBSDKCoreKit.xcconfig */;
 			buildSettings = {
@@ -4757,16 +4977,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSDKCoreKit/FBSDKCoreKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSDKCoreKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TimelineTableViewCell/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSDKCoreKit/FBSDKCoreKit.modulemap";
+				MODULEMAP_FILE = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FBSDKCoreKit;
+				PRODUCT_NAME = TimelineTableViewCell;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -4782,29 +5003,33 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TabPageViewController/TabPageViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TabPageViewController/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-FeedUni/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TabPageViewController/TabPageViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TabPageViewController;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeedUni/Pods-FeedUni.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FeedUni;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		AFC08387F44E7AD0F5A11E0365C20ACC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -4924,7 +5149,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -4950,11 +5175,43 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		DBD6299CA8912E2683E5EF56675D1BC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A25047B0AFB074D525A88F373590F9B9 /* FBSDKLoginKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FBSDKLoginKit/FBSDKLoginKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSDKLoginKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSDKLoginKit/FBSDKLoginKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FBSDKLoginKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DBD6299CA8912E2683E5EF56675D1BC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8577A27AB1095E58837378849904BF37 /* FBSDKLoginKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -5090,6 +5347,24 @@
 			buildConfigurations = (
 				647ED77E8592726419569809E9747709 /* Debug */,
 				AFC08387F44E7AD0F5A11E0365C20ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10D1F7155F7C607830FC797615B4C94E /* Build configuration list for PBXNativeTarget "Realm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BF58DC5E0AA8A48FAC698F30C40C913 /* Debug */,
+				964A1561CA2CA12AF8E7224BBF9CB66C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		262D3DACDD56D897CBDD6C4F3A168F41 /* Build configuration list for PBXNativeTarget "RealmSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EB88DC0BBB26ABDC7EB880CB7A5B7D0 /* Debug */,
+				D8CD0C4648A2AD0820E4CC1EC4408222 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
