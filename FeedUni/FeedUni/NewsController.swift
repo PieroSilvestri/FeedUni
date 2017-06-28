@@ -78,6 +78,8 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     UIGraphicsEndImageContext();
                     
                     cell.imageCell.backgroundColor = UIColor(patternImage: image!)
+                    */
+                
             }
         }
         cell.titleTextView.text = String.init(htmlEncodedString: tempTitle)
