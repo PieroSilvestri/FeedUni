@@ -1,13 +1,15 @@
 //
-//  TimelineViewController.swift
-//  FeedUni
+// TimelineViewController.swift
+// FeedUni
 //
-//  Created by Gabriele Suerz on 21/06/17.
-//  Copyright © 2017 Piero Silvestri. All rights reserved.
+// Created by Gabriele Suerz on 21/06/17.
+// Copyright © 2017 Piero Silvestri. All rights reserved.
 //
 
 import UIKit
+
 import TimelineTableViewCell
+import Alamofire
 import JSONJoy
 
 class TimelineController: UIViewController, UITableViewDelegate, UITableViewDataSource, FilterCourseDelegate {
@@ -26,7 +28,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
         self.initCell()
         
         self.initGUI()
-
+        
         // Chiamata orari
         self.getJsonFromUrl(page: 1)
     }
@@ -79,37 +81,27 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
     
     func getJsonFromUrl(page: Int){
         //self.flagDownload = false;
+        if let token = UserDefaults.standard.object(forKey: "token") {
+            
+        }
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Authorization": "Bearer \(String(describing: UserDefaults.standard.object(forKey: "token")))" // 3252261a-215c-4078-a74d-2e1c5c63f0a1
+        ]
         
-        let urlString = "http://apiunipn.parol.in/V1/timetable"
-        
-        let url = URL(string: urlString)
-        var request = URLRequest(url: url!)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer 3252261a-215c-4078-a74d-2e1c5c63f0a1", forHTTPHeaderField: "Authorization")
-        
-        URLSession.shared.dataTask(with:request) { (data, response, error) in
-            if error != nil {
-                print(error.debugDescription)
-            } else {
-                do {
-                    
-                    let response = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
-                    
-                    self.setCourses(months: response["month"] as! [NSDictionary])
-                    self.setTimeline()
-                    
-                    UIApplication.shared.endIgnoringInteractionEvents()
-                } catch let error as NSError {
-                    print(error)
-                    DispatchQueue.main.sync {
-                        self.spinner.stopAnimating()
-                        self.spinner.isHidden = true
-                        self.timeTableView.reloadData()
-                    }
-                }
+        Alamofire.request("http://apiunipn.parol.in/V1/timetable", headers: headers).responseJSON { response in
+            
+            if let json = response.result.value as? NSDictionary {
+                self.setCourses(months: json["month"] as! [NSDictionary])
+                self.setTimeline()
             }
             
-            }.resume()
+            DispatchQueue.main.sync {
+                self.spinner.stopAnimating()
+                self.spinner.isHidden = true
+                self.timeTableView.reloadData()
+            }
+        }
         
     }
     
@@ -200,6 +192,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
                     } else {
                         self.courses[lessonFormatted.course] = [lessonFormatted]
                     }
+                    
                 } catch {
                     // print("unable to parse the JSON")
                 }
@@ -223,7 +216,6 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
                 var noKey = true
                 if !self.timeline.isEmpty {
                     self.timeline.keys.forEach { (key) in
-                        print(key.contains(day))
                         if key.contains(day) {
                             self.timeline[key]!.append(newPoint)
                             noKey = false
@@ -241,46 +233,48 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
                 }
                 
                 self.timeline[day]?.forEach { (key) in
+                    print(key.3 == self.timeline[day]?.last?.3 && key.2 == self.timeline[day]?.last?.2)
                     if key.3 == self.timeline[day]?.last?.3 && key.2 == self.timeline[day]?.last?.2 {
                         let c = self.timeline[day]?.removeLast()
                         newPoint = (point, backColor: UIColor.clear, (c?.2)!, (c?.3)!, c?.4, c?.5)
                         self.timeline[day]?.append(newPoint)
                     }
                 }
+                print(self.timeline[day])
             }
         }
-                /*let today = (value.object(forKey: "date") as! String)
-                
-                let dateString = value.object(forKey: "time_start") as! String
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-                
-                var noKey = true
-                if !self.timeline.isEmpty {
-                    self.timeline.keys.forEach { (key) in
-                        if key.contains(today) {
-                            self.timeline[key]!.append(newPoint)
-                            noKey = false
-                        } else {
-                            noKey = true
-                        }
-                    }
-                    if noKey {
-                        let k = "\(self.timeline.count)/\(today)"
-                        self.timeline[k] = [newPoint]
-                    }
-                } else {
-                    let k = "\(self.timeline.count)/\(today)"
-                    self.timeline[k] = [newPoint]
-                }
-                
-                self.timeline.forEach { (key) in
-                    print("------------------")
-                    print(key.value == self.timeline[key.key]?.last)
-                    /*let c = self.timeline[key]?.removeLast()
-                    newPoint = (point, backColor: UIColor.clear, (c?.2)!, (c?.3)!, c?.4, c?.5)
-                    self.timeline[key]?.append(newPoint)*/
-                }*/
+        /*let today = (value.object(forKey: "date") as! String)
+         
+         let dateString = value.object(forKey: "time_start") as! String
+         let dateFormatter = DateFormatter()
+         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+         
+         var noKey = true
+         if !self.timeline.isEmpty {
+         self.timeline.keys.forEach { (key) in
+         if key.contains(today) {
+         self.timeline[key]!.append(newPoint)
+         noKey = false
+         } else {
+         noKey = true
+         }
+         }
+         if noKey {
+         let k = "\(self.timeline.count)/\(today)"
+         self.timeline[k] = [newPoint]
+         }
+         } else {
+         let k = "\(self.timeline.count)/\(today)"
+         self.timeline[k] = [newPoint]
+         }
+         
+         self.timeline.forEach { (key) in
+         print("------------------")
+         print(key.value == self.timeline[key.key]?.last)
+         /*let c = self.timeline[key]?.removeLast()
+         newPoint = (point, backColor: UIColor.clear, (c?.2)!, (c?.3)!, c?.4, c?.5)
+         self.timeline[key]?.append(newPoint)*/
+         }*/
         DispatchQueue.main.async(execute: {
             self.spinner.stopAnimating()
             self.spinner.isHidden = true
