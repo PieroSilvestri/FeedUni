@@ -18,7 +18,6 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor(red: 171/255, green: 0/255, blue: 3/255, alpha: 1.0) /* #ab0003 */
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.getJsonFromUrl()
     }
