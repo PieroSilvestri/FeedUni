@@ -14,6 +14,7 @@ class BachecaControllerTableViewCell: UITableViewCell {
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellPrice: UILabel!
     @IBOutlet weak var cellData: UILabel!
+    @IBOutlet weak var cellHeart: UIImageView!
 
     
     override func awakeFromNib() {

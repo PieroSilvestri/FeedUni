@@ -11,13 +11,14 @@ import UIKit
 class BachecaController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var listData = [NSDictionary]()
+    var heartFlag = false
     
     @IBOutlet weak var tableView: UITableView!
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor.red
+        navigationController?.navigationBar.barTintColor = UIColor(red: 171/255, green: 0/255, blue: 3/255, alpha: 1.0) /* #ab0003 */
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.getJsonFromUrl()
     }
@@ -41,17 +42,75 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bachecaCell", for: indexPath) as! BachecaControllerTableViewCell
         let tempItem = self.listData[indexPath.row] as NSDictionary
-        let tempTitle = tempItem["TITLE"] as! String
-        let tempDate = tempItem["DATE"] as! String
+        cell.selectionStyle = .none
+        
+        var tempTitle = ""
+        if (tempItem["TITLE"] is NSNull)
+        {
+            tempTitle = " Titolo non disponibile"
+        } else {
+            tempTitle = tempItem["TITLE"] as! String
+        }
+
+        var tempDate = ""
+        if (tempItem["DATE"] is NSNull)
+        {
+            tempDate = "Data non disponibile"
+        }else {
+            tempDate = tempItem["DATE"] as! String
+        }
         let index = tempDate.index(tempDate.startIndex, offsetBy: 10)
         let range = tempDate.startIndex..<index
-        let tempUser = tempItem["USER"] as! String
+        
+        var tempUser = ""
+        if (tempItem["USER"] is NSNull)
+        {
+            tempUser = "Utente non disponibile"
+        } else {
+            tempUser = tempItem["USER"] as! String
+        }
+        
+        var tempImage = ""
+        if (tempItem["IMAGE"] is NSNull)
+        {
+            tempImage = ""
+            cell.cellImage.image = #imageLiteral(resourceName: "logoUni.png")
+        } else {
+            tempImage = tempItem["IMAGE"] as! String
+
+                /*
+                let dataDecoded : Data = Data(base64Encoded: tempImage, options: .ignoreUnknownCharacters)!
+                let decodedimage = UIImage(data: dataDecoded)
+                cell.cellImage.image = decodedimage 
+                */
+        }
+
         cell.cellTitle.text = tempTitle
         cell.cellData.text = tempDate.substring(with:range)
         cell.cellPrice.text = tempUser
         
+        /*
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("imageTapped:")))
+        cell.cellHeart.addGestureRecognizer(tapGesture)
+        cell.cellHeart.isUserInteractionEnabled = true
+        if (heartFlag == false)
+        {
+            cell.cellHeart.image = #imageLiteral(resourceName: "emptyHeart")
+        }
+        else
+        {
+            cell.cellHeart.image = #imageLiteral(resourceName: "fullHeart")
+        }
+        */
+        
         return cell
     }
+    
+    
+    func imageTapped(gesture: UITapGestureRecognizer){
+        heartFlag = !heartFlag
+    }
+    
     
     func getJsonFromUrl(){
         
@@ -99,14 +158,13 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             let destination = segue.destination as! BachecaDetailController
             let indexRow = self.tableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
             
-            
             let tempItem = self.listData[indexRow!] as NSDictionary
-
+            
             
             var tempTitle = ""
             if (tempItem["TITLE"] is NSNull)
             {
-                tempTitle = " Titolo non disponibile"
+                tempTitle = "Titolo non disponibile"
             } else {
                 tempTitle = tempItem["TITLE"] as! String
             }
@@ -115,20 +173,20 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             var tempDesc = ""
             if (tempItem["DESCRIPTION"] is NSNull)
             {
-                tempDesc = " Descrizione non disponibile"
+                tempDesc = "Descrizione non disponibile"
             } else {
                 tempDesc = tempItem["DESCRIPTION"] as! String
             }
             
-        
+            
             var tempUser = ""
             if (tempItem["USER"] is NSNull)
             {
-                tempUser = " Utente non disponibile"
+                tempUser = "Utente non disponibile"
             } else {
                 tempUser = tempItem["USER"] as! String
             }
-
+            
             
             var tempPrice = 0
             if (tempItem["PRICE"] is NSNull)
@@ -157,8 +215,8 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             } else {
                 tempImage = tempItem["IMAGE"] as! String
             }
-            
-            
+
+
             
             destination.detailImage = tempImage
             destination.detailData = tempDate.substring(with:range)

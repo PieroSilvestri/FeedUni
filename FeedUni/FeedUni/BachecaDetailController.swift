@@ -26,14 +26,15 @@ class BachecaDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor.red
+        navigationController?.navigationBar.barTintColor = UIColor(red: 171/255, green: 0/255, blue: 3/255, alpha: 1.0) /* #ab0003 */
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
 
         detailTitleLabel.text = detailTitle
         detailDescLabel.text = detailDescription
-        detailPriceLabel.text = detailPrice
+        detailPriceLabel.text = "Prezzo: " + detailPrice + "€"
         detailInserzionistaLabel.text = detailUser
-        detailDataLabel.text = detailData
+        detailDataLabel.text = "Pubblicato il: " + detailData
         if (detailImage == "")
         {
             detailImageImage.image = #imageLiteral(resourceName: "logoUni.png")
