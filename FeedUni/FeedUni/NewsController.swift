@@ -5,7 +5,8 @@
 //  Created by Piero Silvestri on 21/06/2017.
 //  Copyright © 2017 Piero Silvestri. All rights reserved.
 //
-
+import Nuke
+import NukeToucanPlugin
 import UIKit
 
 class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
@@ -61,14 +62,23 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.imageCell.bounds.origin.y = (UIImage(data: data as Data)!.size.height/2) - (cell.imageCell.bounds.size.height/2)
                 */
                 
+                cell.imageView?.image = nil
+                
+                var request = Nuke.Request(url: url)
+                request.process(key: "Avatar") {
+                    return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop)
+                }
+                
+                 Nuke.loadImage(with: request, into: cell.imageCell)
+                
+                    /*
                     UIGraphicsBeginImageContext(cell.imageCell.frame.size);
                     UIImage(data: data as Data)?.draw(in: cell.imageCell.bounds);
                     let image = UIGraphicsGetImageFromCurrentImageContext();
                     UIGraphicsEndImageContext();
                     
                     cell.imageCell.backgroundColor = UIColor(patternImage: image!)
-
-                
+                    */
                 
             }
         }
@@ -80,6 +90,22 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //self.performSegue(withIdentifier: "NewsDetaiLSegue", sender: indexPath)
         //self.tableView.allowsSelection = false
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height {
+            tableView.tableFooterView!.isHidden = true
+            // call method to add data to tableView
+            self.indexPage += 1
+            getJsonFromUrl(page: indexPage)
+            print("IndexPage: \(self.indexPage)")
+            self.spinner.center = self.view.center
+            self.spinner.hidesWhenStopped = true
+            self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            view.addSubview(self.spinner)
+            self.spinner.startAnimating()
+            UIApplication.shared.beginIgnoringInteractionEvents()
+        }
     }
  
     
@@ -121,7 +147,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //self.flagDownload = false;
         
         
-        let urlString = "http://apiunipn.parol.in/V1/posts"
+        let urlString = "http://apiunipn.parol.in/V1/posts/\(page)"
         
         let url = URL(string: urlString)
         var request = URLRequest(url: url!)

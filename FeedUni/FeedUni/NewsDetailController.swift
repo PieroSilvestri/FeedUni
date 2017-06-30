@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Nuke
+import NukeToucanPlugin
 
 class NewsDetailController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
@@ -48,18 +50,14 @@ class NewsDetailController: UIViewController {
 
         if let data = NSData(contentsOf: myUrl!) {
             
-            /*
-            newsImageView.backgroundColor = UIColor(patternImage: UIImage(data: data as Data)!)
-            newsImageView.bounds.origin.x = (UIImage(data: data as Data)!.size.width/2) - (newsImageView.bounds.size.width/2)
-            newsImageView.bounds.origin.y = (UIImage(data: data as Data)!.size.height/2) - (newsImageView.bounds.size.height/2)
- 
-            */
-             UIGraphicsBeginImageContext(newsImageView.frame.size);
-             UIImage(data: data as Data)?.draw(in: newsImageView.bounds);
-             let image = UIGraphicsGetImageFromCurrentImageContext();
-             UIGraphicsEndImageContext();
-             
-             newsImageView.backgroundColor = UIColor(patternImage: image!)
+            self.newsImageView?.image = nil
+            
+            var request = Nuke.Request(url: myUrl!)
+            request.process(key: "Avatar") {
+                return $0.resize(CGSize(width: self.newsImageView.frame.width, height: self.newsImageView.frame.height))
+            }
+            
+            Nuke.loadImage(with: request, into: self.newsImageView)
             
             newsImageView.isHidden = false
  

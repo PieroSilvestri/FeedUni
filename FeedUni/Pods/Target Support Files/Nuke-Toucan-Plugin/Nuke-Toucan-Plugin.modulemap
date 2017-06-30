@@ -1,0 +1,6 @@
+framework module NukeToucanPlugin {
+  umbrella header "Nuke-Toucan-Plugin-umbrella.h"
+
+  export *
+  module * { export * }
+}

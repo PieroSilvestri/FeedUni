@@ -26,6 +26,10 @@ PODS:
   - FBSDKShareKit (4.24.0):
     - FBSDKCoreKit
   - JSONJoy-Swift (3.0.1)
+  - Nuke (5.1.1)
+  - Nuke-Toucan-Plugin (0.3):
+    - Nuke (~> 5.0)
+    - Toucan (>= 0.6)
   - Realm (2.8.3):
     - Realm/Headers (= 2.8.3)
   - Realm/Headers (2.8.3)
@@ -33,6 +37,7 @@ PODS:
     - Realm (= 2.8.3)
   - TabPageViewController (0.2.7)
   - TimelineTableViewCell (1.0.1)
+  - Toucan (0.6.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -40,9 +45,12 @@ DEPENDENCIES:
   - FacebookLogin
   - FacebookShare (from `https://github.com/1amageek/facebook-sdk-swift`)
   - JSONJoy-Swift (~> 3.0.0)
+  - Nuke
+  - Nuke-Toucan-Plugin
   - RealmSwift
   - TabPageViewController
   - TimelineTableViewCell
+  - Toucan
 
 EXTERNAL SOURCES:
   FacebookShare:
@@ -63,11 +71,14 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 1214c6d5a1c4995b694d8db8a9ba6910c6028acf
   FBSDKShareKit: a2ed9d7781a4eda9ac20d7404305e795b10251ac
   JSONJoy-Swift: ef6eccdcf319412f149bbdd031b27f0430d5d576
+  Nuke: 0a2ddb4bd13d75782964bf598a159ca2a836d826
+  Nuke-Toucan-Plugin: 6e19d7e53214eac210126b32d50ae73601aeafe3
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
   RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
   TabPageViewController: c37a1257a50c2b50712dde61bf499768eee95b67
   TimelineTableViewCell: 8e46d96b32caf5a3ca9f9d7d5b8c94e9de30b92a
+  Toucan: 47485bbc9cb4541ef6318d6886103e6eaf16e919
 
-PODFILE CHECKSUM: 85df0a6003b891fef42a13db19ee661715d86678
+PODFILE CHECKSUM: 5cea64c794070f34af138687994e9f328a85c58c
 
 COCOAPODS: 1.2.0
