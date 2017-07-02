@@ -76,7 +76,11 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             cell.cellImage.image = #imageLiteral(resourceName: "logoUni.png")
         } else {
             tempImage = tempItem["IMAGE"] as! String
-
+            let decodedData = Data(base64Encoded: tempImage, options: .ignoreUnknownCharacters)
+            if (decodedData != nil){
+                let decodedimage = UIImage(data: decodedData!)
+                cell.cellImage.image = decodedimage
+            }
                 /*
                 let dataDecoded : Data = Data(base64Encoded: tempImage, options: .ignoreUnknownCharacters)!
                 let decodedimage = UIImage(data: dataDecoded)
@@ -214,7 +218,22 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             } else {
                 tempImage = tempItem["IMAGE"] as! String
             }
-
+            
+            var tempNumber = ""
+            if (tempItem["PHONE"] is NSNull)
+            {
+                tempNumber = "Numero non disponibile"
+            } else {
+                tempNumber = tempItem["PHONE"] as! String
+            }
+            
+            var tempEmail = ""
+            if (tempItem["EMAIL"] is NSNull)
+            {
+                tempEmail = "Email non disponibile"
+            } else {
+                tempEmail = tempItem["EMAIL"] as! String
+            }
 
             
             destination.detailImage = tempImage
@@ -223,6 +242,8 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             destination.detailDescription = tempDesc
             destination.detailTitle = tempTitle
             destination.detailPrice = "\(tempPrice)"
+            destination.detailEmail = tempEmail
+            destination.detailNumber = tempNumber
             
         }
     }

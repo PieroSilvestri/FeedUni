@@ -16,6 +16,8 @@ class BachecaDetailController: UIViewController {
     @IBOutlet weak var detailPriceLabel: UILabel!
     @IBOutlet weak var detailInserzionistaLabel: UILabel!
     @IBOutlet weak var detailDataLabel: UILabel!
+    @IBOutlet weak var detailNumberLabel: UILabel!
+    @IBOutlet weak var detailEmailLabel: UILabel!
     
     var detailTitle = ""
     var detailDescription = ""
@@ -23,6 +25,8 @@ class BachecaDetailController: UIViewController {
     var detailUser = ""
     var detailData = ""
     var detailImage = ""
+    var detailNumber = ""
+    var detailEmail = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +38,19 @@ class BachecaDetailController: UIViewController {
         detailDescLabel.text = detailDescription
         detailPriceLabel.text = "Prezzo: " + detailPrice + "€"
         detailInserzionistaLabel.text = detailUser
+        detailNumberLabel.text = detailNumber
+        detailEmailLabel.text = detailEmail
         detailDataLabel.text = "Pubblicato il: " + detailData
         if (detailImage == "")
         {
             detailImageImage.image = #imageLiteral(resourceName: "logoUni.png")
         }
         else {
-            let dataDecoded : Data = Data(base64Encoded: detailImage, options: .ignoreUnknownCharacters)!
-            let decodedimage = UIImage(data: dataDecoded)
-            detailImageImage.image = decodedimage
+            let decodedData = Data(base64Encoded: detailImage, options: .ignoreUnknownCharacters)
+            if (decodedData != nil){
+                let decodedimage = UIImage(data: decodedData!)
+                detailImageImage.image = decodedimage
+            }
         }
         // Do any additional setup after loading the view.
     }
