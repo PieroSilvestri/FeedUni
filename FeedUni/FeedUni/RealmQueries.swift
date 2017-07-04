@@ -32,6 +32,13 @@ class RealmQueries {
         return lessons
     }
     
+    //Ritorna tutte le inserzioni inserite dall'utente
+    static func getUserInsertions() -> [UserInsertion] {
+        let userInsertions = Array(realm.objects(UserInsertion.self))
+        print("\n\nRealmQueries \(userInsertions)")
+        return userInsertions
+    }
+    
     
     //MARK: INSERT QUERIES
     //Inserimento di una news
@@ -82,6 +89,13 @@ class RealmQueries {
     static func deleteLesson(lesson: FavoriteLesson) {
         try! realm.write {
             realm.delete(lesson)
+        }
+    }
+    
+    //Eliminazione inserzione dell'utente
+    static func deleteUserInsertion(userInsertion: UserInsertion) {
+        try! realm.write {
+            realm.delete(userInsertion)
         }
     }
     

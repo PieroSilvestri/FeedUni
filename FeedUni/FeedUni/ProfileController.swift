@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+class ProfileController: UITableViewController {
     @IBOutlet weak var usernameLabel: UILabel!
 
     @IBAction func LogoutPressed(_ sender: UIBarButtonItem) {
@@ -16,26 +16,23 @@ class ProfileController: UIViewController {
         UserDefaults.standard.setValue(false, forKey: "ricordami")
         presentingViewController?.dismiss(animated: false, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "lessonSegue" {
+            let dest = segue.destination as! UserFavsController
+            dest.selection = 1
+        } else if segue.identifier == "newsInsertion" {
+            let dest = segue.destination as! UserFavsController
+            dest.selection = 0
+        } else if segue.identifier == "insertionSegue" {
+            let dest = segue.destination as! UserFavsController
+            dest.selection = 2
+        }
     }
-    */
 
 }

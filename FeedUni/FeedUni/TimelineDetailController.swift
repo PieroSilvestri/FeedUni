@@ -22,6 +22,8 @@ class TimelineDetailController: UIViewController, UIPickerViewDataSource, UIPick
 	@IBOutlet weak var lblLessonStart: UILabel!
 	@IBOutlet weak var lblDuration: UILabel!
 	@IBOutlet weak var pickerView: UIPickerView!
+	@IBOutlet weak var btnSetNotfication: UIButton!
+	@IBOutlet weak var viewTitleNotification: UIView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +75,10 @@ class TimelineDetailController: UIViewController, UIPickerViewDataSource, UIPick
 		dateFormatter.locale = Locale(identifier: "it_IT")
 		dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
 		dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+		let dateFormatter2 = DateFormatter()
+		dateFormatter2.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+		
+		let now = Date(timeIntervalSince1970: (dateFormatter2.date(from: dateFormatter2.string(from: Date()))?.timeIntervalSince1970.subtracting(TimeInterval(400)))!)
 		let date = dateFormatter.date(from: self.selectedLesson.lessonStart!)
 		let date2 = dateFormatter.date(from: self.selectedLesson.lessonEnd!)
 		dateFormatter.dateFormat = "HH:mm"
@@ -83,9 +89,14 @@ class TimelineDetailController: UIViewController, UIPickerViewDataSource, UIPick
 			self.lblLessonType.text = type
 		} else {
 			self.lblLessonType.text = "Lezione"
+			self.selectedLesson.lessonType = "Lezione"
 		}
 		
-		//self.timeBeforeLesson
+		if(date! < now) {
+			self.viewTitleNotification.isHidden = true
+			self.pickerView.isHidden = true
+			self.btnSetNotfication.isHidden = true
+		}
 	}
 	
 	func stringFromTimeInterval(interval: TimeInterval) -> String {
@@ -125,17 +136,39 @@ class TimelineDetailController: UIViewController, UIPickerViewDataSource, UIPick
 		notification.sound = UNNotificationSound.default()
 		
 		let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: (date?.timeIntervalSinceNow)!.subtracting(TimeInterval(secondsBefore)), repeats: false)
-		let request = UNNotificationRequest(identifier: self.selectedLesson.lessonName! + self.selectedLesson.lessonStart!, content: notification, trigger: notificationTrigger)
+		let identifier = self.selectedLesson.lessonName! + self.selectedLesson.lessonStart!
+		let request = UNNotificationRequest(identifier: identifier, content: notification, trigger: notificationTrigger)
 		
 		UNUserNotificationCenter.current().add(request) { (error) in
 			if error == nil {
 				let alert  = UIAlertController(title: "Il promemoria è impostato", message: nil, preferredStyle: .alert)
 				alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (alert) in
 					// Realm lesson save
+					self.saveLesson(id: identifier)
 				}))
 				self.present(alert, animated: true, completion: nil)
 			}
 		}
 	}
-
+	
+	func saveLesson(id: String) {
+		let dateFormatter = DateFormatter()
+		dateFormatter.locale = Locale(identifier: "it_IT")
+		dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+		dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+		
+		let favLesson = FavoriteLesson(value: [
+		"lessonName" : self.selectedLesson.lessonName!,
+		"teacher": self.selectedLesson.teacher!,
+		"room" : self.selectedLesson.room!,
+		"lessonDate" : dateFormatter.date(from: self.selectedLesson.lessonDate!)!,
+		"lessonStart" : dateFormatter.date(from: self.selectedLesson.lessonStart!)!,
+		"lessonEnd" : dateFormatter.date(from: self.selectedLesson.lessonEnd!)!,
+		"course" : self.selectedLesson.course!,
+		"lessonType" : self.selectedLesson.lessonType!,
+		"lessonArea" : self.selectedLesson.lessonArea!,
+		"lessonReminder" : id])
+		RealmQueries.insertLesson(lesson: favLesson)
+	}
+	
 }
