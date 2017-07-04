@@ -34,12 +34,14 @@ class LoginController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        if(UserDefaults.standard.object(forKey: "ricordami") != nil){
         if(UserDefaults.standard.object(forKey: "ricordami") as! Bool){
             if(UserDefaults.standard.object(forKey: "token") != nil){
                 if(UserDefaults.standard.object(forKey: "id") != nil){
                     self.performSegue(withIdentifier: "GoToMainViewFromLoginSegue", sender: self)
                 }
             }
+        }
         }else if(UserDefaults.standard.object(forKey: "email") != nil){
             self.EmailTextField.text = UserDefaults.standard.object(forKey: "email") as! String
         }
