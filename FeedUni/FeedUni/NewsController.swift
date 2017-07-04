@@ -22,6 +22,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //initUI()
         
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         getJsonFromUrl(page: indexPage)
     }
 
