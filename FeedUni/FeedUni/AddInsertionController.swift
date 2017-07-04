@@ -144,6 +144,10 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result
             
+            response.result.ifSuccess {
+                RealmQueries.insertUserInsertion(userInsertion: tempInsertion)
+            }
+            
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
             }
