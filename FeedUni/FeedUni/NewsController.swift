@@ -94,7 +94,6 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height {
-			// tableView.tableFooterView!.isHidden = true
             // call method to add data to tableView
             self.indexPage += 1
             getJsonFromUrl(page: indexPage)
