@@ -8,15 +8,15 @@
 
 import UIKit
 
-protocol FilterCourseDelegate {
+protocol TimelineFilterDelegate {
     func courseChosen(course: String)
 }
 
-class FilterCourseController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TimelineFilterController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var delegate: FilterCourseDelegate?
-    var courses = ["UniUD", "I.T.S."]
-    
+    var delegate: TimelineFilterDelegate?
+	var courses: [String] = []
+	
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -32,7 +32,8 @@ class FilterCourseController: UIViewController, UITableViewDelegate, UITableView
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        return self.courses.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.courses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,10 +46,8 @@ class FilterCourseController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.courseChosen(course: courses[indexPath.row])
-        self.navigationController?.popViewController(animated: true)
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -56,6 +55,6 @@ class FilterCourseController: UIViewController, UITableViewDelegate, UITableView
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
