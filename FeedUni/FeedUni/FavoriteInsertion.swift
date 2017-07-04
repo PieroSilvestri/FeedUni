@@ -18,4 +18,5 @@ class FavoriteInsertion: Object {
     dynamic var price = 0   //Prezzo in centesimi
     dynamic var publishDate: Date?
     dynamic var insertionType = 1
+    dynamic var image = "" //percorso immagine salvata
 }

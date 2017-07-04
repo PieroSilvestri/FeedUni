@@ -8,13 +8,14 @@
 
 import UIKit
 import TimelineTableViewCell
+import JSONJoy
 
 class TimelineController: UIViewController, UITableViewDelegate, UITableViewDataSource, FilterCourseDelegate {
     
     @IBOutlet weak var timeTableView: UITableView!
     
-    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-    var courses: [String :[NSDictionary]] = [String:Array<NSDictionary>]()
+    var spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    var courses: [String :[Lesson]] = [:]
     var chosenCourse = "UniTS"
     var timeline: [String: [(TimelinePoint, UIColor, String, String, String?, String?)]] = [:]
     
@@ -22,6 +23,25 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         // Setup della cella
+        self.initCell()
+        
+        self.initGUI()
+
+        // Chiamata orari
+        self.getJsonFromUrl(page: 1)
+    }
+    
+    // MARK: - Delegate
+    
+    func courseChosen(course: String) {
+        self.chosenCourse = course
+        setTimeline()
+        self.timeTableView.reloadData()
+    }
+    
+    // MARK: - UI
+    
+    func initCell() {
         let bundle = Bundle(for: TimelineTableViewCell.self)
         let nibUrl = bundle.url(forResource: "TimelineTableViewCell", withExtension: "bundle")
         let timelineTableViewCellNib = UINib(nibName: "TimelineTableViewCell",
@@ -30,7 +50,9 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.timeTableView.estimatedRowHeight = 300
         self.timeTableView.rowHeight = UITableViewAutomaticDimension
-        
+    }
+    
+    func initGUI() {
         let rightButton = UIBarButtonItem(
             title: "Filtra",
             style: .plain,
@@ -39,17 +61,23 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
         
         navigationItem.rightBarButtonItem = rightButton
         
-        // Chiamata orari
-        self.getJsonFromUrl(page: 1)
+        self.spinner.center = self.view.center
+        self.spinner.hidesWhenStopped = true
+        view.addSubview(self.spinner)
+        
+        self.spinner.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        timeTableView.tableFooterView = UIView()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func buttonFilterPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "filter", sender: sender)
     }
+    
+    // MARK: - HttpRequest
     
     func getJsonFromUrl(page: Int){
-        
         //self.flagDownload = false;
         
         let urlString = "http://apiunipn.parol.in/V1/timetable"
@@ -70,10 +98,14 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
                     self.setCourses(months: response["month"] as! [NSDictionary])
                     self.setTimeline()
                     
-                    self.spinner.stopAnimating()
                     UIApplication.shared.endIgnoringInteractionEvents()
                 } catch let error as NSError {
                     print(error)
+                    DispatchQueue.main.sync {
+                        self.spinner.stopAnimating()
+                        self.spinner.isHidden = true
+                        self.timeTableView.reloadData()
+                    }
                 }
             }
             
@@ -143,26 +175,33 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "it_IT")
+        dateFormatter.timeZone = TimeZone.current
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         let date = dateFormatter.date(from: name)
-        dateFormatter.locale = Locale(identifier: "it_IT")
         dateFormatter.dateFormat = "EEE dd-MM-yyyy"
         return dateFormatter.string(from: date!).capitalized
     }
+    
+    // MARK: - TimeTableView utils
     
     func setCourses(months: [NSDictionary]){
         for days in months {
             let classes = days.object(forKey: "classes") as! [NSDictionary]
             for lesson in classes {
-                let course = lesson.object(forKey: "course") as! String
-                if !self.courses.isEmpty {
-                    if self.courses.keys.contains(course) {
-                        self.courses[course]!.append(lesson)
+                do {
+                    let lessonFormatted = try Lesson(JSONDecoder(lesson))
+                    if !self.courses.isEmpty {
+                        if self.courses.keys.contains(lessonFormatted.course) {
+                            self.courses[lessonFormatted.course]!.append(lessonFormatted)
+                        } else {
+                            self.courses[lessonFormatted.course] = [lessonFormatted]
+                        }
                     } else {
-                        self.courses[course] = [lesson]
+                        self.courses[lessonFormatted.course] = [lessonFormatted]
                     }
-                } else {
-                    self.courses[course] = [lesson]
+                } catch {
+                    // print("unable to parse the JSON")
                 }
             }
         }
@@ -173,21 +212,48 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
         if self.courses[chosenCourse] != nil {
             let course = self.courses[chosenCourse]
             for value in course! {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                let day = dateFormatter.string(from: value.lessonDate)
+                dateFormatter.dateFormat = "HH:mm"
                 
-                let today = (value.object(forKey: "date") as! String)
+                var point = TimelinePoint()
+                newPoint = (point, UIColor.black, dateFormatter.string(from: value.lessonStart), value.lessonName, value.room, nil)
+                
+                var noKey = true
+                if !self.timeline.isEmpty {
+                    self.timeline.keys.forEach { (key) in
+                        print(key.contains(day))
+                        if key.contains(day) {
+                            self.timeline[key]!.append(newPoint)
+                            noKey = false
+                        } else {
+                            noKey = true
+                        }
+                    }
+                    if noKey {
+                        let k = "\(self.timeline.count)/\(day)"
+                        self.timeline[k] = [newPoint]
+                    }
+                } else {
+                    let k = "\(self.timeline.count)/\(day)"
+                    self.timeline[k] = [newPoint]
+                }
+                
+                self.timeline[day]?.forEach { (key) in
+                    if key.3 == self.timeline[day]?.last?.3 && key.2 == self.timeline[day]?.last?.2 {
+                        let c = self.timeline[day]?.removeLast()
+                        newPoint = (point, backColor: UIColor.clear, (c?.2)!, (c?.3)!, c?.4, c?.5)
+                        self.timeline[day]?.append(newPoint)
+                    }
+                }
+            }
+        }
+                /*let today = (value.object(forKey: "date") as! String)
                 
                 let dateString = value.object(forKey: "time_start") as! String
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-                let date = dateFormatter.date(from: dateString)!
-                dateFormatter.dateFormat = "HH:mm"
-                
-                var point = TimelinePoint()
-                /*if(value == self.courses[chosenCourse]?.last){
-                    newPoint = (point, backColor: UIColor.clear, dateFormatter.string(from: date), value.object(forKey: "name") as! String, value.object(forKey: "class") as? String, nil)
-                } else {*/
-                    newPoint = (point, UIColor.black, dateFormatter.string(from: date), value.object(forKey: "name") as! String, value.object(forKey: "class") as? String, nil)
-                //}
                 
                 var noKey = true
                 if !self.timeline.isEmpty {
@@ -207,19 +273,19 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
                     let k = "\(self.timeline.count)/\(today)"
                     self.timeline[k] = [newPoint]
                 }
-            }
-        }
+                
+                self.timeline.forEach { (key) in
+                    print("------------------")
+                    print(key.value == self.timeline[key.key]?.last)
+                    /*let c = self.timeline[key]?.removeLast()
+                    newPoint = (point, backColor: UIColor.clear, (c?.2)!, (c?.3)!, c?.4, c?.5)
+                    self.timeline[key]?.append(newPoint)*/
+                }*/
         DispatchQueue.main.async(execute: {
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
             self.timeTableView.reloadData()
         })
-    }
-    
-    func buttonFilterPressed(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "filter", sender: sender)
-    }
-    
-    func courseChosen(course: String) {
-        self.chosenCourse = course
     }
     
     /*

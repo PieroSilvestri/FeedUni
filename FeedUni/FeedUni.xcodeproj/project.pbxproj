@@ -10,6 +10,7 @@
 		04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657B1EFAC54D0095CE34 /* LoginController.swift */; };
 		04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657D1EFAC55B0095CE34 /* RegisterController.swift */; };
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
+		381F7DE91F03BB3A00FECEE7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381F7DE81F03BB3A00FECEE7 /* Lesson.swift */; };
 		3897F5AF1EFAC83D000DCD93 /* TimelineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897F5AE1EFAC83D000DCD93 /* TimelineController.swift */; };
 		38D58A301F013CCF00833F1A /* FilterCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D58A2F1F013CCF00833F1A /* FilterCourseController.swift */; };
 		5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74001EF7FBBC009A323E /* AppDelegate.swift */; };
@@ -18,12 +19,21 @@
 		5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74091EF7FBBC009A323E /* LaunchScreen.storyboard */; };
 		5D91CBD61F010D3A005D9BAD /* String+Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91CBD51F010D3A005D9BAD /* String+Shortcuts.swift */; };
 		5DC6437B1EFC3D4D0064511A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6437A1EFC3D4D0064511A /* NewsTableViewCell.swift */; };
+		5DC77F0D1F03C2B300F76427 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC77F0C1F03C2B300F76427 /* ProfileController.swift */; };
 		5DD6F9541F00F2CF002908B4 /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */; };
 		5DE5E2EF1EFAC97100B469E0 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5E2EE1EFAC97100B469E0 /* NewsController.swift */; };
 		650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650EF3261EFABD0D00894F9D /* BachecaController.swift */; };
+		653061BA1F091FED00A26D27 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 653061B81F091FED00A26D27 /* envelope.png */; };
+		653061BB1F091FED00A26D27 /* phone-call.png in Resources */ = {isa = PBXBuildFile; fileRef = 653061B91F091FED00A26D27 /* phone-call.png */; };
 		657D16B01EF92F600069AB00 /* logoUni.png in Resources */ = {isa = PBXBuildFile; fileRef = 657D16AF1EF92F600069AB00 /* logoUni.png */; };
+		65A2E9141F0405EA0035011B /* calendarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A2E9121F0405EA0035011B /* calendarIcon.png */; };
+		65A2E9151F0405EA0035011B /* moneyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A2E9131F0405EA0035011B /* moneyIcon.png */; };
 		65AC99BF1F011E060055D6C8 /* BachecaDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC99BE1F011E060055D6C8 /* BachecaDetailController.swift */; };
+		65CD27F81F05397400598148 /* tec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65CD27F71F05397400598148 /* tec.jpg */; };
 		65CE43501EFACD9B00C00644 /* BachecaControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE434F1EFACD9B00C00644 /* BachecaControllerTableViewCell.swift */; };
+		65F0E20E1F06346900244285 /* utente.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F0E20D1F06346900244285 /* utente.png */; };
+		65F0E2121F063F9900244285 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F0E2111F063F9900244285 /* TabBarController.swift */; };
+		F307B1B51F03BAE5009FF276 /* UserInsertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B1B41F03BAE5009FF276 /* UserInsertion.swift */; };
 		F36706AF1F01437B00D3980C /* AddInsertionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36706AE1F01437B00D3980C /* AddInsertionController.swift */; };
 		F3E457FF1EFAC77200B09BBD /* FavoriteNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E457FE1EFAC77200B09BBD /* FavoriteNews.swift */; };
 		F3E458011EFAC7C200B09BBD /* FavoriteInsertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E458001EFAC7C200B09BBD /* FavoriteInsertion.swift */; };
@@ -35,6 +45,7 @@
 		043C94F31EFEBC5E000EC227 /* FeedUni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeedUni.entitlements; sourceTree = "<group>"; };
 		04F3657B1EFAC54D0095CE34 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		04F3657D1EFAC55B0095CE34 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		381F7DE81F03BB3A00FECEE7 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		3897F5AE1EFAC83D000DCD93 /* TimelineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineController.swift; sourceTree = "<group>"; };
 		38D58A2F1F013CCF00833F1A /* FilterCourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCourseController.swift; sourceTree = "<group>"; };
 		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,14 +57,23 @@
 		5D1A740C1EF7FBBC009A323E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D91CBD51F010D3A005D9BAD /* String+Shortcuts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Shortcuts.swift"; sourceTree = "<group>"; };
 		5DC6437A1EFC3D4D0064511A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		5DC77F0C1F03C2B300F76427 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
 		5DE5E2EE1EFAC97100B469E0 /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		650EF3261EFABD0D00894F9D /* BachecaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BachecaController.swift; sourceTree = "<group>"; };
+		653061B81F091FED00A26D27 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
+		653061B91F091FED00A26D27 /* phone-call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-call.png"; sourceTree = "<group>"; };
 		657D16AF1EF92F600069AB00 /* logoUni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoUni.png; path = FeedUni/logoUni.png; sourceTree = SOURCE_ROOT; };
+		65A2E9121F0405EA0035011B /* calendarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarIcon.png; sourceTree = "<group>"; };
+		65A2E9131F0405EA0035011B /* moneyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneyIcon.png; sourceTree = "<group>"; };
 		65AC99BE1F011E060055D6C8 /* BachecaDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BachecaDetailController.swift; sourceTree = "<group>"; };
+		65CD27F71F05397400598148 /* tec.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tec.jpg; sourceTree = "<group>"; };
 		65CE434F1EFACD9B00C00644 /* BachecaControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BachecaControllerTableViewCell.swift; sourceTree = "<group>"; };
+		65F0E20D1F06346900244285 /* utente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utente.png; sourceTree = "<group>"; };
+		65F0E2111F063F9900244285 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.release.xcconfig"; sourceTree = "<group>"; };
+		F307B1B41F03BAE5009FF276 /* UserInsertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertion.swift; sourceTree = "<group>"; };
 		F36706AE1F01437B00D3980C /* AddInsertionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInsertionController.swift; sourceTree = "<group>"; };
 		F3E457FE1EFAC77200B09BBD /* FavoriteNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteNews.swift; sourceTree = "<group>"; };
 		F3E458001EFAC7C200B09BBD /* FavoriteInsertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteInsertion.swift; sourceTree = "<group>"; };
@@ -129,6 +149,8 @@
 				F36706AE1F01437B00D3980C /* AddInsertionController.swift */,
 				5DE5E2EE1EFAC97100B469E0 /* NewsController.swift */,
 				5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */,
+				5DC77F0C1F03C2B300F76427 /* ProfileController.swift */,
+				65F0E2111F063F9900244285 /* TabBarController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +160,7 @@
 			children = (
 				5DC6437A1EFC3D4D0064511A /* NewsTableViewCell.swift */,
 				5D91CBD51F010D3A005D9BAD /* String+Shortcuts.swift */,
+				381F7DE81F03BB3A00FECEE7 /* Lesson.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -154,6 +177,12 @@
 		657D16AC1EF92C280069AB00 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				653061B81F091FED00A26D27 /* envelope.png */,
+				653061B91F091FED00A26D27 /* phone-call.png */,
+				65F0E20D1F06346900244285 /* utente.png */,
+				65CD27F71F05397400598148 /* tec.jpg */,
+				65A2E9121F0405EA0035011B /* calendarIcon.png */,
+				65A2E9131F0405EA0035011B /* moneyIcon.png */,
 				657D16AF1EF92F600069AB00 /* logoUni.png */,
 			);
 			name = Resouces;
@@ -174,6 +203,7 @@
 				F3E457FE1EFAC77200B09BBD /* FavoriteNews.swift */,
 				F3E458001EFAC7C200B09BBD /* FavoriteInsertion.swift */,
 				F3E458041EFAC83000B09BBD /* FavoriteLesson.swift */,
+				F307B1B41F03BAE5009FF276 /* UserInsertion.swift */,
 			);
 			name = Tables;
 			sourceTree = "<group>";
@@ -247,7 +277,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */,
+				65A2E9141F0405EA0035011B /* calendarIcon.png in Resources */,
+				65F0E20E1F06346900244285 /* utente.png in Resources */,
+				653061BA1F091FED00A26D27 /* envelope.png in Resources */,
 				5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */,
+				65A2E9151F0405EA0035011B /* moneyIcon.png in Resources */,
+				653061BB1F091FED00A26D27 /* phone-call.png in Resources */,
+				65CD27F81F05397400598148 /* tec.jpg in Resources */,
 				5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */,
 				657D16B01EF92F600069AB00 /* logoUni.png in Resources */,
 			);
@@ -313,16 +349,20 @@
 				5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */,
 				5D91CBD61F010D3A005D9BAD /* String+Shortcuts.swift in Sources */,
 				5DC6437B1EFC3D4D0064511A /* NewsTableViewCell.swift in Sources */,
+				5DC77F0D1F03C2B300F76427 /* ProfileController.swift in Sources */,
 				F3E458071EFAC85600B09BBD /* RealmQueries.swift in Sources */,
 				F3E458051EFAC83000B09BBD /* FavoriteLesson.swift in Sources */,
 				04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */,
+				F307B1B51F03BAE5009FF276 /* UserInsertion.swift in Sources */,
 				65AC99BF1F011E060055D6C8 /* BachecaDetailController.swift in Sources */,
+				381F7DE91F03BB3A00FECEE7 /* Lesson.swift in Sources */,
 				65CE43501EFACD9B00C00644 /* BachecaControllerTableViewCell.swift in Sources */,
 				38D58A301F013CCF00833F1A /* FilterCourseController.swift in Sources */,
 				F36706AF1F01437B00D3980C /* AddInsertionController.swift in Sources */,
 				5DD6F9541F00F2CF002908B4 /* NewsDetailController.swift in Sources */,
 				5DE5E2EF1EFAC97100B469E0 /* NewsController.swift in Sources */,
 				650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */,
+				65F0E2121F063F9900244285 /* TabBarController.swift in Sources */,
 				F3E458011EFAC7C200B09BBD /* FavoriteInsertion.swift in Sources */,
 				3897F5AF1EFAC83D000DCD93 /* TimelineController.swift in Sources */,
 			);
@@ -449,8 +489,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G3854Z4687;
 				INFOPLIST_FILE = FeedUni/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.giacomoosso.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,8 +507,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G3854Z4687;
 				INFOPLIST_FILE = FeedUni/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.giacomoosso.FeedUni;
 				PRODUCT_NAME = "$(TARGET_NAME)";

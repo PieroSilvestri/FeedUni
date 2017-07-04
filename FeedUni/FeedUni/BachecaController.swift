@@ -11,12 +11,14 @@ import UIKit
 class BachecaController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var listData = [NSDictionary]()
+    var heartFlag = false
     
     @IBOutlet weak var tableView: UITableView!
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.getJsonFromUrl()
     }
     
@@ -39,17 +41,79 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bachecaCell", for: indexPath) as! BachecaControllerTableViewCell
         let tempItem = self.listData[indexPath.row] as NSDictionary
-        let tempTitle = tempItem["TITLE"] as! String
-        let tempDate = tempItem["DATE"] as! String
+        cell.selectionStyle = .none
+        
+        var tempTitle = ""
+        if (tempItem["TITLE"] is NSNull)
+        {
+            tempTitle = " Titolo non disponibile"
+        } else {
+            tempTitle = tempItem["TITLE"] as! String
+        }
+
+        var tempDate = ""
+        if (tempItem["DATE"] is NSNull)
+        {
+            tempDate = "Data non disponibile"
+        }else {
+            tempDate = tempItem["DATE"] as! String
+        }
         let index = tempDate.index(tempDate.startIndex, offsetBy: 10)
         let range = tempDate.startIndex..<index
-        let tempUser = tempItem["USER"] as! String
+        
+        var tempUser = ""
+        if (tempItem["USER"] is NSNull)
+        {
+            tempUser = "Utente non disponibile"
+        } else {
+            tempUser = tempItem["USER"] as! String
+        }
+        
+        var tempImage = ""
+        if (tempItem["IMAGE"] is NSNull)
+        {
+            tempImage = ""
+            cell.cellImage.image = #imageLiteral(resourceName: "logoUni.png")
+        } else {
+            tempImage = tempItem["IMAGE"] as! String
+            let decodedData = Data(base64Encoded: tempImage, options: .ignoreUnknownCharacters)
+            if (decodedData != nil){
+                let decodedimage = UIImage(data: decodedData!)
+                cell.cellImage.image = decodedimage
+            }
+                /*
+                let dataDecoded : Data = Data(base64Encoded: tempImage, options: .ignoreUnknownCharacters)!
+                let decodedimage = UIImage(data: dataDecoded)
+                cell.cellImage.image = decodedimage 
+                */
+        }
+
         cell.cellTitle.text = tempTitle
         cell.cellData.text = tempDate.substring(with:range)
         cell.cellPrice.text = tempUser
         
+        /*
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("imageTapped:")))
+        cell.cellHeart.addGestureRecognizer(tapGesture)
+        cell.cellHeart.isUserInteractionEnabled = true
+        if (heartFlag == false)
+        {
+            cell.cellHeart.image = #imageLiteral(resourceName: "emptyHeart")
+        }
+        else
+        {
+            cell.cellHeart.image = #imageLiteral(resourceName: "fullHeart")
+        }
+        */
+        
         return cell
     }
+    
+    
+    func imageTapped(gesture: UITapGestureRecognizer){
+        heartFlag = !heartFlag
+    }
+    
     
     func getJsonFromUrl(){
         
@@ -96,16 +160,96 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         if (segue.identifier == "InseptionDetailSegue"){
             let destination = segue.destination as! BachecaDetailController
             let indexRow = self.tableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
+            
             let tempItem = self.listData[indexRow!] as NSDictionary
-            let tempTitle = tempItem["TITLE"] as! String
-            let tempDate = tempItem["DATE"] as! String
+            
+            
+            var tempTitle = ""
+            if (tempItem["TITLE"] is NSNull)
+            {
+                tempTitle = "Titolo non disponibile"
+            } else {
+                tempTitle = tempItem["TITLE"] as! String
+            }
+            
+            
+            var tempDesc = ""
+            if (tempItem["DESCRIPTION"] is NSNull)
+            {
+                tempDesc = "Descrizione non disponibile"
+            } else {
+                tempDesc = tempItem["DESCRIPTION"] as! String
+            }
+            
+            
+            var tempUser = ""
+            if (tempItem["USER"] is NSNull)
+            {
+                tempUser = "Utente non disponibile"
+            } else {
+                tempUser = tempItem["USER"] as! String
+            }
+            
+            
+            var tempPrice = 0
+            if (tempItem["PRICE"] is NSNull)
+            {
+                tempPrice = 0
+            } else {
+                tempPrice = tempItem["PRICE"] as! Int
+            }
+            
+            
+            var tempDate = ""
+            if (tempItem["DATE"] is NSNull)
+            {
+                tempDate = "Data non disponibile"
+            }else {
+                tempDate = tempItem["DATE"] as! String
+            }
             let index = tempDate.index(tempDate.startIndex, offsetBy: 10)
             let range = tempDate.startIndex..<index
-            destination.detailData = tempDate
-            destination.detailUser = tempItem["USER"] as! String
+            
+            
+            var tempImage = ""
+            if (tempItem["IMAGE"] is NSNull)
+            {
+                tempImage = ""
+            } else {
+                tempImage = tempItem["IMAGE"] as! String
+            }
+            
+            var tempNumber = ""
+            if (tempItem["PHONE"] is NSNull)
+            {
+                tempNumber = "Numero non disponibile"
+            } else {
+                tempNumber = tempItem["PHONE"] as! String
+            }
+            
+            var tempEmail = ""
+            if (tempItem["EMAIL"] is NSNull)
+            {
+                tempEmail = "Email non disponibile"
+            } else {
+                tempEmail = tempItem["EMAIL"] as! String
+            }
+
+            
+            destination.detailImage = tempImage
+            destination.detailData = tempDate.substring(with:range)
+            destination.detailUser = tempUser
+            destination.detailDescription = tempDesc
             destination.detailTitle = tempTitle
+            destination.detailPrice = "\(tempPrice)"
+            destination.detailEmail = tempEmail
+            destination.detailNumber = tempNumber
+            
         }
     }
+    
+    
+    
     
 
 }
