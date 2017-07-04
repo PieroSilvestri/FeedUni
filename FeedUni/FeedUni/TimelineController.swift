@@ -18,7 +18,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
     
     var spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     var courses: [Course] = []
-    var chosenCourse = "UniTS"
+    var chosenCourse = "I.T.S."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
     
     func courseChosen(course: String) {
         self.chosenCourse = course
+		self.title = course
 		self.timeTableView.reloadData()
 		self.navigationController?.dismiss(animated: true, completion: nil)
     }
@@ -61,6 +62,9 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
             target: self,
             action: #selector(buttonFilterPressed(_:)))
         navigationItem.rightBarButtonItem = rightButton
+		navigationItem.rightBarButtonItem?.tintColor = .white
+		
+		self.title = self.chosenCourse
 		
 		// spinner
         self.spinner.center = self.view.center
@@ -134,13 +138,12 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 		}) {
 			let dateFormatter = DateFormatter()
 			dateFormatter.locale = Locale(identifier: "it_IT")
-			dateFormatter.timeZone = TimeZone.current
+			dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
 			dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-			let date = dateFormatter.date(from: self.courses[index].days[section].dayTimestamp!)
-			//Date(timeIntervalSince1970: Time)
+			let date = Date(timeIntervalSince1970: (dateFormatter.date(from: self.courses[index].days[section].dayTimestamp!)?.timeIntervalSince1970)!)
 			dateFormatter.dateFormat = "EEEE dd-MM-yyyy"
 			
-			return dateFormatter.string(from: date!).capitalized
+			return dateFormatter.string(from: date).capitalized
 		}
 		return ""
 	}
@@ -172,7 +175,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 			
 			let dateFormatter = DateFormatter()
 			dateFormatter.locale = Locale(identifier: "it_IT")
-			dateFormatter.timeZone = TimeZone.current
+			dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
 			dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 			let date = dateFormatter.date(from: lesson.lessonStart!)
 			dateFormatter.dateFormat = "HH:mm"
