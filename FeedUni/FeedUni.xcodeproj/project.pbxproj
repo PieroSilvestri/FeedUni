@@ -10,9 +10,11 @@
 		04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657B1EFAC54D0095CE34 /* LoginController.swift */; };
 		04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657D1EFAC55B0095CE34 /* RegisterController.swift */; };
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
-		381F7DE91F03BB3A00FECEE7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381F7DE81F03BB3A00FECEE7 /* Lesson.swift */; };
 		3897F5AF1EFAC83D000DCD93 /* TimelineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897F5AE1EFAC83D000DCD93 /* TimelineController.swift */; };
-		38D58A301F013CCF00833F1A /* FilterCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D58A2F1F013CCF00833F1A /* FilterCourseController.swift */; };
+		38CEB5391F07D07C006DD38F /* TimelineDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CEB5381F07D07C006DD38F /* TimelineDetailController.swift */; };
+		38D58A301F013CCF00833F1A /* TimelineFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D58A2F1F013CCF00833F1A /* TimelineFilterController.swift */; };
+		38D6A17B1F0424AA00633657 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6A17A1F0424AA00633657 /* Course.swift */; };
+		38D6A17F1F04E87C00633657 /* DaysResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6A17E1F04E87C00633657 /* DaysResponse.swift */; };
 		5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A74001EF7FBBC009A323E /* AppDelegate.swift */; };
 		5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74041EF7FBBC009A323E /* Main.storyboard */; };
 		5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A74071EF7FBBC009A323E /* Assets.xcassets */; };
@@ -48,9 +50,11 @@
 		043C94F31EFEBC5E000EC227 /* FeedUni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeedUni.entitlements; sourceTree = "<group>"; };
 		04F3657B1EFAC54D0095CE34 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		04F3657D1EFAC55B0095CE34 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		381F7DE81F03BB3A00FECEE7 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		3897F5AE1EFAC83D000DCD93 /* TimelineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineController.swift; sourceTree = "<group>"; };
-		38D58A2F1F013CCF00833F1A /* FilterCourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCourseController.swift; sourceTree = "<group>"; };
+		38CEB5381F07D07C006DD38F /* TimelineDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineDetailController.swift; sourceTree = "<group>"; };
+		38D58A2F1F013CCF00833F1A /* TimelineFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineFilterController.swift; sourceTree = "<group>"; };
+		38D6A17A1F0424AA00633657 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		38D6A17E1F04E87C00633657 /* DaysResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysResponse.swift; sourceTree = "<group>"; };
 		53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedUni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A73FD1EF7FBBC009A323E /* FeedUni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedUni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A74001EF7FBBC009A323E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,7 +155,8 @@
 				04F3657D1EFAC55B0095CE34 /* RegisterController.swift */,
 				65AC99BE1F011E060055D6C8 /* BachecaDetailController.swift */,
 				3897F5AE1EFAC83D000DCD93 /* TimelineController.swift */,
-				38D58A2F1F013CCF00833F1A /* FilterCourseController.swift */,
+				38D58A2F1F013CCF00833F1A /* TimelineFilterController.swift */,
+				38CEB5381F07D07C006DD38F /* TimelineDetailController.swift */,
 				F36706AE1F01437B00D3980C /* AddInsertionController.swift */,
 				5DE5E2EE1EFAC97100B469E0 /* NewsController.swift */,
 				5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */,
@@ -168,7 +173,8 @@
 			children = (
 				5DC6437A1EFC3D4D0064511A /* NewsTableViewCell.swift */,
 				5D91CBD51F010D3A005D9BAD /* String+Shortcuts.swift */,
-				381F7DE81F03BB3A00FECEE7 /* Lesson.swift */,
+				38D6A17A1F0424AA00633657 /* Course.swift */,
+				38D6A17E1F04E87C00633657 /* DaysResponse.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -363,13 +369,15 @@
 				5DC77F0D1F03C2B300F76427 /* ProfileController.swift in Sources */,
 				F3E458071EFAC85600B09BBD /* RealmQueries.swift in Sources */,
 				F3E458051EFAC83000B09BBD /* FavoriteLesson.swift in Sources */,
+				38CEB5391F07D07C006DD38F /* TimelineDetailController.swift in Sources */,
 				04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */,
 				F307B1B51F03BAE5009FF276 /* UserInsertion.swift in Sources */,
 				65AC99BF1F011E060055D6C8 /* BachecaDetailController.swift in Sources */,
-				381F7DE91F03BB3A00FECEE7 /* Lesson.swift in Sources */,
+				38D6A17F1F04E87C00633657 /* DaysResponse.swift in Sources */,
 				65CE43501EFACD9B00C00644 /* BachecaControllerTableViewCell.swift in Sources */,
-				38D58A301F013CCF00833F1A /* FilterCourseController.swift in Sources */,
+				38D58A301F013CCF00833F1A /* TimelineFilterController.swift in Sources */,
 				F36706AF1F01437B00D3980C /* AddInsertionController.swift in Sources */,
+				38D6A17B1F0424AA00633657 /* Course.swift in Sources */,
 				5DD6F9541F00F2CF002908B4 /* NewsDetailController.swift in Sources */,
 				5DE5E2EF1EFAC97100B469E0 /* NewsController.swift in Sources */,
 				650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */,
