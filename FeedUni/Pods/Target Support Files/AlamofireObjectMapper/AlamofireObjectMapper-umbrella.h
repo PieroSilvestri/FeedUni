@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double JSONJoyVersionNumber;
-FOUNDATION_EXPORT const unsigned char JSONJoyVersionString[];
+FOUNDATION_EXPORT double AlamofireObjectMapperVersionNumber;
+FOUNDATION_EXPORT const unsigned char AlamofireObjectMapperVersionString[];
 

@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.5.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -25,11 +28,11 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.24.0):
     - FBSDKCoreKit
-  - JSONJoy-Swift (3.0.1)
   - Nuke (5.1.1)
   - Nuke-Toucan-Plugin (0.3):
     - Nuke (~> 5.0)
     - Toucan (>= 0.6)
+  - ObjectMapper (2.2.7)
   - Realm (2.8.3):
     - Realm/Headers (= 2.8.3)
   - Realm/Headers (2.8.3)
@@ -41,10 +44,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - AlamofireObjectMapper (~> 4.0)
   - FacebookCore
   - FacebookLogin
   - FacebookShare (from `https://github.com/1amageek/facebook-sdk-swift`)
-  - JSONJoy-Swift (~> 3.0.0)
   - Nuke
   - Nuke-Toucan-Plugin
   - RealmSwift
@@ -63,6 +66,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
@@ -70,15 +74,15 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: f8c9eb0dd34a9cd277c7b60da4b32226d142502d
   FBSDKLoginKit: 1214c6d5a1c4995b694d8db8a9ba6910c6028acf
   FBSDKShareKit: a2ed9d7781a4eda9ac20d7404305e795b10251ac
-  JSONJoy-Swift: ef6eccdcf319412f149bbdd031b27f0430d5d576
   Nuke: 0a2ddb4bd13d75782964bf598a159ca2a836d826
   Nuke-Toucan-Plugin: 6e19d7e53214eac210126b32d50ae73601aeafe3
+  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
   RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
   TabPageViewController: c37a1257a50c2b50712dde61bf499768eee95b67
   TimelineTableViewCell: 8e46d96b32caf5a3ca9f9d7d5b8c94e9de30b92a
   Toucan: 47485bbc9cb4541ef6318d6886103e6eaf16e919
 
-PODFILE CHECKSUM: 5cea64c794070f34af138687994e9f328a85c58c
+PODFILE CHECKSUM: 5edb2c43fd934cfd248d2a189e0f601d22c3ebef
 
 COCOAPODS: 1.2.0
