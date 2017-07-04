@@ -8,6 +8,7 @@
 
 import UIKit
 import SystemConfiguration
+import SwiftGifOrigin
 
 class RegisterController: UIViewController, UITextFieldDelegate {
 
@@ -17,6 +18,8 @@ class RegisterController: UIViewController, UITextFieldDelegate {
     
     
     
+    @IBOutlet weak var BackgroundImage: UIImageView!
+    
     
     override func viewDidLoad() {
                super.viewDidLoad()
@@ -24,6 +27,9 @@ class RegisterController: UIViewController, UITextFieldDelegate {
         self.emailTextField.delegate = self
         self.ConfirmPasswordTextField.delegate = self
         self.passwordTextField.delegate = self
+        
+        let imageData = try! Data(contentsOf: Bundle.main.url(forResource: "finale1App", withExtension: "gif")!)
+        self.BackgroundImage.image = UIImage.gif(data: imageData)
         
     }
     

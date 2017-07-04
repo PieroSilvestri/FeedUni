@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043ADA031F0BD42400ECD78C /* finale1App.gif in Resources */ = {isa = PBXBuildFile; fileRef = 043ADA021F0BD42400ECD78C /* finale1App.gif */; };
+		043ADA051F0BD4FF00ECD78C /* logocontrasparenze.png in Resources */ = {isa = PBXBuildFile; fileRef = 043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */; };
 		04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657B1EFAC54D0095CE34 /* LoginController.swift */; };
 		04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657D1EFAC55B0095CE34 /* RegisterController.swift */; };
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043ADA021F0BD42400ECD78C /* finale1App.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = finale1App.gif; sourceTree = "<group>"; };
+		043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logocontrasparenze.png; sourceTree = "<group>"; };
 		043C94F31EFEBC5E000EC227 /* FeedUni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeedUni.entitlements; sourceTree = "<group>"; };
 		04F3657B1EFAC54D0095CE34 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		04F3657D1EFAC55B0095CE34 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 		657D16AC1EF92C280069AB00 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */,
+				043ADA021F0BD42400ECD78C /* finale1App.gif */,
 				653061B81F091FED00A26D27 /* envelope.png */,
 				653061B91F091FED00A26D27 /* phone-call.png */,
 				65F0E20D1F06346900244285 /* utente.png */,
@@ -287,11 +293,13 @@
 				65F0E20E1F06346900244285 /* utente.png in Resources */,
 				653061BA1F091FED00A26D27 /* envelope.png in Resources */,
 				5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */,
+				043ADA051F0BD4FF00ECD78C /* logocontrasparenze.png in Resources */,
 				65A2E9151F0405EA0035011B /* moneyIcon.png in Resources */,
 				653061BB1F091FED00A26D27 /* phone-call.png in Resources */,
 				65CD27F81F05397400598148 /* tec.jpg in Resources */,
 				5D1A74061EF7FBBC009A323E /* Main.storyboard in Resources */,
 				657D16B01EF92F600069AB00 /* logoUni.png in Resources */,
+				043ADA031F0BD42400ECD78C /* finale1App.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

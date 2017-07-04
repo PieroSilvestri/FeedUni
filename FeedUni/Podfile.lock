@@ -38,6 +38,7 @@ PODS:
   - Realm/Headers (2.8.3)
   - RealmSwift (2.8.3):
     - Realm (= 2.8.3)
+  - SwiftGifOrigin (1.6.1)
   - TabPageViewController (0.2.7)
   - TimelineTableViewCell (1.0.1)
   - Toucan (0.6.0)
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - Nuke
   - Nuke-Toucan-Plugin
   - RealmSwift
+  - SwiftGifOrigin (~> 1.6.1)
   - TabPageViewController
   - TimelineTableViewCell
   - Toucan
@@ -79,10 +81,11 @@ SPEC CHECKSUMS:
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
   RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
+  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
   TabPageViewController: c37a1257a50c2b50712dde61bf499768eee95b67
   TimelineTableViewCell: 8e46d96b32caf5a3ca9f9d7d5b8c94e9de30b92a
   Toucan: 47485bbc9cb4541ef6318d6886103e6eaf16e919
 
-PODFILE CHECKSUM: 5edb2c43fd934cfd248d2a189e0f601d22c3ebef
+PODFILE CHECKSUM: 09a51e115e2b542689f970a74d8b8a7860fd61e7
 
 COCOAPODS: 1.2.0
