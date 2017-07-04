@@ -873,10 +873,10 @@
             </objects>
             <point key="canvasLocation" x="2892" y="1287"/>
         </scene>
-        <!--User Insertions Controller-->
+        <!--I miei annunci-->
         <scene sceneID="g0g-8b-qdS">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="t9t-IU-s30" customClass="UserInsertionsController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="I miei annunci" automaticallyAdjustsScrollViewInsets="NO" id="t9t-IU-s30" customClass="UserInsertionsController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ju8-at-QwG"/>
                         <viewControllerLayoutGuide type="bottom" id="2FI-OK-Dlp"/>
@@ -983,6 +983,7 @@
                                             <outlet property="cellImage" destination="W32-Ny-ksX" id="2x2-53-EEq"/>
                                             <outlet property="cellPrice" destination="eGl-1E-CuL" id="G97-Ba-vdR"/>
                                             <outlet property="cellTitle" destination="ScZ-av-g67" id="HmO-ge-2A2"/>
+                                            <segue destination="k9K-5k-WOH" kind="show" id="t1p-CS-7FQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1008,10 +1009,10 @@
             </objects>
             <point key="canvasLocation" x="3782" y="1287"/>
         </scene>
-        <!--User Favs Controller-->
+        <!--Preferiti-->
         <scene sceneID="iBP-m0-kZx">
             <objects>
-                <viewController id="i7F-Zc-jAg" customClass="UserFavsController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Preferiti" id="i7F-Zc-jAg" customClass="UserFavsController" customModule="FeedUni" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3VQ-ut-fWG"/>
                         <viewControllerLayoutGuide type="bottom" id="k7t-uU-fop"/>
@@ -1021,16 +1022,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EA5-9M-XDj">
-                                <rect key="frame" x="16" y="72" width="343" height="29"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="29"/>
+                                <color key="backgroundColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="News"/>
                                     <segment title="Lezioni"/>
                                     <segment title="Annunci"/>
                                 </segments>
-                                <color key="tintColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="controllerChange:" destination="i7F-Zc-jAg" eventType="valueChanged" id="aOv-1b-lrS"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dqc-i6-ZEK">
-                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newsCellFavs" rowHeight="113" id="bWR-e9-0Xa" customClass="NewsTableViewCell" customModule="FeedUni" customModuleProvider="target">
@@ -1079,6 +1084,7 @@
                                             <outlet property="dateLabel" destination="RaC-eH-V3C" id="8W2-pS-zJ4"/>
                                             <outlet property="imageCell" destination="A0y-I4-woO" id="fbJ-6b-qLW"/>
                                             <outlet property="titleTextView" destination="29z-YP-8fs" id="yK5-Gx-8El"/>
+                                            <segue destination="nGC-QL-0mK" kind="show" identifier="newsDetailSegue" id="WHZ-ca-EGc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="insertionCellFavs" rowHeight="160" id="gJ2-1N-iJv" customClass="BachecaControllerTableViewCell" customModule="FeedUni" customModuleProvider="target">
@@ -1175,20 +1181,36 @@
                                             <outlet property="cellImage" destination="XgZ-fY-FiY" id="77S-a0-ndN"/>
                                             <outlet property="cellPrice" destination="8nx-cc-7Cv" id="HAx-QL-hek"/>
                                             <outlet property="cellTitle" destination="pKP-pZ-7Rr" id="kAt-5Q-ZU9"/>
+                                            <segue destination="k9K-5k-WOH" kind="show" identifier="insertionDetailSegue" id="WwW-Dx-tfm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimelineTableViewCell" rowHeight="160" id="nlQ-dS-LvQ" customClass="TimelineTableViewCell">
+                                        <rect key="frame" x="0.0" y="301" width="375" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nlQ-dS-LvQ" id="AbI-62-QWE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1rw-aM-XAB" kind="show" identifier="lessonDetailSegue" id="03m-xm-lIR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="i7F-Zc-jAg" id="cIB-xy-rNi"/>
+                                    <outlet property="delegate" destination="i7F-Zc-jAg" id="l96-oI-SkA"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Dqc-i6-ZEK" firstAttribute="top" secondItem="EA5-9M-XDj" secondAttribute="bottom" constant="8" id="2Os-Of-nNm"/>
-                            <constraint firstItem="Dqc-i6-ZEK" firstAttribute="leading" secondItem="o8h-AT-R5D" secondAttribute="leading" id="42P-nV-tbf"/>
-                            <constraint firstItem="k7t-uU-fop" firstAttribute="top" secondItem="Dqc-i6-ZEK" secondAttribute="bottom" id="ZR2-3Q-EuZ"/>
-                            <constraint firstAttribute="trailing" secondItem="Dqc-i6-ZEK" secondAttribute="trailing" id="dDM-qA-LMg"/>
-                            <constraint firstItem="EA5-9M-XDj" firstAttribute="trailing" secondItem="o8h-AT-R5D" secondAttribute="trailingMargin" id="lUy-N9-Vt9"/>
-                            <constraint firstItem="EA5-9M-XDj" firstAttribute="leading" secondItem="o8h-AT-R5D" secondAttribute="leadingMargin" id="p1y-v4-Zkb"/>
-                            <constraint firstItem="EA5-9M-XDj" firstAttribute="top" secondItem="3VQ-ut-fWG" secondAttribute="bottom" constant="8" id="vhO-nx-iyB"/>
+                            <constraint firstAttribute="trailing" secondItem="EA5-9M-XDj" secondAttribute="trailing" id="AA3-DE-7WL"/>
+                            <constraint firstItem="Dqc-i6-ZEK" firstAttribute="leading" secondItem="o8h-AT-R5D" secondAttribute="leading" id="DiJ-Xx-phN"/>
+                            <constraint firstItem="k7t-uU-fop" firstAttribute="top" secondItem="Dqc-i6-ZEK" secondAttribute="bottom" id="HQ2-tL-Dp1"/>
+                            <constraint firstItem="EA5-9M-XDj" firstAttribute="leading" secondItem="o8h-AT-R5D" secondAttribute="leading" id="Kp4-Jd-PPy"/>
+                            <constraint firstItem="Dqc-i6-ZEK" firstAttribute="top" secondItem="EA5-9M-XDj" secondAttribute="bottom" id="jpo-Pi-Avw"/>
+                            <constraint firstAttribute="trailing" secondItem="Dqc-i6-ZEK" secondAttribute="trailing" id="lqJ-Q1-NjM"/>
+                            <constraint firstItem="EA5-9M-XDj" firstAttribute="top" secondItem="3VQ-ut-fWG" secondAttribute="bottom" id="u2f-yL-0oF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1851,8 +1873,13 @@
         <image name="utente.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jA9-6A-ZBp"/>
+        <segue reference="zNO-1P-LGT"/>
+<<<<<<< HEAD
         <segue reference="EQy-a6-IRh"/>
+        <segue reference="KfP-SI-qxu"/>
+        <segue reference="WHZ-ca-EGc"/>
+        <segue reference="WwW-Dx-tfm"/>
+        <segue reference="03m-xm-lIR"/>
         <segue reference="zNO-1P-LGT"/>
     </inferredMetricsTieBreakers>
 </document>

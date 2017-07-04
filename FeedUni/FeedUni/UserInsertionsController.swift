@@ -37,8 +37,18 @@ class UserInsertionsController: UIViewController, UITableViewDelegate, UITableVi
         return userInsertions.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! BachecaDetailController
+        let index = self.mTableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
+        let selectedInsertion = self.userInsertions[index!]
+        dest.detailTitle = selectedInsertion.title
+        dest.detailDescription = selectedInsertion.description
+        dest.detailPrice = "\(selectedInsertion.price/100)"
+        dest.detailUser = selectedInsertion.publisherName
+        dest.detailData = "\(selectedInsertion.publishDate)"
+        dest.detailImage = selectedInsertion.image
+        dest.detailNumber = selectedInsertion.phoneNumber
+        dest.detailEmail = selectedInsertion.email
     }
 
 }
