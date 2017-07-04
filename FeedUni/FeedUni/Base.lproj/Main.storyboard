@@ -452,6 +452,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnSetNotfication" destination="USg-ub-f8K" id="MbL-ar-TfH"/>
                         <outlet property="lblDuration" destination="HsK-e0-xpt" id="79F-nq-XDR"/>
                         <outlet property="lblLessonName" destination="rJW-fj-8mb" id="gGu-hs-w1K"/>
                         <outlet property="lblLessonStart" destination="NGr-0y-iaX" id="jpo-Dj-Pkw"/>
@@ -459,6 +460,7 @@
                         <outlet property="lblRoom" destination="w46-Ms-KcN" id="5w3-Wg-WAC"/>
                         <outlet property="lblTeacher" destination="ziU-4z-XQr" id="Oxf-6Y-DXb"/>
                         <outlet property="pickerView" destination="bc7-cW-P7a" id="YHR-I2-KbV"/>
+                        <outlet property="viewTitleNotification" destination="pjF-7z-vtC" id="Kxo-sk-WGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6o-Dq-DcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1735,7 +1737,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eAL-dO-t4x" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="history" id="dn4-3a-1cM"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="D0q-Vi-Duf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D0q-Vi-Duf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1781,7 +1783,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7F8-DZ-OwI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="nZt-lX-2bx"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CgH-eJ-mid">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CgH-eJ-mid">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
