@@ -18,7 +18,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
     
     var spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     var courses: [Course] = []
-    var chosenCourse = "UniTS"
+    var chosenCourse = "I.T.S."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +62,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
             target: self,
             action: #selector(buttonFilterPressed(_:)))
         navigationItem.rightBarButtonItem = rightButton
+		navigationItem.rightBarButtonItem?.tintColor = .white
 		
 		self.title = self.chosenCourse
 		
