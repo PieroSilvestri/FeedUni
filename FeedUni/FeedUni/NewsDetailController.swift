@@ -14,8 +14,8 @@ class NewsDetailController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var contentTextView: UITextView!
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var heartLogo: UIImageView!
+    @IBOutlet weak var textView: UITextView!
     let recognizer = UITapGestureRecognizer()
 
     
@@ -50,6 +50,8 @@ class NewsDetailController: UIViewController {
         
         heartLogo.isUserInteractionEnabled = true
         
+        let flag = ""
+        
         //this is where we add the target, since our method to track the taps is in this class
         //we can just type "self", and then put our method name in quotes for the action parameter
         recognizer.addTarget(self, action: "heartClicked")
@@ -57,7 +59,8 @@ class NewsDetailController: UIViewController {
         //finally, this is where we add the gesture recognizer, so it actually functions correctly
         heartLogo.addGestureRecognizer(recognizer)
         
-        titleLabel.text = String.init(htmlEncodedString: titleText)
+        textView.text = String.init(htmlEncodedString: titleText)
+        textView.isUserInteractionEnabled = false
         
         dateLabel.text = date
         
