@@ -36,6 +36,9 @@
 		65F0E20E1F06346900244285 /* utente.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F0E20D1F06346900244285 /* utente.png */; };
 		65F0E2121F063F9900244285 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F0E2111F063F9900244285 /* TabBarController.swift */; };
 		F307B1B51F03BAE5009FF276 /* UserInsertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B1B41F03BAE5009FF276 /* UserInsertion.swift */; };
+		F334B1721F0B876A00044C7D /* piero.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F334B1711F0B876A00044C7D /* piero.jpeg */; };
+		F334B1741F0B884400044C7D /* UserFavsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334B1731F0B884400044C7D /* UserFavsController.swift */; };
+		F334B1761F0B886600044C7D /* UserInsertionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334B1751F0B886600044C7D /* UserInsertionsController.swift */; };
 		F36706AF1F01437B00D3980C /* AddInsertionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36706AE1F01437B00D3980C /* AddInsertionController.swift */; };
 		F3E457FF1EFAC77200B09BBD /* FavoriteNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E457FE1EFAC77200B09BBD /* FavoriteNews.swift */; };
 		F3E458011EFAC7C200B09BBD /* FavoriteInsertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E458001EFAC7C200B09BBD /* FavoriteInsertion.swift */; };
@@ -78,6 +81,9 @@
 		DF9E5A1CFF69DCF7D69241CF /* Pods-FeedUni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB723F15DC7BA5CD023869A /* Pods-FeedUni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUni.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUni/Pods-FeedUni.release.xcconfig"; sourceTree = "<group>"; };
 		F307B1B41F03BAE5009FF276 /* UserInsertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertion.swift; sourceTree = "<group>"; };
+		F334B1711F0B876A00044C7D /* piero.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = piero.jpeg; sourceTree = "<group>"; };
+		F334B1731F0B884400044C7D /* UserFavsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFavsController.swift; sourceTree = "<group>"; };
+		F334B1751F0B886600044C7D /* UserInsertionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertionsController.swift; sourceTree = "<group>"; };
 		F36706AE1F01437B00D3980C /* AddInsertionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInsertionController.swift; sourceTree = "<group>"; };
 		F3E457FE1EFAC77200B09BBD /* FavoriteNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteNews.swift; sourceTree = "<group>"; };
 		F3E458001EFAC7C200B09BBD /* FavoriteInsertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteInsertion.swift; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 				5DD6F9531F00F2CF002908B4 /* NewsDetailController.swift */,
 				5DC77F0C1F03C2B300F76427 /* ProfileController.swift */,
 				65F0E2111F063F9900244285 /* TabBarController.swift */,
+				F334B1731F0B884400044C7D /* UserFavsController.swift */,
+				F334B1751F0B886600044C7D /* UserInsertionsController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -183,6 +191,7 @@
 		657D16AC1EF92C280069AB00 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				F334B1711F0B876A00044C7D /* piero.jpeg */,
 				653061B81F091FED00A26D27 /* envelope.png */,
 				653061B91F091FED00A26D27 /* phone-call.png */,
 				65F0E20D1F06346900244285 /* utente.png */,
@@ -284,6 +293,7 @@
 			files = (
 				5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */,
 				65A2E9141F0405EA0035011B /* calendarIcon.png in Resources */,
+				F334B1721F0B876A00044C7D /* piero.jpeg in Resources */,
 				65F0E20E1F06346900244285 /* utente.png in Resources */,
 				653061BA1F091FED00A26D27 /* envelope.png in Resources */,
 				5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */,
@@ -325,7 +335,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D96E8B35A1154D2EF97CEBD3 /* [CP] Embed Pods Frameworks */ = {
@@ -350,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F334B1741F0B884400044C7D /* UserFavsController.swift in Sources */,
 				F3E457FF1EFAC77200B09BBD /* FavoriteNews.swift in Sources */,
 				04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */,
 				5D1A74011EF7FBBC009A323E /* AppDelegate.swift in Sources */,
@@ -372,6 +383,7 @@
 				650EF3271EFABD0D00894F9D /* BachecaController.swift in Sources */,
 				65F0E2121F063F9900244285 /* TabBarController.swift in Sources */,
 				F3E458011EFAC7C200B09BBD /* FavoriteInsertion.swift in Sources */,
+				F334B1761F0B886600044C7D /* UserInsertionsController.swift in Sources */,
 				3897F5AF1EFAC83D000DCD93 /* TimelineController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
