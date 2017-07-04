@@ -50,7 +50,6 @@ class NewsDetailController: UIViewController {
         
         heartLogo.isUserInteractionEnabled = true
         
-        let flag = ""
         
         //this is where we add the target, since our method to track the taps is in this class
         //we can just type "self", and then put our method name in quotes for the action parameter
