@@ -29,7 +29,6 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         case 0:
             idCategoria = 5
             //getJsonFromUrl()
-            print("BACHECA 0 \(self.listData.count)")
             listData1 = listData
             self.privaVolta = false
             self.tableView.reloadData()
@@ -37,7 +36,6 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         case 1:
             idCategoria = 1
             //getJsonFromUrl()
-            print("BACHECA 1 \(self.listData.count)")
             listData1 = [NSDictionary]()
             for item in listData {
                 if(item["TAG_ID"] as! Int == 1){
@@ -50,7 +48,6 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         case 2:
             idCategoria = 2
             //getJsonFromUrl()
-            print("BACHECA 2 \(self.listData.count)")
             listData1 = [NSDictionary]()
             for item in listData {
                 if(item["TAG_ID"] as! Int == 2){
@@ -63,7 +60,6 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         case 3:
             idCategoria = 3
             //getJsonFromUrl()
-            print("BACHECA 3 \(self.listData.count)")
             listData1 = [NSDictionary]()
             for item in listData {
                 if(item["TAG_ID"] as! Int == 3){
@@ -76,7 +72,6 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         case 4:
             idCategoria = 4
             //getJsonFromUrl()
-            print("BACHECA 4 \(self.listData.count)")
             listData1 = [NSDictionary]()
             for item in listData {
                 if(item["TAG_ID"] as! Int == 4){
@@ -128,7 +123,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bachecaCell", for: indexPath) as! BachecaControllerTableViewCell
         var tempItem = NSDictionary()
-        let indexMunsra = indexPath.row as! Int
+        //let indexMunsra = indexPath.row as! Int
         if(self.privaVolta){
             tempItem = self.listData[indexPath.row] as NSDictionary
         }else{
@@ -263,7 +258,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             let destination = segue.destination as! BachecaDetailController
             let indexRow = self.tableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
             
-            let tempItem = self.listData[indexRow!] as NSDictionary
+            let tempItem = self.listData1[indexRow!] as NSDictionary
             
             
             var tempTitle = ""

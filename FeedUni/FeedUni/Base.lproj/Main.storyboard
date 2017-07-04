@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G23a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -158,13 +158,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CRw-PR-fjv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logocontrasparenze.png" translatesAutoresizingMaskIntoConstraints="NO" id="oYg-jd-Hiw">
-                                <rect key="frame" x="33" y="55" width="308" height="173"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="173" id="AY0-6o-fnh"/>
-                                    <constraint firstAttribute="width" constant="308" id="sXn-K4-kCe"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0dx-y7-Jgb">
                                 <rect key="frame" x="46" y="274" width="283" height="30"/>
                                 <nil key="textColor"/>
@@ -218,6 +211,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logocontrasparenze.png" translatesAutoresizingMaskIntoConstraints="NO" id="oYg-jd-Hiw">
+                                <rect key="frame" x="33" y="55" width="308" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="AY0-6o-fnh"/>
+                                    <constraint firstAttribute="width" constant="308" id="sXn-K4-kCe"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1474,8 +1474,8 @@
         <image name="utente.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="G8M-aD-LBe"/>
-        <segue reference="zNO-1P-LGT"/>
         <segue reference="jA9-6A-ZBp"/>
+        <segue reference="EQy-a6-IRh"/>
+        <segue reference="zNO-1P-LGT"/>
     </inferredMetricsTieBreakers>
 </document>
