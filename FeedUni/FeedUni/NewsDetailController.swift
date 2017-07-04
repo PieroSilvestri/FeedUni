@@ -84,6 +84,19 @@ class NewsDetailController: UIViewController {
     func heartClicked(){
         print("image tapped")
         
+        let newData = DateFormatter.init()
+        newData.dateFormat = "EEEE dd-MM-yyyy";
+        
+        let newFavorite = FavoriteNews(value: [
+            "title": titleText,
+            "content": content,
+            "excerpt": "pace",
+            "publishingDate": newData.date(from: date),
+            "imageURL": imageUrl
+            ])
+        RealmQueries.insertNews(post: newFavorite)
+        
+        heartLogo.image? = UIImage(named: "fullHeart")!;
     }
 
     /*
