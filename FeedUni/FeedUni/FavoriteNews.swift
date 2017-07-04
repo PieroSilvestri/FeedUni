@@ -15,4 +15,5 @@ class FavoriteNews: Object {
     dynamic var content = ""
     dynamic var excerpt = ""
     dynamic var publishingDate: Date!
+    dynamic var imageURL = ""
 }
