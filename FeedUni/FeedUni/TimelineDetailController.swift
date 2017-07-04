@@ -71,13 +71,13 @@ class TimelineDetailController: UIViewController, UIPickerViewDataSource, UIPick
 		
 		let dateFormatter = DateFormatter()
 		dateFormatter.locale = Locale(identifier: "it_IT")
-		dateFormatter.timeZone = TimeZone.current
+		dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
 		dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 		let date = dateFormatter.date(from: self.selectedLesson.lessonStart!)
 		let date2 = dateFormatter.date(from: self.selectedLesson.lessonEnd!)
 		dateFormatter.dateFormat = "HH:mm"
 		self.lblLessonStart.text = "Ore: \(dateFormatter.string(from: date!))"
-		self.lblDuration.text = "Durata: \(self.stringFromTimeInterval(interval: (date?.timeIntervalSince(date2!))!))"
+		self.lblDuration.text = "Durata: \(self.stringFromTimeInterval(interval: (date2?.timeIntervalSince(date!))!))"
 		
 		if let type = self.selectedLesson.lessonType {
 			self.lblLessonType.text = type
@@ -113,14 +113,14 @@ class TimelineDetailController: UIViewController, UIPickerViewDataSource, UIPick
 	func setNewNotification(secondsBefore: Int) {
 		let dateFormatter = DateFormatter()
 		dateFormatter.locale = Locale(identifier: "it_IT")
-		dateFormatter.timeZone = TimeZone.current
+		dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
 		dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 		let date = dateFormatter.date(from: self.selectedLesson.lessonStart!)
 		dateFormatter.dateFormat = "EEEE dd-MM-yyyy HH:mm"
 		
 		let notification = UNMutableNotificationContent()
 		notification.title = self.selectedLesson.lessonName!
-		notification.subtitle = dateFormatter.string(from: date!)
+		notification.subtitle = dateFormatter.string(from: date!).capitalized
 		notification.body = "\(self.selectedLesson.room!) \(self.selectedLesson.teacher!)"
 		notification.sound = UNNotificationSound.default()
 		
