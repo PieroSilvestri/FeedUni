@@ -10,13 +10,14 @@ import Foundation
 import RealmSwift
 
 class FavoriteLesson: Object {
-    dynamic var lessionName = ""
+    dynamic var lessonName = ""
     dynamic var teacher = ""
     dynamic var room = ""
-    dynamic var lessionDate: Date!
-    dynamic var lessionStart: Date!
-    dynamic var lessionEnd: Date!
+    dynamic var lessonDate: Date!
+    dynamic var lessonStart: Date!
+    dynamic var lessonEnd: Date!
     dynamic var course = ""
-    dynamic var lessionType = ""
-    dynamic var lessionArea = 0
+    dynamic var lessonType = ""
+    dynamic var lessonArea = 0
+	dynamic var lessonReminder = ""
 }

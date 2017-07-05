@@ -18,11 +18,14 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
     
     var spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     var courses: [Course] = []
-    var chosenCourse = "I.T.S."
+    var chosenCourse = ""
+	var tokenUser: String = ""
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+		super.viewDidLoad()
+		
+		self.initPreferences()
+		
         // Setup della cella
         self.initCell()
         
@@ -39,8 +42,30 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 		self.title = course
 		self.timeTableView.reloadData()
 		self.navigationController?.dismiss(animated: true, completion: nil)
+		
+		let shared = UserDefaults.standard
+		shared.set(course, forKey: "userCourse")
+		
+		shared.synchronize()
     }
-    
+	
+	// MARK: - Shared Preferences
+	
+	func initPreferences() {
+		let shared = UserDefaults.standard
+		if let token = shared.object(forKey: "token") {
+			self.tokenUser = token as! String
+		} else {
+			self.tokenUser = "3252261a-215c-4078-a74d-2e1c5c63f0a1"
+		}
+		
+		if let course = shared.object(forKey: "userCourse") {
+			self.chosenCourse = course as! String
+		} else {
+			self.chosenCourse = "I.T.S."
+		}
+	}
+	
     // MARK: - UI
     
     func initCell() {
@@ -86,14 +111,9 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
         var headers: HTTPHeaders = [
             "Content-Type": "application/json"
         ]
-        
-        let shared = UserDefaults.standard
-        if let token = shared.object(forKey: "token") {
-            headers["Authorization"] = "Bearer \(token)"
-		} else {
-			headers["Authorization"] = "Bearer 3252261a-215c-4078-a74d-2e1c5c63f0a1"
-		}
 		
+		headers["Authorization"] = "Bearer \(tokenUser)"
+			
 		Alamofire.request("http://apiunipn.parol.in/V1/timetable", headers: headers).responseObject { (response: DataResponse<DaysResponse>)  in
 			
 			

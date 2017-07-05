@@ -11,15 +11,91 @@ import UIKit
 class BachecaController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var listData = [NSDictionary]()
+    var listData1 = [NSDictionary]()
+
     var heartFlag = false
+    private let refreshControl = UIRefreshControl()
+    var idCategoria = 5
+    var rowsTable = 0
+    var privaVolta = true
+    
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentCtrl: UISegmentedControl!
+    @IBAction func indexChanged(_ sender: Any) {
+        
+        switch segmentCtrl.selectedSegmentIndex
+        {
+        case 0:
+            idCategoria = 5
+            //getJsonFromUrl()
+            listData1 = listData
+            self.privaVolta = false
+            self.tableView.reloadData()
+            break
+        case 1:
+            idCategoria = 1
+            //getJsonFromUrl()
+            listData1 = [NSDictionary]()
+            for item in listData {
+                if(item["TAG_ID"] as! Int == 1){
+                    listData1.append(item)
+                }
+            }
+            self.privaVolta = false
+            self.tableView.reloadData()
+            break
+        case 2:
+            idCategoria = 2
+            //getJsonFromUrl()
+            listData1 = [NSDictionary]()
+            for item in listData {
+                if(item["TAG_ID"] as! Int == 2){
+                    listData1.append(item)
+                }
+            }
+            self.privaVolta = false
+            self.tableView.reloadData()
+            break
+        case 3:
+            idCategoria = 3
+            //getJsonFromUrl()
+            listData1 = [NSDictionary]()
+            for item in listData {
+                if(item["TAG_ID"] as! Int == 3){
+                    listData1.append(item)
+                }
+            }
+            self.privaVolta = false
+            self.tableView.reloadData()
+            break
+        case 4:
+            idCategoria = 4
+            //getJsonFromUrl()
+            listData1 = [NSDictionary]()
+            for item in listData {
+                if(item["TAG_ID"] as! Int == 4){
+                    listData1.append(item)
+                }
+            }
+            self.privaVolta = false
+            self.tableView.reloadData()
+            break
+        default:
+            break
+        }
+    }
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.getJsonFromUrl()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
 
@@ -34,13 +110,25 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listData.count
+        var counter = Int()
+        if(self.privaVolta){
+            counter = self.listData.count
+        }else{
+            counter = self.listData1.count
+        }
+        return counter
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bachecaCell", for: indexPath) as! BachecaControllerTableViewCell
-        let tempItem = self.listData[indexPath.row] as NSDictionary
+        var tempItem = NSDictionary()
+        //let indexMunsra = indexPath.row as! Int
+        if(self.privaVolta){
+            tempItem = self.listData[indexPath.row] as NSDictionary
+        }else{
+            tempItem = self.listData1[indexPath.row] as NSDictionary
+        }
         cell.selectionStyle = .none
         
         var tempTitle = ""
@@ -70,6 +158,8 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         }
         
         var tempImage = ""
+        var imageDecoded = #imageLiteral(resourceName: "logoUni.png")
+        
         if (tempItem["IMAGE"] is NSNull)
         {
             tempImage = ""
@@ -79,21 +169,27 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             let decodedData = Data(base64Encoded: tempImage, options: .ignoreUnknownCharacters)
             if (decodedData != nil){
                 let decodedimage = UIImage(data: decodedData!)
-                cell.cellImage.image = decodedimage
+                imageDecoded = decodedimage!
             }
-                /*
-                let dataDecoded : Data = Data(base64Encoded: tempImage, options: .ignoreUnknownCharacters)!
-                let decodedimage = UIImage(data: dataDecoded)
-                cell.cellImage.image = decodedimage 
-                */
         }
+        
+        var tempCat = 0
+        if (tempItem["TAG_ID"] is NSNull)
+        {
+            tempCat = 0
+        } else {
+            tempCat = tempItem["TAG_ID"] as! Int
+        }
+        
 
+        cell.cellImage.image = imageDecoded
         cell.cellTitle.text = tempTitle
         cell.cellData.text = tempDate.substring(with:range)
         cell.cellPrice.text = tempUser
+
         
         /*
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("imageTapped:")))
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("imageTapped:")))Toucan Group
         cell.cellHeart.addGestureRecognizer(tapGesture)
         cell.cellHeart.isUserInteractionEnabled = true
         if (heartFlag == false)
@@ -105,7 +201,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             cell.cellHeart.image = #imageLiteral(resourceName: "fullHeart")
         }
         */
-        
+
         return cell
     }
     
@@ -123,6 +219,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         
         let url = URL(string: urlString)
         let request = URLRequest(url: url!)
+        self.rowsTable = 0
         
         URLSession.shared.dataTask(with:request) { (data, response, error) in
             if error != nil {
@@ -135,15 +232,15 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
                     
                     let posts = response["body"] as! [NSDictionary]
                     for post in posts{
-                        self.listData.append(post)
+                            self.listData.append(post)
+                            self.rowsTable += 1
                     }
                     
                     print(self.listData)
                     
                     UIApplication.shared.endIgnoringInteractionEvents()
                     
-                    //let currentTemperatureF = self.listData[0]["id"] as! Int
-                    //print(currentTemperatureF)
+                    
                     DispatchQueue.main.sync {
                         self.tableView.reloadData()
                     }
@@ -161,7 +258,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             let destination = segue.destination as! BachecaDetailController
             let indexRow = self.tableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
             
-            let tempItem = self.listData[indexRow!] as NSDictionary
+            let tempItem = self.listData1[indexRow!] as NSDictionary
             
             
             var tempTitle = ""
@@ -234,7 +331,6 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             } else {
                 tempEmail = tempItem["EMAIL"] as! String
             }
-
             
             destination.detailImage = tempImage
             destination.detailData = tempDate.substring(with:range)
@@ -247,9 +343,6 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             
         }
     }
-    
-    
-    
-    
+
 
 }
