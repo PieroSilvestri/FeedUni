@@ -9,7 +9,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1377,17 +1376,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y38-35-eQK">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="jlY-wo-maK">
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="Gtr-zc-F2P" kind="presentation" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="dNA-zf-n6O"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Filtro" id="iev-AC-mfX">
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jlY-wo-maK">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Gtr-zc-F2P" kind="presentation" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="dNA-zf-n6O"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="segmentCtrl" destination="jAQ-gc-Qun" id="ktj-MD-abE"/>
@@ -1851,8 +1845,9 @@
         <image name="utente.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jA9-6A-ZBp"/>
         <segue reference="EQy-a6-IRh"/>
         <segue reference="zNO-1P-LGT"/>
+        <segue reference="XKF-1s-DxQ"/>
+        <segue reference="jA9-6A-ZBp"/>
     </inferredMetricsTieBreakers>
 </document>

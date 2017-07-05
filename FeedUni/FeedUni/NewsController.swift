@@ -20,7 +20,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         //initUI()
-        
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         // Do any additional setup after loading the view.
         getJsonFromUrl(page: indexPage)
     }
