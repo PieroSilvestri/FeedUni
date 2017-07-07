@@ -35,7 +35,6 @@ class RealmQueries {
     //Ritorna tutte le inserzioni inserite dall'utente
     static func getUserInsertions() -> [UserInsertion] {
         let userInsertions = Array(realm.objects(UserInsertion.self))
-        print("\n\nRealmQueries \(userInsertions)")
         return userInsertions
     }
     

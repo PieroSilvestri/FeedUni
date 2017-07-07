@@ -28,6 +28,7 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.24.0):
     - FBSDKCoreKit
+  - Gifu (2.0.0)
   - Nuke (5.1.1)
   - Nuke-Toucan-Plugin (0.3):
     - Nuke (~> 5.0)
@@ -49,6 +50,7 @@ DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FacebookShare (from `https://github.com/1amageek/facebook-sdk-swift`)
+  - Gifu
   - Nuke
   - Nuke-Toucan-Plugin
   - RealmSwift
@@ -76,6 +78,7 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: f8c9eb0dd34a9cd277c7b60da4b32226d142502d
   FBSDKLoginKit: 1214c6d5a1c4995b694d8db8a9ba6910c6028acf
   FBSDKShareKit: a2ed9d7781a4eda9ac20d7404305e795b10251ac
+  Gifu: 56a4d8f1092399159fa32662aa2232158b48d8ac
   Nuke: 0a2ddb4bd13d75782964bf598a159ca2a836d826
   Nuke-Toucan-Plugin: 6e19d7e53214eac210126b32d50ae73601aeafe3
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
@@ -86,6 +89,6 @@ SPEC CHECKSUMS:
   TimelineTableViewCell: 8e46d96b32caf5a3ca9f9d7d5b8c94e9de30b92a
   Toucan: 47485bbc9cb4541ef6318d6886103e6eaf16e919
 
-PODFILE CHECKSUM: 09a51e115e2b542689f970a74d8b8a7860fd61e7
+PODFILE CHECKSUM: b6ca30301ff9bf415fb010712e8ba61185738de2
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
