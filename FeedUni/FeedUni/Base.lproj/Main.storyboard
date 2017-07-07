@@ -542,6 +542,13 @@
                                     <barButtonItem title="Scegli il tuo corso" style="done" id="RYb-Cj-D2N">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="hb5-ho-AKf"/>
+                                    <barButtonItem systemItem="stop" id="6ad-U8-tRq">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="buttonCancelPressed:" destination="Nbh-Il-6iQ" id="q2H-g5-QjE"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.6705882353" green="0.14117647059999999" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                             </toolbar>
@@ -559,7 +566,6 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="XRz-2j-Kny" id="h6Y-pq-KWw"/>
-                        <outlet property="toolbar" destination="iK6-6b-xDW" id="tlX-fI-65b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdk-Iy-93H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1918,6 +1924,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="G8M-aD-LBe"/>
+        <segue reference="EQy-a6-IRh"/>
         <segue reference="zNO-1P-LGT"/>
         <segue reference="jA9-6A-ZBp"/>
         <segue reference="XKF-1s-DxQ"/>

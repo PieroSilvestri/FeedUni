@@ -92,10 +92,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 		self.title = self.chosenCourse
 		
 		// spinner
-        self.spinner.center = self.view.center
-        self.spinner.hidesWhenStopped = true
-        view.addSubview(self.spinner)
-        self.spinner.startAnimating()
+        self.customActivityIndicatory(self.view, startAnimate: true)
 		
 		// unused cells eliminated
         self.timeTableView.tableFooterView = UIView()
@@ -116,11 +113,10 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 			
 		Alamofire.request("http://apiunipn.parol.in/V1/timetable", headers: headers).responseObject { (response: DataResponse<DaysResponse>)  in
 			
-			
+			// set the courses array
 			self.setCourses(response: response.result.value!)
 			
-			self.spinner.stopAnimating()
-			self.spinner.isHidden = true
+			self.customActivityIndicatory(self.view, startAnimate: false)
 			self.timeTableView.reloadData()
         }
 		
@@ -156,6 +152,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 		if let index = self.courses.index(where: { (c) -> Bool in
 			c.courseName == self.chosenCourse
 		}) {
+			// Date formatted in string "DayName 01-01-1970"
 			let dateFormatter = DateFormatter()
 			dateFormatter.locale = Locale(identifier: "it_IT")
 			dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
@@ -175,10 +172,12 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 		if let index = self.courses.index(where: { (c) -> Bool in
 			c.courseName == self.chosenCourse
 		}) {
+			// Get the lesson
 			guard let lesson = self.courses[index].days[indexPath.section].lessons?[indexPath.row] else {
 				return cell
 			}
 			
+			// Set colors and point
 			var timelinePoint = TimelinePoint()
 			var timelineBackColor = UIColor.black
 			var timelineFrontColor = UIColor.clear
@@ -200,6 +199,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 			let date = dateFormatter.date(from: lesson.lessonStart!)
 			dateFormatter.dateFormat = "HH:mm"
 			
+			// Set cell
 			cell.timelinePoint = timelinePoint
 			cell.timeline.frontColor = timelineFrontColor
 			cell.timeline.backColor = timelineBackColor
@@ -215,8 +215,9 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 		self.performSegue(withIdentifier: "TimelineDetailSegue", sender: tableView.cellForRow(at: indexPath))
 	}
 	
-    // MARK: - Course formatter utils
-    
+    // MARK: - Utils
+	
+	// Set the course orderer array from response course list
     func setCourses(response: DaysResponse){
         for today in response.calendar! {
             for lesson in today.lessons! {
@@ -236,12 +237,51 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         }
-    }
-    
+	}
+	
+	// Custom spinner
+	func customActivityIndicatory(_ viewContainer: UIView, startAnimate:Bool? = true) -> UIActivityIndicatorView {
+		let mainContainer: UIView = UIView(frame: viewContainer.frame)
+		mainContainer.center = viewContainer.center
+		mainContainer.backgroundColor = UIColor.black
+		// mainContainer.backgroundColor = UIColor.init(coder: 0xFFFFFF)
+		mainContainer.alpha = 0.5
+		mainContainer.tag = 789456123
+		mainContainer.isUserInteractionEnabled = false
+		
+		let viewBackgroundLoading: UIView = UIView(frame: CGRect(x:0,y: 0,width: 80,height: 80))
+		viewBackgroundLoading.center = viewContainer.center
+		viewBackgroundLoading.backgroundColor = UIColor.lightGray
+		//viewBackgroundLoading.backgroundColor = UIColor.init(netHex: 0x444444)
+		viewBackgroundLoading.alpha = 0.5
+		viewBackgroundLoading.clipsToBounds = true
+		viewBackgroundLoading.layer.cornerRadius = 15
+		
+		let activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView()
+		activityIndicatorView.frame = CGRect(x:0.0,y: 0.0,width: 40.0, height: 40.0)
+		activityIndicatorView.activityIndicatorViewStyle =
+			UIActivityIndicatorViewStyle.whiteLarge
+		activityIndicatorView.center = CGPoint(x: viewBackgroundLoading.frame.size.width / 2, y: viewBackgroundLoading.frame.size.height / 2)
+		if startAnimate!{
+			viewBackgroundLoading.addSubview(activityIndicatorView)
+			mainContainer.addSubview(viewBackgroundLoading)
+			viewContainer.addSubview(mainContainer)
+			activityIndicatorView.startAnimating()
+		}else{
+			for subview in viewContainer.subviews{
+				if subview.tag == 789456123{
+					subview.removeFromSuperview()
+				}
+			}
+		}
+		return activityIndicatorView
+	}
+	
     // MARK: - Navigation
-    
+	
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "TimelineFilterSegue" {
+			// Filter modal
 			let filter = segue.destination as! TimelineFilterController
 			filter.delegate = self
 			let array = self.courses.map({ (c) -> String in
@@ -249,6 +289,7 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
 			})
 			filter.courses = array
 		} else if segue.identifier == "TimelineDetailSegue" {
+			// Detail of the lesson
 			let indexPath = self.timeTableView.indexPath(for: sender as! TimelineTableViewCell)!
 			let detail = segue.destination as! TimelineDetailController
 			if let index = self.courses.index(where: { (c) -> Bool in
