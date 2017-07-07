@@ -195,6 +195,7 @@
 		657D16AC1EF92C280069AB00 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				F334B1711F0B876A00044C7D /* piero.jpeg */,
 				043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */,
 				043ADA021F0BD42400ECD78C /* finale1App.gif */,
 				653061B81F091FED00A26D27 /* envelope.png */,

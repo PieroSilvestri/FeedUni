@@ -11,6 +11,8 @@ import SystemConfiguration
 import FacebookCore
 import FacebookLogin
 import SwiftGifOrigin
+import Gifu
+
 
 
 
@@ -27,6 +29,8 @@ class LoginController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         self.PasswordTextField.delegate=self;
         self.EmailTextField.delegate=self;
+        
+        
         
         let imageData = try! Data(contentsOf: Bundle.main.url(forResource: "finale1App", withExtension: "gif")!)
         self.BackgroundImageView.image = UIImage.gif(data: imageData)
