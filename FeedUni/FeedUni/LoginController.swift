@@ -10,6 +10,11 @@ import UIKit
 import SystemConfiguration
 import FacebookCore
 import FacebookLogin
+import SwiftGifOrigin
+import Gifu
+
+
+
 
 class LoginController: UIViewController, UITextFieldDelegate {
     
@@ -17,20 +22,35 @@ class LoginController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var EmailTextField: UITextField!
     
     @IBOutlet weak var RicordamiSwitchUI: UISwitch!
+    
+    @IBOutlet weak var BackgroundImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.PasswordTextField.delegate=self;
+        self.EmailTextField.delegate=self;
         
+        
+        
+        let imageData = try! Data(contentsOf: Bundle.main.url(forResource: "finale1App", withExtension: "gif")!)
+        self.BackgroundImageView.image = UIImage.gif(data: imageData)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if(UserDefaults.standard.object(forKey: "ricordami") != nil){
-            if(UserDefaults.standard.object(forKey: "ricordami") as! Bool){
-                if(UserDefaults.standard.object(forKey: "token") != nil){
-                    if(UserDefaults.standard.object(forKey: "id") != nil){
-                        self.performSegue(withIdentifier: "GoToMainViewFromLoginSegue", sender: self)
-                    }
+        if(UserDefaults.standard.object(forKey: "ricordami") as! Bool){
+            if(UserDefaults.standard.object(forKey: "token") != nil){
+                if(UserDefaults.standard.object(forKey: "id") != nil){
+                    self.performSegue(withIdentifier: "GoToMainViewFromLoginSegue", sender: self)
                 }
             }
         }
+        }else if(UserDefaults.standard.object(forKey: "email") != nil){
+            self.EmailTextField.text = UserDefaults.standard.object(forKey: "email") as! String
+        }
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -146,6 +166,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
                             defaults.setValue(self.EmailTextField.text, forKey: "email")
                             defaults.setValue(accessToken, forKey: "token")
                             defaults.setValue(id, forKey: "id")
+                            defaults.synchronize()
                             
                             DispatchQueue.main.sync {
                                 /*
@@ -197,15 +218,17 @@ class LoginController: UIViewController, UITextFieldDelegate {
             switch loginResult {
             case .failed(let error):
                 print(error)
+                self.customActivityIndicatory(self.view, startAnimate: false)
+                
             case .cancelled:
                 print("User cancelled login.")
+                self.customActivityIndicatory(self.view, startAnimate: false)
                 
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 let defaults = UserDefaults.standard
                 
-                //self.customActivityIndicatory(self.view, startAnimate: true)
                 
-                defaults.setValue(accessToken.authenticationToken , forKey: "token")
+                
                 
                 DispatchQueue.global(qos: .userInitiated).sync {
                     self.sendFacebookToken(token: accessToken.authenticationToken)
@@ -277,7 +300,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
                         let defaults = UserDefaults.standard
                         defaults.setValue(accessToken, forKey: "token")
                         defaults.setValue(id, forKey: "id")
+                        defaults.setValue(self.RicordamiSwitchUI.isOn, forKey: "ricordami")
                         //salvare i dati e passare alla view
+                        defaults.synchronize()
                         self.performSegue(withIdentifier: "GoToMainViewFromLoginSegue", sender: self)
                         
                     }catch let error as NSError{
