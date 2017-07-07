@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G23a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -570,7 +570,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdk-Iy-93H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4700" y="-193.85307346326837"/>
+            <point key="canvasLocation" x="4662" y="-205"/>
         </scene>
         <!--News-->
         <scene sceneID="P2v-4h-UFl">
@@ -1832,11 +1832,11 @@
             </objects>
             <point key="canvasLocation" x="4662.3188405797109" y="513.58695652173913"/>
         </scene>
-        <!--Timeline-->
+        <!--Orari-->
         <scene sceneID="riq-YJ-bwc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eAL-dO-t4x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Timeline" image="timelineIcon" id="dn4-3a-1cM"/>
+                    <tabBarItem key="tabBarItem" title="Orari" image="timelineIcon" id="dn4-3a-1cM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D0q-Vi-Duf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1923,12 +1923,11 @@
         <image name="utente.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="G8M-aD-LBe"/>
+        <segue reference="WwW-Dx-tfm"/>
+        <segue reference="XKF-1s-DxQ"/>
         <segue reference="EQy-a6-IRh"/>
         <segue reference="zNO-1P-LGT"/>
         <segue reference="jA9-6A-ZBp"/>
-        <segue reference="XKF-1s-DxQ"/>
-        <segue reference="WwW-Dx-tfm"/>
         <segue reference="WHZ-ca-EGc"/>
     </inferredMetricsTieBreakers>
 </document>
