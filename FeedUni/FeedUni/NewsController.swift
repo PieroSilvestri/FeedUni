@@ -22,6 +22,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //initUI()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         getJsonFromUrl(page: indexPage)
     }
 
@@ -62,7 +63,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.imageCell.bounds.origin.y = (UIImage(data: data as Data)!.size.height/2) - (cell.imageCell.bounds.size.height/2)
                 */
                 
-                cell.imageView?.image = nil
+                cell.imageView!.image = nil
                 
                 var request = Nuke.Request(url: url)
                 request.process(key: "Avatar") {
