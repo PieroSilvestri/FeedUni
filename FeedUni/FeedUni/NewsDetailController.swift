@@ -24,6 +24,10 @@ class NewsDetailController: UIViewController {
     var imageUrl : String = ""
     var content : String = ""
     
+    override func viewDidLayoutSubviews() {
+        newsImageView.layer.cornerRadius = 0.5 * self.newsImageView.frame.width
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
@@ -59,7 +63,8 @@ class NewsDetailController: UIViewController {
         
         textView.text = String.init(htmlEncodedString: titleText)
         textView.isUserInteractionEnabled = false
-        contentTextView.isUserInteractionEnabled = false
+        contentTextView.isEditable = false;
+        contentTextView.isUserInteractionEnabled = true
         
         dateLabel.text = date
         
@@ -86,14 +91,16 @@ class NewsDetailController: UIViewController {
     func heartClicked(){
         print("image tapped")
         
-        let newData = DateFormatter.init()
-        newData.dateFormat = "EEEE dd-MM-yyyy";
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "it_IT")
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
         let newFavorite = FavoriteNews(value: [
             "title": titleText,
             "content": content,
             "excerpt": "pace",
-            "publishingDate": newData.date(from: date),
+            "publishingDate": dateFormatter.date(from: date)!,
             "imageURL": imageUrl
             ])
         RealmQueries.insertNews(post: newFavorite)
