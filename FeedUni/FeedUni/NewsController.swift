@@ -15,11 +15,12 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var spinner: UIActivityIndicatorView = UIActivityIndicatorView()
     var indexPage: Int = 1
     var listData = [NSDictionary]()
+    var tokenUser: String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //initUI()
+        initUI()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
@@ -128,6 +129,13 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func initUI(){
         
+        let shared = UserDefaults.standard
+        if let token = shared.object(forKey: "token") {
+            self.tokenUser = token as! String
+        } else {
+            self.tokenUser = "f23996c1-0703-464f-b76f-14ffa7a43b58"
+        }
+        
         self.spinner.center = self.view.center
         self.spinner.hidesWhenStopped = true
         self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
@@ -153,8 +161,9 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let url = URL(string: urlString)
         var request = URLRequest(url: url!)
+        
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer 3252261a-215c-4078-a74d-2e1c5c63f0a1", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer " + self.tokenUser, forHTTPHeaderField: "Authorization")
         let session = URLSession.shared
         
             session.dataTask(with:request) { (data, response, error) in

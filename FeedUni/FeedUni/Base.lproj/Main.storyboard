@@ -1882,7 +1882,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eAL-dO-t4x" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Orari" image="timelineIcon" id="dn4-3a-1cM"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D0q-Vi-Duf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="D0q-Vi-Duf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1909,7 +1909,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jIG-B7-D6g">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jIG-B7-D6g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1930,7 +1930,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7F8-DZ-OwI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="userIcon" id="nZt-lX-2bx"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CgH-eJ-mid">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CgH-eJ-mid">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1967,11 +1967,11 @@
         <image name="utente.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WwW-Dx-tfm"/>
-        <segue reference="XKF-1s-DxQ"/>
-        <segue reference="EQy-a6-IRh"/>
         <segue reference="zNO-1P-LGT"/>
+        <segue reference="EQy-a6-IRh"/>
+        <segue reference="diy-Ga-cIA"/>
         <segue reference="jA9-6A-ZBp"/>
-        <segue reference="WHZ-ca-EGc"/>
+        <segue reference="XKF-1s-DxQ"/>
+        <segue reference="WwW-Dx-tfm"/>
     </inferredMetricsTieBreakers>
 </document>
