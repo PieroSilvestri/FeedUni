@@ -20,4 +20,5 @@ class FavoriteLesson: Object {
     dynamic var lessonType = ""
     dynamic var lessonArea = 0
 	dynamic var lessonReminder = ""
+    dynamic var id = "" //Mettere quello tornato dal backend di zeze
 }

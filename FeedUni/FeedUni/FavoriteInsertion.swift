@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class FavoriteInsertion: Object {
+    dynamic var id = "" //Mettere quello tornato dal backend di zeze
     dynamic var title = ""
     dynamic var insertionDescription = ""
     dynamic var publisherName = ""

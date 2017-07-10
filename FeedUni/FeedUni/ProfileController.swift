@@ -10,12 +10,6 @@ import UIKit
 
 class ProfileController: UITableViewController {
     @IBOutlet weak var usernameLabel: UILabel!
-
-    @IBAction func LogoutPressed(_ sender: UIBarButtonItem) {
-        print("Logout pressed")
-        UserDefaults.standard.setValue(false, forKey: "ricordami")
-        presentingViewController?.dismiss(animated: false, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +26,10 @@ class ProfileController: UITableViewController {
         } else if segue.identifier == "insertionSegue" {
             let dest = segue.destination as! UserFavsController
             dest.selection = 2
+        } else if segue.identifier == "logoutSegue" {
+            let defaults = UserDefaults.standard
+            defaults.setValue(false, forKey: "ricordami")
+            defaults.synchronize()
         }
     }
 

@@ -45,6 +45,7 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
     }
     
     var cameraUI: UIImagePickerController! = UIImagePickerController()
+    let newSize = CGSize.init(width: 100.0, height: 100.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,16 +117,27 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
     //MARK: metodi di creazione dell'annuncio
     //Conversione oggetto per poter fare il POST
     func insertionToJSON(userInsertion: UserInsertion) -> [String : Any] {
+        let mImage = resizeImage(image: (insertionImage.imageView?.image)!)
         return [
             "title" : userInsertion.title,
             "price" : userInsertion.price,
-            "image" : UIImagePNGRepresentation((insertionImage.imageView?.image)!)!.base64EncodedString(options: .lineLength64Characters),
+            "image" : UIImagePNGRepresentation(mImage)!.base64EncodedString(options: .lineLength64Characters),
             "email" : userInsertion.email,
             "description" : userInsertion.insertionDescription,
             "phone" : userInsertion.phoneNumber,
             "username" : userInsertion.publisherName,
             "tag_id" : userInsertion.insertionType
         ]
+    }
+    
+    
+    //Comprime l'immagine presa da fotocamera per poterla postare online
+    func resizeImage(image: UIImage) -> UIImage{
+        UIGraphicsBeginImageContext(newSize)
+        image.draw(in: CGRect.init(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
     }
     
     
