@@ -102,11 +102,6 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.indexPage += 1
             getJsonFromUrl(page: indexPage)
             print("IndexPage: \(self.indexPage)")
-            self.spinner.center = self.view.center
-            self.spinner.hidesWhenStopped = true
-            self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-            view.addSubview(self.spinner)
-            self.spinner.startAnimating()
             UIApplication.shared.beginIgnoringInteractionEvents()
         }
     }
