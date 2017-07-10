@@ -1387,13 +1387,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="R2Z-UH-l1I">
-                                                    <rect key="frame" x="347" y="134.5" width="15" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="15" id="LoU-64-dnQ"/>
-                                                        <constraint firstAttribute="height" constant="15" id="pGR-x0-43i"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Hnd-f5-VVj" secondAttribute="trailing" constant="5" id="1ZK-QT-Tk0"/>
@@ -1402,7 +1395,6 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="fv1-gd-Bjh" secondAttribute="bottom" id="6Qr-Vo-PRP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="wIB-Bz-bfS" secondAttribute="trailing" constant="255" id="9Lf-Cn-RCJ"/>
                                                 <constraint firstItem="fv1-gd-Bjh" firstAttribute="leading" secondItem="wIB-Bz-bfS" secondAttribute="trailing" constant="10" id="9eN-UV-SSb"/>
-                                                <constraint firstAttribute="bottom" secondItem="R2Z-UH-l1I" secondAttribute="bottom" constant="10" id="BYV-dj-k64"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="uq0-nd-svB" secondAttribute="bottom" id="G6e-e7-CoD"/>
                                                 <constraint firstItem="Hnd-f5-VVj" firstAttribute="top" secondItem="D6L-Fr-ZmZ" secondAttribute="topMargin" constant="10" id="KiD-ve-IX3"/>
                                                 <constraint firstItem="ugb-Wd-4NU" firstAttribute="top" secondItem="2LM-zd-gZ7" secondAttribute="bottom" constant="10" id="LPA-Wd-8bE"/>
@@ -1410,19 +1402,15 @@
                                                 <constraint firstItem="Hnd-f5-VVj" firstAttribute="leading" secondItem="wIB-Bz-bfS" secondAttribute="trailing" constant="10" id="TXf-BM-fzT"/>
                                                 <constraint firstItem="5HU-sC-qPw" firstAttribute="top" secondItem="2LM-zd-gZ7" secondAttribute="bottom" constant="10" id="UuF-xs-QqJ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2LM-zd-gZ7" secondAttribute="trailing" constant="5" id="UyP-UN-5PX"/>
-                                                <constraint firstAttribute="trailing" secondItem="R2Z-UH-l1I" secondAttribute="trailing" constant="13" id="aoj-6D-lIX"/>
                                                 <constraint firstItem="ugb-Wd-4NU" firstAttribute="leading" secondItem="wIB-Bz-bfS" secondAttribute="trailing" constant="10" id="fwM-cG-qdF"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="wIB-Bz-bfS" secondAttribute="bottom" id="gs2-G3-HfY"/>
                                                 <constraint firstItem="wIB-Bz-bfS" firstAttribute="leading" secondItem="D6L-Fr-ZmZ" secondAttribute="leadingMargin" id="ivU-z4-XCu"/>
                                                 <constraint firstItem="wIB-Bz-bfS" firstAttribute="top" secondItem="D6L-Fr-ZmZ" secondAttribute="topMargin" id="jcc-2T-xlu"/>
-                                                <constraint firstAttribute="trailing" secondItem="R2Z-UH-l1I" secondAttribute="trailing" constant="13" id="vns-Fa-B1V"/>
-                                                <constraint firstAttribute="bottom" secondItem="R2Z-UH-l1I" secondAttribute="bottom" constant="10" id="wgH-8M-iqi"/>
                                                 <constraint firstItem="5HU-sC-qPw" firstAttribute="leading" secondItem="ugb-Wd-4NU" secondAttribute="trailing" constant="7" id="ySh-he-SOG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellData" destination="uq0-nd-svB" id="9xF-Gw-vbH"/>
-                                            <outlet property="cellHeart" destination="R2Z-UH-l1I" id="lao-ZI-szq"/>
                                             <outlet property="cellImage" destination="wIB-Bz-bfS" id="w8F-44-1fG"/>
                                             <outlet property="cellPrice" destination="5HU-sC-qPw" id="z2k-eh-GMg"/>
                                             <outlet property="cellTitle" destination="Hnd-f5-VVj" id="3Cl-KN-UMX"/>
@@ -1621,12 +1609,20 @@
                                     <constraint firstAttribute="height" constant="22" id="OKb-qm-Bdh"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="YOl-Tv-Eqk">
+                                <rect key="frame" x="340" y="371" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="drr-oF-ba6"/>
+                                    <constraint firstAttribute="width" constant="20" id="mRq-Bw-2cL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Yal-Ay-ESd" firstAttribute="top" secondItem="JNT-IT-qW2" secondAttribute="bottom" constant="15" id="0Sn-sd-wUt"/>
                             <constraint firstItem="a40-RK-sPB" firstAttribute="leading" secondItem="nmq-rf-5GO" secondAttribute="trailing" constant="7" id="6eH-UB-eQP"/>
                             <constraint firstItem="11a-UJ-Epg" firstAttribute="height" secondItem="f3n-RE-hfm" secondAttribute="height" id="8QA-CN-ku1"/>
+                            <constraint firstAttribute="trailing" secondItem="YOl-Tv-Eqk" secondAttribute="trailing" constant="15" id="8mx-YS-XF1"/>
                             <constraint firstItem="Xls-Sx-wXH" firstAttribute="top" secondItem="yKD-Fw-xKr" secondAttribute="bottom" constant="20" id="BGB-Gn-x1Q"/>
                             <constraint firstAttribute="trailing" secondItem="LKS-AO-g9g" secondAttribute="trailing" constant="30" id="D4j-8w-pwC"/>
                             <constraint firstItem="JNT-IT-qW2" firstAttribute="centerX" secondItem="Rz9-kT-cdx" secondAttribute="centerX" id="EWk-OF-C4p"/>
@@ -1655,6 +1651,7 @@
                             <constraint firstAttribute="trailing" secondItem="1Wa-4D-dvI" secondAttribute="trailing" id="elh-7K-KeI"/>
                             <constraint firstItem="gQm-fX-6fv" firstAttribute="leading" secondItem="Rz9-kT-cdx" secondAttribute="leading" id="hBL-09-aDE"/>
                             <constraint firstItem="gQm-fX-6fv" firstAttribute="top" secondItem="yiV-J3-dd4" secondAttribute="bottom" id="hNi-qE-8ug"/>
+                            <constraint firstItem="YOl-Tv-Eqk" firstAttribute="top" secondItem="11a-UJ-Epg" secondAttribute="bottom" constant="15" id="iXp-7a-7ia"/>
                             <constraint firstItem="qtP-wg-Sof" firstAttribute="centerX" secondItem="Rz9-kT-cdx" secondAttribute="centerX" id="jwH-Jj-oL9"/>
                             <constraint firstItem="11a-UJ-Epg" firstAttribute="leading" secondItem="Rz9-kT-cdx" secondAttribute="leading" id="lh1-g4-Kkm"/>
                             <constraint firstItem="JNT-IT-qW2" firstAttribute="leading" secondItem="8kU-tj-qYd" secondAttribute="trailing" constant="10" id="nkH-lx-AM3"/>
@@ -1679,11 +1676,12 @@
                         <outlet property="detailNumberLabel" destination="SSc-8j-A3w" id="oRJ-au-Qp9"/>
                         <outlet property="detailPriceLabel" destination="JNT-IT-qW2" id="KeK-vO-Zt7"/>
                         <outlet property="detailTitleLabel" destination="1Wa-4D-dvI" id="a6Y-0n-p8r"/>
+                        <outlet property="heartImage" destination="YOl-Tv-Eqk" id="tke-Fp-eDW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9j-s3-MMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3782.608695652174" y="513.58695652173913"/>
+            <point key="canvasLocation" x="3781.5999999999999" y="513.19340329835086"/>
         </scene>
         <!--Add Insertion Controller-->
         <scene sceneID="bsc-7l-7P9">
@@ -1918,12 +1916,10 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EQy-a6-IRh"/>
-        <segue reference="KfP-SI-qxu"/>
-        <segue reference="WHZ-ca-EGc"/>
-        <segue reference="WwW-Dx-tfm"/>
-        <segue reference="03m-xm-lIR"/>
         <segue reference="zNO-1P-LGT"/>
         <segue reference="XKF-1s-DxQ"/>
+        <segue reference="WHZ-ca-EGc"/>
+        <segue reference="Icj-gt-Njs"/>
         <segue reference="jA9-6A-ZBp"/>
     </inferredMetricsTieBreakers>
 </document>
