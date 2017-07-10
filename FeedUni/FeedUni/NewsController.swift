@@ -17,7 +17,6 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var listData = [NSDictionary]()
     var tokenUser: String = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
@@ -88,6 +87,9 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         cell.titleTextView.text = String.init(htmlEncodedString: tempTitle)
         cell.dateLabel.text =  tempDate.substring(with:range)
+        
+        
+        
         return cell
     }
     

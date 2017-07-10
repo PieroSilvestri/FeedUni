@@ -24,6 +24,10 @@ class NewsDetailController: UIViewController {
     var imageUrl : String = ""
     var content : String = ""
     
+    override func viewDidLayoutSubviews() {
+        newsImageView.layer.cornerRadius = 0.5 * self.newsImageView.frame.width
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
@@ -59,7 +63,8 @@ class NewsDetailController: UIViewController {
         
         textView.text = String.init(htmlEncodedString: titleText)
         textView.isUserInteractionEnabled = false
-        contentTextView.isUserInteractionEnabled = false
+        contentTextView.isEditable = false;
+        contentTextView.isUserInteractionEnabled = true
         
         dateLabel.text = date
         
