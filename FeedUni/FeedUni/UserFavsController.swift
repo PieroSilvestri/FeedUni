@@ -56,70 +56,114 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch self.postController.selectedSegmentIndex {
         case 0:
-            let cell = self.mTableView.dequeueReusableCell(withIdentifier: "newsCellFavs", for: indexPath) as! NewsTableViewCell
-            let vNews = self.favNews[indexPath.row]
-            cell.titleTextView.text = vNews.title
-            cell.dateLabel.text = "\(vNews.publishingDate)"
-            if let url = URL(string: vNews.imageURL) {
-                if let data = NSData(contentsOf: url) {
-                    
-                    cell.imageView?.image = nil
-                    
-                    var request = Nuke.Request(url: url)
-                    request.process(key: "Avatar") {
-                        return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop)
+            if (self.favNews.count > 0) {
+                let dateFormatter = DateFormatter()
+                dateFormatter.locale = Locale(identifier: "it_IT")
+                dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                
+                let cell = self.mTableView.dequeueReusableCell(withIdentifier: "newsCellFavs", for: indexPath) as! NewsTableViewCell
+                let vNews = self.favNews[indexPath.row]
+                cell.titleTextView.text = vNews.title
+                cell.dateLabel.text = dateFormatter.string(from: vNews.publishingDate)
+                if let url = URL(string: vNews.imageURL) {
+                    if let data = NSData(contentsOf: url) {
+                        
+                        cell.imageView?.image = nil
+                        
+                        var request = Nuke.Request(url: url)
+                        request.process(key: "Avatar") {
+                            return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop)
+                        }
+                        
+                        Nuke.loadImage(with: request, into: cell.imageCell)
                     }
-                    
-                    Nuke.loadImage(with: request, into: cell.imageCell)
                 }
+                return cell
+            } else {
+                self.mTableView.estimatedRowHeight = 300
+                self.mTableView.rowHeight = UITableViewAutomaticDimension
+                return self.mTableView.dequeueReusableCell(withIdentifier: "nothingCell", for: indexPath)
             }
-            return cell
         case 2:
-            let cell = self.mTableView.dequeueReusableCell(withIdentifier: "insertionCellFavs", for: indexPath) as! BachecaControllerTableViewCell
-            let vInsertion = self.favInsertions[indexPath.row]
-            cell.cellTitle.text = vInsertion.title
-            cell.cellData.text = "\(Date.init())"
-            cell.cellPrice.text = vInsertion.publisherName
-            return cell
+            if (self.favInsertions.count > 0) {
+                let cell = self.mTableView.dequeueReusableCell(withIdentifier: "insertionCellFavs", for: indexPath) as! BachecaControllerTableViewCell
+                let vInsertion = self.favInsertions[indexPath.row]
+                cell.cellTitle.text = vInsertion.title
+                cell.cellData.text = "\(Date.init())"
+                cell.cellPrice.text = vInsertion.publisherName
+                return cell
+            } else {
+                self.mTableView.estimatedRowHeight = 300
+                self.mTableView.rowHeight = UITableViewAutomaticDimension
+                return self.mTableView.dequeueReusableCell(withIdentifier: "nothingCell", for: indexPath) as UITableViewCell
+            }
         default:
-            let lesson = self.favLesson[indexPath.row]
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell",
-                                                     for: indexPath) as! TimelineTableViewCell
-            let timelinePoint = TimelinePoint()
-            let timelineBackColor = UIColor.black
-            let timelineFrontColor = UIColor.clear
-
-            cell.timelinePoint = timelinePoint
-            cell.timeline.frontColor = timelineFrontColor
-            cell.timeline.backColor = timelineBackColor
-            cell.titleLabel.text = "\(lesson.lessonStart)"
-            cell.descriptionLabel.text = lesson.lessonName
-            cell.lineInfoLabel.text = lesson.room
-
-            return cell
+            if (self.favLesson.count > 0) {
+                let lesson = self.favLesson[indexPath.row]
+                
+                // Date formatted in string "DayName 01-01-1970"
+                let dateFormatter = DateFormatter()
+                dateFormatter.locale = Locale(identifier: "it_IT")
+                dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+                dateFormatter.dateFormat = "EEEE dd-MM-yyyy"
+                
+                self.mTableView.estimatedRowHeight = 300
+                self.mTableView.rowHeight = UITableViewAutomaticDimension
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell",
+                                                         for: indexPath) as! TimelineTableViewCell
+                
+                let timelinePoint = TimelinePoint(color: UIColor(red: 0.29, green: 0.65, blue: 0.89, alpha: 1.0), filled: true)
+                let timelineBackColor = UIColor.clear
+                let timelineFrontColor = UIColor.clear
+                
+                cell.timelinePoint = timelinePoint
+                cell.timeline.frontColor = timelineFrontColor
+                cell.timeline.backColor = timelineBackColor
+                cell.titleLabel.text = dateFormatter.string(from: lesson.lessonDate).capitalized
+                cell.descriptionLabel.text = lesson.lessonName
+                cell.lineInfoLabel.text = lesson.room
+                
+                return cell
+            } else {
+                self.mTableView.estimatedRowHeight = 300
+                self.mTableView.rowHeight = UITableViewAutomaticDimension
+                return self.mTableView.dequeueReusableCell(withIdentifier: "nothingCell", for: indexPath)
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch self.postController.selectedSegmentIndex {
         case 0:
-            return self.favNews.count
+            if (self.favNews.count > 0) {
+                return self.favNews.count
+            } else {
+                return 1
+            }
         case 2:
-            return self.favInsertions.count
+            if (self.favInsertions.count > 0) {
+                return self.favInsertions.count
+            } else {
+                return 1
+            }
         default:
-            return self.favLesson.count
+            if (self.favLesson.count > 0) {
+                return self.favLesson.count
+            } else {
+                return 1
+            }
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if self.postController.selectedSegmentIndex == 1 {
-            self.performSegue(withIdentifier: "lessonDetailSegue", sender: self.mTableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell" , for: indexPath) as! TimelineTableViewCell)
             self.chosenLesson = self.favLesson[indexPath.row]
+            self.performSegue(withIdentifier: "lessonDetailSegue", sender: self.mTableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell" , for: indexPath) as! TimelineTableViewCell)
         }
     }
     
@@ -145,6 +189,12 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
             dest.detailNumber = selectedInsertion.phoneNumber
             dest.detailEmail = selectedInsertion.email
         } else if segue.identifier == "lessonDetailSegue" {
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "it_IT")
+            dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            
             let dest = segue.destination as! TimelineDetailController
             let selectedLesson = self.chosenLesson
             let convertedObj = Lesson.init()
@@ -152,9 +202,9 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
             convertedObj.teacher = selectedLesson?.teacher
             convertedObj.lessonName = selectedLesson?.lessonName
             convertedObj.room = selectedLesson?.room
-            convertedObj.lessonDate = "\(selectedLesson?.lessonDate)"
-            convertedObj.lessonStart = "\(selectedLesson?.lessonStart)"
-            convertedObj.lessonEnd = "\(selectedLesson?.lessonEnd)"
+            convertedObj.lessonDate = dateFormatter.string(from: (selectedLesson?.lessonDate!)!)
+            convertedObj.lessonStart = dateFormatter.string(from: (selectedLesson?.lessonStart!)!)
+            convertedObj.lessonEnd = dateFormatter.string(from: (selectedLesson?.lessonEnd!)!)
             convertedObj.lessonType = selectedLesson?.lessonType
             convertedObj.lessonArea = selectedLesson?.lessonArea
             dest.selectedLesson = convertedObj

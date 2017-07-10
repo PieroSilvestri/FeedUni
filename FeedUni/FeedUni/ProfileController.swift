@@ -13,7 +13,13 @@ class ProfileController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let defaults = UserDefaults.standard
+        let premail = defaults.value(forKey: "email")
+        if (premail as? String != nil) {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "profileCell")
+            cell?.textLabel?.text = premail as! String
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
