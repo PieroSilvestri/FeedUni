@@ -13,12 +13,10 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
     var listData = [NSDictionary]()
     var listData1 = [NSDictionary]()
 
-    var heartFlag = false
     private let refreshControl = UIRefreshControl()
     var idCategoria = 5
     var rowsTable = 0
     var privaVolta = true
-    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentCtrl: UISegmentedControl!
@@ -187,28 +185,8 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         cell.cellTitle.text = tempTitle
         cell.cellData.text = tempDate.substring(with:range)
         cell.cellPrice.text = tempUser
-
         
-        /*
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("imageTapped:")))Toucan Group
-        cell.cellHeart.addGestureRecognizer(tapGesture)
-        cell.cellHeart.isUserInteractionEnabled = true
-        if (heartFlag == false)
-        {
-            cell.cellHeart.image = #imageLiteral(resourceName: "emptyHeart")
-        }
-        else
-        {
-            cell.cellHeart.image = #imageLiteral(resourceName: "fullHeart")
-        }
-        */
-
         return cell
-    }
-    
-    
-    func imageTapped(gesture: UITapGestureRecognizer){
-        heartFlag = !heartFlag
     }
     
     
@@ -260,7 +238,13 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             let destination = segue.destination as! BachecaDetailController
             let indexRow = self.tableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
             
-            let tempItem = self.listData1[indexRow!] as NSDictionary
+            var tempItem = NSDictionary()
+            //let indexMunsra = indexPath.row as! Int
+            if(self.privaVolta){
+                tempItem = self.listData[indexRow!] as NSDictionary
+            }else{
+                tempItem = self.listData1[indexRow!] as NSDictionary
+            }
             
             
             var tempTitle = ""
