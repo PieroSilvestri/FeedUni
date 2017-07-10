@@ -16,7 +16,6 @@ class TimelineController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var timeTableView: UITableView!
     
-    var spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     var courses: [Course] = []
     var chosenCourse = ""
 	var tokenUser: String = ""
