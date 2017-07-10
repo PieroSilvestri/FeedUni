@@ -9,6 +9,7 @@ import Nuke
 import NukeToucanPlugin
 import UIKit
 
+
 class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet weak var tableView: UITableView!
@@ -17,6 +18,9 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var listData = [NSDictionary]()
     var tokenUser: String = ""
     
+    override func viewDidLayoutSubviews() {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,14 +71,15 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 */
                 
                 cell.imageView!.image = nil
-                
                 var request = Nuke.Request(url: url)
                 request.process(key: "Avatar") {
-                    return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop)
+                    return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop).maskWithEllipse()
                 }
                 
-                 Nuke.loadImage(with: request, into: cell.imageCell)
                 
+                Nuke.loadImage(with: request, into: cell.imageCell)
+            
+
                     /*
                     UIGraphicsBeginImageContext(cell.imageCell.frame.size);
                     UIImage(data: data as Data)?.draw(in: cell.imageCell.bounds);

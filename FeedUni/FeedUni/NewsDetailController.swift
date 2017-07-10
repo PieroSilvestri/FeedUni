@@ -86,14 +86,16 @@ class NewsDetailController: UIViewController {
     func heartClicked(){
         print("image tapped")
         
-        let newData = DateFormatter.init()
-        newData.dateFormat = "EEEE dd-MM-yyyy";
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "it_IT")
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
         let newFavorite = FavoriteNews(value: [
             "title": titleText,
             "content": content,
             "excerpt": "pace",
-            "publishingDate": newData.date(from: date),
+            "publishingDate": dateFormatter.date(from: date)!,
             "imageURL": imageUrl
             ])
         RealmQueries.insertNews(post: newFavorite)

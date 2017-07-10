@@ -598,13 +598,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zl5-Rr-eve">
-                                                    <rect key="frame" x="5" y="10" width="124" height="93"/>
+                                                    <rect key="frame" x="5" y="10" width="93" height="93"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="zl5-Rr-eve" secondAttribute="height" multiplier="4:3" id="kMI-WU-5CZ"/>
+                                                        <constraint firstAttribute="width" secondItem="zl5-Rr-eve" secondAttribute="height" multiplier="3:3" id="kMI-WU-5CZ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do ." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRl-HU-oy5">
-                                                    <rect key="frame" x="137" y="10" width="150" height="60"/>
+                                                    <rect key="frame" x="106" y="10" width="236" height="60"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="DF0-rP-ZG9"/>
@@ -613,7 +613,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendarIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="uQ3-1a-VEr">
-                                                    <rect key="frame" x="145" y="88" width="15" height="15"/>
+                                                    <rect key="frame" x="114" y="88" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="fqs-ae-E9Y"/>
                                                         <constraint firstAttribute="width" constant="15" id="phZ-4g-DMp"/>
@@ -627,7 +627,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3I-PL-c7Q">
-                                                    <rect key="frame" x="171" y="88" width="29" height="13.5"/>
+                                                    <rect key="frame" x="140" y="88" width="29" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1008,13 +1008,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITOLO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScZ-av-g67">
-                                                    <rect key="frame" x="161" y="18" width="146" height="20"/>
+                                                    <rect key="frame" x="161" y="18" width="201" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zc6-lj-xfB">
-                                                    <rect key="frame" x="151" y="43" width="156" height="1"/>
+                                                    <rect key="frame" x="151" y="43" width="211" height="1"/>
                                                     <color key="backgroundColor" red="1" green="0.029831843470000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="O3s-pZ-UfL"/>
@@ -1049,7 +1049,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="NhP-jb-IPg">
-                                                    <rect key="frame" x="292" y="134.5" width="15" height="15"/>
+                                                    <rect key="frame" x="347" y="134.5" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="7m3-rt-HUN"/>
                                                         <constraint firstAttribute="height" constant="15" id="9u3-nC-iQD"/>
@@ -1156,7 +1156,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do ." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29z-YP-8fs">
-                                                    <rect key="frame" x="137" y="10" width="150" height="60"/>
+                                                    <rect key="frame" x="137" y="10" width="205" height="60"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="CMA-IO-sQo"/>
@@ -1165,7 +1165,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaC-eH-V3C">
-                                                    <rect key="frame" x="141" y="70" width="146" height="43"/>
+                                                    <rect key="frame" x="141" y="70" width="201" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1206,13 +1206,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITOLO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKP-pZ-7Rr">
-                                                    <rect key="frame" x="161" y="18" width="146" height="20"/>
+                                                    <rect key="frame" x="161" y="18" width="201" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBX-w6-LTm">
-                                                    <rect key="frame" x="151" y="43" width="156" height="1"/>
+                                                    <rect key="frame" x="151" y="43" width="211" height="1"/>
                                                     <color key="backgroundColor" red="1" green="0.029831843470000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="sbP-jE-cdf"/>
@@ -1247,7 +1247,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="tUf-Gg-z7g">
-                                                    <rect key="frame" x="292" y="134.5" width="15" height="15"/>
+                                                    <rect key="frame" x="347" y="134.5" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="5Bp-7z-HQ4"/>
                                                         <constraint firstAttribute="width" constant="15" id="IBS-jC-Lzp"/>
@@ -1402,13 +1402,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITOLO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hnd-f5-VVj">
-                                                    <rect key="frame" x="161" y="18" width="146" height="20"/>
+                                                    <rect key="frame" x="161" y="18" width="201" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2LM-zd-gZ7">
-                                                    <rect key="frame" x="151" y="43" width="156" height="1"/>
+                                                    <rect key="frame" x="151" y="43" width="211" height="1"/>
                                                     <color key="backgroundColor" red="1" green="0.029831843470000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="p4s-fc-M4x"/>
@@ -1442,7 +1442,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="R2Z-UH-l1I">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="R2Z-UH-l1I">
                                                     <rect key="frame" x="292" y="134.5" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="LoU-64-dnQ"/>
@@ -1895,7 +1895,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eAL-dO-t4x" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Orari" image="timelineIcon" id="dn4-3a-1cM"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="D0q-Vi-Duf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D0q-Vi-Duf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1922,7 +1922,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jIG-B7-D6g">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jIG-B7-D6g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1943,7 +1943,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7F8-DZ-OwI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="userIcon" id="nZt-lX-2bx"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CgH-eJ-mid">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CgH-eJ-mid">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.67202103140000002" green="0.13925553860000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1980,18 +1980,11 @@
         <image name="utente.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WwW-Dx-tfm"/>
-        <segue reference="XKF-1s-DxQ"/>
         <segue reference="jA9-6A-ZBp"/>
-        <segue reference="zNO-1P-LGT"/>
         <segue reference="EQy-a6-IRh"/>
-        <segue reference="zNO-1P-LGT"/>
-        <segue reference="EQy-a6-IRh"/>
-        <segue reference="Icj-gt-Njs"/>
-        <segue reference="diy-Ga-cIA"/>
-        <segue reference="jA9-6A-ZBp"/>
         <segue reference="XKF-1s-DxQ"/>
         <segue reference="WHZ-ca-EGc"/>
         <segue reference="WwW-Dx-tfm"/>
+        <segue reference="zNO-1P-LGT"/>
     </inferredMetricsTieBreakers>
 </document>
