@@ -10,7 +10,6 @@ import Foundation
 import RealmSwift
 
 class UserInsertion: Object {
-    //dynamic var userId = ""
     dynamic var title = ""
     dynamic var insertionDescription = ""
     dynamic var publisherName = ""
@@ -20,4 +19,5 @@ class UserInsertion: Object {
     dynamic var publishDate = 0.0
     dynamic var insertionType = 1
     dynamic var image = "" //Percorso immagine nel file system
+    let ofUser = LinkingObjects(fromType: User.self, property: "insertions")
 }

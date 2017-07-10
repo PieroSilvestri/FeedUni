@@ -11,6 +11,7 @@ import RealmSwift
 
 //Tabella che contiene i post riguardanti le news
 class FavoriteNews: Object {
+    dynamic var id = "" //Mettere quello tornato dal backend di zeze
     dynamic var title = ""
     dynamic var content = ""
     dynamic var excerpt = ""

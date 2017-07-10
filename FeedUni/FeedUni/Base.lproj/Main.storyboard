@@ -812,6 +812,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" modalTransitionStyle="flipHorizontal" id="ksv-pn-fVb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1886,13 +1889,11 @@
         <image name="utente.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="jA9-6A-ZBp"/>
         <segue reference="EQy-a6-IRh"/>
-        <segue reference="KfP-SI-qxu"/>
-        <segue reference="WHZ-ca-EGc"/>
-        <segue reference="WwW-Dx-tfm"/>
-        <segue reference="03m-xm-lIR"/>
         <segue reference="zNO-1P-LGT"/>
         <segue reference="XKF-1s-DxQ"/>
-        <segue reference="jA9-6A-ZBp"/>
+        <segue reference="WwW-Dx-tfm"/>
+        <segue reference="WHZ-ca-EGc"/>
     </inferredMetricsTieBreakers>
 </document>
