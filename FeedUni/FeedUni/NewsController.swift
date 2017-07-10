@@ -12,7 +12,7 @@ import UIKit
 class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet weak var tableView: UITableView!
-    var spinner: UIActivityIndicatorView = UIActivityIndicatorView()
+    var spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     var indexPage: Int = 1
     var listData = [NSDictionary]()
     var tokenUser: String = ""
@@ -138,15 +138,11 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.tokenUser = "f23996c1-0703-464f-b76f-14ffa7a43b58"
         }
         
-        self.spinner.center = self.view.center
-        self.spinner.hidesWhenStopped = true
-        self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(self.spinner)
-        self.tableView.tableFooterView = UIView()
+        // spinner
+        self.customActivityIndicatory(self.view, startAnimate: true)
         
         indexPage = 1
         
-        self.spinner.startAnimating()
         UIApplication.shared.beginIgnoringInteractionEvents()
         
         self.tableView.tableFooterView = UIView()
@@ -188,8 +184,8 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         //let currentTemperatureF = self.listData[0]["id"] as! Int
                         //print(currentTemperatureF)
                         DispatchQueue.main.sync {
-                            self.spinner.stopAnimating()
-                            self.spinner.isHidden = true
+                            self.customActivityIndicatory(self.view, startAnimate: false)
+
                             self.tableView.reloadData()
                         }
                     } catch let error as NSError {
@@ -202,6 +198,44 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         
+    }
+    
+    // Custom spinner
+    func customActivityIndicatory(_ viewContainer: UIView, startAnimate:Bool? = true) -> UIActivityIndicatorView {
+        let mainContainer: UIView = UIView(frame: viewContainer.frame)
+        mainContainer.center = viewContainer.center
+        mainContainer.backgroundColor = UIColor.black
+        // mainContainer.backgroundColor = UIColor.init(coder: 0xFFFFFF)
+        mainContainer.alpha = 0.5
+        mainContainer.tag = 789456123
+        mainContainer.isUserInteractionEnabled = false
+        
+        let viewBackgroundLoading: UIView = UIView(frame: CGRect(x:0,y: 0,width: 80,height: 80))
+        viewBackgroundLoading.center = viewContainer.center
+        viewBackgroundLoading.backgroundColor = UIColor.lightGray
+        //viewBackgroundLoading.backgroundColor = UIColor.init(netHex: 0x444444)
+        viewBackgroundLoading.alpha = 0.5
+        viewBackgroundLoading.clipsToBounds = true
+        viewBackgroundLoading.layer.cornerRadius = 15
+        
+        let activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.frame = CGRect(x:0.0,y: 0.0,width: 40.0, height: 40.0)
+        activityIndicatorView.activityIndicatorViewStyle =
+            UIActivityIndicatorViewStyle.whiteLarge
+        activityIndicatorView.center = CGPoint(x: viewBackgroundLoading.frame.size.width / 2, y: viewBackgroundLoading.frame.size.height / 2)
+        if startAnimate!{
+            viewBackgroundLoading.addSubview(activityIndicatorView)
+            mainContainer.addSubview(viewBackgroundLoading)
+            viewContainer.addSubview(mainContainer)
+            activityIndicatorView.startAnimating()
+        }else{
+            for subview in viewContainer.subviews{
+                if subview.tag == 789456123{
+                    subview.removeFromSuperview()
+                }
+            }
+        }
+        return activityIndicatorView
     }
     
     /*

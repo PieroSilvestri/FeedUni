@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		043ADA031F0BD42400ECD78C /* finale1App.gif in Resources */ = {isa = PBXBuildFile; fileRef = 043ADA021F0BD42400ECD78C /* finale1App.gif */; };
 		043ADA051F0BD4FF00ECD78C /* logocontrasparenze.png in Resources */ = {isa = PBXBuildFile; fileRef = 043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */; };
+		045BB25B1F14092700B65B80 /* icona p-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 045BB25A1F14092700B65B80 /* icona p-2.png */; };
 		04F3657C1EFAC54D0095CE34 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657B1EFAC54D0095CE34 /* LoginController.swift */; };
 		04F3657E1EFAC55B0095CE34 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3657D1EFAC55B0095CE34 /* RegisterController.swift */; };
 		1286DA0731ED0A6A9274C73D /* Pods_FeedUni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F9C6E6CF34591896148975 /* Pods_FeedUni.framework */; };
@@ -53,6 +54,7 @@
 		043ADA021F0BD42400ECD78C /* finale1App.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = finale1App.gif; sourceTree = "<group>"; };
 		043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logocontrasparenze.png; sourceTree = "<group>"; };
 		043C94F31EFEBC5E000EC227 /* FeedUni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeedUni.entitlements; sourceTree = "<group>"; };
+		045BB25A1F14092700B65B80 /* icona p-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icona p-2.png"; sourceTree = "<group>"; };
 		04F3657B1EFAC54D0095CE34 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		04F3657D1EFAC55B0095CE34 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		3897F5AE1EFAC83D000DCD93 /* TimelineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		657D16AC1EF92C280069AB00 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				045BB25A1F14092700B65B80 /* icona p-2.png */,
 				F334B1711F0B876A00044C7D /* piero.jpeg */,
 				043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */,
 				043ADA021F0BD42400ECD78C /* finale1App.gif */,
@@ -307,6 +310,7 @@
 				653061BA1F091FED00A26D27 /* envelope.png in Resources */,
 				5D1A74081EF7FBBC009A323E /* Assets.xcassets in Resources */,
 				043ADA051F0BD4FF00ECD78C /* logocontrasparenze.png in Resources */,
+				045BB25B1F14092700B65B80 /* icona p-2.png in Resources */,
 				65A2E9151F0405EA0035011B /* moneyIcon.png in Resources */,
 				653061BB1F091FED00A26D27 /* phone-call.png in Resources */,
 				65CD27F81F05397400598148 /* tec.jpg in Resources */,
@@ -346,7 +350,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D96E8B35A1154D2EF97CEBD3 /* [CP] Embed Pods Frameworks */ = {
