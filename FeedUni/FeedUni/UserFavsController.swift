@@ -64,7 +64,7 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 let cell = self.mTableView.dequeueReusableCell(withIdentifier: "newsCellFavs", for: indexPath) as! NewsTableViewCell
                 let vNews = self.favNews[indexPath.row]
-                cell.titleTextView.text = vNews.title
+                cell.titleTextView.text = String.init(htmlEncodedString: vNews.title)
                 cell.dateLabel.text = dateFormatter.string(from: vNews.publishingDate)
                 if let url = URL(string: vNews.imageURL) {
                     if let data = NSData(contentsOf: url) {
