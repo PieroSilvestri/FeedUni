@@ -18,6 +18,7 @@ class BachecaDetailController: UIViewController {
     @IBOutlet weak var detailDataLabel: UILabel!
     @IBOutlet weak var detailNumberLabel: UILabel!
     @IBOutlet weak var detailEmailLabel: UILabel!
+    @IBOutlet weak var heartImage: UIImageView!
     
     var detailTitle = ""
     var detailDescription = ""
@@ -27,6 +28,10 @@ class BachecaDetailController: UIViewController {
     var detailImage = ""
     var detailNumber = ""
     var detailEmail = ""
+    let recognizer = UITapGestureRecognizer()
+    var heartFlag = false
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +57,20 @@ class BachecaDetailController: UIViewController {
                 detailImageImage.image = decodedimage
             }
         }
-        // Do any additional setup after loading the view.
+        
+        
+        heartImage.isUserInteractionEnabled = true
+        recognizer.addTarget(self, action: "imageTapped")
+        heartImage.addGestureRecognizer(recognizer)
+        if (heartFlag == false)
+        {
+            heartImage.image = #imageLiteral(resourceName: "emptyHeart")
+            
+        }
+        else
+        {
+            heartImage.image = #imageLiteral(resourceName: "fullHeart")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,6 +79,22 @@ class BachecaDetailController: UIViewController {
     }
     
 
+    override func viewDidAppear(_ animated: Bool) {
+        initUI()
+    }
+    
+    
+    func initUI(){
+        
+    }
+
+    
+    func imageTapped(gesture: UITapGestureRecognizer){
+        heartFlag = !heartFlag
+        print("image tapped")
+
+    }
+    
     /*
     // MARK: - Navigation
 

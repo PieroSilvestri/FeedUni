@@ -13,12 +13,10 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
     var listData = [NSDictionary]()
     var listData1 = [NSDictionary]()
 
-    var heartFlag = false
     private let refreshControl = UIRefreshControl()
     var idCategoria = 5
     var rowsTable = 0
     var privaVolta = true
-    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentCtrl: UISegmentedControl!
@@ -91,6 +89,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         super.viewDidLoad()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.getJsonFromUrl()
+        self.customActivityIndicatory(self.view, startAnimate: true)
         
     }
     
@@ -186,28 +185,8 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
         cell.cellTitle.text = tempTitle
         cell.cellData.text = tempDate.substring(with:range)
         cell.cellPrice.text = tempUser
-
         
-        /*
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("imageTapped:")))Toucan Group
-        cell.cellHeart.addGestureRecognizer(tapGesture)
-        cell.cellHeart.isUserInteractionEnabled = true
-        if (heartFlag == false)
-        {
-            cell.cellHeart.image = #imageLiteral(resourceName: "emptyHeart")
-        }
-        else
-        {
-            cell.cellHeart.image = #imageLiteral(resourceName: "fullHeart")
-        }
-        */
-
         return cell
-    }
-    
-    
-    func imageTapped(gesture: UITapGestureRecognizer){
-        heartFlag = !heartFlag
     }
     
     
@@ -242,6 +221,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
                     
                     
                     DispatchQueue.main.sync {
+                        self.customActivityIndicatory(self.view, startAnimate: false)
                         self.tableView.reloadData()
                     }
                 } catch let error as NSError {
@@ -258,7 +238,13 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             let destination = segue.destination as! BachecaDetailController
             let indexRow = self.tableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
             
-            let tempItem = self.listData1[indexRow!] as NSDictionary
+            var tempItem = NSDictionary()
+            //let indexMunsra = indexPath.row as! Int
+            if(self.privaVolta){
+                tempItem = self.listData[indexRow!] as NSDictionary
+            }else{
+                tempItem = self.listData1[indexRow!] as NSDictionary
+            }
             
             
             var tempTitle = ""
@@ -342,6 +328,43 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             destination.detailNumber = tempNumber
             
         }
+    }
+    
+    func customActivityIndicatory(_ viewContainer: UIView, startAnimate:Bool? = true) -> UIActivityIndicatorView {
+        let mainContainer: UIView = UIView(frame: viewContainer.frame)
+        mainContainer.center = viewContainer.center
+        mainContainer.backgroundColor = UIColor.black
+        // mainContainer.backgroundColor = UIColor.init(coder: 0xFFFFFF)
+        mainContainer.alpha = 0.5
+        mainContainer.tag = 789456123
+        mainContainer.isUserInteractionEnabled = false
+        
+        let viewBackgroundLoading: UIView = UIView(frame: CGRect(x:0,y: 0,width: 80,height: 80))
+        viewBackgroundLoading.center = viewContainer.center
+        viewBackgroundLoading.backgroundColor = UIColor.lightGray
+        //viewBackgroundLoading.backgroundColor = UIColor.init(netHex: 0x444444)
+        viewBackgroundLoading.alpha = 0.5
+        viewBackgroundLoading.clipsToBounds = true
+        viewBackgroundLoading.layer.cornerRadius = 15
+        
+        let activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.frame = CGRect(x:0.0,y: 0.0,width: 40.0, height: 40.0)
+        activityIndicatorView.activityIndicatorViewStyle =
+            UIActivityIndicatorViewStyle.whiteLarge
+        activityIndicatorView.center = CGPoint(x: viewBackgroundLoading.frame.size.width / 2, y: viewBackgroundLoading.frame.size.height / 2)
+        if startAnimate!{
+            viewBackgroundLoading.addSubview(activityIndicatorView)
+            mainContainer.addSubview(viewBackgroundLoading)
+            viewContainer.addSubview(mainContainer)
+            activityIndicatorView.startAnimating()
+        }else{
+            for subview in viewContainer.subviews{
+                if subview.tag == 789456123{
+                    subview.removeFromSuperview()
+                }
+            }
+        }
+        return activityIndicatorView
     }
 
 

@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Delegate to report the chosen course to the TimelineController
 protocol TimelineFilterDelegate {
     func courseChosen(course: String)
 }
@@ -21,13 +22,23 @@ class TimelineFilterController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        self.tableView.tableFooterView = UIView()
-        
+		
+		// Setting the UI
+		self.setGUI()
     }
-    
+	
+	// MARK: - UI
+	
+	func setGUI() {
+		self.tableView.tableFooterView = UIView()
+	}
+	
+	@IBAction func buttonCancelPressed(_ sender: Any) {
+		self.dismiss(animated: true, completion: nil)
+	}
+	
+	// MARK: - Tableview
+	
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -45,16 +56,8 @@ class TimelineFilterController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		// Changing the course
         delegate?.courseChosen(course: courses[indexPath.row])
     }
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-
 
 }
