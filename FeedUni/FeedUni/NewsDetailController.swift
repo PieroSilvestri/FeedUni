@@ -46,11 +46,9 @@ class NewsDetailController: UIViewController {
     // MARK: - MY FUNC
     
     
-    
     func initUI(){
         
         heartLogo.isUserInteractionEnabled = true
-        
         
         //this is where we add the target, since our method to track the taps is in this class
         //we can just type "self", and then put our method name in quotes for the action parameter
@@ -61,6 +59,7 @@ class NewsDetailController: UIViewController {
         
         textView.text = String.init(htmlEncodedString: titleText)
         textView.isUserInteractionEnabled = false
+        contentTextView.isUserInteractionEnabled = false
         
         dateLabel.text = date
         

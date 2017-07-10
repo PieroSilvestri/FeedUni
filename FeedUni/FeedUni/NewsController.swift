@@ -50,6 +50,8 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let tempImage = tempItem["media"] as! String
         let tempTitle = tempItem["title"] as! String
         let tempDate = tempItem["pub_date"] as! String
+        let index = tempDate.index(tempDate.startIndex, offsetBy: 10)
+        let range = tempDate.startIndex..<index
         
         //let myUrl = URL.init(string: imageUrl)
         
@@ -84,7 +86,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
         cell.titleTextView.text = String.init(htmlEncodedString: tempTitle)
-        cell.dateLabel.text = tempDate
+        cell.dateLabel.text =  tempDate.substring(with:range)
         return cell
     }
     
