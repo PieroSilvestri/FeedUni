@@ -20,4 +20,5 @@ target 'FeedUni' do
   pod 'Nuke-Toucan-Plugin'
   pod 'SwiftGifOrigin', '~> 1.6.1'
   pod 'Gifu'
+  pod 'AlamofireImage', '~> 3.1'
 end

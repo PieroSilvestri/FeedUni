@@ -48,6 +48,8 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
         let tempItem = self.listData[indexPath.row] as NSDictionary
+        
+        
         let tempImage = tempItem["media"] as! String
         let tempTitle = tempItem["title"] as! String
         let tempDate = tempItem["pub_date"] as! String
@@ -65,17 +67,23 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.imageCell.bounds.origin.x = (UIImage(data: data as Data)!.size.width/2) - (cell.imageCell.bounds.size.width/2)
                 cell.imageCell.bounds.origin.y = (UIImage(data: data as Data)!.size.height/2) - (cell.imageCell.bounds.size.height/2)
                 */
-                
+              
                 cell.imageView!.image = nil
+
+                
+                DispatchQueue.main.async {
+                    
                 var request = Nuke.Request(url: url)
-                request.process(key: "Avatar") {
+                request.process(key: ""+url.absoluteString) {
                     return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop).maskWithEllipse()
+                    self.tableView.reloadData()
                 }
                 
+                 Nuke.loadImage(with: request, into: cell.imageView!)
+ 
                 
-                Nuke.loadImage(with: request, into: cell.imageCell)
-            
-
+               
+                
                     /*
                     UIGraphicsBeginImageContext(cell.imageCell.frame.size);
                     UIImage(data: data as Data)?.draw(in: cell.imageCell.bounds);
@@ -84,7 +92,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                     cell.imageCell.backgroundColor = UIColor(patternImage: image!)
                     */
-                
+                }
             }
         }
         cell.titleTextView.text = String.init(htmlEncodedString: tempTitle)
@@ -180,7 +188,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         
                         //let currentTemperatureF = self.listData[0]["id"] as! Int
                         //print(currentTemperatureF)
-                        DispatchQueue.main.sync {
+                        DispatchQueue.main.async {
                             self.customActivityIndicatory(self.view, startAnimate: false)
 
                             self.tableView.reloadData()
