@@ -34,6 +34,11 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
         self.mTableView.tableFooterView = UIView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        setUpController(vSelection: self.postController.selectedSegmentIndex)
+        self.mTableView.reloadData()
+    }
+    
     func setUpController(vSelection: Int) {
         self.postController.selectedSegmentIndex = vSelection
         switch vSelection {
