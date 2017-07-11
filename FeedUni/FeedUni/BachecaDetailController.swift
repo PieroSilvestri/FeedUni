@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import SwiftShareBubbles
+import Social
 
-class BachecaDetailController: UIViewController {
+class BachecaDetailController: UIViewController, SwiftShareBubblesDelegate{
+    
+    var bubbles: SwiftShareBubbles?
+
+    @IBAction func sharePressed(_ sender: UIBarButtonItem) {
+        bubbles?.show()
+    }
 
     @IBOutlet weak var detailImageImage: UIImageView!
     @IBOutlet weak var detailTitleLabel: UILabel!
@@ -28,6 +36,7 @@ class BachecaDetailController: UIViewController {
     var detailImage = ""
     var detailNumber = ""
     var detailEmail = ""
+    var detailCategory = 0
     let recognizer = UITapGestureRecognizer()
     var heartFlag = false
 
@@ -58,6 +67,9 @@ class BachecaDetailController: UIViewController {
             }
         }
         
+        bubbles = SwiftShareBubbles(point: CGPoint(x: view.frame.width / 2, y: view.frame.height / 2), radius: 100, in: view)
+        bubbles?.showBubbleTypes = [Bubble.twitter, Bubble.facebook, Bubble.google, Bubble.instagram, Bubble.pintereset, Bubble.whatsapp]
+        bubbles?.delegate = self
         
         heartImage.isUserInteractionEnabled = true
         recognizer.addTarget(self, action: "imageTapped")
@@ -76,9 +88,47 @@ class BachecaDetailController: UIViewController {
     
     
     func initUI(){
-        
+        let newsList = RealmQueries.getFavoriteInsertions()
+            for item in newsList{
+            if(item.title == detailTitle){
+                heartFlag = true
+                heartImage.image = #imageLiteral(resourceName: "fullHeart")
+            }
+        }
+
     }
 
+    // SwiftShareBubblesDelegate
+    func bubblesTapped(bubbles: SwiftShareBubbles, bubbleId: Int) {
+        if let bubble = Bubble(rawValue: bubbleId) {
+            print("\(bubble)")
+            switch bubble {
+            case .facebook:
+                if let composer = SLComposeViewController(forServiceType: SLServiceTypeFacebook){
+                    composer.setInitialText(detailTitle)
+                    composer.add(detailImageImage.image!)
+                    present(composer, animated: true)
+                }
+                break
+            case .twitter:
+                if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
+                    guard let composer = SLComposeViewController(forServiceType: SLServiceTypeTwitter) else { return }
+                    composer.setInitialText("Inserisci il testo...")
+                    present(composer, animated: true, completion: nil)
+                }
+                break
+            case .whatsapp:
+                break
+            default:
+                break
+            }
+        } else {
+            // custom case
+        }
+    }
+    
+    func bubblesDidHide(bubbles: SwiftShareBubbles) {
+    }
     
     func imageTapped(){
         heartFlag = !heartFlag
@@ -88,11 +138,42 @@ class BachecaDetailController: UIViewController {
         {
             heartImage.image = #imageLiteral(resourceName: "emptyHeart")
             
+            let newsList = RealmQueries.getFavoriteInsertions()
+            
+            for item in newsList{
+                if(item.title == detailTitle){
+                    RealmQueries.deleteInsertion(insertion: item)
+                }
+            }
+            
         }
-        else
-        {
+        else{
             heartImage.image = #imageLiteral(resourceName: "fullHeart")
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "it_IT")
+            dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let data = dateFormatter.date(from: detailData)
+            
+            let price = Int.init(detailPrice)
+            
+            let newFavorit = FavoriteInsertion(value:[
+                "title": detailTitle,
+                "insertionDescription":detailDescription,
+                "publisherName": detailUser,
+                "publishDate": data,
+                "email": detailEmail,
+                "phoneNumber": detailNumber,
+                "price": price,
+                "insertionType": detailCategory
+                
+            ])
+            
+
+            RealmQueries.insertInsertion(insertion: newFavorit)
         }
+
     }
     
     /*

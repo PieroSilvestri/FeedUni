@@ -15,6 +15,7 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var mTableView: UITableView!
     @IBOutlet weak var postController: UISegmentedControl!
+    
     var favInsertions : [FavoriteInsertion] = []
     var favNews : [FavoriteNews] = []
     var favLesson : [FavoriteLesson] = []
@@ -28,8 +29,14 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor.white
         setUpController(vSelection: selection)
         self.mTableView.tableFooterView = UIView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setUpController(vSelection: self.postController.selectedSegmentIndex)
+        self.mTableView.reloadData()
     }
     
     func setUpController(vSelection: Int) {
@@ -64,6 +71,13 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 let cell = self.mTableView.dequeueReusableCell(withIdentifier: "newsCellFavs", for: indexPath) as! NewsTableViewCell
                 let vNews = self.favNews[indexPath.row]
+                
+                cell.onButtonTapped = {
+                    RealmQueries.deleteNews(post: self.favNews[indexPath.row])
+                    self.favNews.remove(at: indexPath.row)
+                    self.mTableView.reloadData()
+                }
+                
                 cell.titleTextView.text = String.init(htmlEncodedString: vNews.title)
                 cell.dateLabel.text = dateFormatter.string(from: vNews.publishingDate)
                 if let url = URL(string: vNews.imageURL) {
@@ -89,6 +103,13 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
             if (self.favInsertions.count > 0) {
                 let cell = self.mTableView.dequeueReusableCell(withIdentifier: "insertionCellFavs", for: indexPath) as! BachecaControllerTableViewCell
                 let vInsertion = self.favInsertions[indexPath.row]
+                
+                cell.onButtonTapped = {
+                    RealmQueries.deleteInsertion(insertion: self.favInsertions[indexPath.row])
+                    self.favInsertions.remove(at: indexPath.row)
+                    self.mTableView.reloadData()
+                }
+                
                 cell.cellTitle.text = vInsertion.title
                 cell.cellData.text = "\(Date.init())"
                 cell.cellPrice.text = vInsertion.publisherName
@@ -161,14 +182,14 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if self.postController.selectedSegmentIndex == 1 {
+        if self.postController.selectedSegmentIndex == 1 && self.favLesson.count > 0{
             self.chosenLesson = self.favLesson[indexPath.row]
             self.performSegue(withIdentifier: "lessonDetailSegue", sender: self.mTableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell" , for: indexPath) as! TimelineTableViewCell)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "newsDetailSegue" {
+        if segue.identifier == "newsDetailSegue" && self.favNews.count > 0 {
             let dest = segue.destination as! NewsDetailController
             let index = self.mTableView.indexPath(for: sender as! NewsTableViewCell)?.row
             let selectedNews = self.favNews[index!]
@@ -176,7 +197,7 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
             dest.content = selectedNews.content
             dest.date = "\(selectedNews.publishingDate)"
             dest.imageUrl = selectedNews.imageURL
-        } else if segue.identifier == "insertionDetailSegue" {
+        } else if segue.identifier == "insertionDetailSegue" && self.favInsertions.count > 0 {
             let dest = segue.destination as! BachecaDetailController
             let index = self.mTableView.indexPath(for: sender as! BachecaControllerTableViewCell)?.row
             let selectedInsertion = self.favInsertions[index!]

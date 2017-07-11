@@ -807,8 +807,8 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5B5AC3C06B783F8674FDB4C0F900B56A;
-			remoteInfo = FBSDKLoginKit;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
 		};
 		1C05F1BC4B6F06B4C0446413DA20D093 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -901,12 +901,40 @@
 			remoteGlobalIDString = 9EFE4C70245EE2857D336B8B9FA4E825;
 			remoteInfo = AlamofireImage;
 		};
+		5C9CAABB1EE0338514FC17FB88BBFA06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7FEAA14E89971698ACA148F7F7202F2;
+			remoteInfo = FacebookShare;
+		};
+		6DB9770D9F1A16B737D868B2A7C7B0FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7335E9C9689F3B8A16F063A884748533;
+			remoteInfo = FacebookLogin;
+		};
+		6EBBBD69CF1DD756F7655030B3355ABC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6111E73402848FC49BD531C774E94A2;
+			remoteInfo = SwiftGifOrigin;
+		};
 		709123FA3378063036E76800A835D78D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 593E9479C06FB200807D11AB29EB50BD;
 			remoteInfo = FBSDKCoreKit;
+		};
+		796D42799092A542C65A07928883446C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FB3581F4855FB816F0C4899ED1A6026;
+			remoteInfo = Nuke;
 		};
 		79C653BF28A85A4416BD1419B8C5BFA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -922,12 +950,12 @@
 			remoteGlobalIDString = 5BB71B2772758FDC20143D3920E07321;
 			remoteInfo = Toucan;
 		};
-		8C8608F2C87A6D91FCD86F90E5604514 /* PBXContainerItemProxy */ = {
+		8BF0334792D4E4A96506A55AD34B1A5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 44CAD6CE523055ED339E87154473A254;
-			remoteInfo = Bolts;
+			remoteGlobalIDString = 8632E6BADE37075A128F5F4513F11346;
+			remoteInfo = SwiftShareBubbles;
 		};
 		97793D355FB11B086CBE31CF7BC58008 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -996,8 +1024,8 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2F5622F3B18DF497981AB58C6D1FC72F;
-			remoteInfo = ObjectMapper;
+			remoteGlobalIDString = 52474C6F8555253E94AB36538AF88743;
+			remoteInfo = TabPageViewController;
 		};
 		C3F532C17A7A6E2B2358F5B4FADD3F6A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1013,12 +1041,12 @@
 			remoteGlobalIDString = 593E9479C06FB200807D11AB29EB50BD;
 			remoteInfo = FBSDKCoreKit;
 		};
-		CCEA274D6567B8AF3FC64523E9ACCC0B /* PBXContainerItemProxy */ = {
+		C1A5D8BFA991F310B28E4706D3C31A58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 332F91393FB1DE033D370B4CEDDD5FCF;
-			remoteInfo = FBSDKShareKit;
+			remoteGlobalIDString = 06C5F8FDCA8E74D414938B5017E9E51D;
+			remoteInfo = RealmSwift;
 		};
 		D53E3885669EAC4D646F64CE4367BFFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1062,7 +1090,7 @@
 			remoteGlobalIDString = 7335E9C9689F3B8A16F063A884748533;
 			remoteInfo = FacebookLogin;
 		};
-		FA292E856D14F23EA8F2CFEE5343A139 /* PBXContainerItemProxy */ = {
+		DFC06ED1C92517D73D8C7E8D56028520 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -1972,7 +2000,7 @@
 			files = (
 				167AC0D800CE5EE45F0D046894BBE2C7 /* Bolts.framework in Frameworks */,
 				8B533682B55D5ADC1BBABE5DA70EBDA1 /* FBSDKCoreKit.framework in Frameworks */,
-				4FA7BA06B984F3AEB78A0EDF9ECDBF4A /* Foundation.framework in Frameworks */,
+				688894DCD0767FA211FA64A28FE410B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1980,7 +2008,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B98B2218577698D56128BB7397DFF0 /* Foundation.framework in Frameworks */,
+				7E8F914D4CA9F638231996CCACC953C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		148C8AED6C28DDB693C33A099ECBF64F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFF21A322BB9FA5A0ACC550EB9702AE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1990,7 +2026,7 @@
 			files = (
 				31587B6567C7DE9531A351CB3953B745 /* Bolts.framework in Frameworks */,
 				FBDE48F34AF4D00680F08E9AC1676C64 /* FBSDKCoreKit.framework in Frameworks */,
-				9DDEFD116876C792FDF51756319467F6 /* Foundation.framework in Frameworks */,
+				F935C41F48F194C0236AF6F4A9C4465A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2002,7 +2038,7 @@
 				225DA0F10BD3A6277FB30713BBC8B004 /* FacebookCore.framework in Frameworks */,
 				F323A370732A0ABB77A711776189017E /* FBSDKCoreKit.framework in Frameworks */,
 				3746A72C5BF46359EB21F2DB12A8BBC1 /* FBSDKShareKit.framework in Frameworks */,
-				F44ABAEC143917037DF0BFC03E353855 /* Foundation.framework in Frameworks */,
+				980DA464B14064BD06761A0CC1C4C3A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2010,7 +2046,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA9705A6BDC6B8871DD7E2D05FE8C736 /* Foundation.framework in Frameworks */,
+				2A6393E79A01EFFAFBA463E3219DDC73 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2027,7 +2063,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FF27E27BEAFC1CDFAAC84DB20E72CE7 /* Foundation.framework in Frameworks */,
+				B0B39E85697CFE688867475900E38598 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2051,7 +2087,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210E1BBF27B80CD317A58C9F9F2C658C /* Foundation.framework in Frameworks */,
+				0202E91BD433E428B5ABA0057800D7BD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2059,7 +2095,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */,
+				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2071,7 +2107,7 @@
 				F89C12B6F6A9F5ADD788C607ED9938B9 /* FacebookCore.framework in Frameworks */,
 				40FDBC63E4ACD92DD150ECEF8FCB8DB8 /* FBSDKCoreKit.framework in Frameworks */,
 				ACFFDCD15150DE7B22C2A6C146994239 /* FBSDKLoginKit.framework in Frameworks */,
-				31A0462C4E1916C5A733810376DD6E04 /* Foundation.framework in Frameworks */,
+				1F34FA75264BBEA78C59F44F0EBB6004 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2095,28 +2131,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE051ED46319A27B6BD8CAD1FEFD1C9C /* Foundation.framework in Frameworks */,
+				F400FB6CE4254D3115F8C66716A3E9A2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C78E34E143E90F7394146A5E4618ED0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80621DD8A0F2498E8B41ECAB7A72935C /* Foundation.framework in Frameworks */,
 				BC130BDC5E9D341E75A646FA42BF24FF /* Nuke.framework in Frameworks */,
 				F833FC4BCF81CD7C3FDED600146B4DD7 /* Toucan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1AF25F8E0C97EBD1D352412A10B3D43 /* Frameworks */ = {
+		CA5FB00ED252CD8492154DF24C7C28FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95EAD0E7564942B4D09ECDB5D6D003B /* Bolts.framework in Frameworks */,
-				39769A9EC4166516233154D16DE69604 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D55863AC11CD93D729F336D4A1837D9C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E144A5F6A61AACDFDFF8E00A4E5C17B /* Alamofire.framework in Frameworks */,
-				D51A0163C26006A2332C71B5140B2A2D /* Foundation.framework in Frameworks */,
-				82B33F223516A2AA7DA2985E5A954B88 /* ObjectMapper.framework in Frameworks */,
+				06AC66F53B5BDE4403EB069C4A74BC89 /* Foundation.framework in Frameworks */,
+				9C57098487BC4531A5BF090F74CB5286 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2293,9 +2327,15 @@
 		194AA382418FA28B718A5B1161750449 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DCB3D4A4E44F2F8DE7D399CDFB6846F7 /* Pods-FeedUni */,
+				88EAB0F7198225B613DCDE6B875A9877 /* Info.plist */,
+				D4699FC42BCFFF34126E9FEAF6E86980 /* SwiftGifOrigin.modulemap */,
+				7E547D8DE3513963D82198A5730D9DD4 /* SwiftGifOrigin.xcconfig */,
+				D40A4077A8982C44F0999DD4BBAA6CE2 /* SwiftGifOrigin-dummy.m */,
+				A07195F19B826F9A6FFE5CF314698728 /* SwiftGifOrigin-prefix.pch */,
+				CE837787C218A492CC731B21E833B165 /* SwiftGifOrigin-umbrella.h */,
 			);
-			name = "Targets Support Files";
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGifOrigin";
 			sourceTree = "<group>";
 		};
 		1C4F72B02C18A2963781781D2B90E17F /* Support Files */ = {
@@ -2307,6 +2347,43 @@
 				6F6319C140379D92F290AB56D7457CA4 /* SwiftGifOrigin-dummy.m */,
 				34B95A0DA153AB4367A23841DD9A350F /* SwiftGifOrigin-prefix.pch */,
 				32093B3A6D5811C38F4158AAD0224BF9 /* SwiftGifOrigin-umbrella.h */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4465811232C464006D8EA71D612920FD /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				A13FBDCCF7D852B74CD41BF71244268B /* BFCancellationToken.h */,
+				C0EA0358E742E65BA870556CCA685611 /* BFCancellationToken.m */,
+				FE5AD9D89565035F32145CC43FD31EC0 /* BFCancellationTokenRegistration.h */,
+				8E9D3538472900339AD850AAFE504760 /* BFCancellationTokenRegistration.m */,
+				7112AF3A721328A380774E24E1107035 /* BFCancellationTokenSource.h */,
+				83081E16E41F9138D695A20C829FE4F1 /* BFCancellationTokenSource.m */,
+				7E2746B22031A169D85E56223A252BC0 /* BFExecutor.h */,
+				A8C14CE9543DAC622E1C411E26D6FA94 /* BFExecutor.m */,
+				1039872BEB327E54985A85BB9E3EB741 /* BFTask.h */,
+				4F03DCA43357EEB268ABFADB0CF2CBBB /* BFTask.m */,
+				EF8B8BBB0AB3209420C72E271F63ED16 /* BFTask+Exceptions.h */,
+				7CDEDDD2C782797499E6508343879DEF /* BFTask+Exceptions.m */,
+				FE8711E328065CCEFE4C2A54764BCD92 /* BFTaskCompletionSource.h */,
+				A4674839A62664463C11B2EA34F93B06 /* BFTaskCompletionSource.m */,
+				86FD6F4B1EAD3B465A7F34D0FCCABCB7 /* Bolts.h */,
+				59727346C16E414A6D4A38B5F05460E4 /* Bolts.m */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		496D6A50237A3EECEA6D5B983D4C7278 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				105D2973A7960D9B2225C60D1F6B1058 /* Info.plist */,
+				CA37992D785189EB18C76974201AD5CD /* ResourceBundle-SwiftShareBubbles-Info.plist */,
+				B2C41D10FBCB590EAF1FFFA7D65284FC /* SwiftShareBubbles.modulemap */,
+				C223FB96AF732EB1D49889342CBCC12B /* SwiftShareBubbles.xcconfig */,
+				98F9629C232B7523460710A0C9C8839B /* SwiftShareBubbles-dummy.m */,
+				CE229F0383DC056C074ADB7C0FF2228C /* SwiftShareBubbles-prefix.pch */,
+				4ED899760F7397ECF9FA40BD2941B181 /* SwiftShareBubbles-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftGifOrigin";
@@ -2807,19 +2884,15 @@
 		6F4E2A2D2FAD92FD271180B82245DD7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FE919B38903041BD481AFEC48866AF65 /* Alamofire.framework */,
-				1FB656CE6651B55289130947200589E0 /* Bolts.framework */,
-				2D02F1FB197A3BA687D879DEA285CE84 /* FacebookCore.framework */,
-				DF9C71D39AB0D4DA5A4AD500BBCF6D0E /* FBSDKCoreKit.framework */,
-				B30DCD6EADF162841FEEE015A53B155B /* FBSDKLoginKit.framework */,
-				7461EB10FB73E7E4AE82CE1518656B6C /* FBSDKShareKit.framework */,
-				E3D14A354F40B973DC3C01E8F2FEFE1F /* Nuke.framework */,
-				1EFA1BC9E7B857EBF4D041E9EBEB8067 /* ObjectMapper.framework */,
-				A23B340B758E20A99AC4313BAE1B9DC6 /* Realm.framework */,
-				C2830F3446E0B5A00D71FF896CA60B37 /* Toucan.framework */,
-				DC3C8EC45DC0FF2BD29BDF86C65DA08A /* iOS */,
+				12E5237F76534029F56A24CF4A118E01 /* Info.plist */,
+				D659393D9CAAA16BFB95E8F2C4969F9B /* TabPageViewController.modulemap */,
+				4B0FF6D7B1BACC60CE2286322B33B65C /* TabPageViewController.xcconfig */,
+				9247030D1ED39EEB961B435135FF3BE1 /* TabPageViewController-dummy.m */,
+				37925ADB35D370149426081D364917D3 /* TabPageViewController-prefix.pch */,
+				C7D3E8D0980AB72B38EA3090916DD1CF /* TabPageViewController-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/TabPageViewController";
 			sourceTree = "<group>";
 		};
 		71A27C374117ECEF46F8B150F81F7441 /* Gifu */ = {
@@ -2889,6 +2962,19 @@
 				49DA86AC431EBB106E71806EDEF9F4F7 /* Bolts-prefix.pch */,
 				14B4A839864D27E5673A98DA49263429 /* Bolts-umbrella.h */,
 				6BBC2FCE6D6D0CD144CBD06A36CAA470 /* Info.plist */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98DF6529AE4A8AB67B4182402423BBDB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFA9FA00352A68A48B55718C1154BDA2 /* Info.plist */,
+				9E34B17C9AAD47C56414EE8391F30081 /* Nuke.modulemap */,
+				6EC35350B78EA0C7536ED79A9C1F6339 /* Nuke.xcconfig */,
+				2046EB0E92C16FF81F3034DCB747AF78 /* Nuke-dummy.m */,
+				4BA13F7932B8DCC387021FB9612A1611 /* Nuke-prefix.pch */,
+				579B45CEC6CADB96B54B243A3E7DD163 /* Nuke-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Bolts";
@@ -3286,13 +3372,52 @@
 			path = "Nuke-Toucan-Plugin";
 			sourceTree = "<group>";
 		};
-		DC3C8EC45DC0FF2BD29BDF86C65DA08A /* iOS */ = {
+		CE5D7D943F8B16CABBBC79AF492C4594 /* FacebookCore */ = {
 			isa = PBXGroup;
 			children = (
-				205B322798E7D33C54BD3DECE5C47D49 /* Foundation.framework */,
-				9ED4AB36C97D977EB596489EF1C68E57 /* UIKit.framework */,
+				FFDE645A64656F05317E493F9E51ECF1 /* AccessToken.swift */,
+				BDE2ACC48F8F5289B487ECEC94BCC12F /* AppEvent.swift */,
+				5C575324950C1CEE3584AB3D9EAA5222 /* AppEvent.Builtin.swift */,
+				0237AC1BC51CF90FECB2AD112974F9BF /* AppEventName.swift */,
+				203E6483EA0761EA79E7908E1B60D347 /* AppEventParameterName.swift */,
+				47C46BA3141C92225B69A5A01C95D170 /* AppEventsLogger.swift */,
+				8126517F18F0250049CACD44DB86F6CE /* AppEventsLogger.FlushBehavior.swift */,
+				DC29F15538A1EF70B34E15AF6625D4ED /* Dictionary+KeyValueMap.swift */,
+				43556DA27D5AFA218989E9BFDD95B9FF /* GraphAPIVersion.swift */,
+				D21612C0964B738A4E2D49B768000243 /* GraphRequest.swift */,
+				902D79FE023AC63780F2BB10FA20A580 /* GraphRequestConnection.swift */,
+				416B3BC488C22C44DBC89DFEC3ADB0CA /* GraphRequestConnection.Delegate.swift */,
+				1012D7EBE68407AEAEB334AB88824E2B /* GraphRequestDataAttachment.swift */,
+				4F196F1BBF1C65579C246E45EAA1E06B /* GraphRequestProtocol.swift */,
+				FD6CEAB2BB75C6AECC84CE9F76C15F00 /* GraphRequestProtocol.Bridge.swift */,
+				7712B398900A3D34517A90A77F239D42 /* GraphRequestResult.swift */,
+				1C3FE066FA8EF1956C1BBA3858D8257D /* GraphResponse.swift */,
+				AE4FA65CF9C5DB3BB1BC4B0A71AB7996 /* GraphResponseProtocol.swift */,
+				F895FDF720D0F5EFF654ACB1A1D3EA94 /* Optional+OnSome.swift */,
+				B87ABEE5D2B4FE34A925178C352F1C80 /* Permission.swift */,
+				51226F2FDE25E8A509E4A23A7BA48943 /* PublishPermission.swift */,
+				8EB55B3B4360F11C9F07DECF524BECE1 /* ReadPermission.swift */,
+				482BA6E16C039390D555B8EA658AC4D6 /* SDKApplicationDelegate.swift */,
+				079F992A63206546865BFA9A823995E7 /* SDKLoggingBehavior.swift */,
+				74BD80581AE22E11E961898557A2D5AF /* SDKSettings.swift */,
+				4B5F761323B3CEB61E5719F1EBDBE2D6 /* UserProfile.swift */,
+				5C9835B6BE1E17287EC12081716FE7C9 /* UserProfile.FetchResult.swift */,
+				E26A15D6E311D26155A6E05716ABD25E /* UserProfile.PictureView.swift */,
+				CB39A587583D921685ADF8B977019EE4 /* Support Files */,
 			);
-			name = iOS;
+			name = FacebookCore;
+			path = FacebookCore;
+			sourceTree = "<group>";
+		};
+		DBA7B5B6BBDDBA794E383744C1FE9B1E /* Bolts */ = {
+			isa = PBXGroup;
+			children = (
+				BD22AA0EF59ABD92F9695F15463CE5A2 /* AppLinks */,
+				91FC6C469BB28C7C7874868F2B670E4A /* Support Files */,
+				4465811232C464006D8EA71D612920FD /* Tasks */,
+			);
+			name = Bolts;
+			path = Bolts;
 			sourceTree = "<group>";
 		};
 		DCB3D4A4E44F2F8DE7D399CDFB6846F7 /* Pods-FeedUni */ = {
@@ -3380,7 +3505,7 @@
 				7A30A5CE059173D7709F12133B2B83E1 /* BFWebViewAppLinkResolver.h */,
 				268AB15A0155E8816457694E6116DF8E /* BFWebViewAppLinkResolver.m */,
 			);
-			name = AppLinks;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		F93A4510C936AD5951E6CFDD260D4A06 /* ObjectMapper */ = {
@@ -3432,6 +3557,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		004A19D6E066C4E758E84AD5B1B82E37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A373E92E93DE255909069D506B53E9 /* Pods-FeedUni-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F7AA26455094DAE6D976C115FC5F37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B8A69C395C60ABC3ECE718DB9646EE /* SwiftShareBubbles-umbrella.h in Headers */,
+				25D86BDDB13440D72F33FCA7CEA2E1A3 /* SwiftShareBubbles.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A5EEDFE98B0C2AE0C9DA3DE95F609CA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -3753,15 +3895,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3F1538E71AAFE06F3FF5A1F82C7E481 /* Nuke-umbrella.h in Headers */,
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
+		C0A592C37F6799BCD5CC388FB2D9124D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+				B5144B1109302B5E686B02A5F88830CF /* SwiftGifOrigin-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3778,6 +3920,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5293EA3A7C10539F48F8CEC6A99A81B /* Toucan-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3F9381AB58A06AD73770BEECE88C8B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4513D00901B998DE09C43D2A7AD2D90E /* TabPageViewController-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3846,23 +3996,26 @@
 			buildRules = (
 			);
 			dependencies = (
+				00C0660E284857E6B4C6517CB8FB0F0B /* PBXTargetDependency */,
 			);
 			name = Realm;
 			productName = Realm;
 			productReference = 2BECFEB24C0A3E04B2047258B5B8BC29 /* Realm.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1FB3581F4855FB816F0C4899ED1A6026 /* Nuke */ = {
+		0BB2023D6E4FBDF4CD0A32893CED2893 /* TimelineTableViewCell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A445007023C82BE51996B505561EC8F /* Build configuration list for PBXNativeTarget "Nuke" */;
+			buildConfigurationList = 79992E5B1FB19746E05E7106C2BB6AD4 /* Build configuration list for PBXNativeTarget "TimelineTableViewCell" */;
 			buildPhases = (
-				102C79780792590C1C8F876967F520E1 /* Sources */,
-				0DF7C270ECEA34B7AD8A63EF72774E49 /* Frameworks */,
-				AA7E6E233F607A6AF83889D0EFA7A78D /* Headers */,
+				BDFB13E7882612E0DD0E20B3F665C042 /* Sources */,
+				FC81EDB011137E92BCC7CDAA4A914604 /* Frameworks */,
+				092436E7EABD8F4CFEB336E344538C62 /* Resources */,
+				414086CD85DCB57B270855E35B9BC717 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				978047D71A0FA617AF68747ACB393137 /* PBXTargetDependency */,
 			);
 			name = Nuke;
 			productName = Nuke;
@@ -4050,6 +4203,42 @@
 			name = FacebookLogin;
 			productName = FacebookLogin;
 			productReference = 5773DF32F6D4680D9053483160E2B4DD /* FacebookLogin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		79B2D3C3C65008E86349576F2AF209AD /* TimelineTableViewCell-TimelineTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 542C6F2FA068E4E2C9A8E3CDF3CCC16E /* Build configuration list for PBXNativeTarget "TimelineTableViewCell-TimelineTableViewCell" */;
+			buildPhases = (
+				E05A9722B71FCDC857AAC97BD98E2074 /* Sources */,
+				363866BE5104F269E8570EBFB28896AE /* Frameworks */,
+				34C2A9A0D3EF5BC58AA0010AFFC52289 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TimelineTableViewCell-TimelineTableViewCell";
+			productName = "TimelineTableViewCell-TimelineTableViewCell";
+			productReference = 5E3E82B60A6C803AA1412C36DAAEFE3A /* TimelineTableViewCell.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8632E6BADE37075A128F5F4513F11346 /* SwiftShareBubbles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3838D400097F7E67298E34E798A5F3E /* Build configuration list for PBXNativeTarget "SwiftShareBubbles" */;
+			buildPhases = (
+				44FB39454694160A977072A52C938F85 /* Sources */,
+				C4A539260E54FE78A4A7CB82DDD89E9F /* Frameworks */,
+				82A53427DC15C1EF5EFD8C870F664A4E /* Resources */,
+				09F7AA26455094DAE6D976C115FC5F37 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D75624556ED139B564A428F0AA06BE8 /* PBXTargetDependency */,
+			);
+			name = SwiftShareBubbles;
+			productName = SwiftShareBubbles;
+			productReference = 5E20B7D189DFF2E95B9CA3B245519F13 /* SwiftShareBubbles.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
@@ -4260,7 +4449,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -4325,6 +4514,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D74698D70F464BC389C2E2F9F4BA36F /* TimelineTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA661EC2532E94EC16C3024B8A822B6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5D7DC2777A0E2D846B9233BC544CC /* FacebookSDKStrings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A84C76C7372AB5126E54C687B0B82356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037E65C096D9F274CD462F7DACA02E5B /* TabCollectionCell.xib in Resources */,
+				AC7641277CD8D54EEBD8E26A25ABF69D /* TabPageViewController.storyboard in Resources */,
+				7D16000D9F86CE06A875EAF0871D9B07 /* TabView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4452,6 +4659,18 @@
 				3A8F508533ADB6D1CF80CD4A1ACB2C40 /* FBSDKViewImpressionTracker.m in Sources */,
 				81BB869D81785738050FC6DB20CDE9A5 /* FBSDKWebDialog.m in Sources */,
 				468A777F552BD0567796A5A05F2B6748 /* FBSDKWebDialogView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26194FDB3EDA5118E11416A837AAA451 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0688B2C7D51D748433B402D569680A78 /* TabCollectionCell.swift in Sources */,
+				9E660812C31FB91D598BDD61C1FDD739 /* TabPageOption.swift in Sources */,
+				2944ECFDEA7B108F262A7C230DEE737C /* TabPageViewController-dummy.m in Sources */,
+				D10A8BC1B924E3AEF6E46877D88CE44F /* TabPageViewController.swift in Sources */,
+				73D8D641C771F2C42BCD39DD3D29B725 /* TabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4907,8 +5126,85 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				249BEC20A95460C784F48DF9AC00A302 /* AlamofireObjectMapper-dummy.m in Sources */,
-				ACECE9F41CC1F2423487F78054413525 /* AlamofireObjectMapper.swift in Sources */,
+				4F2B331E2BA1AC363EF4C6A2379340B1 /* binding_callback_thread_observer.cpp in Sources */,
+				1B040151F056CD73F59DC020FD48DAB8 /* collection_change_builder.cpp in Sources */,
+				603CDC773B093D45F61D0840DC99AF5B /* collection_notifications.cpp in Sources */,
+				CDD1FAC4BE58C32CEA40860D90C30080 /* collection_notifier.cpp in Sources */,
+				87E5C7B54AB45EB92F8D5DE9C0F05CB3 /* external_commit_helper.cpp in Sources */,
+				A9DE4B9F2085320CE82EBF49BF4FD3C2 /* format.cpp in Sources */,
+				4BEA8E69F235DF37D2C0D9D005DCBA40 /* index_set.cpp in Sources */,
+				A974ECD6601C1754A6493C47F79B187E /* keychain_helper.cpp in Sources */,
+				5BA1220A7ED4F6D1F7A7A2668EF15CF3 /* list.cpp in Sources */,
+				F8BF1B90AA160F40EAC10471A24A12F8 /* list_notifier.cpp in Sources */,
+				135CC97E30B9BF6DB6A9294D1B10A3DB /* network_reachability_observer.cpp in Sources */,
+				96E53FDCACD1CF628FFCA49FB798CE4C /* NSError+RLMSync.m in Sources */,
+				06BF24A8479874BF16796B0FB9682BD9 /* object.cpp in Sources */,
+				0D515492129E05E7057B1B9C482715E3 /* object_notifier.cpp in Sources */,
+				EB5301B1820B4946A431D4F1ADC3DDAC /* object_schema.cpp in Sources */,
+				7158CF1596B3B76EF85F81319D8ABA3F /* object_store.cpp in Sources */,
+				9E9E9438CE1A0B3ABCD9C8E80B28FD29 /* placeholder.cpp in Sources */,
+				56EBAB20DDC19B8C9BF7A7FDB9639FA2 /* Realm-dummy.m in Sources */,
+				9B5793B8644ACB3A9C510D8AB0BE0475 /* realm_coordinator.cpp in Sources */,
+				EFB4D8F8A578B49C87413BA649C69CDD /* results.cpp in Sources */,
+				3B450559001BA662BA34A7260695373F /* results_notifier.cpp in Sources */,
+				706ABC87508828405FFE7E0B2A5E39AE /* RLMAccessor.mm in Sources */,
+				353A77E22DB16C159797A9F383D34FD6 /* RLMAnalytics.mm in Sources */,
+				03DB64E7E6A8694FBFA0869D776E94F1 /* RLMArray.mm in Sources */,
+				CF5960B69AED62CB50427548FFAEE236 /* RLMArrayLinkView.mm in Sources */,
+				BF91BE61D2DFDABA826418EDE98C1350 /* RLMAuthResponseModel.m in Sources */,
+				C89DCD17CC5AFE5DFF03BB1258756A83 /* RLMClassInfo.mm in Sources */,
+				781483F7F4CE99E2883418F4B505050D /* RLMCollection.mm in Sources */,
+				714B330C179574886D8EAAA66B5009BC /* RLMConstants.m in Sources */,
+				7460C77D4DEC2A4FAFC1AD9502A1FF05 /* RLMListBase.mm in Sources */,
+				8974D68DC3557C62DBD439E65D055F99 /* RLMMigration.mm in Sources */,
+				EEB45C361F42F548ECD5749A5934AC42 /* RLMNetworkClient.mm in Sources */,
+				D827B365B041F0AD4F50ECE31A443DB2 /* RLMObject.mm in Sources */,
+				4FB1E0F333F665778DA0EF048E8FE774 /* RLMObjectBase.mm in Sources */,
+				0946167E53BC0F604B35EB4A4F197F65 /* RLMObjectSchema.mm in Sources */,
+				3C76B20D7326E215948C95A2B40B99D6 /* RLMObjectStore.mm in Sources */,
+				E5B619977364F23E6B0E2710E0CFA0CB /* RLMObservation.mm in Sources */,
+				811ADA8BE0F514A7D50B18423A693D48 /* RLMOptionalBase.mm in Sources */,
+				61E8507581571FC7D262C9100A00E456 /* RLMPredicateUtil.mm in Sources */,
+				A60D329B139F2ADDA22AF7EF3BC3DD86 /* RLMProperty.mm in Sources */,
+				B378F88E3F65D6CAC8914669FBB033C9 /* RLMQueryUtil.mm in Sources */,
+				879598DB8D8E61B7E83EEC7763EFD058 /* RLMRealm.mm in Sources */,
+				2166989D8AF294F01E5C268EB3AD10A4 /* RLMRealmConfiguration+Sync.mm in Sources */,
+				E482083C5CC737FAB67D24020B20C3A1 /* RLMRealmConfiguration.mm in Sources */,
+				947E5644C3C9D0EFBBA6EB48A6286805 /* RLMRealmUtil.mm in Sources */,
+				C302BE509643A904B7C20F9B19AC8611 /* RLMResults.mm in Sources */,
+				E54F7FCB2196323FDB5D0F218A3C0136 /* RLMSchema.mm in Sources */,
+				B05F67F3F1CC7AB0CF1A90286DA5A2D3 /* RLMSwiftSupport.m in Sources */,
+				35E3C1D602F5CBE033668DB7FF2632D5 /* RLMSyncConfiguration.mm in Sources */,
+				3B5CDC5A57117BB3C2CDB5F6B6B12DF6 /* RLMSyncCredentials.m in Sources */,
+				C4996D5216D11C53044C16334ACE06D1 /* RLMSyncErrorResponseModel.m in Sources */,
+				C15401948D5D0E8E1DF94FAF25E9D17D /* RLMSyncManager.mm in Sources */,
+				ACA88326B2E2601E7EB640A858851675 /* RLMSyncPermission.m in Sources */,
+				896870AB80A38862A8B88D81251699FF /* RLMSyncPermissionChange.m in Sources */,
+				8BCA037BF26D05A7E4CCD6CCA2A24A7D /* RLMSyncPermissionOffer.m in Sources */,
+				18E1A674358F754C203C599A260B49D8 /* RLMSyncPermissionOfferResponse.m in Sources */,
+				C1D597FB03079B2BB91C09F6C1A92DD6 /* RLMSyncPermissionResults.mm in Sources */,
+				1CFC54823CEC27AC96ADD05826C7EABF /* RLMSyncPermissionValue.mm in Sources */,
+				B39E866CB1C65B126CBD589B8797BE6B /* RLMSyncSession.mm in Sources */,
+				2BE0D243827D50F1EF782DA3375FA3DA /* RLMSyncSessionRefreshHandle.mm in Sources */,
+				13C402D9B9D3E607F2205395DBFB194D /* RLMSyncUser.mm in Sources */,
+				8B373D2CAC913F5EAF0C90719CC008FE /* RLMSyncUtil.mm in Sources */,
+				8E0ADF4778E0360CD17A2885F28393D5 /* RLMThreadSafeReference.mm in Sources */,
+				410EB98A4DEB29788550ADA5FC0C501E /* RLMTokenModels.m in Sources */,
+				5980468974C1FAEA7541A0294F3D8BB0 /* RLMUpdateChecker.mm in Sources */,
+				2DDCDD2763C8723ACD5F0B898DB2DE61 /* RLMUtil.mm in Sources */,
+				3A557D93CC91BE9B6AC6A858E3017B91 /* schema.cpp in Sources */,
+				A263D99F23F4EEB05532CA9A26A6D484 /* shared_realm.cpp in Sources */,
+				FE944DAC1D1F68514FBE7536D9F9E236 /* sync_file.cpp in Sources */,
+				D08F30E4D400B7DE60E1E6ECBAECED6B /* sync_manager.cpp in Sources */,
+				4888EA390EA2F773A13664C39B47314A /* sync_metadata.cpp in Sources */,
+				55794BE792FD5DD03EA51FA08F1757C2 /* sync_permission.cpp in Sources */,
+				24EC415935B29CD4331E4A6C5D91E325 /* sync_session.cpp in Sources */,
+				9B516C8182E0C8F23418945FF75F9C54 /* sync_user.cpp in Sources */,
+				70045E08410861CC2B4B6AC9ED70DB72 /* system_configuration.cpp in Sources */,
+				44C1CD0E7CC0E083F0B9BF3E670A178F /* thread_safe_reference.cpp in Sources */,
+				09CC3F79066932C46F2BA43529F48F81 /* transact_log_handler.cpp in Sources */,
+				31A043CCAC5C269BCD1055AE54F1C771 /* uuid.cpp in Sources */,
+				E0EF2F62081266E2897F47A5D248D742 /* weak_realm_notifier.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4926,6 +5222,18 @@
 			name = TabPageViewController;
 			target = A5D2B842DA15F2681FEF288DDA1EC3B4 /* TabPageViewController */;
 			targetProxy = E4CEAD33935DB0835C418760406272B3 /* PBXContainerItemProxy */;
+		};
+		157A4B3ED374B605314ECE49F0DEE563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit;
+			target = 593E9479C06FB200807D11AB29EB50BD /* FBSDKCoreKit */;
+			targetProxy = BF37B7846B8A07F8C81581D6ADFC5EC8 /* PBXContainerItemProxy */;
+		};
+		1753AD3175FEF4B6422AEF47DFF475E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RealmSwift;
+			target = 06C5F8FDCA8E74D414938B5017E9E51D /* RealmSwift */;
+			targetProxy = C1A5D8BFA991F310B28E4706D3C31A58 /* PBXContainerItemProxy */;
 		};
 		1D5E477078E2373969DF1E1DEF30A230 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4945,11 +5253,11 @@
 			target = 593E9479C06FB200807D11AB29EB50BD /* FBSDKCoreKit */;
 			targetProxy = 709123FA3378063036E76800A835D78D /* PBXContainerItemProxy */;
 		};
-		3AD374BD47173289CD51E510F815CFE3 /* PBXTargetDependency */ = {
+		29BDC3F29EB056EF93A0E95E2E6CF821 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Bolts;
 			target = 44CAD6CE523055ED339E87154473A254 /* Bolts */;
-			targetProxy = 3CC86B89628C4FAD9D64973B13407AF5 /* PBXContainerItemProxy */;
+			targetProxy = B3E95714EA3554416EA3DB205CD9D93A /* PBXContainerItemProxy */;
 		};
 		44CA53ACBD9C77814ECDFAE884CE38A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5052,6 +5360,12 @@
 			name = Alamofire;
 			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
 			targetProxy = A04F064E4A878D0A36386C26C1925C4F /* PBXContainerItemProxy */;
+		};
+		9D638BC161A43F7E2FD7C202F72273A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FacebookCore;
+			target = DDBCFDE490CDFDABF6F16A26F346932D /* FacebookCore */;
+			targetProxy = B6317E1CCBE8920B2AB139415EC1651E /* PBXContainerItemProxy */;
 		};
 		A5DD40516DCA819F15009F1FE58DFF6F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5174,6 +5488,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A4EBFF88FF7709108BEA9AFB2669CEC /* Nuke.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5185,16 +5500,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Nuke/Nuke-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Nuke/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/FacebookLogin/FacebookLogin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FacebookLogin/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Nuke/Nuke.modulemap";
+				MODULEMAP_FILE = "Target Support Files/FacebookLogin/FacebookLogin.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Nuke;
+				PRODUCT_NAME = FacebookLogin;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -5203,43 +5519,82 @@
 			};
 			name = Debug;
 		};
-		0A29B6F510198AF64EFD762EF6FA97A5 /* Release */ = {
+		12DB6E105637CC8CCFB2948FBAC166E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3DA5A3B8CEE24AF94675AA221636F6CA /* Alamofire.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftGifOrigin;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		156284431C64CB05C59BDA0595A1E95A /* Release */ = {
+		12F29D3407271A7FC50BF254A78EB6DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340A053035563BAB44DF3E79C95E46D6 /* Toucan.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Toucan/Toucan-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toucan/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toucan/Toucan.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Toucan;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -5247,20 +5602,27 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -5268,12 +5630,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		168AC353350A012966FF45AF002B7312 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -5406,15 +5768,15 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 		25260AFB39630A4DF6A0D2DC32E34251 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 890AEEBA17E111D466EF7B893DDE9E37 /* Bolts.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5447,6 +5809,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB74759A0644E8C6430BA4501CE2C89C /* TabPageViewController.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5461,7 +5824,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TabPageViewController/TabPageViewController-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TabPageViewController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TabPageViewController/TabPageViewController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -5480,6 +5843,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F91BF9F83529985962B8885678344D79 /* FacebookLogin.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5494,13 +5858,14 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FacebookLogin/FacebookLogin-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FacebookLogin/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FacebookLogin/FacebookLogin.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = FacebookLogin;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -5513,6 +5878,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 470E281E78EBE8B1FBA73D9D1D73F5CD /* FacebookCore.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5527,13 +5893,14 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FacebookCore/FacebookCore-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FacebookCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FacebookCore/FacebookCore.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = FacebookCore;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -5545,6 +5912,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E06BD65E64DD0CFF64E71953821C97B5 /* TimelineTableViewCell.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5577,11 +5945,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AE01878AB533BAE0AD7F6D69BB8E97C /* FBSDKCoreKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -5603,12 +5972,13 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		498D3E4A1C1E786EC4E83A2D732817B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9328B54EA5496C02A51F84B46E9AAEB1 /* FacebookShare.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5637,10 +6007,11 @@
 			};
 			name = Release;
 		};
-		5A4DDDDE0167AD71CE7B643E32024562 /* Release */ = {
+		3ABEB1C0240FD818292D67A097B6F127 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F91BF9F83529985962B8885678344D79 /* FacebookLogin.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5662,6 +6033,7 @@
 				PRODUCT_NAME = FacebookLogin;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -5669,10 +6041,11 @@
 			};
 			name = Release;
 		};
-		60D7D933B7F2DFAA772AB877D2752E68 /* Release */ = {
+		406F4A585745A33F8A513151DDEBBDE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 769477A6F474229DA7342AAF7508D3D3 /* ObjectMapper.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5684,16 +6057,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TabPageViewController/TabPageViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TabPageViewController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				MODULEMAP_FILE = "Target Support Files/TabPageViewController/TabPageViewController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ObjectMapper;
+				PRODUCT_NAME = TabPageViewController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -5701,42 +6075,45 @@
 			};
 			name = Release;
 		};
-		647ED77E8592726419569809E9747709 /* Debug */ = {
+		42102BFCAD265CF6A096AA4C68F879A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EDCDA816C660C93617A82D09558DA42 /* FBSDKShareKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSDKShareKit/FBSDKShareKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSDKShareKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftShareBubbles/SwiftShareBubbles-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftShareBubbles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSDKShareKit/FBSDKShareKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FBSDKShareKit;
+				MODULEMAP_FILE = "Target Support Files/SwiftShareBubbles/SwiftShareBubbles.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftShareBubbles;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		6D098726DDAA83F2EA4C2CD92D4C7AA1 /* Debug */ = {
+		45AD51612733E88748227BDB9B43112F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AEB432B1373F9C833BF4317375E9A1D /* Nuke-Toucan-Plugin.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5758,6 +6135,7 @@
 				PRODUCT_NAME = NukeToucanPlugin;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -5802,6 +6180,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9328B54EA5496C02A51F84B46E9AAEB1 /* FacebookShare.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5813,16 +6192,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FacebookShare/FacebookShare-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FacebookShare/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TimelineTableViewCell/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FacebookShare/FacebookShare.modulemap";
+				MODULEMAP_FILE = "Target Support Files/TimelineTableViewCell/TimelineTableViewCell.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FacebookShare;
+				PRODUCT_NAME = TimelineTableViewCell;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -5868,25 +6248,26 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A4EBFF88FF7709108BEA9AFB2669CEC /* Nuke.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Nuke/Nuke-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Nuke/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/FBSDKCoreKit/FBSDKCoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSDKCoreKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Nuke/Nuke.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Nuke;
+				MODULEMAP_FILE = "Target Support Files/FBSDKCoreKit/FBSDKCoreKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FBSDKCoreKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -5894,12 +6275,13 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		7E3795656CE05962C4D7EE8FACF46FD5 /* Release */ = {
+		5EAA96BCC871CA85EF6747AD81CFB0C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50523E1091114A793590637A82AD3B36 /* FBSDKLoginKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -5911,14 +6293,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSDKLoginKit/FBSDKLoginKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSDKLoginKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/FBSDKShareKit/FBSDKShareKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSDKShareKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSDKLoginKit/FBSDKLoginKit.modulemap";
+				MODULEMAP_FILE = "Target Support Files/FBSDKShareKit/FBSDKShareKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FBSDKLoginKit;
+				PRODUCT_NAME = FBSDKShareKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -5965,44 +6347,46 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 26AE324D8805A4FDFD891AE033CBA901 /* Gifu.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Gifu/Gifu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Gifu/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Gifu/Gifu.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Gifu;
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ObjectMapper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		8C33E6BABA7FFD520C57AF86ED0B6B02 /* Debug */ = {
+		6498D9E0C0F98AAF99B41C9EEAA80A86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AE01878AB533BAE0AD7F6D69BB8E97C /* FBSDKCoreKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -6015,40 +6399,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSDKCoreKit/FBSDKCoreKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FBSDKCoreKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8E5E6E59AEF98B901DA4F30FDA0B0F32 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A0BA0039995A2304E045AB4912C3F0E /* AlamofireObjectMapper.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AlamofireObjectMapper/AlamofireObjectMapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AlamofireObjectMapper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AlamofireObjectMapper/AlamofireObjectMapper.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AlamofireObjectMapper;
+				PRODUCT_NAME = FBSDKCoreKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -6058,10 +6410,56 @@
 			};
 			name = Release;
 		};
-		918B700CBFC153D13E879DD1BEED4DAF /* Debug */ = {
+		707B86CFB21B645E37109F39754D4051 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D73F0342CD96E60D136BE3293404F63 /* RealmSwift.xcconfig */;
+			baseConfigurationReference = 7A0BA0039995A2304E045AB4912C3F0E /* AlamofireObjectMapper.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7AF98E370B05A9D275DA005501467E47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C8B1D280D5BD2367651D5D2C5B97465 /* Realm.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -6073,6 +6471,39 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Realm/Realm-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Realm/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Realm/Realm.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Realm;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		918B700CBFC153D13E879DD1BEED4DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D73F0342CD96E60D136BE3293404F63 /* RealmSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/RealmSwift/RealmSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RealmSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -6083,18 +6514,19 @@
 				PRODUCT_NAME = RealmSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		9C90761AFA4581B3F9B5E355E229E574 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D73F0342CD96E60D136BE3293404F63 /* RealmSwift.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -6116,6 +6548,7 @@
 				PRODUCT_NAME = RealmSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -6127,6 +6560,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A0BA0039995A2304E045AB4912C3F0E /* AlamofireObjectMapper.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -6181,6 +6615,7 @@
 				PRODUCT_NAME = NukeToucanPlugin;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -6192,293 +6627,46 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E06BD65E64DD0CFF64E71953821C97B5 /* TimelineTableViewCell.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TimelineTableViewCell";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/TimelineTableViewCell/ResourceBundle-TimelineTableViewCell-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = TimelineTableViewCell;
+				INFOPLIST_FILE = "Target Support Files/Pods-FeedUni/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeedUni/Pods-FeedUni.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FeedUni;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		AFC08387F44E7AD0F5A11E0365C20ACC /* Release */ = {
+		8477545773BAB1568E3E68A462035182 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EDCDA816C660C93617A82D09558DA42 /* FBSDKShareKit.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSDKShareKit/FBSDKShareKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSDKShareKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSDKShareKit/FBSDKShareKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FBSDKShareKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B3471BA9AAE4C4DAE00A39931C1B0D0B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 769477A6F474229DA7342AAF7508D3D3 /* ObjectMapper.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ObjectMapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C10503CDC90120B409FE6ED432540770 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26AE324D8805A4FDFD891AE033CBA901 /* Gifu.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Gifu/Gifu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Gifu/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Gifu/Gifu.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Gifu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		CB68AD0E9F97BE661B751A1372428534 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 038BAC44E46BFD8925B88FD74D344B02 /* Toucan.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Toucan/Toucan-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toucan/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Toucan/Toucan.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Toucan;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CB8150FD939A8F946D5B77A50D8EEB3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 038BAC44E46BFD8925B88FD74D344B02 /* Toucan.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Toucan/Toucan-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toucan/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Toucan/Toucan.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Toucan;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CE1691C6F5B81B11D5343544F8AF7DFF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAD44D2F6FDDB98F692AB75B2724AE3B /* Realm.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Realm/Realm-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Realm/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Realm/Realm.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Realm;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DA988F0C8EEA0629D487978BCC76FB42 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB74759A0644E8C6430BA4501CE2C89C /* TabPageViewController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TabPageViewController/TabPageViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TabPageViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TabPageViewController/TabPageViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TabPageViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DBD6299CA8912E2683E5EF56675D1BC3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50523E1091114A793590637A82AD3B36 /* FBSDKLoginKit.xcconfig */;
-			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -6507,6 +6695,244 @@
 			};
 			name = Debug;
 		};
+		8498AB073C5C300F0AF8AEC53624E3CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 769477A6F474229DA7342AAF7508D3D3 /* ObjectMapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C10503CDC90120B409FE6ED432540770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26AE324D8805A4FDFD891AE033CBA901 /* Gifu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AlamofireObjectMapper/AlamofireObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlamofireObjectMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AlamofireObjectMapper/AlamofireObjectMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AlamofireObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB68AD0E9F97BE661B751A1372428534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 038BAC44E46BFD8925B88FD74D344B02 /* Toucan.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Nuke/Nuke-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nuke/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Nuke/Nuke.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Nuke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4F9B37B309A1017D60AF41D7B305CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 038BAC44E46BFD8925B88FD74D344B02 /* Toucan.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FacebookCore/FacebookCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FacebookCore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FacebookCore/FacebookCore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FacebookCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CE1691C6F5B81B11D5343544F8AF7DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD44D2F6FDDB98F692AB75B2724AE3B /* Realm.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Realm/Realm-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Realm/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Realm/Realm.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Realm;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA988F0C8EEA0629D487978BCC76FB42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB74759A0644E8C6430BA4501CE2C89C /* TabPageViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TabPageViewController/TabPageViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TabPageViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TabPageViewController/TabPageViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TabPageViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CF14676D2CECCEEAB659919CB32AEB49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50523E1091114A793590637A82AD3B36 /* FBSDKLoginKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Bolts/Bolts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Bolts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Bolts/Bolts.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Bolts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		E708D892A28E0EDD0A36215FE42564FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E06BD65E64DD0CFF64E71953821C97B5 /* TimelineTableViewCell.xcconfig */;
@@ -6522,110 +6948,13 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
-		EBAE90F9E30802DCCF5D569ED0531ABB /* Debug */ = {
+		DEE97AC1900DF8905DC1575BF850DD9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 470E281E78EBE8B1FBA73D9D1D73F5CD /* FacebookCore.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FacebookCore/FacebookCore-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FacebookCore/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FacebookCore/FacebookCore.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FacebookCore;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EF713E9F0F49348D0B0CF56B1117E8F3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64489918E55895412E482DCEA656A458 /* SwiftGifOrigin.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftGifOrigin;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F383079BFBF927813EA3613CFB679FDE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DA5A3B8CEE24AF94675AA221636F6CA /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F6507D54050B922927215A1C8738F80E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 890AEEBA17E111D466EF7B893DDE9E37 /* Bolts.xcconfig */;
-			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -6654,6 +6983,109 @@
 			};
 			name = Release;
 		};
+		EF713E9F0F49348D0B0CF56B1117E8F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64489918E55895412E482DCEA656A458 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E54F1272074D9CE947463204BF1EAEF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA5A3B8CEE24AF94675AA221636F6CA /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FacebookShare/FacebookShare-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FacebookShare/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FacebookShare/FacebookShare.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FacebookShare;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E8FC9AA02F4B291276B06255927866EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 890AEEBA17E111D466EF7B893DDE9E37 /* Bolts.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Nuke/Nuke-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nuke/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Nuke/Nuke.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Nuke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -6678,8 +7110,8 @@
 		0F78B4868885D9E36AFE233BBB23EAD5 /* Build configuration list for PBXNativeTarget "FBSDKShareKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				647ED77E8592726419569809E9747709 /* Debug */,
-				AFC08387F44E7AD0F5A11E0365C20ACC /* Release */,
+				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
+				707B86CFB21B645E37109F39754D4051 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6687,26 +7119,17 @@
 		2A445007023C82BE51996B505561EC8F /* Build configuration list for PBXNativeTarget "Nuke" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06221250F75021D1B3616F72C4F03AC5 /* Debug */,
-				7447C2E1C4ABF4CDDB786D137C5F397B /* Release */,
+				A8B4991B4B81E7E97DDEB2FC87F3AD6E /* Debug */,
+				B7988943D58739294F75742313EC1862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		5827FEFE401A812BD6103D91B3D44DEF /* Build configuration list for PBXNativeTarget "Pods-FeedUni" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C382132BB6BF8CA1A911872A2062FD0D /* Debug */,
-				156284431C64CB05C59BDA0595A1E95A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F383079BFBF927813EA3613CFB679FDE /* Debug */,
-				0A29B6F510198AF64EFD762EF6FA97A5 /* Release */,
+				836DD731EC2F3600F89CEC8978148543 /* Debug */,
+				CBE5FEE7B4CA4EF01B4082F898B27C68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6714,8 +7137,8 @@
 		60E5C1973ED954759B0DA9A10C47E504 /* Build configuration list for PBXNativeTarget "Gifu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8538CA1AD1831828320297F6E1C994E7 /* Debug */,
-				C10503CDC90120B409FE6ED432540770 /* Release */,
+				2B69E6CBB6890CE4A430E5DF22E33B9E /* Debug */,
+				2C268E740EB2889CC401C0C34A5B24CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6723,8 +7146,8 @@
 		6D81E4D14126EBE350D8AC86DB74356C /* Build configuration list for PBXNativeTarget "FacebookLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29A44FE4A4B9C194A0E3AC280C7D2C68 /* Debug */,
-				5A4DDDDE0167AD71CE7B643E32024562 /* Release */,
+				0B39B6318175A6FBB8A6422853843CDA /* Debug */,
+				3ABEB1C0240FD818292D67A097B6F127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6732,8 +7155,17 @@
 		79724D5ACB954F3F91AFBE6B4F3C13CC /* Build configuration list for PBXNativeTarget "FBSDKCoreKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C33E6BABA7FFD520C57AF86ED0B6B02 /* Debug */,
-				336D6DE3F2A4144E625A9EC43BD0AB7A /* Release */,
+				4D0600C8607F365B156DD030F39A99BA /* Debug */,
+				6498D9E0C0F98AAF99B41C9EEAA80A86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79992E5B1FB19746E05E7106C2BB6AD4 /* Build configuration list for PBXNativeTarget "TimelineTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C61FB5EA5367691C562E5B2DAF2C2A8 /* Debug */,
+				371FFCC092C646357C01F3707B30F574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6741,8 +7173,17 @@
 		848BDB3AD956B6F8C193419E91AA121E /* Build configuration list for PBXNativeTarget "FBSDKLoginKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBD6299CA8912E2683E5EF56675D1BC3 /* Debug */,
-				7E3795656CE05962C4D7EE8FACF46FD5 /* Release */,
+				8477545773BAB1568E3E68A462035182 /* Debug */,
+				0980B502F9CAB26606676994DD2DB3C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		857D91ECEF14D5A508CD53447B7A6050 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12DB6E105637CC8CCFB2948FBAC166E9 /* Debug */,
+				9459738C4F3F67CF8D5C97E5C7C5FB9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6750,8 +7191,8 @@
 		AD1A157C7FE4D6FE81A636F10F2694C4 /* Build configuration list for PBXNativeTarget "Nuke-Toucan-Plugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6D098726DDAA83F2EA4C2CD92D4C7AA1 /* Debug */,
-				9D88A1E67EE210EA726D5516A0DD1A3A /* Release */,
+				45AD51612733E88748227BDB9B43112F /* Debug */,
+				218FAD522DE08C65D03E7A85ACB68C56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6774,11 +7215,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BA25813CB740193AC81AE79954A34C03 /* Build configuration list for PBXNativeTarget "RealmSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87C232D274F7C8F2672F2BC2EF9713AE /* Debug */,
+				825DA8E22C493D8EF6A6429B34FE1875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C2F7B444073984595845606C15BAB95B /* Build configuration list for PBXNativeTarget "Toucan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB8150FD939A8F946D5B77A50D8EEB3E /* Debug */,
-				CB68AD0E9F97BE661B751A1372428534 /* Release */,
+				12F29D3407271A7FC50BF254A78EB6DB /* Debug */,
+				FC9A07C59B5C26FAAD4E010A048DD407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6786,8 +7236,8 @@
 		C422E6D5D4D1CBA93636F30E9C630E16 /* Build configuration list for PBXNativeTarget "AlamofireObjectMapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9CCADF4D45EB042A2EF8AD2A35FC981E /* Debug */,
-				8E5E6E59AEF98B901DA4F30FDA0B0F32 /* Release */,
+				924EC7857D7DC07A62A4F014928C73DA /* Debug */,
+				32E4132E9D7000066247C1FC71F69EB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6795,8 +7245,8 @@
 		CBEBB824215B9763F0875C8A32E6B6D4 /* Build configuration list for PBXNativeTarget "FacebookCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EBAE90F9E30802DCCF5D569ED0531ABB /* Debug */,
-				2A05B33125C8652AA7BD163FC8150F75 /* Release */,
+				E1B2B1CC0974A7AE41027394B87E98F8 /* Debug */,
+				C4F9B37B309A1017D60AF41D7B305CA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6813,8 +7263,8 @@
 		E632AC8ACCC0FE74CF66EA39B7832F10 /* Build configuration list for PBXNativeTarget "FacebookShare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6EE8C98A8ECBF9F6CA2CEEE7B6A46E1E /* Debug */,
-				498D3E4A1C1E786EC4E83A2D732817B0 /* Release */,
+				E54F1272074D9CE947463204BF1EAEF1 /* Debug */,
+				7E76034EBF1B4737245954D01214A4DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6849,8 +7299,8 @@
 		EFC80F30E9F21DF4B195270284D4B34F /* Build configuration list for PBXNativeTarget "ObjectMapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B3471BA9AAE4C4DAE00A39931C1B0D0B /* Debug */,
-				60D7D933B7F2DFAA772AB877D2752E68 /* Release */,
+				8498AB073C5C300F0AF8AEC53624E3CB /* Debug */,
+				5F4BB85B35670C53E82013C40A1042E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
