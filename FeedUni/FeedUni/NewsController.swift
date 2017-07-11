@@ -63,7 +63,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let sizeOfImage = CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height)
                 if let image = imageCache.image(withIdentifier: url.absoluteString){
                     cell.imageCell.image = Toucan(image: image).resize(sizeOfImage, fitMode: Toucan.Resize.FitMode.crop).maskWithEllipse().image
-                }else{
+                } else {
                     Alamofire.request(url).responseImage { response in
                         if let image = response.result.value {
                             cell.imageCell.image = Toucan(image: image).resize(sizeOfImage, fitMode: Toucan.Resize.FitMode.crop).maskWithEllipse().image
@@ -71,22 +71,6 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         }
                     }
                 }
-                
-                /*
-                 DispatchQueue.main.async {
-                 
-                 var request = Nuke.Request(url: url)
-                 request.process(key: ""+url.absoluteString) {
-                 return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop).maskWithEllipse()
-                 self.tableView.reloadData()
-                 }
-                 
-                 Nuke.loadImage(with: request, into: cell.imageView!)
-                 
-                 
-                 }
-                 
-                 */
             }
         }
         cell.titleTextView.text = String.init(htmlEncodedString: tempTitle)
