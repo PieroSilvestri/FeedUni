@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04079F281F14DE6A00BCCBA3 /* iconaAppFinale.png in Resources */ = {isa = PBXBuildFile; fileRef = 04079F271F14DE6A00BCCBA3 /* iconaAppFinale.png */; };
 		043ADA031F0BD42400ECD78C /* finale1App.gif in Resources */ = {isa = PBXBuildFile; fileRef = 043ADA021F0BD42400ECD78C /* finale1App.gif */; };
 		043ADA051F0BD4FF00ECD78C /* logocontrasparenze.png in Resources */ = {isa = PBXBuildFile; fileRef = 043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */; };
 		045BB25B1F14092700B65B80 /* icona p-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 045BB25A1F14092700B65B80 /* icona p-2.png */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04079F271F14DE6A00BCCBA3 /* iconaAppFinale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconaAppFinale.png; sourceTree = "<group>"; };
 		043ADA021F0BD42400ECD78C /* finale1App.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = finale1App.gif; sourceTree = "<group>"; };
 		043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logocontrasparenze.png; sourceTree = "<group>"; };
 		043C94F31EFEBC5E000EC227 /* FeedUni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeedUni.entitlements; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		657D16AC1EF92C280069AB00 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				04079F271F14DE6A00BCCBA3 /* iconaAppFinale.png */,
 				045BB25A1F14092700B65B80 /* icona p-2.png */,
 				F334B1711F0B876A00044C7D /* piero.jpeg */,
 				043ADA041F0BD4FF00ECD78C /* logocontrasparenze.png */,
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D1A740B1EF7FBBC009A323E /* LaunchScreen.storyboard in Resources */,
+				04079F281F14DE6A00BCCBA3 /* iconaAppFinale.png in Resources */,
 				65A2E9141F0405EA0035011B /* calendarIcon.png in Resources */,
 				F334B1721F0B876A00044C7D /* piero.jpeg in Resources */,
 				65F0E20E1F06346900244285 /* utente.png in Resources */,

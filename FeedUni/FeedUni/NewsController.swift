@@ -5,15 +5,18 @@
 //  Created by Piero Silvestri on 21/06/2017.
 //  Copyright © 2017 Piero Silvestri. All rights reserved.
 //
+import Alamofire
 import Nuke
 import NukeToucanPlugin
+import Toucan
 import UIKit
+import AlamofireImage
 
 
 class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
-
+    
     @IBOutlet weak var tableView: UITableView!
-    var spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    //var spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     var indexPage: Int = 1
     var listData = [NSDictionary]()
     var tokenUser: String = ""
@@ -21,19 +24,16 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        // Do any additional setup after loading the view.
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         getJsonFromUrl(page: indexPage)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     // MARK - TABLE FUNC
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -55,44 +55,38 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let tempDate = tempItem["pub_date"] as! String
         let index = tempDate.index(tempDate.startIndex, offsetBy: 10)
         let range = tempDate.startIndex..<index
+        let imageCache = AutoPurgingImageCache(memoryCapacity: 100 * 1024 * 1024, preferredMemoryUsageAfterPurge: 60 * 1024 * 1024)
         
-        //let myUrl = URL.init(string: imageUrl)
-        
-        // Configure the cell...
         if let url = URL(string: tempImage) {
-            if let data = NSData(contentsOf: url) {
+            if NSData(contentsOf: url) != nil {
+                cell.imageView!.image = nil
+                let sizeOfImage = CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height)
+                if let image = imageCache.image(withIdentifier: url.absoluteString){
+                    cell.imageCell.image = Toucan(image: image).resize(sizeOfImage, fitMode: Toucan.Resize.FitMode.crop).maskWithEllipse().image
+                }else{
+                    Alamofire.request(url).responseImage { response in
+                        if let image = response.result.value {
+                            cell.imageCell.image = Toucan(image: image).resize(sizeOfImage, fitMode: Toucan.Resize.FitMode.crop).maskWithEllipse().image
+                            imageCache.add(image, withIdentifier: url.absoluteString)
+                        }
+                    }
+                }
                 
                 /*
-                cell.imageCell.backgroundColor = UIColor(patternImage: UIImage(data: data as Data)!)
-                cell.imageCell.bounds.origin.x = (UIImage(data: data as Data)!.size.width/2) - (cell.imageCell.bounds.size.width/2)
-                cell.imageCell.bounds.origin.y = (UIImage(data: data as Data)!.size.height/2) - (cell.imageCell.bounds.size.height/2)
-                */
-              
-                cell.imageView!.image = nil
-
-                
-                DispatchQueue.main.async {
-                    
-                var request = Nuke.Request(url: url)
-                request.process(key: ""+url.absoluteString) {
-                    return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop).maskWithEllipse()
-                    self.tableView.reloadData()
-                }
-                
+                 DispatchQueue.main.async {
+                 
+                 var request = Nuke.Request(url: url)
+                 request.process(key: ""+url.absoluteString) {
+                 return $0.resize(CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height), fitMode: .crop).maskWithEllipse()
+                 self.tableView.reloadData()
+                 }
+                 
                  Nuke.loadImage(with: request, into: cell.imageView!)
- 
-                
-               
-                
-                    /*
-                    UIGraphicsBeginImageContext(cell.imageCell.frame.size);
-                    UIImage(data: data as Data)?.draw(in: cell.imageCell.bounds);
-                    let image = UIGraphicsGetImageFromCurrentImageContext();
-                    UIGraphicsEndImageContext();
-                    
-                    cell.imageCell.backgroundColor = UIColor(patternImage: image!)
-                    */
-                }
+                 
+                 
+                 }
+                 
+                 */
             }
         }
         cell.titleTextView.text = String.init(htmlEncodedString: tempTitle)
@@ -108,16 +102,14 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //self.tableView.allowsSelection = false
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if (scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height {
-            // call method to add data to tableView
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (tableView.numberOfRows(inSection: indexPath.section) - 1) {
             self.indexPage += 1
             getJsonFromUrl(page: indexPage)
             print("IndexPage: \(self.indexPage)")
-            UIApplication.shared.beginIgnoringInteractionEvents()
         }
     }
- 
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "NewsDetailSegue"){
@@ -136,7 +128,6 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK - MY FUNC
     
     func initUI(){
-        
         let shared = UserDefaults.standard
         if let token = shared.object(forKey: "token") {
             self.tokenUser = token as! String
@@ -149,61 +140,32 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         indexPage = 1
         
-        UIApplication.shared.beginIgnoringInteractionEvents()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         self.tableView.tableFooterView = UIView()
-        
-        
     }
     
     func getJsonFromUrl(page: Int){
-        
-        //self.flagDownload = false;
-        
-        
         let urlString = "http://apiunipn.parol.in/V1/posts/\(page)"
         
-        let url = URL(string: urlString)
-        var request = URLRequest(url: url!)
+        var headers: HTTPHeaders = [
+            "Content-Type": "application/json"
+        ]
         
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer " + self.tokenUser, forHTTPHeaderField: "Authorization")
-        let session = URLSession.shared
+        headers["Authorization"] = "Bearer \(self.tokenUser)"
         
-            session.dataTask(with:request) { (data, response, error) in
-                if error != nil {
-                    print(error.debugDescription)
-                } else {
-                    do {
-                        
-                        let response = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
-                        
-                        let posts = response["data"] as! [NSDictionary]
-                        for post in posts{
-                            self.listData.append(post)
-                        }
-                        
-                        //print(self.listData)
-                        
-                        UIApplication.shared.endIgnoringInteractionEvents()
-                        
-                        //let currentTemperatureF = self.listData[0]["id"] as! Int
-                        //print(currentTemperatureF)
-                        DispatchQueue.main.async {
-                            self.customActivityIndicatory(self.view, startAnimate: false)
-
-                            self.tableView.reloadData()
-                        }
-                    } catch let error as NSError {
-                        print(error)
-                    }
+        Alamofire.request(urlString, headers: headers).responseJSON { response  in
+            
+            self.customActivityIndicatory(self.view, startAnimate: false)
+            
+            if let json = response.result.value as? NSDictionary{
+                for post in (json["data"] as? NSArray)!{
+                    self.listData.append((post as? NSDictionary)!)
                 }
-                
-                }.resume()
-        
-        
-        
-        
+            }
+            self.tableView.reloadData()
+        }
     }
     
     // Custom spinner
@@ -244,14 +206,4 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return activityIndicatorView
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

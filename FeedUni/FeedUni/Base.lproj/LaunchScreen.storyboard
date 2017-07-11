@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G23a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +22,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icona p-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="deJ-jh-CCV">
+                                <rect key="frame" x="122" y="207" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="deJ-jh-CCV" secondAttribute="height" multiplier="1:1" id="AmV-Nt-GOx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FeedUni" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpz-hJ-QEy">
+                                <rect key="frame" x="140" y="396" width="94" height="31"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6705882352941176" green="0.14117647058823529" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bpz-hJ-QEy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="124" id="D2Y-PV-I4E"/>
+                            <constraint firstItem="deJ-jh-CCV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="122" id="Ia9-3b-Mcm"/>
+                            <constraint firstAttribute="trailing" secondItem="deJ-jh-CCV" secondAttribute="trailing" constant="123" id="JCx-4b-gIh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bpz-hJ-QEy" secondAttribute="trailing" constant="125" id="MKC-Av-xYS"/>
+                            <constraint firstItem="deJ-jh-CCV" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="187" id="nvz-v2-vQx"/>
+                            <constraint firstItem="bpz-hJ-QEy" firstAttribute="top" secondItem="deJ-jh-CCV" secondAttribute="bottom" constant="59" id="qTs-EK-PPb"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bpz-hJ-QEy" secondAttribute="bottom" constant="240" id="uV0-Lo-IDB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icona p-2.png" width="1146" height="1158"/>
+    </resources>
 </document>
