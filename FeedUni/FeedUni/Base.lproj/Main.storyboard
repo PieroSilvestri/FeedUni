@@ -1801,6 +1801,14 @@
                             <constraint firstAttribute="trailing" secondItem="gQm-fX-6fv" secondAttribute="trailing" id="ynw-8g-WXk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kvV-TD-HfK">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="Elw-ym-R95">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="sharePressed:" destination="k9K-5k-WOH" id="bh1-Xf-wYt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailDataLabel" destination="Xls-Sx-wXH" id="Jly-Gn-abG"/>
                         <outlet property="detailDescLabel" destination="LKS-AO-g9g" id="4vc-da-vML"/>
@@ -2053,13 +2061,10 @@
         <image name="utente.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XKF-1s-DxQ"/>
+        <segue reference="Icj-gt-Njs"/>
         <segue reference="G8M-aD-LBe"/>
         <segue reference="zNO-1P-LGT"/>
-        <segue reference="Icj-gt-Njs"/>
-        <segue reference="diy-Ga-cIA"/>
         <segue reference="XKF-1s-DxQ"/>
-        <segue reference="t1p-CS-7FQ"/>
         <segue reference="03m-xm-lIR"/>
         <segue reference="WHZ-ca-EGc"/>
     </inferredMetricsTieBreakers>

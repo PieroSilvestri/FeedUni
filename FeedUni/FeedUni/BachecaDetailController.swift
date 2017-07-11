@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import SwiftShareBubbles
+import Social
 
-class BachecaDetailController: UIViewController {
+class BachecaDetailController: UIViewController, SwiftShareBubblesDelegate{
+    
+    var bubbles: SwiftShareBubbles?
+
+    @IBAction func sharePressed(_ sender: UIBarButtonItem) {
+        bubbles?.show()
+    }
 
     @IBOutlet weak var detailImageImage: UIImageView!
     @IBOutlet weak var detailTitleLabel: UILabel!
@@ -59,6 +67,9 @@ class BachecaDetailController: UIViewController {
             }
         }
         
+        bubbles = SwiftShareBubbles(point: CGPoint(x: view.frame.width / 2, y: view.frame.height / 2), radius: 100, in: view)
+        bubbles?.showBubbleTypes = [Bubble.twitter, Bubble.facebook, Bubble.google, Bubble.instagram, Bubble.pintereset, Bubble.whatsapp]
+        bubbles?.delegate = self
         
         heartImage.isUserInteractionEnabled = true
         recognizer.addTarget(self, action: "imageTapped")
@@ -87,6 +98,37 @@ class BachecaDetailController: UIViewController {
 
     }
 
+    // SwiftShareBubblesDelegate
+    func bubblesTapped(bubbles: SwiftShareBubbles, bubbleId: Int) {
+        if let bubble = Bubble(rawValue: bubbleId) {
+            print("\(bubble)")
+            switch bubble {
+            case .facebook:
+                if let composer = SLComposeViewController(forServiceType: SLServiceTypeFacebook){
+                    composer.setInitialText(detailTitle)
+                    composer.add(detailImageImage.image!)
+                    present(composer, animated: true)
+                }
+                break
+            case .twitter:
+                if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
+                    guard let composer = SLComposeViewController(forServiceType: SLServiceTypeTwitter) else { return }
+                    composer.setInitialText("Inserisci il testo...")
+                    present(composer, animated: true, completion: nil)
+                }
+                break
+            case .whatsapp:
+                break
+            default:
+                break
+            }
+        } else {
+            // custom case
+        }
+    }
+    
+    func bubblesDidHide(bubbles: SwiftShareBubbles) {
+    }
     
     func imageTapped(){
         heartFlag = !heartFlag
