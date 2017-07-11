@@ -318,6 +318,14 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
                 tempEmail = tempItem["EMAIL"] as! String
             }
             
+            var tempCat = 0
+            if (tempItem["TAG_ID"] is NSNull)
+            {
+                tempCat = 0
+            } else {
+                tempCat = tempItem["TAG_ID"] as! Int
+            }
+            
             destination.detailImage = tempImage
             destination.detailData = tempDate.substring(with:range)
             destination.detailUser = tempUser
@@ -326,7 +334,7 @@ class BachecaController: UIViewController, UITableViewDataSource, UITableViewDel
             destination.detailPrice = "\(tempPrice)"
             destination.detailEmail = tempEmail
             destination.detailNumber = tempNumber
-            
+            destination.detailCategory = tempCat
         }
     }
     

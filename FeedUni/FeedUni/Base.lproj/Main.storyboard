@@ -620,13 +620,6 @@
                                                         <constraint firstAttribute="width" constant="15" id="phZ-4g-DMp"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="HtZ-m8-t8e">
-                                                    <rect key="frame" x="304" y="85" width="20" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="20" id="Ye1-YV-6M6"/>
-                                                        <constraint firstAttribute="height" constant="20" id="jqx-cA-uhg"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3I-PL-c7Q">
                                                     <rect key="frame" x="140" y="88" width="29" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -643,10 +636,8 @@
                                                 <constraint firstItem="uQ3-1a-VEr" firstAttribute="leading" secondItem="zl5-Rr-eve" secondAttribute="trailing" constant="16" id="Ofg-Me-RDC"/>
                                                 <constraint firstItem="zl5-Rr-eve" firstAttribute="top" secondItem="Ft2-1k-CCL" secondAttribute="top" constant="10" id="VHa-dn-CtW"/>
                                                 <constraint firstAttribute="trailing" secondItem="qRl-HU-oy5" secondAttribute="trailing" id="YdP-Qa-vkn"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="HtZ-m8-t8e" secondAttribute="trailing" constant="10" id="aWB-QS-OI5"/>
                                                 <constraint firstAttribute="bottom" secondItem="zl5-Rr-eve" secondAttribute="bottom" constant="9.5" id="ccw-P6-N24"/>
                                                 <constraint firstItem="qRl-HU-oy5" firstAttribute="top" secondItem="Ft2-1k-CCL" secondAttribute="top" constant="10" id="eXE-0m-IXd"/>
-                                                <constraint firstItem="HtZ-m8-t8e" firstAttribute="top" secondItem="qRl-HU-oy5" secondAttribute="bottom" constant="15" id="f4u-CV-Kms"/>
                                                 <constraint firstItem="uQ3-1a-VEr" firstAttribute="top" secondItem="qRl-HU-oy5" secondAttribute="bottom" constant="18" id="whM-lq-1jF"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1075,13 +1066,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="NhP-jb-IPg">
-                                                    <rect key="frame" x="347" y="134.5" width="15" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="15" id="7m3-rt-HUN"/>
-                                                        <constraint firstAttribute="height" constant="15" id="9u3-nC-iQD"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Zc6-lj-xfB" firstAttribute="leading" secondItem="W32-Ny-ksX" secondAttribute="trailing" id="0qV-De-bTd"/>
@@ -1469,13 +1453,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="R2Z-UH-l1I">
-                                                    <rect key="frame" x="292" y="134.5" width="15" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="15" id="LoU-64-dnQ"/>
-                                                        <constraint firstAttribute="height" constant="15" id="pGR-x0-43i"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Hnd-f5-VVj" secondAttribute="trailing" constant="5" id="1ZK-QT-Tk0"/>
@@ -2009,9 +1986,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="G8M-aD-LBe"/>
         <segue reference="zNO-1P-LGT"/>
-        <segue reference="XKF-1s-DxQ"/>
-        <segue reference="WHZ-ca-EGc"/>
-        <segue reference="03m-xm-lIR"/>
         <segue reference="Icj-gt-Njs"/>
+        <segue reference="diy-Ga-cIA"/>
+        <segue reference="XKF-1s-DxQ"/>
+        <segue reference="03m-xm-lIR"/>
     </inferredMetricsTieBreakers>
 </document>
