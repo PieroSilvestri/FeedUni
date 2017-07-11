@@ -28,6 +28,7 @@ class BachecaDetailController: UIViewController {
     var detailImage = ""
     var detailNumber = ""
     var detailEmail = ""
+    var detailCategory = 0
     let recognizer = UITapGestureRecognizer()
     var heartFlag = false
 
@@ -76,7 +77,14 @@ class BachecaDetailController: UIViewController {
     
     
     func initUI(){
-        
+        let newsList = RealmQueries.getFavoriteInsertions()
+            for item in newsList{
+            if(item.title == detailTitle){
+                heartFlag = true
+                heartImage.image = #imageLiteral(resourceName: "fullHeart")
+            }
+        }
+
     }
 
     
@@ -88,11 +96,42 @@ class BachecaDetailController: UIViewController {
         {
             heartImage.image = #imageLiteral(resourceName: "emptyHeart")
             
+            let newsList = RealmQueries.getFavoriteInsertions()
+            
+            for item in newsList{
+                if(item.title == detailTitle){
+                    RealmQueries.deleteInsertion(insertion: item)
+                }
+            }
+            
         }
-        else
-        {
+        else{
             heartImage.image = #imageLiteral(resourceName: "fullHeart")
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "it_IT")
+            dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let data = dateFormatter.date(from: detailData)
+            
+            let price = Int.init(detailPrice)
+            
+            let newFavorit = FavoriteInsertion(value:[
+                "title": detailTitle,
+                "insertionDescription":detailDescription,
+                "publisherName": detailUser,
+                "publishDate": data,
+                "email": detailEmail,
+                "phoneNumber": detailNumber,
+                "price": price,
+                "insertionType": detailCategory
+                
+            ])
+            
+
+            RealmQueries.insertInsertion(insertion: newFavorit)
         }
+
     }
     
     /*
