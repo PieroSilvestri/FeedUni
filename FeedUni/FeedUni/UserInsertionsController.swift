@@ -15,18 +15,31 @@ class UserInsertionsController: UIViewController, UITableViewDelegate, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor.white
         userInsertions = RealmQueries.getUserInsertions()
         self.mTableView.tableFooterView = UIView()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.mTableView.dequeueReusableCell(withIdentifier: "bachecaCellUser", for: indexPath) as! BachecaControllerTableViewCell
-        let vInsertion = userInsertions[indexPath.row]
-        cell.cellPrice.text = vInsertion.publisherName
-        cell.cellTitle.text = vInsertion.title
-        cell.cellData.text = "\(Date.init())"
-        
-        return cell
+        if self.userInsertions.count > 0 {
+            let cell = self.mTableView.dequeueReusableCell(withIdentifier: "bachecaCellUser", for: indexPath) as! BachecaControllerTableViewCell
+            let vInsertion = self.userInsertions[indexPath.row]
+            cell.cellPrice.text = vInsertion.publisherName
+            cell.cellTitle.text = vInsertion.title
+            cell.cellData.text = "\(Date.init())"
+            
+            cell.onButtonTapped = {
+                RealmQueries.deleteUserInsertion(userInsertion: self.userInsertions[indexPath.row])
+                self.userInsertions.remove(at: indexPath.row)
+                self.mTableView.reloadData()
+            }
+            
+            return cell
+        } else {
+            self.mTableView.estimatedRowHeight = 300
+            self.mTableView.rowHeight = UITableViewAutomaticDimension
+            return self.mTableView.dequeueReusableCell(withIdentifier: "noInsertionCell")!
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,7 +47,11 @@ class UserInsertionsController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userInsertions.count
+        if self.userInsertions.count > 0 {
+            return userInsertions.count
+        } else {
+            return 1
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

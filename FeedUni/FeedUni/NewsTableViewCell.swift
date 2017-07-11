@@ -13,7 +13,13 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var imageCell: UIImageView!
-
+    
+    @IBAction func deleteClicked(_ sender: UIButton) {
+        if let onButtonTapped = self.onButtonTapped {
+            onButtonTapped()
+        }
+    }
+    var onButtonTapped : (() -> Void)? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,16 +9,18 @@
 import UIKit
 
 class ProfileController: UITableViewController {
-    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         let premail = defaults.value(forKey: "email")
-        if (premail as? String != nil) {
-            let cell = self.tableView.dequeueReusableCell(withIdentifier: "profileCell")
-            cell?.textLabel?.text = premail as! String
+        if (premail != nil) {
+            self.mailLabel.text = premail as! String
         }
     }
     

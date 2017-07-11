@@ -14,7 +14,13 @@ class BachecaControllerTableViewCell: UITableViewCell {
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellPrice: UILabel!
     @IBOutlet weak var cellData: UILabel!
-
+    @IBAction func deleteClicked(_ sender: UIButton) {
+        if let onButtonTapped = self.onButtonTapped {
+            onButtonTapped()
+        }
+    }
+    
+    var onButtonTapped : (() -> Void)? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
