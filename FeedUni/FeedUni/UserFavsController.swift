@@ -10,6 +10,10 @@ import UIKit
 import Nuke
 import NukeToucanPlugin
 import TimelineTableViewCell
+import Toucan
+import AlamofireImage
+import Alamofire
+
 
 class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -87,7 +91,27 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 cell.titleTextView.text = String.init(htmlEncodedString: vNews.title)
                 cell.dateLabel.text = dateFormatter.string(from: vNews.publishingDate)
+                
+                let imageCache = AutoPurgingImageCache(memoryCapacity: 100 * 1024 * 1024, preferredMemoryUsageAfterPurge: 60 * 1024 * 1024)
                 if let url = URL(string: vNews.imageURL) {
+                    if NSData(contentsOf: url) != nil {
+                        cell.imageView!.image = nil
+                        let sizeOfImage = CGSize(width: cell.imageCell.frame.width, height: cell.imageCell.frame.height)
+                        if let image = imageCache.image(withIdentifier: url.absoluteString){
+                            cell.imageCell.image = Toucan(image: image).resize(sizeOfImage, fitMode: Toucan.Resize.FitMode.crop).maskWithEllipse().image
+                        } else {
+                            Alamofire.request(url).responseImage { response in
+                                if let image = response.result.value {
+                                    cell.imageCell.image = Toucan(image: image).resize(sizeOfImage, fitMode: Toucan.Resize.FitMode.crop).maskWithEllipse().image
+                                    imageCache.add(image, withIdentifier: url.absoluteString)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+                /*if let url = URL(string: vNews.imageURL) {
                     if let data = NSData(contentsOf: url) {
                         
                         cell.imageView?.image = nil
@@ -99,7 +123,7 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
                         
                         Nuke.loadImage(with: request, into: cell.imageCell)
                     }
-                }
+                }*/
                 return cell
             } else {
                 self.mTableView.estimatedRowHeight = 300
@@ -215,7 +239,7 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
             let selectedNews = self.favNews[index!]
             dest.titleText = selectedNews.title
             dest.content = selectedNews.content
-            dest.date = "\(selectedNews.publishingDate)"
+            dest.date = insertionFormatter.string(from: selectedNews.publishingDate)
             dest.imageUrl = selectedNews.imageURL
         } else if segue.identifier == "insertionDetailSegue" && self.favInsertions.count > 0 {
             let dest = segue.destination as! BachecaDetailController
