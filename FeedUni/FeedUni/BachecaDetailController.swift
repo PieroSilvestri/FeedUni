@@ -124,8 +124,8 @@ class BachecaDetailController: UIViewController {
                 "email": detailEmail,
                 "phoneNumber": detailNumber,
                 "price": price,
-                "insertionType": detailCategory
-                
+                "insertionType": detailCategory,
+                "image": detailImage
             ])
             
 

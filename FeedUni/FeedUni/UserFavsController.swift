@@ -22,6 +22,8 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
     var selection = 0   //Per preimpostare il tipo di post da visualizzare
     var chosenLesson : FavoriteLesson? = nil
     
+    let insertionFormatter = DateFormatter()
+    
     @IBAction func controllerChange(_ sender: UISegmentedControl) {
         setUpController(vSelection: sender.selectedSegmentIndex)
         self.mTableView.reloadData()
@@ -29,6 +31,11 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        insertionFormatter.locale = Locale(identifier: "it_IT")
+        insertionFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        insertionFormatter.dateFormat = "dd-MM-yyyy"
+        
         navigationController?.navigationBar.tintColor = UIColor.white
         setUpController(vSelection: selection)
         self.mTableView.tableFooterView = UIView()
@@ -110,9 +117,22 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
                     self.mTableView.reloadData()
                 }
                 
+                var imageDecoded : UIImage? = nil
+                print("\n\nimagein profile= \(vInsertion.image)")
+                let decodedData = Data(base64Encoded: vInsertion.image, options: .ignoreUnknownCharacters)
+                if (decodedData != nil){
+                    let decodedimage = UIImage(data: decodedData!)
+                    if decodedimage != nil {
+                        imageDecoded = decodedimage!
+                    }
+                }
+
                 cell.cellTitle.text = vInsertion.title
-                cell.cellData.text = "\(Date.init())"
+                cell.cellData.text = self.insertionFormatter.string(from: vInsertion.publishDate!)
                 cell.cellPrice.text = vInsertion.publisherName
+                if imageDecoded != nil {
+                    cell.cellImage.image = imageDecoded
+                }
                 return cell
             } else {
                 self.mTableView.estimatedRowHeight = 300
@@ -205,7 +225,7 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
             dest.detailDescription = selectedInsertion.insertionDescription
             dest.detailPrice = "\(selectedInsertion.price/100)"
             dest.detailUser = selectedInsertion.publisherName
-            dest.detailData = "\(selectedInsertion.publishDate)"
+            dest.detailData = self.insertionFormatter.string(from: selectedInsertion.publishDate!)
             dest.detailImage = selectedInsertion.image
             dest.detailNumber = selectedInsertion.phoneNumber
             dest.detailEmail = selectedInsertion.email

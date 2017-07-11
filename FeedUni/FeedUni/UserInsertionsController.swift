@@ -13,8 +13,15 @@ class UserInsertionsController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var mTableView: UITableView!
     var userInsertions: [UserInsertion] = []
 
+    let insertionFormatter = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        insertionFormatter.locale = Locale(identifier: "it_IT")
+        insertionFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        insertionFormatter.dateFormat = "dd-MM-yyyy"
+        
         navigationController?.navigationBar.tintColor = UIColor.white
         userInsertions = RealmQueries.getUserInsertions()
         self.mTableView.tableFooterView = UIView()
@@ -26,7 +33,20 @@ class UserInsertionsController: UIViewController, UITableViewDelegate, UITableVi
             let vInsertion = self.userInsertions[indexPath.row]
             cell.cellPrice.text = vInsertion.publisherName
             cell.cellTitle.text = vInsertion.title
-            cell.cellData.text = "\(Date.init())"
+            cell.cellData.text = insertionFormatter.string(from: vInsertion.publishDate!)
+            
+            var imageDecoded : UIImage? = nil
+            let decodedData = Data(base64Encoded: vInsertion.image, options: .ignoreUnknownCharacters)
+            if (decodedData != nil){
+                let decodedimage = UIImage(data: decodedData!)
+                if decodedimage != nil {
+                    imageDecoded = decodedimage!
+                }
+            }
+
+            if imageDecoded != nil {
+                cell.cellImage.image = imageDecoded
+            }
             
             cell.onButtonTapped = {
                 RealmQueries.deleteUserInsertion(userInsertion: self.userInsertions[indexPath.row])
