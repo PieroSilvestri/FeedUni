@@ -46,7 +46,8 @@ class LoginController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        }else if(UserDefaults.standard.object(forKey: "email") != nil){
+        }
+        if(UserDefaults.standard.object(forKey: "email") != nil){
             self.EmailTextField.text = UserDefaults.standard.object(forKey: "email") as! String
         }
     }
