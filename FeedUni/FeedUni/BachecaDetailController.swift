@@ -166,8 +166,8 @@ class BachecaDetailController: UIViewController, SwiftShareBubblesDelegate{
                 "email": detailEmail,
                 "phoneNumber": detailNumber,
                 "price": price,
-                "insertionType": detailCategory
-                
+                "insertionType": detailCategory,
+                "image": detailImage
             ])
             
 

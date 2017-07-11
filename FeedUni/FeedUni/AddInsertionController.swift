@@ -147,7 +147,7 @@ class AddInsertionController: UIViewController, UITextFieldDelegate, UIImagePick
         let tempInsertion = UserInsertion(value: ["title" : insertionTitleTxt.text, "insertionDescription": insertionDescriptionTxt.text,
                                                   "publisherName" : insertionPublisherTxt.text, "email" : publisherMailTxt.text,
                                                   "phoneNumber" : publisherPhoneTxt.text, "price" : Int.init(insertionPriceTxt.text!)!*100,
-                                                  "publishDate" : Date.init().timeIntervalSince1970, "insertionType" : insertionTypeController.selectedSegmentIndex+1, "image" : "documents/hjb"])
+                                                  "publishDate" : Date.init(), "insertionType" : insertionTypeController.selectedSegmentIndex+1, "image" : "documents/hjb"])
         
         //Post su munsra back end
         let jsonInsertion = insertionToJSON(userInsertion: tempInsertion)
