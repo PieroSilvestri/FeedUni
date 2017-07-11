@@ -102,7 +102,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let tempItem = self.listData[index!]
             detail.titleText = tempItem["title"] as! String
             detail.postLink = tempItem["link"] as! String
-            detail.date = tempItem["createdAt"] as! String
+            detail.date = tempItem["pub_date"] as! String
             detail.imageUrl = tempItem["media"] as! String
             detail.content = tempItem["content"] as! String
             

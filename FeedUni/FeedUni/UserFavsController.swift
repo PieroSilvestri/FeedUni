@@ -215,7 +215,7 @@ class UserFavsController: UIViewController, UITableViewDataSource, UITableViewDe
             let selectedNews = self.favNews[index!]
             dest.titleText = selectedNews.title
             dest.content = selectedNews.content
-            dest.date = "\(selectedNews.publishingDate)"
+            dest.date = insertionFormatter.string(from: selectedNews.publishingDate)
             dest.imageUrl = selectedNews.imageURL
         } else if segue.identifier == "insertionDetailSegue" && self.favInsertions.count > 0 {
             let dest = segue.destination as! BachecaDetailController

@@ -58,7 +58,7 @@ class NewsDetailController: UIViewController, SwiftShareBubblesDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         initUI()
     }
     
@@ -80,6 +80,13 @@ class NewsDetailController: UIViewController, SwiftShareBubblesDelegate {
         textView.isUserInteractionEnabled = false
         contentTextView.isEditable = false;
         contentTextView.isUserInteractionEnabled = true
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "it_IT")
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let newDate = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         
         dateLabel.text = date
         
@@ -105,8 +112,13 @@ class NewsDetailController: UIViewController, SwiftShareBubblesDelegate {
         for item in newsList{
             if(item.title == titleText){
                 heartFlag = true
-                heartLogo.image = #imageLiteral(resourceName: "fullHeart")
             }
+        }
+        
+        if(heartFlag){
+            heartLogo.image = #imageLiteral(resourceName: "fullHeart")
+        }else{
+            heartLogo.image = #imageLiteral(resourceName: "emptyHeart")
         }
         
         contentTextView.text = String.init(htmlEncodedString: content)
