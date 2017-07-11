@@ -62,15 +62,6 @@ class BachecaDetailController: UIViewController {
         heartImage.isUserInteractionEnabled = true
         recognizer.addTarget(self, action: "imageTapped")
         heartImage.addGestureRecognizer(recognizer)
-        if (heartFlag == false)
-        {
-            heartImage.image = #imageLiteral(resourceName: "emptyHeart")
-            
-        }
-        else
-        {
-            heartImage.image = #imageLiteral(resourceName: "fullHeart")
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,10 +80,19 @@ class BachecaDetailController: UIViewController {
     }
 
     
-    func imageTapped(gesture: UITapGestureRecognizer){
+    func imageTapped(){
         heartFlag = !heartFlag
         print("image tapped")
-
+        
+        if (heartFlag == false)
+        {
+            heartImage.image = #imageLiteral(resourceName: "emptyHeart")
+            
+        }
+        else
+        {
+            heartImage.image = #imageLiteral(resourceName: "fullHeart")
+        }
     }
     
     /*

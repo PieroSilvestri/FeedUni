@@ -23,6 +23,7 @@ class NewsDetailController: UIViewController {
     var date : String = ""
     var imageUrl : String = ""
     var content : String = ""
+    var heartFlag: Bool = false
     
     override func viewDidLayoutSubviews() {
         newsImageView.layer.cornerRadius = 0.5 * self.newsImageView.frame.width
@@ -85,27 +86,56 @@ class NewsDetailController: UIViewController {
  
         }
         
+        let newsList = RealmQueries.getFavoritePosts()
+        
+        for item in newsList{
+            if(item.title == titleText){
+                heartFlag = true
+                heartLogo.image = #imageLiteral(resourceName: "fullHeart")
+            }
+        }
+        
         contentTextView.text = String.init(htmlEncodedString: content)
     }
     
     func heartClicked(){
         print("image tapped")
+        heartFlag = !heartFlag
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "it_IT")
-        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
-        let newFavorite = FavoriteNews(value: [
-            "title": titleText,
-            "content": content,
-            "excerpt": "pace",
-            "publishingDate": dateFormatter.date(from: date)!,
-            "imageURL": imageUrl
-            ])
-        RealmQueries.insertNews(post: newFavorite)
         
-        heartLogo.image? = UIImage(named: "fullHeart")!;
+        
+        if (heartFlag == false)
+        {
+            heartLogo.image = #imageLiteral(resourceName: "emptyHeart")
+            
+            let newsList = RealmQueries.getFavoritePosts()
+            
+            for item in newsList{
+                if(item.title == titleText){
+                    RealmQueries.deleteNews(post: item)
+                }
+            }
+            
+        }
+        else
+        {
+            heartLogo.image = #imageLiteral(resourceName: "fullHeart")
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "it_IT")
+            dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            
+            let newFavorite = FavoriteNews(value: [
+                "title": titleText,
+                "content": content,
+                "excerpt": "pace",
+                "publishingDate": dateFormatter.date(from: date)!,
+                "imageURL": imageUrl
+                ])
+            RealmQueries.insertNews(post: newFavorite)
+        }
     }
 
     /*
